@@ -15,7 +15,7 @@ try{
   page.on('pageerror',err=>errors.push(String(err)));
   page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url())});
   await page.goto(base);await page.evaluate(()=>document.fonts.ready);
-  await expect(page.getByRole('heading',{level:1})).toBeVisible();
+  await expect(page.getByRole('heading',{level:1})).toBeVisible(); await expect.poll(()=>page.locator('.hardware img').evaluateAll(imgs=>imgs.every(img=>img.complete&&img.naturalWidth>0))).toBe(true);
   await checkWidth(page);
   const screenshots=[390,1440].includes(width),prefix=width<768?'mobile':'desktop';
   if(screenshots) await shot(page,prefix+'-home');
@@ -75,7 +75,7 @@ try{
    await card.getByRole('button',{name:'نسخ الرقم',exact:true}).click();
    assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),await card.locator('code').textContent(),'account clipboard');
   }
-  assert.equal(await page.getByRole('dialog').locator('img').count(),2);
+  assert.equal(await page.getByRole('dialog').locator('img').count(),2); await expect.poll(()=>page.getByRole('dialog').locator('img').evaluateAll(imgs=>imgs.every(img=>img.complete&&img.naturalWidth>0))).toBe(true);
   if(screenshots)await shot(page,prefix+'-support');
   await page.getByRole('button',{name:'إغلاق',exact:true}).click();
   await open(page,'نموذج تلجرام');
