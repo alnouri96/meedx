@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   ShieldCheck, ShieldOff, Magnet, Cast, Radio, HardDrive, Server,
   Smartphone, Monitor, MousePointer2, Gamepad2, Download, Compass,
@@ -9,10 +9,19 @@ import {
 
 export function InteractiveShowcase({ t, L, copy }) {
   const [scenario, setScenario] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
   const [step, setStep] = useState(0);
   const [tab, setTab] = useState(0);
   const [torrentMode, setTorrentMode] = useState('stream');
   const [activeBento, setActiveBento] = useState(0);
+
+  useEffect(() => {
+    if (!autoPlay) return;
+    const id = setInterval(() => {
+      setScenario((prev) => (prev + 1) % 4);
+    }, 5000);
+    return () => clearInterval(id);
+  }, [autoPlay]);
 
   const scenarios = [
     {
@@ -130,7 +139,7 @@ export function InteractiveShowcase({ t, L, copy }) {
         {
           icon: Magnet,
           title: t('التقاط تلقائي لروابط التورنت', 'Auto Magnet & Torrent Catch'),
-          text: t(<>يلتقط أي رابط تورنت ({L('Magnet')} / {L('.torrent')}) بمجرد الضغط عليه داخل المتصفح.</>, 'Automatically captures any Magnet or .torrent link the moment you tap it.'),
+          text: t(<>يلتقط أي رابط تورنت ({L('Magnet / .torrent')}) بمجرد الضغط عليه داخل المتصفح.</>, 'Automatically captures any Magnet or .torrent link the moment you tap it.'),
         },
         {
           icon: torrentMode === 'stream' ? Radio : Download,
@@ -231,29 +240,33 @@ export function InteractiveShowcase({ t, L, copy }) {
             <span className="sc-kicker"><CheckCircle2 size={15} /> {t('مجاني ومفتوح المصدر 100% · تطبيقان متكاملان', '100% Free & Open Source · Two Synchronized Apps')}</span>
             <h3>{t('كيف يعمل التطبيقان معاً؟', 'How do both apps work together?')}</h3>
           </div>
-          <code dir="ltr">Phone + TV · Local LAN</code>
+          <span className="sc-lan-pill">{t('هاتف + شاشة · شبكة محلية', 'Phone + TV · Local LAN')}</span>
         </div>
 
         <div className="sc-scenarios" role="tablist" aria-label={t('سيناريوهات العمل', 'Workflow scenarios')}>
           {scenarios.map((item, idx) => {
             const Icon = item.icon;
+            const isActive = scenario === idx;
             return (
               <button
                 key={item.id}
                 type="button"
                 role="tab"
-                aria-selected={scenario === idx}
-                className={'sc-pill' + (scenario === idx ? ' active' : '')}
-                onClick={() => setScenario(idx)}
+                aria-selected={isActive}
+                className={'sc-pill' + (isActive ? ' active' : '')}
+                onClick={() => { setAutoPlay(false); setScenario(idx); }}
+                onMouseEnter={() => setAutoPlay(false)}
+                onFocus={() => setAutoPlay(false)}
               >
                 <Icon size={17} />
                 <span>{item.label}</span>
+                {isActive && autoPlay && <span key={scenario} className="sc-progress" aria-hidden="true" />}
               </button>
             );
           })}
         </div>
 
-        <div className="sc-diagram">
+        <div key={activeScenario.id + '-diag'} className="sc-diagram sc-animate">
           <div className="sc-node">
             <div className="sc-icon-ring"><Smartphone size={28} /></div>
             <div className="sc-node-text">
@@ -282,7 +295,7 @@ export function InteractiveShowcase({ t, L, copy }) {
           </div>
         </div>
 
-        <p className="sc-arch-desc">{activeScenario.desc}</p>
+        <p key={activeScenario.id + '-desc'} className="sc-arch-desc sc-animate">{activeScenario.desc}</p>
       </section>
 
       <section className="sc-card sc-walk" aria-label={t('ابدأ في 3 خطوات', 'Start in 3 steps')}>
@@ -316,7 +329,7 @@ export function InteractiveShowcase({ t, L, copy }) {
           })}
         </div>
 
-        <div className="sc-step-detail">
+        <div key={activeStep.num} className="sc-step-detail sc-animate">
           <p>{activeStep.body}</p>
           {activeStep.hasCode && (
             <div className="sc-step-actions">
@@ -333,11 +346,11 @@ export function InteractiveShowcase({ t, L, copy }) {
         </div>
       </section>
 
-      <section className="sc-card sc-features" aria-label={t('مستعرض المزايا التفاعلي', 'Interactive feature explorer')}>
+      <section className="sc-card sc-features" aria-label={t('قدرات المنظومة الكاملة', 'Full Ecosystem Capabilities')}>
         <div className="sc-head">
           <div>
-            <h3>{t('مستعرض المزايا بالأيقونات', 'Feature explorer')}</h3>
-            <p>{t('تصفّح قدرات المنظومة عبر الأقسام الأربعة.', 'Explore every capability across four interactive tabs.')}</p>
+            <h3>{t('قدرات المنظومة الكاملة', 'Full Ecosystem Capabilities')}</h3>
+            <p>{t('اختر أي قسم لاستكشاف تفاصيل التشغيل والبث والتحكم', 'Select a category to explore playback, streaming, and control features')}</p>
           </div>
         </div>
 
@@ -360,7 +373,7 @@ export function InteractiveShowcase({ t, L, copy }) {
           })}
         </div>
 
-        <div className="sc-feature-grid" role="tabpanel">
+        <div key={activeTab.id} className="sc-feature-grid sc-animate" role="tabpanel">
           {activeTab.cards.map((card) => {
             const Icon = card.icon;
             return (
