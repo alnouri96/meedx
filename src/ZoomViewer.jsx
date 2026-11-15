@@ -4,14 +4,16 @@ import {ChevronLeft, ChevronRight, Minus, Plus, RotateCcw} from 'lucide-react';
 const initial = {scale: 1, x: 0, y: 0};
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
-function ZoomImage({src, alt, t}) {
+function ZoomImage({src, alt, isQr = false, t}) {
   const [view, setView] = useState(initial);
   const frame = useRef(null);
   const image = useRef(null);
   const pointers = useRef(new Map());
 
   function constrain(scale, x, y) {
-    const bound = (imageSize, frameSize) => Math.max(0, (imageSize * scale - frameSize) / 2);
+    if (!image.current || !frame.current) return {scale, x: 0, y: 0};
+    const pad = 24;
+    const bound = (imageSize, frameSize) => Math.max(0, (imageSize * scale - Math.max(0, frameSize - pad)) / 2);
     const maxX = bound(image.current.clientWidth, frame.current.clientWidth);
     const maxY = bound(image.current.clientHeight, frame.current.clientHeight);
     return {scale, x: clamp(x, -maxX, maxX), y: clamp(y, -maxY, maxY)};
@@ -76,7 +78,7 @@ function ZoomImage({src, alt, t}) {
 
   const percentage = Math.round(view.scale * 100);
   return <>
-    <div ref={frame} className="zoom-stage" data-zoomed={view.scale > 1}
+    <div ref={frame} className="zoom-stage" data-zoomed={view.scale > 1} data-qr={isQr ? 'true' : undefined}
       tabIndex={0} aria-label={t('حرّك الصورة المكبّرة بمفاتيح الأسهم','Pan the zoomed image with arrow keys')}
       onPointerDown={pointerDown} onPointerMove={pointerMove} onPointerUp={pointerEnd}
       onPointerCancel={pointerEnd} onLostPointerCapture={pointerEnd}
@@ -108,20 +110,34 @@ function ZoomImage({src, alt, t}) {
   </>;
 }
 
-export function ZoomViewer({shots, index, device, setDevice, move, t}) {
+export function ZoomViewer({shots, index, device, setDevice, move, qr, onBackToSupport, t}) {
+  if (qr) {
+    return <div className="zoom-viewer">
+      <ZoomImage key={qr.src} src={qr.src} alt={qr.title} isQr t={t}/>
+      <div className="zoom-footer">
+        <div className="zoom-nav">
+          <code dir="ltr">{qr.number}</code>
+          <button type="button" onClick={onBackToSupport}>{t('العودة للدعم','Back to support')}</button>
+        </div>
+      </div>
+    </div>;
+  }
+
   const shot = shots[index];
   const photo = shot.images.find(photo => photo.device === device) ?? shot.images[0];
   const label = device => device === 'tv' ? t('التلفاز','TV') : t('الهاتف','Phone');
   return <div className="zoom-viewer">
     <ZoomImage key={photo.file} src={'/assets/screenshots/' + photo.file}
       alt={shot.name + ' · ' + label(photo.device)} t={t}/>
-    <div className="zoom-nav">
-      <button onClick={() => move(-1)} aria-label={t('الشريحة السابقة','Previous slide')}>{t(<ChevronRight/>,<ChevronLeft/>)}</button>
-      <code>{index + 1} / {shots.length}</code>
-      <button onClick={() => move(1)} aria-label={t('الشريحة التالية','Next slide')}>{t(<ChevronLeft/>,<ChevronRight/>)}</button>
-      <div className="zoom-devices" role="group" aria-label={t('لقطة الجهاز','Device screenshot')}>
-        {shot.images.map(item => <button key={item.device} aria-pressed={photo.device === item.device}
-          onClick={() => setDevice(item.device)}>{label(item.device)}</button>)}
+    <div className="zoom-footer">
+      <div className="zoom-nav">
+        <button onClick={() => move(-1)} aria-label={t('الشريحة السابقة','Previous slide')}>{t(<ChevronRight/>,<ChevronLeft/>)}</button>
+        <code>{index + 1} / {shots.length}</code>
+        <button onClick={() => move(1)} aria-label={t('الشريحة التالية','Next slide')}>{t(<ChevronLeft/>,<ChevronRight/>)}</button>
+        <div className="zoom-devices" role="group" aria-label={t('لقطة الجهاز','Device screenshot')}>
+          {shot.images.map(item => <button key={item.device} aria-pressed={photo.device === item.device}
+            onClick={() => setDevice(item.device)}>{label(item.device)}</button>)}
+        </div>
       </div>
     </div>
   </div>;
