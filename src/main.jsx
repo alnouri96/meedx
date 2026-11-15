@@ -1,0 +1,73 @@
+import React,{useEffect,useRef,useState} from 'react';
+import {createRoot} from 'react-dom/client';
+import {Menu,X,Download,Monitor,Smartphone,Maximize2,Copy,MessageSquare,Heart,ShieldCheck,Gamepad2,Terminal,ArrowDown,ArrowUpRight} from 'lucide-react';
+import {Swiper,SwiperSlide} from 'swiper/react';
+import {A11y,Keyboard,Navigation,Pagination} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import '@fontsource/ibm-plex-sans-arabic/400.css';
+import '@fontsource/ibm-plex-sans-arabic/600.css';
+import '@fontsource/ibm-plex-sans-arabic/700.css';
+import '@fontsource/jetbrains-mono/400.css';
+import {siteConfig} from './config/siteConfig';
+import screenshotGroups from './data/screenshots.json';
+import {screenshotCopy} from './data/screenshot-copy';
+import {Panels} from './panels';
+import './style.css';
+import './gallery.css';
+
+function App(){
+ const [ar,setAr]=useState(true),[menu,setMenu]=useState(false),[modal,setModal]=useState(null),[slide,setSlide]=useState(0),[toast,setToast]=useState('');
+ const t=(a,e)=>ar?a:e;
+ const catalog=siteConfig.downloads;
+ const shots=screenshotGroups.map(group=>{
+   const [titleAr,titleEn,descriptionAr,descriptionEn]=screenshotCopy[group.id] ?? [
+     'لقطة Local Cinema', 'Local Cinema screenshot',
+     'لقطة من منظومة Local Cinema.', 'A capture from the Local Cinema system.'
+   ];
+   return {...group,name:t(titleAr,titleEn),text:t(descriptionAr,descriptionEn)};
+ });
+ const hero=shots.find(shot=>shot.id==='15-19-11') ?? shots[0];
+ const heroTv=hero.images.find(photo=>photo.device==='tv');
+ const heroPhone=hero.images.find(photo=>photo.device==='phone');
+ const label=device=>device==='tv'?t('التلفاز','TV'):t('الهاتف','Phone');
+ useEffect(()=>{document.documentElement.lang=ar?'ar':'en';document.documentElement.dir=ar?'rtl':'ltr';document.title=t('MEEDX — استوديو تطبيقات وعتاد','MEEDX — Software & hardware studio')},[ar]);
+ useEffect(()=>{if(!toast)return;const id=setTimeout(()=>setToast(''),2200);return()=>clearTimeout(id)},[toast]);
+ async function copy(value){try{await navigator.clipboard.writeText(value);setToast(t('تم النسخ','Copied'))}catch{setToast(t('تعذر النسخ. حدّد النص وانسخه يدوياً.','Select and copy the text manually.'))}}
+ const links=[['apps',t('التطبيقات','Apps')],['lab',t('الألعاب والأدوات','Games & tools')],['services',t('الخدمات','Services')],['downloads',t('التحميلات','Downloads')]];
+ const contact=(topic='Local Cinema',kind='feature')=>setModal({id:'telegram',topic,kind});
+ const support=()=>setModal({id:'support'});
+ const image=(file,alt,props)=> <img src={'/assets/screenshots/'+file} alt={alt} {...props}/>;
+ return <>
+ <a href="#main" className="skip">{t('انتقل للمحتوى','Skip to content')}</a>
+ <header><div className="wrap top"><a href="#" className="wordmark"><img src="/assets/meedx.svg" alt=""/>MEEDX</a><nav className="desktop" aria-label={t('التنقل الرئيسي','Main navigation')}>{links.map(([id,s])=><a href={'#'+id} key={id}>{s}</a>)}</nav><div className="actions"><button className="lang" onClick={()=>setAr(!ar)} aria-label={t('Switch to English','التبديل إلى العربية')}>{ar?'EN':'AR'}</button><button className="desktop" onClick={()=>contact()}><MessageSquare size={17}/>{t('تواصل','Contact')}</button><button className="desktop top-support" onClick={support}><Heart size={17}/>{t('ادعم MEEDX','Support MEEDX')}</button><button className="mobile" onClick={()=>setMenu(!menu)} aria-expanded={menu} aria-controls="mobile-menu" aria-label={t('القائمة','Menu')}>{menu?<X/>:<Menu/>}</button></div></div>
+ {menu&&<nav id="mobile-menu" className="mobile drawer" aria-label={t('قائمة الهاتف','Mobile menu')}>{links.map(([id,s])=><a href={'#'+id} key={id} onClick={()=>setMenu(false)}>{s}<ArrowUpRight size={18}/></a>)}<button onClick={()=>{setMenu(false);contact()}}>{t('اقتراح أو طلب عمل','Feedback or work request')}<MessageSquare size={18}/></button><button onClick={()=>{setMenu(false);support()}}>{t('زين كاش / كي كارد','ZainCash / QiCard')}<Heart size={18}/></button></nav>}</header>
+ <main id="main">
+ <section className="wrap hero">
+ <div className="hero-copy"><h1>{t('شاشتك ومكتبتك،','Your TV and library,')}<br/>{t('بيدك.','in your hands.')}</h1><p>{t('Local Cinema يجمع مكتبتك على Android TV ويجعل هاتفك جهاز التحكم. أول تطبيق من MEEDX، استوديو أحمد النوري للتطبيقات والألعاب والعتاد.','Local Cinema brings your library to Android TV and puts the remote on your phone. The first app from MEEDX, Ahmed Al-Nouri’s software, gaming and hardware studio.')}</p><div className="hero-buttons"><a href="#downloads" className="button primary">{t('حمّل النسخة التجريبية','Get the beta')}<Download size={18}/></a><a href="#apps" className="button">{t('استكشف Local Cinema','Explore Local Cinema')}<ArrowUpRight size={18}/></a></div><div className="hero-meta"><span className="signal"/><code>v1.0.0-beta.1</code><span>{t('متاح للمعاينة','Preview available')}</span></div></div>
+ <div className="hardware"><div className="tv-frame">{image(heroTv.file,hero.name,{fetchPriority:'high',width:1920,height:1080})}<div className="bezel"><span>LOCAL CINEMA</span><i/></div><div className="stand"/></div><div className="phone-frame">{image(heroPhone.file,hero.name,{width:1080,height:2340})}</div><div className="frame-meta"><span><Monitor size={16}/> Android TV</span><span><Smartphone size={16}/> Android</span></div></div>
+ <div className="hero-foot"><span>MEEDX Studio</span><a href="#lab">{t('الألعاب وأدوات الحاسوب','Gaming & PC tools')}<ArrowDown size={16}/></a></div>
+ </section>
+ <section id="apps" className="band"><div className="wrap section"><div className="section-head"><div><h2>Local Cinema</h2><p>{t('معاينة قصيرة لمنظومة الشاشة والهاتف.','A short preview of the TV and phone apps.')}</p></div><code>beta.1</code></div><div className="gallery"><div className="gallery-media"><Swiper key={ar?'ar':'en'} dir={ar?'rtl':'ltr'} modules={[A11y,Keyboard,Navigation,Pagination]} keyboard={{enabled:true,onlyInViewport:true}} navigation pagination={{clickable:true}} onSwiper={()=>setSlide(0)} onSlideChange={s=>setSlide(s.activeIndex)}>{shots.map((shot,index)=><SwiperSlide key={shot.id}>
+   <div className={'paired-shots' + (shot.images.length===1?' solo':'')}>
+     {shot.images.map(photo=><button type="button" key={photo.file}
+       className={'gallery-device gallery-'+photo.device}
+       onClick={()=>setModal({id:'lightbox',index,device:photo.device})}
+       aria-label={t('تكبير لقطة ','Zoom screenshot: ')+label(photo.device)}>
+       {image(photo.file,shot.name+' · '+label(photo.device),{loading:index<2?'eager':'lazy'})}
+       <span><Maximize2 size={15}/>{t('تكبير','Zoom')} · {label(photo.device)}</span>
+     </button>)}
+   </div>
+ </SwiperSlide>)}</Swiper></div><article className="gallery-info"><code>{slide+1} / {shots.length}</code><h3>{shots[slide].name}</h3><p>{shots[slide].text}</p><button className="link" onClick={()=>contact()}>{t('شارك ملاحظة عن التطبيق','Share app feedback')}<MessageSquare size={17}/></button></article></div></div></section>
+ <section id="lab" className="wrap section"><div className="section-head"><div><h2>{t('الألعاب وأدوات الحاسوب','Gaming & PC tools')}</h2><p>{t('مساحة المشاريع القادمة.','A space for upcoming projects.')}</p></div></div><div className="lab">{[[Gamepad2,'Gaming & Tweaks',t('إعدادات التحكم وملفات تخصيص الألعاب.','Control layouts and game configurations.')],[Terminal,'PC Software & Scripts',t('أدوات Windows وPowerShell وADB.','Windows, PowerShell and ADB utilities.')]].map(([Icon,name,desc])=><article key={name}><Icon size={33}/><h3>{name}</h3><p>{desc}</p><span>{t('لا توجد ملفات منشورة في المعاينة','No files in this preview')}</span></article>)}</div></section>
+ <section id="services" className="band"><div className="wrap section services"><div><h2>{t('الخدمات التقنية','Technical services')}</h2><p>{t('صيانة الأجهزة وتطوير أدوات مخصصة.','Device maintenance and custom software.')}</p></div><div>{[t('صيانة الهواتف','Phone repair'),t('تجميع وصيانة الحاسوب','PC assembly & maintenance'),t('تطبيقات وسكربتات مخصصة','Custom apps & scripts')].map(name=><article key={name}><h3>{name}</h3><button className="link" onClick={()=>contact(name,'service')}>{t('اطلب عبر تلجرام','Request via Telegram')}<ArrowUpRight size={16}/></button></article>)}</div></div></section>
+ <section id="downloads" className="wrap section"><div className="section-head"><div><h2>{t('مركز التحميل','Downloads hub')}</h2><p>{t('ملفات النسخة التجريبية وبصمات التحقق.','Beta release files and verification hashes.')}</p></div><ShieldCheck size={31}/></div><div className="downloads">{catalog.filter(p=>p.available).map(p=><article key={p.id}><div className="file-title">{p.device==='tv'?<Monitor/>:<Smartphone/>}<div><h3>{p.name}</h3><code>v{p.version} · {(p.sizeBytes/1048576).toFixed(1)} MiB · APK</code></div><span className="signal" aria-label={t('متاح','Available')}/></div><details><summary>{t('سجل التغييرات والبصمة','Changelog & checksum')}</summary><p>{p.changelog[ar?'ar':'en']}</p><div className="hash"><code>SHA-256<br/>{p.sha256}</code><button onClick={()=>copy(p.sha256)} aria-label={t('نسخ بصمة ','Copy checksum for ')+p.name}><Copy size={17}/></button></div></details><div className="file-actions"><button className="button primary" onClick={()=>setModal({id:'download',file:p})}>{t('تنزيل APK','Download APK')}<Download size={17}/></button><button className="link" onClick={()=>contact(p.name)}>{t('بلاغ أو اقتراح','Report or suggest')}</button></div></article>)}</div></section>
+ </main>
+ <footer><div className="wrap foot"><div><a href="#" className="wordmark"><img src="/assets/meedx.svg" alt=""/>MEEDX</a><p>{t('أحمد النوري · تطبيقات، ألعاب وعتاد','Ahmed Al-Nouri · Apps, gaming & hardware')}</p></div><div><h3>{t('ادعم تطوير MEEDX','Support MEEDX development')}</h3><button className="link" onClick={support}>ZainCash / QiCard <Heart size={17}/></button></div><button className="button" onClick={()=>contact()}>{t('اقتراح أو طلب عمل','Feedback or work request')}<MessageSquare size={17}/></button></div></footer>
+ <div className="floating"><button className="primary" onClick={support}><Heart size={17}/>{t('ادعم MEEDX • زين كاش / Qi','Support MEEDX • ZainCash / Qi')}</button><button aria-label={t('نموذج تلجرام','Telegram form')} onClick={()=>contact()}><MessageSquare size={20}/></button></div>
+ {modal&&<Panels key={modal.id} modal={modal} close={()=>setModal(null)} shots={shots} t={t} copy={copy}/>}
+ <div className="toast" role="status">{toast}</div>
+ </>;
+}
+createRoot(document.getElementById('root')).render(<App/>);
