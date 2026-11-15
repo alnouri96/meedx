@@ -15,8 +15,10 @@ import screenshotGroups from './data/screenshots.json';
 import {screenshotCopy} from './data/screenshot-copy';
 import {Panels} from './panels';
 import {EquationPanel} from './EquationPanel';
+import {InteractiveShowcase} from './InteractiveShowcase';
 import './style.css';
 import './gallery.css';
+import './showcase.css';
 
 function App(){
  const [ar,setAr]=useState(true),[menu,setMenu]=useState(false),[modal,setModal]=useState(null),[slide,setSlide]=useState(0),[toast,setToast]=useState('');
@@ -53,7 +55,7 @@ function App(){
  <div className="hardware"><div className="tv-frame">{image(heroTv.file,hero.name,{fetchPriority:'high',width:1920,height:1080})}<div className="bezel"><span>LOCAL CINEMA</span><i/></div><div className="stand"/></div><div className="phone-frame">{image(heroPhone.file,hero.name,{width:1080,height:2340})}</div><div className="frame-meta"><span><Monitor size={16}/> Android TV</span><span><Smartphone size={16}/> Android</span></div></div>
  <div className="hero-foot"><span>MEEDX Studio</span><a href="#lab">{t('الألعاب وأدوات الحاسوب','Gaming & PC tools')}<ArrowDown size={16}/></a></div>
  </section>
- <section id="apps" className="band"><div className="wrap section"><div className="section-head"><div><h2>Local Cinema</h2><p>{t('معاينة قصيرة لمنظومة الشاشة والهاتف.','A short preview of the TV and phone apps.')}</p></div><code dir="ltr">{shortVersion}</code></div><EquationPanel t={t}/><div className="gallery"><div className="gallery-media"><Swiper key={ar?'ar':'en'} dir={ar?'rtl':'ltr'} modules={[A11y,Keyboard,Navigation,Pagination]} keyboard={{enabled:true,onlyInViewport:true}} navigation pagination={{clickable:true}} onSwiper={()=>setSlide(0)} onSlideChange={s=>setSlide(s.activeIndex)}>{shots.map((shot,index)=><SwiperSlide key={shot.id}>
+ <section id="apps" className="band"><div className="wrap section"><div className="section-head"><div><h2>Local Cinema</h2><p>{t('معاينة قصيرة لمنظومة الشاشة والهاتف.','A short preview of the TV and phone apps.')}</p></div><code dir="ltr">{shortVersion}</code></div><EquationPanel t={t}/><InteractiveShowcase t={t} L={L} copy={copy}/><div className="gallery"><div className="gallery-media"><Swiper key={ar?'ar':'en'} dir={ar?'rtl':'ltr'} modules={[A11y,Keyboard,Navigation,Pagination]} keyboard={{enabled:true,onlyInViewport:true}} navigation pagination={{clickable:true}} onSwiper={()=>setSlide(0)} onSlideChange={s=>setSlide(s.activeIndex)}>{shots.map((shot,index)=><SwiperSlide key={shot.id}>
    <div className={'paired-shots' + (shot.images.length===1?' solo':'')}>
      {shot.images.map(photo=><button type="button" key={photo.file}
        className={'gallery-device gallery-'+photo.device}
