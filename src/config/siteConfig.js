@@ -4,8 +4,8 @@ export const siteConfig = {
   ...{
   "brand": "MEEDX",
   "developer": {
-    "ar": "أحمد النوري",
-    "en": "Ahmed Al-Nouri"
+    "ar": "استوديو MEEDX",
+    "en": "MEEDX Studio"
   },
   "telegramUsername": "@اكتب_معرفك_هنا",
   "telegramLink": "https://t.me/MEEDXAPP",

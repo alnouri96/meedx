@@ -1,8 +1,25 @@
 # MEEDX · Local Cinema (`v1.0.0-beta.2`)
 
-منصة **MEEDX** وتطبيق **Local Cinema** لبث وإدارة مكتبتك المرئية والصوتية بين هاتف Android وتلفاز Android TV عبر الشبكة المحلية.
+منظومة **Local Cinema** المتكاملة تجمع مكتبة أفلامك ومسلسلاتك المحلية وعبر الويب على شاشة **Android TV** بواجهة سينمائية ذكية تجلب البوسترات والتقييمات والترجمة العربية تلقائياً، وتحوّل هاتفك إلى ريموت وماوس هوائي ويد تحكم متكاملة. الإصدار الأول من **MEEDX** — استوديو تطوير التطبيقات والألعاب والحلول التقنية.
 
-**MEEDX** & **Local Cinema** — A local-network media ecosystem pairing your Android TV player with your Android companion controller and media manager.
+The complete **Local Cinema** suite brings your local and web movies and series to **Android TV** with a smart cinematic interface featuring automatic posters, ratings, and Arabic subtitles—while turning your phone into a full remote, air mouse, and gamepad. The debut release by **MEEDX** — a studio for apps, games, and tech solutions.
+
+<p align="center">
+  <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الحي | Visit Live Website (meedx.pages.dev)</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.2"><strong>⬇️ تحميل v1.0.0-beta.2 | Releases</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://t.me/MEEDXAPP"><strong>💬 تلجرام | Telegram (@MEEDXAPP)</strong></a>
+</p>
+
+### الدعم المالي والتواصل | Support & Contact
+
+| الوسيلة / Channel | التفاصيل / Details |
+| --- | --- |
+| **الموقع الرسمي / Live Website** | [https://meedx.pages.dev](https://meedx.pages.dev) |
+| **زين كاش / ZainCash** | `+964781714448` · [عرض باركود ZainCash](public/assets/qr/zaincash-qr.png) |
+| **كي كارد / QiCard** | `7110031577` · [عرض باركود QiCard](public/assets/qr/qicard-qr.png) |
+| **تلجرام / Telegram** | [https://t.me/MEEDXAPP](https://t.me/MEEDXAPP) |
 
 ---
 
