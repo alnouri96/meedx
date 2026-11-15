@@ -9,6 +9,7 @@
 - **الموقع الحي (Cloudflare Pages):** `https://meedx.pages.dev`
 - **تغذية التحديثات التلقائية (`version.json`):** `https://meedx.pages.dev/api/version.json`
 - **مستودع GitHub العام:** `https://github.com/alnouri96/meedx`
+- **بروفايل GitHub للاستوديو:** `https://github.com/alnouri96` (مستودع `https://github.com/alnouri96/alnouri96`)
 - **صفحة الإصدارات (GitHub Releases):** `https://github.com/alnouri96/meedx/releases`
 - **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.3`
 
@@ -60,4 +61,5 @@
 | `2026-11-15` | `d5e4a36` | إضافة 4 شرائح جديدة لريموت ولوحة لمس الهاتف والكتابة داخل المتصفح ويوتيوب (13 شريحة). | لا يوجد |
 | `2026-11-15` | `4764f57` | إضافة شريحة مشاركة مجلدات ويندوز عبر `SMB` (`20-54-00`) ودعم نمط `.gallery-pc` (14 شريحة). | لا يوجد |
 | `2026-11-15` | `40b6031` | حذف ملفات `APK` المكررة وأرشيفات `ZIP`، وتحديث `verify-downloads.mjs` و`sync-assets.py` للقراءة من `G:\Local Cinema\releases\` مباشرة، وإيقاف `backup-site.*` عن إنشاء ZIP، واعتماد `AGENT_HANDOFF.md`. | لا يوجد |
-| `2026-11-15` | `4294cc0` | إطلاق `v1.0.0-beta.3` (`versionCode = 3`) على GitHub Releases مباشرة من `G:\Local Cinema\releases\v1.0.0-beta.3\`، وتحديث `README.md` بباركودات الدعم والموقع، وتحديث `catalog.json` و`version.json` والنشر الحي على Cloudflare Pages. | لا يوجد |
+| `2026-11-15` | `ac369c4` | تحديث `AGENT_HANDOFF.md` ببيانات `v1.0.0-beta.3`. | لا يوجد |
+| `2026-11-15` | `HEAD` | توليد بطاقتي البانر (`meedx-hero-banner.png` و`local-cinema-card.png`)، إنشاء ونشر مستودع البروفايل `alnouri96/alnouri96` مع باركودات الدعم، وتوحيد واجهة `README.md` في `alnouri96/meedx`. | تحديث اسم ووصف البروفايل عبر `gh auth refresh -h github.com -s user` (إن لم يُحدّث من إعدادات GitHub). |

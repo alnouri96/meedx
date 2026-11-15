@@ -1,5 +1,11 @@
 # MEEDX · Local Cinema (`v1.0.0-beta.3`)
 
+<p align="center">
+  <a href="https://meedx.pages.dev">
+    <img src="public/assets/github/local-cinema-card.png" alt="Local Cinema — شاشتك ومكتبتك، بيدك" width="100%" />
+  </a>
+</p>
+
 منظومة **Local Cinema** المتكاملة تجمع مكتبة أفلامك ومسلسلاتك المحلية وعبر الويب على شاشة **Android TV** بواجهة سينمائية ذكية تجلب البوسترات والتقييمات والترجمة العربية تلقائياً، وتحوّل هاتفك إلى ريموت وماوس هوائي ويد تحكم متكاملة. الإصدار الأول من **MEEDX** — استوديو تطوير التطبيقات والألعاب والحلول التقنية.
 
 The complete **Local Cinema** suite brings your local and web movies and series to **Android TV** with a smart cinematic interface featuring automatic posters, ratings, and Arabic subtitles—while turning your phone into a full remote, air mouse, and gamepad. The debut release by **MEEDX** — a studio for apps, games, and tech solutions.
