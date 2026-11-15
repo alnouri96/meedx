@@ -23,7 +23,8 @@ for (const p of catalog.filter(p => p.available)) {
   assert.equal((await stat(file)).size, p.sizeBytes, p.name);
   assert.equal(h.digest('hex'), p.sha256, p.name);
 
-  assert.match(p.url, /^https:\/\/github\.com\/alnouri96\/meedx\/releases\/download\/v1\.0\.0-beta\.2\//);
+  const escapedVersion = p.version.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  assert.match(p.url, new RegExp(`^https://github\\.com/alnouri96/meedx/releases/download/v${escapedVersion}/`));
 
   const record = feed.builds.find(build => build.id === p.id);
   assert.deepEqual(record, p);
