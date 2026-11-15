@@ -33,8 +33,8 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 | --- | :---: | :---: |
 | **نشر مكتبة الهاتف على التلفاز**<br>Publishing the phone library to TV | ![TV Library](public/assets/screenshots/tv_2026-11-15_15-19-11.png) | ![Phone TV Hub](public/assets/screenshots/phone_2026-11-15_15-19-11.png) |
 | **اقتران الهاتف بالتلفاز**<br>Pairing the phone and TV | ![TV Pairing](public/assets/screenshots/tv_2026-11-15_15-18-45.png) | ![Phone Connection](public/assets/screenshots/phone_2026-11-15_15-18-45.png) |
-| **تشغيل الفيديو والتحكم من الهاتف**<br>Video playback with phone controls | ![TV Playback](public/assets/screenshots/tv_2026-11-15_15-53-20.png) | ![Phone Remote Controls](public/assets/screenshots/phone_2026-11-15_15-53-20.png) |
-| **عرض الترجمة العربية**<br>Arabic subtitles during playback | ![TV Arabic Subtitles](public/assets/screenshots/tv_2026-11-15_15-53-36.png) | ![Phone Subtitles Button](public/assets/screenshots/phone_2026-11-15_15-53-36.png) |
+| **صفحة تفاصيل الفيلم والتقييمات**<br>Movie details and ratings page | ![TV Movie Details](public/assets/screenshots/tv_2026-11-15_19-41-02.png) | ![Phone Library Tab](public/assets/screenshots/phone_2026-11-15_19-41-02.png) |
+| **تشغيل الفيلم والتحكم من الهاتف**<br>Movie playback with phone controls | ![TV Playback](public/assets/screenshots/tv_2026-11-15_19-42-17.png) | ![Phone Remote Controls](public/assets/screenshots/phone_2026-11-15_19-42-17.png) |
 | **بث الصوت والموجات الذهبية**<br>Audio casting & gold visualizer | ![TV Audio Visualizer](public/assets/screenshots/tv_2026-11-15_15-55-13.png) | ![Phone Audio Queue](public/assets/screenshots/phone_2026-11-15_15-55-13.png) |
 | **عرض الصور من الهاتف**<br>Casting photos from the phone | ![TV Photo Cast](public/assets/screenshots/tv_2026-11-15_15-58-19.png) | ![Phone Photo Cast](public/assets/screenshots/phone_2026-11-15_15-58-19.png) |
 
