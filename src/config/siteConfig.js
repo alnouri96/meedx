@@ -21,7 +21,7 @@ export const siteConfig = {
       "configured": true
     }
   },
-  "githubReleases": "https://github.com/alnouri96/local-cinema/releases",
+  "githubReleases": "https://github.com/alnouri96/meedx/releases",
   "turnstileSiteKey": "",
   "downloadsMode": "local"
 },

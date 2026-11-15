@@ -19,6 +19,6 @@ The pairing QR and TV network address are covered in the served TV capture, and 
 
 ## APK updates
 
-`src/data/catalog.json` lists eight APKs with package IDs, versions, exact sizes, and SHA-256 hashes. The website serves the APKs locally. The optional Arabic, LTR, and legacy builds are separate download choices. `public/api/version.json` keeps the app-compatible `tv` and `phone` entries for the standard beta and lists all variants under `builds`. The release URLs use the project’s existing GitHub release path. Verify public HTTPS availability and publish the feed at the URL compiled into the apps before relying on remote automatic updates.
+The catalog and local download folder contain the two audited beta.2 builds. The corresponding input APKs are in `MEEDX_Assets/04_Apps_APK`. The update feed contains proposed GitHub Release URLs for the two exact filenames. Upload the audited files and verify unauthenticated HTTPS access and hashes before publishing the feed. The URLs are not yet verified.
 
 The site remains a local preview. The download confirmation is a UI step. Any future bot protection requires verification on the server.
