@@ -67,30 +67,31 @@ for key, number_key in [('zaincash','ZainCash_Number'), ('qicard','QiCard_Number
     payments[key] = {'number': wallets[number_key].strip(), 'qr': f'/assets/qr/{qr.name}', 'configured': True}
 
 aapt = Path(os.environ['LOCALAPPDATA'])/'Android/Sdk/build-tools/36.0.0/aapt.exe'
+releases_root = Path(os.environ.get('LOCAL_CINEMA_RELEASES', 'G:/Local Cinema/releases'))
+release_dir = releases_root / 'v1.0.0-beta.2'
+if not release_dir.exists():
+    release_dir = releases_root
 feed, catalog = {}, []
-for file in sorted((assets/'04_Apps_APK').glob('*.apk')):
+for file in sorted(release_dir.glob('*.apk')):
     raw = subprocess.check_output([str(aapt), 'dump', 'badging', str(file)], stderr=subprocess.DEVNULL)
     package, code, version = re.search(rb"^package: name='([^']+)' versionCode='([^']+)' versionName='([^']+)'", raw, re.M).groups()
     package, code, version = package.decode(), int(code), version.decode()
     device = 'phone' if 'Phone' in file.name else 'tv'
     variant = 'legacy' if file.name.startswith('Local-Cinema') else 'arabic' if '-Arabic' in file.stem else 'ltr' if '-LTR' in file.stem else 'standard'
-    suffix = {'standard':'', 'legacy':' (legacy)', 'arabic':' (Arabic)', 'ltr':' (LTR)'}[variant]
-    name = ('Local Cinema TV' if device == 'tv' else 'Local Cinema Manager') + suffix
-    dest = public/'downloads'/file.name
-    shutil.copyfile(file, dest)
-    with dest.open('rb') as apk:
+    if variant != 'standard':
+        continue
+    name = 'Local Cinema TV' if device == 'tv' else 'Local Cinema Manager'
+    with file.open('rb') as apk:
         sha = hashlib.file_digest(apk, 'sha256').hexdigest()
-    entry = dict(id=device if variant == 'standard' else f'{device}-{variant}', device=device,
-                 variant=variant, packageId=package, name=name, available=True, version=version,
-                 versionCode=code, url=f'/downloads/{file.name}', sizeBytes=dest.stat().st_size, sha256=sha,
-                 changelog={'en': 'APK supplied in the MEEDX asset bundle.',
-                            'ar': 'ملف APK من حزمة MEEDX.'})
+    release_url = f'https://github.com/alnouri96/meedx/releases/download/v{version}/{file.name}'
+    entry = dict(id=device, device=device, variant=variant, packageId=package, name=name, available=True,
+                 version=version, versionCode=code, url=release_url, sizeBytes=file.stat().st_size, sha256=sha,
+                 changelog={'en': 'APK verified directly from G:/Local Cinema/releases.',
+                            'ar': 'ملف APK موثّق مباشرة من المسار الأصلي.'})
     catalog.append(entry)
-    if variant == 'standard':
-        feed[device] = dict(latestVersionCode=code, latestVersionName=version, versionCode=code,
-                            versionName=version, sizeBytes=entry['sizeBytes'], sha256=sha,
-                            changelog=entry['changelog']['en'],
-                            apkUrl=f'https://github.com/alnouri96/meedx/releases/download/v{version}/{file.name}')
+    feed[device] = dict(latestVersionCode=code, latestVersionName=version, versionCode=code,
+                        versionName=version, sizeBytes=entry['sizeBytes'], sha256=sha,
+                        changelog=entry['changelog']['en'], apkUrl=release_url)
 catalog.sort(key=lambda e: ('standard','arabic','ltr','legacy').index(e['variant']) * 2 + (e['device'] == 'phone'))
 feed['builds'] = catalog
 write_json(root/'src/data/catalog.json', catalog)

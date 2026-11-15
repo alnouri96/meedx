@@ -1,21 +1,22 @@
 import { createReadStream, existsSync } from 'node:fs';
 import { readFile, stat } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { basename } from 'node:path';
+import { basename, join } from 'node:path';
 import assert from 'node:assert/strict';
 
 const root = new URL('../', import.meta.url);
+const releasesRoot = process.env.LOCAL_CINEMA_RELEASES || 'G:/Local Cinema/releases';
 const catalog = JSON.parse(await readFile(new URL('src/data/catalog.json', root), 'utf8'));
 const feed = JSON.parse(await readFile(new URL('public/api/version.json', root), 'utf8'));
 
 for (const p of catalog.filter(p => p.available)) {
   const filename = basename(p.url);
   const candidates = [
-    new URL('MEEDX_Assets/04_Apps_APK/' + filename, root),
-    new URL('public/downloads/' + filename, root),
+    join(releasesRoot, `v${p.version}`, filename),
+    join(releasesRoot, filename),
   ];
   const file = candidates.find(candidate => existsSync(candidate));
-  assert.ok(file, `Local APK file missing for verification: ${filename}`);
+  assert.ok(file, `Original APK file missing in ${releasesRoot} for verification: ${filename}`);
 
   const h = createHash('sha256');
   for await (const chunk of createReadStream(file)) h.update(chunk);
@@ -32,5 +33,5 @@ for (const p of catalog.filter(p => p.available)) {
   assert.equal(feed[p.id].latestVersionCode, p.versionCode);
   assert.equal(feed[p.id].latestVersionName, p.version);
   assert.equal(feed[p.id].apkUrl, p.url);
-  console.log('Verified', p.name, p.sizeBytes, p.sha256);
+  console.log('Verified (source)', file, p.sizeBytes, p.sha256);
 }
