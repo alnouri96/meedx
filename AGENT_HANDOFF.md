@@ -10,20 +10,20 @@
 - **تغذية التحديثات التلقائية (`version.json`):** `https://meedx.pages.dev/api/version.json`
 - **مستودع GitHub العام:** `https://github.com/alnouri96/meedx`
 - **صفحة الإصدارات (GitHub Releases):** `https://github.com/alnouri96/meedx/releases`
-- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.2`
+- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.3`
 
 ---
 
 ## 2. الحالة الحالية | Current State
 
-### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.2` · `versionCode = 2`)
+### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.3` · `versionCode = 3`)
 
 | التطبيق | الحزمة (`Package ID`) | الحجم (بايت) | بصمة `SHA-256` | رابط التحميل المباشر |
 | --- | --- | ---: | --- | --- |
-| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38623848` | `245b51c1adfd48bb2344afd7d20eadd278bf8fe9680b720468bcc9aa19b1b372` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-TV-v1.0.0-beta.2.apk` |
-| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `605953911` | `d0ac4190867a8d0f5cfd0eeca606b9671a1a2db39e8b6a5ee00299fbef397750` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-Manager-Phone-v1.0.0-beta.2.apk` |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38624372` | `1b35502386683b7a0028e381563aee855d4e6045a667719a9cf42cd08d76e7b2` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-TV-v1.0.0-beta.3.apk` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `605953911` | `0c41633b3b3014a26f7a811b13771590cb0dc75d1d208a26e9bf0da5a2609c61` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-Manager-Phone-v1.0.0-beta.3.apk` |
 
-- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.2\`
+- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.3\`
 - **ملف تسليم التطبيقات المرجعي:** `G:\Local Cinema\AGENT_HANDOFF.md`
 
 ### ب) حالة الواجهة والمزايا المنشورة
@@ -59,4 +59,5 @@
 | `2026-11-15` | `0891a45` | استبدال الشريحة 1 بلقطة الاقتران الجديدة (`20-28-48`) وتقديم الشريحتين `19-41-02` و`15-59-12` إلى البداية. | لا يوجد |
 | `2026-11-15` | `d5e4a36` | إضافة 4 شرائح جديدة لريموت ولوحة لمس الهاتف والكتابة داخل المتصفح ويوتيوب (13 شريحة). | لا يوجد |
 | `2026-11-15` | `4764f57` | إضافة شريحة مشاركة مجلدات ويندوز عبر `SMB` (`20-54-00`) ودعم نمط `.gallery-pc` (14 شريحة). | لا يوجد |
-| `2026-11-15` | `HEAD` | حذف ملفات `APK` المكررة وأرشيفات `ZIP`، وتحديث `verify-downloads.mjs` و`sync-assets.py` للقراءة من `G:\Local Cinema\releases\` مباشرة، وإيقاف `backup-site.*` عن إنشاء ZIP، واعتماد `AGENT_HANDOFF.md`. | لا يوجد |
+| `2026-11-15` | `40b6031` | حذف ملفات `APK` المكررة وأرشيفات `ZIP`، وتحديث `verify-downloads.mjs` و`sync-assets.py` للقراءة من `G:\Local Cinema\releases\` مباشرة، وإيقاف `backup-site.*` عن إنشاء ZIP، واعتماد `AGENT_HANDOFF.md`. | لا يوجد |
+| `2026-11-15` | `4294cc0` | إطلاق `v1.0.0-beta.3` (`versionCode = 3`) على GitHub Releases مباشرة من `G:\Local Cinema\releases\v1.0.0-beta.3\`، وتحديث `README.md` بباركودات الدعم والموقع، وتحديث `catalog.json` و`version.json` والنشر الحي على Cloudflare Pages. | لا يوجد |
