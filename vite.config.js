@@ -4,12 +4,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
-export default defineConfig(({ mode }) => {
-  const pages = mode === 'pages';
-  const plugins = [react(), tailwindcss()];
-
-  if (pages) {
-    plugins.push({
+export default defineConfig(() => {
+  const plugins = [
+    react(),
+    tailwindcss(),
+    {
       name: 'pages-static-assets',
       writeBundle(options) {
         const output = options.dir;
@@ -17,12 +16,12 @@ export default defineConfig(({ mode }) => {
         cpSync(resolve('public/_headers'), resolve(output, '_headers'));
         cpSync(resolve('public/api'), resolve(output, 'api'), { recursive: true });
       },
-    });
-  }
+    },
+  ];
 
   return {
     plugins,
-    build: { copyPublicDir: !pages },
+    build: { copyPublicDir: false },
     server: { port: 5173, strictPort: true },
     preview: { port: 4173, strictPort: true },
   };

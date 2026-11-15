@@ -6,7 +6,7 @@
     "versionName": "1.0.0-beta.2",
     "sizeBytes": 38623848,
     "sha256": "245b51c1adfd48bb2344afd7d20eadd278bf8fe9680b720468bcc9aa19b1b372",
-    "changelog": "Local Cinema beta.2 release.",
+    "changelog": "Local Cinema v1.0.0-beta.2: Zero-config posters & ratings (Cinemeta/TVmaze/Jikan/Arabic Wikipedia) and Subtitles source settings (Subsource default, OpenSubtitles, or both).",
     "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-TV-v1.0.0-beta.2.apk"
   },
   "phone": {
@@ -16,7 +16,7 @@
     "versionName": "1.0.0-beta.2",
     "sizeBytes": 605953911,
     "sha256": "d0ac4190867a8d0f5cfd0eeca606b9671a1a2db39e8b6a5ee00299fbef397750",
-    "changelog": "Local Cinema beta.2 release.",
+    "changelog": "Local Cinema Manager v1.0.0-beta.2: Companion controller & TV Hub release.",
     "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-Manager-Phone-v1.0.0-beta.2.apk"
   },
   "builds": [
@@ -29,12 +29,12 @@
       "available": true,
       "version": "1.0.0-beta.2",
       "versionCode": 2,
-      "url": "/downloads/LocalCinema-TV-v1.0.0-beta.2.apk",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-TV-v1.0.0-beta.2.apk",
       "sizeBytes": 38623848,
       "sha256": "245b51c1adfd48bb2344afd7d20eadd278bf8fe9680b720468bcc9aa19b1b372",
       "changelog": {
-        "en": "Local Cinema beta.2 release.",
-        "ar": "إصدار Local Cinema التجريبي الثاني."
+        "en": "Zero-config open posters & ratings (Cinemeta, TVmaze, Jikan, Arabic Wikipedia) and Subtitles source settings (Subsource default, OpenSubtitles, or both).",
+        "ar": "بوسترات وتقييمات تلقائية بلا مفاتيح (Cinemeta وTVmaze وJikan وويكيبيديا العربية) وإعدادات مصادر الترجمة (Subsource افتراضياً أو OpenSubtitles أو كليهما)."
       }
     },
     {
@@ -46,12 +46,12 @@
       "available": true,
       "version": "1.0.0-beta.2",
       "versionCode": 2,
-      "url": "/downloads/LocalCinema-Manager-Phone-v1.0.0-beta.2.apk",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-Manager-Phone-v1.0.0-beta.2.apk",
       "sizeBytes": 605953911,
       "sha256": "d0ac4190867a8d0f5cfd0eeca606b9671a1a2db39e8b6a5ee00299fbef397750",
       "changelog": {
-        "en": "Local Cinema beta.2 release.",
-        "ar": "إصدار Local Cinema التجريبي الثاني."
+        "en": "Local Cinema Manager beta.2 companion build with TV Hub pairing, remote control, and updated version metadata (code 2).",
+        "ar": "الإصدار التجريبي الثاني لتطبيق الهاتف المرافق مع TV Hub وأدوات التحكم عن بُعد والاقتران."
       }
     }
   ]

@@ -90,15 +90,15 @@ for file in sorted((assets/'04_Apps_APK').glob('*.apk')):
         feed[device] = dict(latestVersionCode=code, latestVersionName=version, versionCode=code,
                             versionName=version, sizeBytes=entry['sizeBytes'], sha256=sha,
                             changelog=entry['changelog']['en'],
-                            apkUrl=f'https://github.com/alnouri96/local-cinema/releases/download/v{version}/{file.name}')
+                            apkUrl=f'https://github.com/alnouri96/meedx/releases/download/v{version}/{file.name}')
 catalog.sort(key=lambda e: ('standard','arabic','ltr','legacy').index(e['variant']) * 2 + (e['device'] == 'phone'))
 feed['builds'] = catalog
 write_json(root/'src/data/catalog.json', catalog)
 write_json(public/'api/version.json', feed)
 config = dict(brand='MEEDX', developer={'ar':'أحمد النوري','en':'Ahmed Al-Nouri'},
               telegramUsername=telegram['Telegram_Username'].strip(), telegramLink=telegram['Telegram_Link'].strip(),
-              payments=payments, githubReleases='https://github.com/alnouri96/local-cinema/releases',
-              turnstileSiteKey='', downloadsMode='local')
+              payments=payments, githubReleases='https://github.com/alnouri96/meedx/releases',
+              turnstileSiteKey='', downloadsMode='github-releases')
 (root/'src/config/siteConfig.js').write_text(
     "import catalog from '../data/catalog.json';\n\nexport const siteConfig = {\n  ..."
     + json.dumps(config, ensure_ascii=False, indent=2) + ",\n  downloads: catalog,\n};\n", encoding='utf-8')
