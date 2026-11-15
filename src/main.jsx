@@ -35,7 +35,7 @@ function App(){
  const hero=shots.find(shot=>shot.id==='15-19-11') ?? shots[0];
  const heroTv=hero.images.find(photo=>photo.device==='tv');
  const heroPhone=hero.images.find(photo=>photo.device==='phone');
- const label=device=>device==='tv'?t('التلفاز','TV'):t('الهاتف','Phone');
+ const label=device=>device==='tv'?t('التلفاز','TV'):device==='pc'?t('الحاسوب','Windows PC'):t('الهاتف','Phone');
  useEffect(()=>{document.documentElement.lang=ar?'ar':'en';document.documentElement.dir=ar?'rtl':'ltr';document.title=t('MEEDX — استوديو تطوير التطبيقات والألعاب والحلول التقنية','MEEDX — Apps, games & tech solutions studio')},[ar]);
  useEffect(()=>{if(!toast)return;const id=setTimeout(()=>setToast(''),2200);return()=>clearTimeout(id)},[toast]);
  async function copy(value){try{await navigator.clipboard.writeText(value);setToast(t('تم النسخ','Copied'))}catch{setToast(t('تعذر النسخ. حدّد النص وانسخه يدوياً.','Select and copy the text manually.'))}}
