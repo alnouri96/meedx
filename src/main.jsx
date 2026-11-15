@@ -14,6 +14,7 @@ import {siteConfig} from './config/siteConfig';
 import screenshotGroups from './data/screenshots.json';
 import {screenshotCopy} from './data/screenshot-copy';
 import {Panels} from './panels';
+import {EquationPanel} from './EquationPanel';
 import './style.css';
 import './gallery.css';
 
@@ -51,7 +52,7 @@ function App(){
  <div className="hardware"><div className="tv-frame">{image(heroTv.file,hero.name,{fetchPriority:'high',width:1920,height:1080})}<div className="bezel"><span>LOCAL CINEMA</span><i/></div><div className="stand"/></div><div className="phone-frame">{image(heroPhone.file,hero.name,{width:1080,height:2340})}</div><div className="frame-meta"><span><Monitor size={16}/> Android TV</span><span><Smartphone size={16}/> Android</span></div></div>
  <div className="hero-foot"><span>MEEDX Studio</span><a href="#lab">{t('الألعاب وأدوات الحاسوب','Gaming & PC tools')}<ArrowDown size={16}/></a></div>
  </section>
- <section id="apps" className="band"><div className="wrap section"><div className="section-head"><div><h2>Local Cinema</h2><p>{t('معاينة قصيرة لمنظومة الشاشة والهاتف.','A short preview of the TV and phone apps.')}</p></div><code dir="ltr">{shortVersion}</code></div><div className="gallery"><div className="gallery-media"><Swiper key={ar?'ar':'en'} dir={ar?'rtl':'ltr'} modules={[A11y,Keyboard,Navigation,Pagination]} keyboard={{enabled:true,onlyInViewport:true}} navigation pagination={{clickable:true}} onSwiper={()=>setSlide(0)} onSlideChange={s=>setSlide(s.activeIndex)}>{shots.map((shot,index)=><SwiperSlide key={shot.id}>
+ <section id="apps" className="band"><div className="wrap section"><div className="section-head"><div><h2>Local Cinema</h2><p>{t('معاينة قصيرة لمنظومة الشاشة والهاتف.','A short preview of the TV and phone apps.')}</p></div><code dir="ltr">{shortVersion}</code></div><EquationPanel t={t}/><div className="gallery"><div className="gallery-media"><Swiper key={ar?'ar':'en'} dir={ar?'rtl':'ltr'} modules={[A11y,Keyboard,Navigation,Pagination]} keyboard={{enabled:true,onlyInViewport:true}} navigation pagination={{clickable:true}} onSwiper={()=>setSlide(0)} onSlideChange={s=>setSlide(s.activeIndex)}>{shots.map((shot,index)=><SwiperSlide key={shot.id}>
    <div className={'paired-shots' + (shot.images.length===1?' solo':'')}>
      {shot.images.map(photo=><button type="button" key={photo.file}
        className={'gallery-device gallery-'+photo.device}
@@ -105,7 +106,7 @@ function App(){
  </main>
  <footer><div className="wrap foot"><div><a href="#" className="wordmark"><img src="/assets/meedx.svg" alt=""/>MEEDX</a><p>{t('أحمد النوري · تطبيقات، ألعاب وعتاد','Ahmed Al-Nouri · Apps, gaming & hardware')}</p></div><div><h3>{t('ادعم تطوير MEEDX','Support MEEDX development')}</h3><button className="link" onClick={support}>ZainCash / QiCard <Heart size={17}/></button></div><button className="button" onClick={()=>contact()}>{t('اقتراح أو طلب عمل','Feedback or work request')}<MessageSquare size={17}/></button></div></footer>
  <div className="floating"><button className="primary" onClick={support}><Heart size={17}/>{t('ادعم MEEDX • زين كاش / Qi','Support MEEDX • ZainCash / Qi')}</button><button aria-label={t('نموذج تلجرام','Telegram form')} onClick={()=>contact()}><MessageSquare size={20}/></button></div>
- {modal&&<Panels key={modal.id} modal={modal} close={()=>setModal(null)} shots={shots} t={t} copy={copy}/>}
+ {modal&&<Panels key={modal.id} modal={modal} setModal={setModal} close={()=>setModal(null)} shots={shots} t={t} copy={copy}/>}
  <div className="toast" role="status">{toast}</div>
  </>;
 }

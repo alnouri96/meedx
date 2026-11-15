@@ -35,7 +35,7 @@ try{
   await pair.getByRole('button',{name:'تكبير لقطة التلفاز',exact:true}).click();
   const zoom=page.getByRole('dialog');
   const stage=zoom.locator('.zoom-stage');
-  await expect(stage.locator('img')).toHaveAttribute('src',/tv_.*15-19-11/);
+  await expect(stage.locator('img')).toHaveAttribute('src',/tv_.*15-19-11/); await expect.poll(()=>stage.locator('img').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true); const fit=await stage.evaluate(el=>{const s=el.getBoundingClientRect(),i=el.querySelector('img').getBoundingClientRect();return i.top>=s.top-1&&i.bottom<=s.bottom+1&&i.left>=s.left-1&&i.right<=s.right+1;}); assert.equal(fit,true,'100% image must fit inside zoom-stage without clipping'); if(screenshots)await shot(page,prefix+'-zoom-100');
   await zoom.getByRole('button',{name:'تكبير',exact:true}).click();
   await expect(zoom.locator('output')).toHaveText('125%');
   const rangeControl=zoom.getByRole('slider');
@@ -76,7 +76,7 @@ try{
    assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),await card.locator('code').textContent(),'account clipboard');
   }
   assert.equal(await page.getByRole('dialog').locator('img').count(),2); await expect.poll(()=>page.getByRole('dialog').locator('img').evaluateAll(imgs=>imgs.every(img=>img.complete&&img.naturalWidth>0))).toBe(true);
-  if(screenshots)await shot(page,prefix+'-support');
+  if(screenshots)await shot(page,prefix+'-support'); await page.getByRole('button',{name:'تكبير باركود كي كارد / الماستر',exact:true}).click(); const qrStage=page.getByRole('dialog').locator('.zoom-stage[data-qr="true"]'); await expect(qrStage.locator('img')).toHaveAttribute('src',/qicard-qr\.png/); await expect.poll(()=>qrStage.locator('img').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true); const qrBg=await qrStage.locator('img').evaluate(img=>getComputedStyle(img).backgroundColor); assert.equal(qrBg,'rgb(255, 255, 255)'); if(screenshots)await shot(page,prefix+'-qr-zoom'); await page.getByRole('button',{name:'العودة للدعم',exact:true}).click();
   await page.getByRole('button',{name:'إغلاق',exact:true}).click();
   await open(page,'نموذج تلجرام');
   await page.locator('#type').selectOption('bug');
