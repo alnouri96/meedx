@@ -23,7 +23,7 @@ export const siteConfig = {
   },
   "githubReleases": "https://github.com/alnouri96/meedx/releases",
   "turnstileSiteKey": "",
-  "downloadsMode": "local"
+  "downloadsMode": "github-releases"
 },
   downloads: catalog,
 };
