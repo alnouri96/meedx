@@ -1,23 +1,23 @@
 {
-  "phone": {
-    "latestVersionCode": 1,
-    "latestVersionName": "1.0.0-beta.1",
-    "versionCode": 1,
-    "versionName": "1.0.0-beta.1",
-    "sizeBytes": 605903278,
-    "sha256": "e3152660cd93ac9a0f83f7a1d6e672381918c589e118b909accb4288f28cee12",
-    "changelog": "APK supplied in the MEEDX asset bundle.",
-    "apkUrl": "https://github.com/alnouri96/local-cinema/releases/download/v1.0.0-beta.1/LocalCinema-Manager-Phone-v1.0.0-beta.1.apk"
-  },
   "tv": {
-    "latestVersionCode": 1,
-    "latestVersionName": "1.0.0-beta.1",
-    "versionCode": 1,
-    "versionName": "1.0.0-beta.1",
-    "sizeBytes": 38496611,
-    "sha256": "2d8c1be646c65c31ea02001ef2cf075ee7346538b4b8cc4af622b43044db6b36",
-    "changelog": "APK supplied in the MEEDX asset bundle.",
-    "apkUrl": "https://github.com/alnouri96/local-cinema/releases/download/v1.0.0-beta.1/LocalCinema-TV-v1.0.0-beta.1.apk"
+    "latestVersionCode": 2,
+    "latestVersionName": "1.0.0-beta.2",
+    "versionCode": 2,
+    "versionName": "1.0.0-beta.2",
+    "sizeBytes": 38623848,
+    "sha256": "245b51c1adfd48bb2344afd7d20eadd278bf8fe9680b720468bcc9aa19b1b372",
+    "changelog": "Local Cinema beta.2 release.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-TV-v1.0.0-beta.2.apk"
+  },
+  "phone": {
+    "latestVersionCode": 2,
+    "latestVersionName": "1.0.0-beta.2",
+    "versionCode": 2,
+    "versionName": "1.0.0-beta.2",
+    "sizeBytes": 605953911,
+    "sha256": "d0ac4190867a8d0f5cfd0eeca606b9671a1a2db39e8b6a5ee00299fbef397750",
+    "changelog": "Local Cinema beta.2 release.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-Manager-Phone-v1.0.0-beta.2.apk"
   },
   "builds": [
     {
@@ -27,14 +27,14 @@
       "packageId": "com.meedx.localcinema.tv",
       "name": "Local Cinema TV",
       "available": true,
-      "version": "1.0.0-beta.1",
-      "versionCode": 1,
-      "url": "/downloads/LocalCinema-TV-v1.0.0-beta.1.apk",
-      "sizeBytes": 38496611,
-      "sha256": "2d8c1be646c65c31ea02001ef2cf075ee7346538b4b8cc4af622b43044db6b36",
+      "version": "1.0.0-beta.2",
+      "versionCode": 2,
+      "url": "/downloads/LocalCinema-TV-v1.0.0-beta.2.apk",
+      "sizeBytes": 38623848,
+      "sha256": "245b51c1adfd48bb2344afd7d20eadd278bf8fe9680b720468bcc9aa19b1b372",
       "changelog": {
-        "en": "APK supplied in the MEEDX asset bundle.",
-        "ar": "ملف APK من حزمة MEEDX."
+        "en": "Local Cinema beta.2 release.",
+        "ar": "إصدار Local Cinema التجريبي الثاني."
       }
     },
     {
@@ -44,116 +44,14 @@
       "packageId": "com.meedx.localcinema.manager",
       "name": "Local Cinema Manager",
       "available": true,
-      "version": "1.0.0-beta.1",
-      "versionCode": 1,
-      "url": "/downloads/LocalCinema-Manager-Phone-v1.0.0-beta.1.apk",
-      "sizeBytes": 605903278,
-      "sha256": "e3152660cd93ac9a0f83f7a1d6e672381918c589e118b909accb4288f28cee12",
+      "version": "1.0.0-beta.2",
+      "versionCode": 2,
+      "url": "/downloads/LocalCinema-Manager-Phone-v1.0.0-beta.2.apk",
+      "sizeBytes": 605953911,
+      "sha256": "d0ac4190867a8d0f5cfd0eeca606b9671a1a2db39e8b6a5ee00299fbef397750",
       "changelog": {
-        "en": "APK supplied in the MEEDX asset bundle.",
-        "ar": "ملف APK من حزمة MEEDX."
-      }
-    },
-    {
-      "id": "tv-arabic",
-      "device": "tv",
-      "variant": "arabic",
-      "packageId": "com.meedx.localcinema.tv",
-      "name": "Local Cinema TV (Arabic)",
-      "available": true,
-      "version": "1.0.0-beta.1",
-      "versionCode": 1,
-      "url": "/downloads/LocalCinema-TV-v1.0.0-beta.1-Arabic.apk",
-      "sizeBytes": 38595791,
-      "sha256": "118dfc59bf1421073822a8239c0bb3fdbd868222b7567391ba9ed07976f75594",
-      "changelog": {
-        "en": "APK supplied in the MEEDX asset bundle.",
-        "ar": "ملف APK من حزمة MEEDX."
-      }
-    },
-    {
-      "id": "phone-arabic",
-      "device": "phone",
-      "variant": "arabic",
-      "packageId": "com.meedx.localcinema.manager",
-      "name": "Local Cinema Manager (Arabic)",
-      "available": true,
-      "version": "1.0.0-beta.1",
-      "versionCode": 1,
-      "url": "/downloads/LocalCinema-Manager-Phone-v1.0.0-beta.1-Arabic.apk",
-      "sizeBytes": 605953331,
-      "sha256": "e434625a3421cc52f7243bc6fbfd49691985a9540cdc80c032375ea4fd1c66f2",
-      "changelog": {
-        "en": "APK supplied in the MEEDX asset bundle.",
-        "ar": "ملف APK من حزمة MEEDX."
-      }
-    },
-    {
-      "id": "tv-ltr",
-      "device": "tv",
-      "variant": "ltr",
-      "packageId": "com.meedx.localcinema.tv",
-      "name": "Local Cinema TV (LTR)",
-      "available": true,
-      "version": "1.0.0-beta.1",
-      "versionCode": 1,
-      "url": "/downloads/LocalCinema-TV-v1.0.0-beta.1-LTR.apk",
-      "sizeBytes": 38608904,
-      "sha256": "209d957ee89979b93654e936a5cf3d8d29861cd173cb43de3d64f8cdfbfd585a",
-      "changelog": {
-        "en": "APK supplied in the MEEDX asset bundle.",
-        "ar": "ملف APK من حزمة MEEDX."
-      }
-    },
-    {
-      "id": "phone-ltr",
-      "device": "phone",
-      "variant": "ltr",
-      "packageId": "com.meedx.localcinema.manager",
-      "name": "Local Cinema Manager (LTR)",
-      "available": true,
-      "version": "1.0.0-beta.1",
-      "versionCode": 1,
-      "url": "/downloads/LocalCinema-Manager-Phone-v1.0.0-beta.1-LTR.apk",
-      "sizeBytes": 605953907,
-      "sha256": "601d8e84dc8f14869c2707b1f76e0470bdd737369ef914ace962b30e3f7352c5",
-      "changelog": {
-        "en": "APK supplied in the MEEDX asset bundle.",
-        "ar": "ملف APK من حزمة MEEDX."
-      }
-    },
-    {
-      "id": "tv-legacy",
-      "device": "tv",
-      "variant": "legacy",
-      "packageId": "org.nova.cinema",
-      "name": "Local Cinema TV (legacy)",
-      "available": true,
-      "version": "6.4.29",
-      "versionCode": 6040029,
-      "url": "/downloads/Local-Cinema-TV.apk",
-      "sizeBytes": 46296985,
-      "sha256": "81f14bca980f7ea9b80a937bb06db32b302258489d7e9b0e902668e7a8560d9d",
-      "changelog": {
-        "en": "APK supplied in the MEEDX asset bundle.",
-        "ar": "ملف APK من حزمة MEEDX."
-      }
-    },
-    {
-      "id": "phone-legacy",
-      "device": "phone",
-      "variant": "legacy",
-      "packageId": "org.proninyaroslav.libretorrent.cinemamanager",
-      "name": "Local Cinema Manager (legacy)",
-      "available": true,
-      "version": "4.1.1-DEBUG",
-      "versionCode": 9000352,
-      "url": "/downloads/Local-Cinema-Manager-Phone.apk",
-      "sizeBytes": 242520448,
-      "sha256": "140c2b5708fa7daa04483fd703cc35316bf4fefb75c6a2806312327f986b0664",
-      "changelog": {
-        "en": "APK supplied in the MEEDX asset bundle.",
-        "ar": "ملف APK من حزمة MEEDX."
+        "en": "Local Cinema beta.2 release.",
+        "ar": "إصدار Local Cinema التجريبي الثاني."
       }
     }
   ]
