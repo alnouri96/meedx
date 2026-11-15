@@ -6,14 +6,14 @@
     "packageId": "com.meedx.localcinema.tv",
     "name": "Local Cinema TV",
     "available": true,
-    "version": "1.0.0-beta.4",
-    "versionCode": 4,
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.4/LocalCinema-TV-v1.0.0-beta.4.apk",
-    "sizeBytes": 38626632,
-    "sha256": "073cf38811242ddd034e9f1c9a365988f37f39b7bfc2ac8a8381ee673724053b",
+    "version": "1.0.0-beta.5",
+    "versionCode": 5,
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.5/LocalCinema-TV-v1.0.0-beta.5.apk",
+    "sizeBytes": 38626641,
+    "sha256": "d81a2ce48a807f6b60c91d4f47e528aaf3ad5d6acbd7633f8599bd363a309bd5",
     "changelog": {
-      "en": "Keep Screen On & MediaSession anti-standby fix across movie/SMB, web/cast video, and music/cast audio playback.",
-      "ar": "منع دخول الشاشة في وضع الاستعداد تلقائياً أثناء تشغيل الأفلام والبث والموسيقى عبر FLAG_KEEP_SCREEN_ON وMediaSession."
+      "en": "Local Cinema TV v1.0.0-beta.5 (code 5) matching beta.5 release with anti-standby playback and SMB sync fixes.",
+      "ar": "الإصدار التجريبي الخامس لتطبيق التلفاز (code 5) متوافقاً مع حزمة beta.5 وإصلاحات منع الاستعداد ومزامنة SMB."
     }
   },
   {
@@ -23,14 +23,14 @@
     "packageId": "com.meedx.localcinema.manager",
     "name": "Local Cinema Manager",
     "available": true,
-    "version": "1.0.0-beta.4",
-    "versionCode": 4,
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.4/LocalCinema-Manager-Phone-v1.0.0-beta.4.apk",
-    "sizeBytes": 605953911,
-    "sha256": "504df9a94e95dbb176c75a6cdd86ffca151c127bb44225b1ac2a3f1ce2fbbfb0",
+    "version": "1.0.0-beta.5",
+    "versionCode": 5,
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.5/LocalCinema-Manager-Phone-v1.0.0-beta.5.apk",
+    "sizeBytes": 196728271,
+    "sha256": "137d5475f2bfb587f1d9f012681e9f2eb79c39840d4e4f1585ad71ec387c45ab",
     "changelog": {
-      "en": "Local Cinema Manager v1.0.0-beta.4 companion release (code 4) matching TV beta.4.",
-      "ar": "الإصدار التجريبي الرابع لتطبيق الهاتف المرافق (code 4) متوافقاً مع إصدار التلفاز beta.4."
+      "en": "Reduced Phone APK size by ~67.5% (from 606 MB to 196.7 MB) in a single unified build supporting all Android phones (arm64-v8a + armeabi-v7a) with 100% of features intact.",
+      "ar": "تقليص حجم تطبيق الهاتف بنسبة ~67.5% (من 606 MB إلى 196.7 MB) في نسخة موحّدة تدعم جميع الهواتف مع الحفاظ الكامل على جميع الميزات والخدمات."
     }
   }
 ]

@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.4`)
+# MEEDX · Local Cinema (`v1.0.0-beta.5`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.4"><strong>⬇️ تحميل v1.0.0-beta.4 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.5"><strong>⬇️ تحميل v1.0.0-beta.5 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,11 +61,10 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.4` (`versionCode = 4`)
-- **منع دخول الشاشة في وضع الاستعداد تلقائياً (`Keep Screen On & MediaSession`)**:
-  - تفعيل `FLAG_KEEP_SCREEN_ON` و`setKeepScreenOn` تلقائياً أثناء التشغيل الفعلي في مشغّل الأفلام والـ `SMB`، ومشغّل بث الويب، ومشغّل الموسيقى والصوتيات (مع إزالتهما عند الإيقاف المؤقت أو الانتهاء).
-  - تحديث حالة `MediaSessionCompat` (`STATE_PLAYING` / `STATE_PAUSED` / `STATE_STOPPED`) وإدارة `AudioFocus` لمنع مؤقت السكون التلقائي على `Android TV`.
-- *(يتضمن إصلاحات `beta.3` السابقة لمزامنة الصوت عبر `SMB` وأزرار الضبط السريع `±50 ms` و`0 ms`).*
+### جديد الإصدار `v1.0.0-beta.5` (`versionCode = 5`)
+- **تقليص حجم تطبيق الهاتف بنسبة ~67.5% (`~196.7 MB` بدلاً من `606 MB`)**:
+  - نسخة APK واحدة موحّدة تدعم جميع الهواتف (`arm64-v8a` + `armeabi-v7a`) مع ضغط المكتبات الأصلية وإزالة معماريات المحاكيات غير الضرورية، مع الحفاظ الكامل على جميع الميزات والخدمات (الاقتران، الريموت، لوحة المفاتيح، البث، مستخرج روابط الويب، والتحديث التلقائي).
+- *(يتضمن إصلاحات `beta.4` لمنع وضع الاستعداد للشاشة أثناء التشغيل، وإصلاحات `beta.3` لمزامنة الصوت عبر `SMB` وأزرار الضبط السريع `±50 ms` و`0 ms`).*
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -92,11 +91,10 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.4` (`versionCode = 4`)
-- **Keep Screen On & MediaSession Anti-Standby Fix**:
-  - Enforces `FLAG_KEEP_SCREEN_ON` and `setKeepScreenOn` during active playback across Movie/SMB (`PlayerActivity`), Web/Cast Video (`CinemaHlsActivity`), and Music/Cast Audio (`CinemaLocalMediaActivity`), clearing them on pause/completion/exit.
-  - Integrates `MediaSessionCompat` playback state updates and `AudioFocus` handling to prevent Android TV automatic standby during movies, streams, and music.
-- *(Includes all `beta.3` SMB A/V sync drift fixes and quick `±50 ms` / `0 ms` audio delay controls.)*
+### What's New in `v1.0.0-beta.5` (`versionCode = 5`)
+- **Phone APK Size Reduction (~67.5% smaller — `~196.7 MB` down from `606 MB`)**:
+  - Single unified APK supporting all Android phones (`arm64-v8a` + `armeabi-v7a`) with compressed native libraries (`useLegacyPackaging = true`), keeping 100% of features intact (pairing, remote/keyboard/gamepad, media casting, web video grabber, and OTA updates).
+- *(Includes all `beta.4` Keep Screen On / MediaSession anti-standby fixes and `beta.3` SMB A/V sync drift fixes.)*
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
@@ -121,12 +119,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ---
 
-## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.4`)
+## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.5`)
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.4.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.4` (`4`) | `38,626,632` | `073cf38811242ddd034e9f1c9a365988f37f39b7bfc2ac8a8381ee673724053b` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.4.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.4` (`4`) | `605,953,911` | `504df9a94e95dbb176c75a6cdd86ffca151c127bb44225b1ac2a3f1ce2fbbfb0` |
+| `LocalCinema-TV-v1.0.0-beta.5.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.5` (`5`) | `38,626,641` | `d81a2ce48a807f6b60c91d4f47e528aaf3ad5d6acbd7633f8599bd363a309bd5` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.5.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.5` (`5`) | `196,728,271` | `137d5475f2bfb587f1d9f012681e9f2eb79c39840d4e4f1585ad71ec387c45ab` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >
