@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.3`)
+# MEEDX · Local Cinema (`v1.0.0-beta.4`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.3"><strong>⬇️ تحميل v1.0.0-beta.3 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.4"><strong>⬇️ تحميل v1.0.0-beta.4 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,11 +61,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.3` (`versionCode = 3`)
-- **إصلاح مزامنة الصوت عبر SMB (`SMB A/V Sync Drift Fix`)**:
-  - إضافة مخزن قراءة مسبقة بحجم **512 كيلوبايت** لتدفقات `smb://` و`smbj://` مع مخزن نسخ `64 KB`، دون المساس بطلبات `Range`/`skip()` أو بث الهاتف.
-  - رفع مخزن بث `AVOS` إلى **48 MB** على الأقل وتثبيت ساعة المزامنة المعتمدة على `PTS` لبث `SMB` لمنع الانزياح التدريجي للصوت في الأفلام عالية الدقة متعددة المسارات.
-  - إضافة أزرار الضبط السريع لتزامن الصوت (**`-50 ms`** و**`+50 ms`** و**`0 ms`**) مع عرض قيمة التأخير الحالية مباشرة داخل قائمة الصوت على التلفاز.
+### جديد الإصدار `v1.0.0-beta.4` (`versionCode = 4`)
+- **منع دخول الشاشة في وضع الاستعداد تلقائياً (`Keep Screen On & MediaSession`)**:
+  - تفعيل `FLAG_KEEP_SCREEN_ON` و`setKeepScreenOn` تلقائياً أثناء التشغيل الفعلي في مشغّل الأفلام والـ `SMB`، ومشغّل بث الويب، ومشغّل الموسيقى والصوتيات (مع إزالتهما عند الإيقاف المؤقت أو الانتهاء).
+  - تحديث حالة `MediaSessionCompat` (`STATE_PLAYING` / `STATE_PAUSED` / `STATE_STOPPED`) وإدارة `AudioFocus` لمنع مؤقت السكون التلقائي على `Android TV`.
+- *(يتضمن إصلاحات `beta.3` السابقة لمزامنة الصوت عبر `SMB` وأزرار الضبط السريع `±50 ms` و`0 ms`).*
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -92,11 +92,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.3` (`versionCode = 3`)
-- **SMB A/V Sync Drift Fix**:
-  - Wraps `smb://` and `smbj://` streams in a **512 KB** read-ahead `BufferedInputStream` with a `64 KB` copy buffer while keeping `Range`/`skip()` intact and leaving phone-cast streams untouched.
-  - Applies a minimum **48 MB** `LibAvos` stream buffer, disables dynamic audio delay, and enforces PTS-based sync exclusively for `smb://`/`smbj://` playback so multi-audio high-bitrate streams stay in sync.
-  - Adds instant **`-50 ms`**, **`+50 ms`**, and **`0 ms`** quick audio delay buttons with live `ms` readout right inside the TV audio tracks menu.
+### What's New in `v1.0.0-beta.4` (`versionCode = 4`)
+- **Keep Screen On & MediaSession Anti-Standby Fix**:
+  - Enforces `FLAG_KEEP_SCREEN_ON` and `setKeepScreenOn` during active playback across Movie/SMB (`PlayerActivity`), Web/Cast Video (`CinemaHlsActivity`), and Music/Cast Audio (`CinemaLocalMediaActivity`), clearing them on pause/completion/exit.
+  - Integrates `MediaSessionCompat` playback state updates and `AudioFocus` handling to prevent Android TV automatic standby during movies, streams, and music.
+- *(Includes all `beta.3` SMB A/V sync drift fixes and quick `±50 ms` / `0 ms` audio delay controls.)*
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
@@ -121,12 +121,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ---
 
-## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.3`)
+## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.4`)
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.3.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.3` (`3`) | `38,624,372` | `1b35502386683b7a0028e381563aee855d4e6045a667719a9cf42cd08d76e7b2` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.3.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.3` (`3`) | `605,953,911` | `0c41633b3b3014a26f7a811b13771590cb0dc75d1d208a26e9bf0da5a2609c61` |
+| `LocalCinema-TV-v1.0.0-beta.4.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.4` (`4`) | `38,626,632` | `073cf38811242ddd034e9f1c9a365988f37f39b7bfc2ac8a8381ee673724053b` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.4.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.4` (`4`) | `605,953,911` | `504df9a94e95dbb176c75a6cdd86ffca151c127bb44225b1ac2a3f1ce2fbbfb0` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >
