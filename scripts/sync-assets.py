@@ -95,7 +95,7 @@ catalog.sort(key=lambda e: ('standard','arabic','ltr','legacy').index(e['variant
 feed['builds'] = catalog
 write_json(root/'src/data/catalog.json', catalog)
 write_json(public/'api/version.json', feed)
-config = dict(brand='MEEDX', developer={'ar':'أحمد النوري','en':'Ahmed Al-Nouri'},
+config = dict(brand='MEEDX', developer={'ar':'استوديو MEEDX','en':'MEEDX Studio'},
               telegramUsername=telegram['Telegram_Username'].strip(), telegramLink=telegram['Telegram_Link'].strip(),
               payments=payments, githubReleases='https://github.com/alnouri96/meedx/releases',
               turnstileSiteKey='', downloadsMode='github-releases')

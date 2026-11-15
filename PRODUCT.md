@@ -5,7 +5,7 @@ web
 ## Stack
 React + Vite + Tailwind CSS + Swiper, explicitly requested.
 ## Product Purpose
-Arabic-first portfolio and download hub for Ahmed Al-Nouri's MEEDX software and hardware studio. English toggle, local APK downloads, technical services, donation and Telegram entry points.
+Arabic-first portfolio and download hub for MEEDX software, gaming, and tech solutions studio. English toggle, APK downloads, technical services, donation and Telegram entry points.
 ## Users
 Visitors evaluating Local Cinema, gamers seeking documented configurations, and clients requesting hardware/software services.
 ## Capabilities and Constraints
