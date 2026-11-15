@@ -1,23 +1,23 @@
 {
   "tv": {
-    "latestVersionCode": 3,
-    "latestVersionName": "1.0.0-beta.3",
-    "versionCode": 3,
-    "versionName": "1.0.0-beta.3",
-    "sizeBytes": 38624372,
-    "sha256": "1b35502386683b7a0028e381563aee855d4e6045a667719a9cf42cd08d76e7b2",
-    "changelog": "Local Cinema v1.0.0-beta.3: SMB A/V sync drift fix (512 KB read-ahead buffer, 48 MB AVOS stream buffer, PTS sync) plus quick ±50 ms and 0 ms audio delay controls.",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-TV-v1.0.0-beta.3.apk"
+    "latestVersionCode": 4,
+    "latestVersionName": "1.0.0-beta.4",
+    "versionCode": 4,
+    "versionName": "1.0.0-beta.4",
+    "sizeBytes": 38626632,
+    "sha256": "073cf38811242ddd034e9f1c9a365988f37f39b7bfc2ac8a8381ee673724053b",
+    "changelog": "Local Cinema v1.0.0-beta.4: Keep Screen On & MediaSession anti-standby fix across movie/SMB, web/cast video, and music/cast audio playback.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.4/LocalCinema-TV-v1.0.0-beta.4.apk"
   },
   "phone": {
-    "latestVersionCode": 3,
-    "latestVersionName": "1.0.0-beta.3",
-    "versionCode": 3,
-    "versionName": "1.0.0-beta.3",
+    "latestVersionCode": 4,
+    "latestVersionName": "1.0.0-beta.4",
+    "versionCode": 4,
+    "versionName": "1.0.0-beta.4",
     "sizeBytes": 605953911,
-    "sha256": "0c41633b3b3014a26f7a811b13771590cb0dc75d1d208a26e9bf0da5a2609c61",
-    "changelog": "Local Cinema Manager v1.0.0-beta.3: Companion controller & TV Hub release (code 3).",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-Manager-Phone-v1.0.0-beta.3.apk"
+    "sha256": "504df9a94e95dbb176c75a6cdd86ffca151c127bb44225b1ac2a3f1ce2fbbfb0",
+    "changelog": "Local Cinema Manager v1.0.0-beta.4: Companion controller & TV Hub release (code 4).",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.4/LocalCinema-Manager-Phone-v1.0.0-beta.4.apk"
   },
   "builds": [
     {
@@ -27,14 +27,14 @@
       "packageId": "com.meedx.localcinema.tv",
       "name": "Local Cinema TV",
       "available": true,
-      "version": "1.0.0-beta.3",
-      "versionCode": 3,
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-TV-v1.0.0-beta.3.apk",
-      "sizeBytes": 38624372,
-      "sha256": "1b35502386683b7a0028e381563aee855d4e6045a667719a9cf42cd08d76e7b2",
+      "version": "1.0.0-beta.4",
+      "versionCode": 4,
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.4/LocalCinema-TV-v1.0.0-beta.4.apk",
+      "sizeBytes": 38626632,
+      "sha256": "073cf38811242ddd034e9f1c9a365988f37f39b7bfc2ac8a8381ee673724053b",
       "changelog": {
-        "en": "SMB A/V sync drift fix (512 KB read-ahead buffer, 48 MB AVOS stream buffer, PTS sync) plus quick ±50 ms and 0 ms audio delay controls.",
-        "ar": "إصلاح تزامن الصوت عبر SMB (مخزن قراءة مسبقة 512 كيلوبايت وضبط مخزن AVOS وساعة المزامنة) مع أزرار الضبط السريع ±50ms و0ms."
+        "en": "Keep Screen On & MediaSession anti-standby fix across movie/SMB, web/cast video, and music/cast audio playback.",
+        "ar": "منع دخول الشاشة في وضع الاستعداد تلقائياً أثناء تشغيل الأفلام والبث والموسيقى عبر FLAG_KEEP_SCREEN_ON وMediaSession."
       }
     },
     {
@@ -44,14 +44,14 @@
       "packageId": "com.meedx.localcinema.manager",
       "name": "Local Cinema Manager",
       "available": true,
-      "version": "1.0.0-beta.3",
-      "versionCode": 3,
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-Manager-Phone-v1.0.0-beta.3.apk",
+      "version": "1.0.0-beta.4",
+      "versionCode": 4,
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.4/LocalCinema-Manager-Phone-v1.0.0-beta.4.apk",
       "sizeBytes": 605953911,
-      "sha256": "0c41633b3b3014a26f7a811b13771590cb0dc75d1d208a26e9bf0da5a2609c61",
+      "sha256": "504df9a94e95dbb176c75a6cdd86ffca151c127bb44225b1ac2a3f1ce2fbbfb0",
       "changelog": {
-        "en": "Local Cinema Manager v1.0.0-beta.3 companion release (code 3) matching TV beta.3.",
-        "ar": "الإصدار التجريبي الثالث لتطبيق الهاتف المرافق (code 3) متوافقاً مع إصدار التلفاز beta.3."
+        "en": "Local Cinema Manager v1.0.0-beta.4 companion release (code 4) matching TV beta.4.",
+        "ar": "الإصدار التجريبي الرابع لتطبيق الهاتف المرافق (code 4) متوافقاً مع إصدار التلفاز beta.4."
       }
     }
   ]

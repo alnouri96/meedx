@@ -11,20 +11,20 @@
 - **مستودع GitHub العام:** `https://github.com/alnouri96/meedx`
 - **بروفايل GitHub للاستوديو:** `https://github.com/alnouri96` (مستودع `https://github.com/alnouri96/alnouri96`)
 - **صفحة الإصدارات (GitHub Releases):** `https://github.com/alnouri96/meedx/releases`
-- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.3`
+- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.4`
 
 ---
 
 ## 2. الحالة الحالية | Current State
 
-### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.3` · `versionCode = 3`)
+### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.4` · `versionCode = 4`)
 
 | التطبيق | الحزمة (`Package ID`) | الحجم (بايت) | بصمة `SHA-256` | رابط التحميل المباشر |
 | --- | --- | ---: | --- | --- |
-| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38624372` | `1b35502386683b7a0028e381563aee855d4e6045a667719a9cf42cd08d76e7b2` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-TV-v1.0.0-beta.3.apk` |
-| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `605953911` | `0c41633b3b3014a26f7a811b13771590cb0dc75d1d208a26e9bf0da5a2609c61` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-Manager-Phone-v1.0.0-beta.3.apk` |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38626632` | `073cf38811242ddd034e9f1c9a365988f37f39b7bfc2ac8a8381ee673724053b` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.4/LocalCinema-TV-v1.0.0-beta.4.apk` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `605953911` | `504df9a94e95dbb176c75a6cdd86ffca151c127bb44225b1ac2a3f1ce2fbbfb0` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.4/LocalCinema-Manager-Phone-v1.0.0-beta.4.apk` |
 
-- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.3\`
+- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.4\`
 - **ملف تسليم التطبيقات المرجعي:** `G:\Local Cinema\AGENT_HANDOFF.md`
 
 ### ب) حالة الواجهة والمزايا المنشورة
@@ -63,3 +63,4 @@
 | `2026-11-15` | `40b6031` | حذف ملفات `APK` المكررة وأرشيفات `ZIP`، وتحديث `verify-downloads.mjs` و`sync-assets.py` للقراءة من `G:\Local Cinema\releases\` مباشرة، وإيقاف `backup-site.*` عن إنشاء ZIP، واعتماد `AGENT_HANDOFF.md`. | لا يوجد |
 | `2026-11-15` | `ac369c4` | تحديث `AGENT_HANDOFF.md` ببيانات `v1.0.0-beta.3`. | لا يوجد |
 | `2026-11-15` | `841eab9` | توليد بطاقتي البانر (`meedx-hero-banner.png` و`local-cinema-card.png`)، إنشاء ونشر مستودع البروفايل `alnouri96/alnouri96` (`724c790`) مع باركودات الدعم، وتوحيد واجهة `README.md` في `alnouri96/meedx` وضبط بيانات البروفايل الجانبي (`MEEDX`). | لا يوجد |
+| `2026-11-15` | `HEAD` | إطلاق `v1.0.0-beta.4` (`versionCode = 4`) كأحدث إصدار (`--latest`) على GitHub Releases مباشرة من `G:\Local Cinema\releases\v1.0.0-beta.4\`، وتحديث `version.json` و`catalog.json` و`README.md` (في `meedx` و`alnouri96`) والنشر الحي على Cloudflare Pages. | لا يوجد |
