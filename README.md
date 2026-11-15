@@ -37,6 +37,10 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 | **تشغيل الفيلم والتحكم من الهاتف**<br>Movie playback with phone controls | ![TV Playback](public/assets/screenshots/tv_2026-11-15_19-42-17.png) | ![Phone Remote Controls](public/assets/screenshots/phone_2026-11-15_19-42-17.png) |
 | **بث الصوت والموجات الذهبية**<br>Audio casting & gold visualizer | ![TV Audio Visualizer](public/assets/screenshots/tv_2026-11-15_15-55-13.png) | ![Phone Audio Queue](public/assets/screenshots/phone_2026-11-15_15-55-13.png) |
 | **عرض الصور من الهاتف**<br>Casting photos from the phone | ![TV Photo Cast](public/assets/screenshots/tv_2026-11-15_15-58-19.png) | ![Phone Photo Cast](public/assets/screenshots/phone_2026-11-15_15-58-19.png) |
+| **البحث والكتابة الفورية من الهاتف**<br>Instant search and typing from the phone | ![TV Search](public/assets/screenshots/tv_2026-11-15_20-40-20.png) | ![Phone D-Pad Keyboard](public/assets/screenshots/phone_2026-11-15_20-40-20.png) |
+| **تفعيل الريموت العام ولوحة اللمس (Touchpad)**<br>System-wide TV Remote & Touchpad | ![TV Accessibility](public/assets/screenshots/tv_2026-11-15_20-41-41.png) | ![Phone Touchpad](public/assets/screenshots/phone_2026-11-15_20-41-41.png) |
+| **فتح تطبيقات التلفاز والكتابة داخل المتصفح**<br>TV app launcher and browser typing | ![TV Browser](public/assets/screenshots/tv_2026-11-15_20-43-18.png) | ![Phone Apps Drawer](public/assets/screenshots/phone_2026-11-15_20-43-18.png) |
+| **البحث بالكتابة من الهاتف داخل يوتيوب التلفاز**<br>Typing from the phone inside YouTube on TV | ![TV YouTube](public/assets/screenshots/tv_2026-11-15_20-44-16.png) | ![Phone YouTube Typing](public/assets/screenshots/phone_2026-11-15_20-44-16.png) |
 
 ---
 
