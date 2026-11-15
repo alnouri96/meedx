@@ -27,7 +27,7 @@ try{
   }else await page.locator('#apps').scrollIntoViewIfNeeded();
   await page.locator('.gallery').evaluate(el=>el.scrollIntoView({block:'center'}));
   await page.locator('#apps .swiper-button-next').click();
-  await expect(page.locator('.gallery-info h3')).toHaveText('نشر مكتبة الهاتف على التلفاز');
+  await expect(page.locator('.gallery-info h3')).toHaveText('المواسم واستئناف الحلقة');
   const pair=page.locator('.swiper-slide-active');
   await expect(pair.locator('img')).toHaveCount(2);
   await expect.poll(()=>pair.locator('img').evaluateAll(images=>images.every(img=>img.complete&&img.naturalWidth>0))).toBe(true);
@@ -35,7 +35,7 @@ try{
   await pair.getByRole('button',{name:'تكبير لقطة التلفاز',exact:true}).click();
   const zoom=page.getByRole('dialog');
   const stage=zoom.locator('.zoom-stage');
-  await expect(stage.locator('img')).toHaveAttribute('src',/tv_.*15-19-11/); await expect.poll(()=>stage.locator('img').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true); const fit=await stage.evaluate(el=>{const s=el.getBoundingClientRect(),i=el.querySelector('img').getBoundingClientRect();return i.top>=s.top-1&&i.bottom<=s.bottom+1&&i.left>=s.left-1&&i.right<=s.right+1;}); assert.equal(fit,true,'100% image must fit inside zoom-stage without clipping'); if(screenshots)await shot(page,prefix+'-zoom-100');
+  await expect(stage.locator('img')).toHaveAttribute('src',/tv_.*15-59-12/); await expect.poll(()=>stage.locator('img').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true); const fit=await stage.evaluate(el=>{const s=el.getBoundingClientRect(),i=el.querySelector('img').getBoundingClientRect();return i.top>=s.top-1&&i.bottom<=s.bottom+1&&i.left>=s.left-1&&i.right<=s.right+1;}); assert.equal(fit,true,'100% image must fit inside zoom-stage without clipping'); if(screenshots)await shot(page,prefix+'-zoom-100');
   await zoom.getByRole('button',{name:'تكبير',exact:true}).click();
   await expect(zoom.locator('output')).toHaveText('125%');
   const rangeControl=zoom.getByRole('slider');
@@ -52,7 +52,7 @@ try{
   await page.mouse.wheel(0,450);
   await expect(zoom.locator('output')).not.toHaveText('300%');
   await zoom.getByRole('button',{name:'الهاتف',exact:true}).click();
-  await expect(stage.locator('img')).toHaveAttribute('src',/phone_.*15-19-11/);
+  await expect(stage.locator('img')).toHaveAttribute('src',/phone_.*15-59-12/);
   await expect(zoom.locator('output')).toHaveText('100%');
   if(width===390){
    const cdp=await context.newCDPSession(page);
@@ -66,8 +66,8 @@ try{
    await expect(zoom.locator('output')).not.toHaveText('100%');
   }
   await zoom.getByRole('button',{name:'الشريحة السابقة'}).click();
-  await expect(zoom.getByRole('heading')).toHaveText('اقتران الهاتف بالتلفاز');
-  await expect(stage.locator('img')).toHaveAttribute('src',/phone_.*15-18-45/);
+  await expect(zoom.getByRole('heading')).toHaveText('صفحة تفاصيل الفيلم والتقييمات');
+  await expect(stage.locator('img')).toHaveAttribute('src',/phone_.*19-41-02/);
   await page.keyboard.press('Escape');
   await open(page,'ادعم MEEDX • زين كاش / Qi');
   const payments=page.getByRole('dialog').locator('.payments article');
