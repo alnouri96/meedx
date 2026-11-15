@@ -41,6 +41,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 | **تفعيل الريموت العام ولوحة اللمس (Touchpad)**<br>System-wide TV Remote & Touchpad | ![TV Accessibility](public/assets/screenshots/tv_2026-11-15_20-41-41.png) | ![Phone Touchpad](public/assets/screenshots/phone_2026-11-15_20-41-41.png) |
 | **فتح تطبيقات التلفاز والكتابة داخل المتصفح**<br>TV app launcher and browser typing | ![TV Browser](public/assets/screenshots/tv_2026-11-15_20-43-18.png) | ![Phone Apps Drawer](public/assets/screenshots/phone_2026-11-15_20-43-18.png) |
 | **البحث بالكتابة من الهاتف داخل يوتيوب التلفاز**<br>Typing from the phone inside YouTube on TV | ![TV YouTube](public/assets/screenshots/tv_2026-11-15_20-44-16.png) | ![Phone YouTube Typing](public/assets/screenshots/phone_2026-11-15_20-44-16.png) |
+| **مشاركة مجلدات الحاسوب عبر الشبكة (SMB)**<br>Sharing Windows PC folders over SMB | ![TV SMB Library](public/assets/screenshots/tv_2026-11-15_20-54-00.jpg) | ![Windows SMB Sharing](public/assets/screenshots/pc_2026-11-15_20-54-00.png) |
 
 ---
 
