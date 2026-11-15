@@ -6,14 +6,14 @@
     "packageId": "com.meedx.localcinema.tv",
     "name": "Local Cinema TV",
     "available": true,
-    "version": "1.0.0-beta.2",
-    "versionCode": 2,
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-TV-v1.0.0-beta.2.apk",
-    "sizeBytes": 38623848,
-    "sha256": "245b51c1adfd48bb2344afd7d20eadd278bf8fe9680b720468bcc9aa19b1b372",
+    "version": "1.0.0-beta.3",
+    "versionCode": 3,
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-TV-v1.0.0-beta.3.apk",
+    "sizeBytes": 38624372,
+    "sha256": "1b35502386683b7a0028e381563aee855d4e6045a667719a9cf42cd08d76e7b2",
     "changelog": {
-      "en": "Zero-config open posters & ratings (Cinemeta, TVmaze, Jikan, Arabic Wikipedia) and Subtitles source settings (Subsource default, OpenSubtitles, or both).",
-      "ar": "بوسترات وتقييمات تلقائية بلا مفاتيح (Cinemeta وTVmaze وJikan وويكيبيديا العربية) وإعدادات مصادر الترجمة (Subsource افتراضياً أو OpenSubtitles أو كليهما)."
+      "en": "SMB A/V sync drift fix (512 KB read-ahead buffer, 48 MB AVOS stream buffer, PTS sync) plus quick ±50 ms and 0 ms audio delay controls.",
+      "ar": "إصلاح تزامن الصوت عبر SMB (مخزن قراءة مسبقة 512 كيلوبايت وضبط مخزن AVOS وساعة المزامنة) مع أزرار الضبط السريع ±50ms و0ms."
     }
   },
   {
@@ -23,14 +23,14 @@
     "packageId": "com.meedx.localcinema.manager",
     "name": "Local Cinema Manager",
     "available": true,
-    "version": "1.0.0-beta.2",
-    "versionCode": 2,
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.2/LocalCinema-Manager-Phone-v1.0.0-beta.2.apk",
+    "version": "1.0.0-beta.3",
+    "versionCode": 3,
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.3/LocalCinema-Manager-Phone-v1.0.0-beta.3.apk",
     "sizeBytes": 605953911,
-    "sha256": "d0ac4190867a8d0f5cfd0eeca606b9671a1a2db39e8b6a5ee00299fbef397750",
+    "sha256": "0c41633b3b3014a26f7a811b13771590cb0dc75d1d208a26e9bf0da5a2609c61",
     "changelog": {
-      "en": "Local Cinema Manager beta.2 companion build with TV Hub pairing, remote control, and updated version metadata (code 2).",
-      "ar": "الإصدار التجريبي الثاني لتطبيق الهاتف المرافق مع TV Hub وأدوات التحكم عن بُعد والاقتران."
+      "en": "Local Cinema Manager v1.0.0-beta.3 companion release (code 3) matching TV beta.3.",
+      "ar": "الإصدار التجريبي الثالث لتطبيق الهاتف المرافق (code 3) متوافقاً مع إصدار التلفاز beta.3."
     }
   }
 ]
