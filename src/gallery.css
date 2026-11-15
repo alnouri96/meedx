@@ -1,3 +1,4 @@
+.gallery {margin-block-end:28px}
 .paired-shots {
   display:grid;
   grid-template-columns:minmax(0, 4fr) minmax(0, 1fr);
