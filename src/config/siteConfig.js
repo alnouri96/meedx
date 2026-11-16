@@ -1,7 +1,6 @@
 import catalog from '../data/catalog.json';
 
 export const siteConfig = {
-  ...{
   "brand": "MEEDX",
   "developer": {
     "ar": "استوديو MEEDX",
@@ -9,6 +8,10 @@ export const siteConfig = {
   },
   "telegramUsername": "@اكتب_معرفك_هنا",
   "telegramLink": "https://t.me/MEEDXAPP",
+  "tvDownloaderCode": "3213660",
+  "phoneDownloaderCode": "3213660",
+  "tvShortUrl": "meedx.pages.dev/tv",
+  "phoneShortUrl": "meedx.pages.dev/phone",
   "payments": {
     "zaincash": {
       "number": "+964781714448",
@@ -23,7 +26,6 @@ export const siteConfig = {
   },
   "githubReleases": "https://github.com/alnouri96/meedx/releases",
   "turnstileSiteKey": "",
-  "downloadsMode": "github-releases"
-},
+  "downloadsMode": "github-releases",
   downloads: catalog,
 };

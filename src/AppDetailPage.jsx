@@ -72,33 +72,68 @@ export function AppDetailPage({
           </div>
 
           <div className="detail-dl-grid">
-            {[tvApp, phoneApp].filter(Boolean).map((p) => (
-              <div key={p.id} className="detail-dl-box">
-                <div className="file-title">
-                  {p.device === 'tv' ? <Monitor /> : <Smartphone />}
-                  <div>
-                    <h3>{p.name}</h3>
-                    <code dir="ltr">v{p.version} · {p.specs?.sizeLabel} · {p.specs?.platform[lang]} · {p.specs?.architecture[lang]}</code>
+            {[tvApp, phoneApp].filter(Boolean).map((p) => {
+              const isTv = p.device === 'tv';
+              const versionBanner = p.versionBanner?.[lang] ?? (isTv ? t('هذه نسخة الشاشة (Android TV)', 'This is the TV Version (Android TV)') : t('هذه نسخة الهاتف (Android Phone)', 'This is the Phone Version (Android Phone)'));
+              const dlLabel = p.downloaderLabel?.[lang] ?? (isTv ? t('كود Downloader — هذه نسخة الشاشة', 'Downloader Code — This is the TV Version') : t('كود Downloader — هذه نسخة الهاتف', 'Downloader Code — This is the Phone Version'));
+              const dlCode = p.downloaderCode || '3213660';
+              const shortUrl = p.shortUrl || (isTv ? 'meedx.pages.dev/tv' : 'meedx.pages.dev/phone');
+              return (
+                <div key={p.id} className="detail-dl-box">
+                  <div className={'device-explicit-banner ' + (isTv ? 'tv-banner' : 'phone-banner')}>
+                    {isTv ? <Monitor size={18} /> : <Smartphone size={18} />}
+                    <strong>{versionBanner}</strong>
                   </div>
-                  <span className="badge-ok">{t('مفعّل', 'Active')}</span>
+                  <div className="file-title">
+                    {isTv ? <Monitor /> : <Smartphone />}
+                    <div>
+                      <h3>{p.name}</h3>
+                      <code dir="ltr">v{p.version} · {p.specs?.sizeLabel} · {p.specs?.platform[lang]} · {p.specs?.architecture[lang]}</code>
+                    </div>
+                    <span className="badge-ok">{t('مفعّل', 'Active')}</span>
+                  </div>
+                  <div className="downloader-code-box">
+                    <div className="downloader-code-meta">
+                      <span className="downloader-code-title">{dlLabel}</span>
+                      <div className="downloader-code-values">
+                        <code dir="ltr" className="downloader-num">{dlCode}</code>
+                        <span className="downloader-sep">·</span>
+                        <code dir="ltr" className="downloader-url">{shortUrl}</code>
+                      </div>
+                    </div>
+                    <div className="downloader-code-actions">
+                      <button type="button" className="button" onClick={() => copy(dlCode)}>
+                        <Copy size={14} />
+                        <span>{t('نسخ الكود', 'Copy Code')} <bdi dir="ltr">{dlCode}</bdi></span>
+                      </button>
+                      <button type="button" className="button" onClick={() => copy('https://' + shortUrl)}>
+                        <Copy size={14} />
+                        <span>{t('نسخ الرابط المختصر', 'Copy Short Link')}</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div className="hash">
+                    <code dir="ltr">SHA-256<br />{p.sha256}</code>
+                    <button type="button" onClick={() => copy(p.sha256)} aria-label={t('نسخ بصمة ', 'Copy checksum for ') + p.name}>
+                      <Copy size={17} />
+                    </button>
+                  </div>
+                  <div className="file-actions">
+                    <button type="button" className="button primary" onClick={() => setModal({ id: 'download', file: p })}>
+                      <span>
+                        {isTv
+                          ? t(<>تنزيل {L('APK')} — هذه نسخة الشاشة ({L('Android TV')})</>, 'Download APK — This is the TV Version (Android TV)')
+                          : t(<>تنزيل {L('APK')} — هذه نسخة الهاتف ({L('Android Phone')})</>, 'Download APK — This is the Phone Version (Android Phone)')}
+                      </span>
+                      <Download size={17} />
+                    </button>
+                    <button type="button" className="link" onClick={() => contact(p.name)}>
+                      {t('بلاغ أو اقتراح', 'Report or suggest')}
+                    </button>
+                  </div>
                 </div>
-                <div className="hash">
-                  <code dir="ltr">SHA-256<br />{p.sha256}</code>
-                  <button type="button" onClick={() => copy(p.sha256)} aria-label={t('نسخ بصمة ', 'Copy checksum for ') + p.name}>
-                    <Copy size={17} />
-                  </button>
-                </div>
-                <div className="file-actions">
-                  <button type="button" className="button primary" onClick={() => setModal({ id: 'download', file: p })}>
-                    {t(<>تنزيل {p.device === 'tv' ? L('TV APK') : L('Phone APK')}</>, p.device === 'tv' ? 'Download TV APK' : 'Download Phone APK')}
-                    <Download size={17} />
-                  </button>
-                  <button type="button" className="link" onClick={() => contact(p.name)}>
-                    {t('بلاغ أو اقتراح', 'Report or suggest')}
-                  </button>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </article>
       </section>

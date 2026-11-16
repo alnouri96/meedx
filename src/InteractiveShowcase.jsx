@@ -335,12 +335,16 @@ export function InteractiveShowcase({ t, L, copy }) {
             <div className="sc-step-actions">
               <button type="button" className="button primary" onClick={() => copy('3213660')}>
                 <Copy size={16} />
-                <span>{t('نسخ كود Downloader:', 'Copy Downloader code:')} <bdi dir="ltr">3213660</bdi></span>
+                <span>{t('كود Downloader للشاشة والهاتف:', 'Downloader Code (TV & Phone):')} <bdi dir="ltr">3213660</bdi></span>
               </button>
-              <a href="#downloads" className="button">
-                <Download size={16} />
-                <span>{t('التحميل المباشر للتطبيقين', 'Download both APKs')}</span>
-              </a>
+              <button type="button" className="button" onClick={() => copy('https://meedx.pages.dev/tv')}>
+                <Copy size={16} />
+                <span>{t('رابط نسخة الشاشة:', 'TV Link:')} <bdi dir="ltr">meedx.pages.dev/tv</bdi></span>
+              </button>
+              <button type="button" className="button" onClick={() => copy('https://meedx.pages.dev/phone')}>
+                <Copy size={16} />
+                <span>{t('رابط نسخة الهاتف:', 'Phone Link:')} <bdi dir="ltr">meedx.pages.dev/phone</bdi></span>
+              </button>
             </div>
           )}
         </div>
