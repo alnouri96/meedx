@@ -11,9 +11,9 @@ export function DownloadAppCard({ p, ar, t, L, copy, onDownload, onContact }) {
   const notes = p.updateNotes || [];
   const isTv = p.device === 'tv';
   const versionBanner = p.versionBanner?.[lang] ?? (isTv ? t('هذه نسخة الشاشة (Android TV)', 'This is the TV Version (Android TV)') : t('هذه نسخة الهاتف (Android Phone)', 'This is the Phone Version (Android Phone)'));
-  const dlLabel = p.downloaderLabel?.[lang] ?? (isTv ? t('كود Downloader — هذه نسخة الشاشة', 'Downloader Code — This is the TV Version') : t('كود Downloader — هذه نسخة الهاتف', 'Downloader Code — This is the Phone Version'));
+  const dlLabel = p.downloaderLabel?.[lang] ?? t('كود Downloader — هذه نسخة الشاشة', 'Downloader Code — This is the TV Version');
   const dlCode = p.downloaderCode || '3213660';
-  const shortUrl = p.shortUrl || (isTv ? 'meedx.pages.dev/tv' : 'meedx.pages.dev/phone');
+  const shortUrl = p.shortUrl || 'meedx.pages.dev/tv';
 
   return (
     <article className="dl-card">
@@ -36,36 +36,38 @@ export function DownloadAppCard({ p, ar, t, L, copy, onDownload, onContact }) {
         <span className="signal" aria-label={t('متاح', 'Available')} />
       </div>
 
-      <div className="downloader-code-box">
-        <div className="downloader-code-meta">
-          <span className="downloader-code-title">{dlLabel}</span>
-          <div className="downloader-code-values">
-            <code dir="ltr" className="downloader-num">{dlCode}</code>
-            <span className="downloader-sep">·</span>
-            <code dir="ltr" className="downloader-url">{shortUrl}</code>
+      {isTv && (
+        <div className="downloader-code-box">
+          <div className="downloader-code-meta">
+            <span className="downloader-code-title">{dlLabel}</span>
+            <div className="downloader-code-values">
+              <code dir="ltr" className="downloader-num">{dlCode}</code>
+              <span className="downloader-sep">·</span>
+              <code dir="ltr" className="downloader-url">{shortUrl}</code>
+            </div>
+          </div>
+          <div className="downloader-code-actions">
+            <button
+              type="button"
+              className="button"
+              onClick={() => copy(dlCode)}
+              aria-label={t('نسخ كود Downloader لـ ', 'Copy Downloader code for ') + p.name}
+            >
+              <Copy size={14} />
+              <span>{t('نسخ الكود', 'Copy Code')} <bdi dir="ltr">{dlCode}</bdi></span>
+            </button>
+            <button
+              type="button"
+              className="button"
+              onClick={() => copy('https://' + shortUrl)}
+              aria-label={t('نسخ الرابط المختصر لـ ', 'Copy short URL for ') + p.name}
+            >
+              <Copy size={14} />
+              <span>{t('نسخ الرابط المختصر', 'Copy Short Link')}</span>
+            </button>
           </div>
         </div>
-        <div className="downloader-code-actions">
-          <button
-            type="button"
-            className="button"
-            onClick={() => copy(dlCode)}
-            aria-label={t('نسخ كود Downloader لـ ', 'Copy Downloader code for ') + p.name}
-          >
-            <Copy size={14} />
-            <span>{t('نسخ الكود', 'Copy Code')} <bdi dir="ltr">{dlCode}</bdi></span>
-          </button>
-          <button
-            type="button"
-            className="button"
-            onClick={() => copy('https://' + shortUrl)}
-            aria-label={t('نسخ الرابط المختصر لـ ', 'Copy short URL for ') + p.name}
-          >
-            <Copy size={14} />
-            <span>{t('نسخ الرابط المختصر', 'Copy Short Link')}</span>
-          </button>
-        </div>
-      </div>
+      )}
 
       <div className="semantic-row">
         <span className="badge-ok"><CheckCircle2 size={13} /> {t('مكتمل ومفحوص ✓', 'Verified ✓')}</span>

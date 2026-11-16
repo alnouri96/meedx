@@ -9,9 +9,7 @@ export const siteConfig = {
   "telegramUsername": "@اكتب_معرفك_هنا",
   "telegramLink": "https://t.me/MEEDXAPP",
   "tvDownloaderCode": "3213660",
-  "phoneDownloaderCode": "3213660",
   "tvShortUrl": "meedx.pages.dev/tv",
-  "phoneShortUrl": "meedx.pages.dev/phone",
   "payments": {
     "zaincash": {
       "number": "+964781714448",

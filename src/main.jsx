@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   Menu, X, Download, Monitor, Smartphone, MessageSquare, Heart, ShieldCheck,
-  Gamepad2, Terminal, ArrowUp, ArrowUpRight, Film, KeyRound, CheckCircle2,
+  Gamepad2, Terminal, ArrowUp, ArrowUpRight, CheckCircle2,
   AlertTriangle, Puzzle, Wrench, Sparkles
 } from 'lucide-react';
 import 'swiper/css';
@@ -431,33 +431,6 @@ function App() {
                   onContact={() => contact(p.name)}
                 />
               ))}
-            </div>
-
-            <div id="setup-guide" className="setup-guide">
-              <div className="guide-head">
-                <div>
-                  <h3>{t('التشغيل التلقائي وإدارة المفاتيح والإضافات', 'Zero-Account Mode & Phone Hub Management')}</h3>
-                  <p>{t(<>يعمل التطبيق تلقائياً بلا أي مفاتيح أو حسابات، ويمكنك إدارة المفاتيح الاختيارية والإضافات بسهولة من تطبيق الهاتف عبر {L('TV Hub ← Connection')}.</>, 'The app works automatically with no keys or accounts required; optional API keys and addons are managed easily from the phone app via TV Hub → Connection.')}</p>
-                </div>
-                <a href="/apps/local-cinema#addons" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema#addons'); }}>
-                  {t('الانتقال إلى دليل الإضافات والتعليمات', 'Open App Addons & Guides')}<ArrowUpRight size={16} />
-                </a>
-              </div>
-              <div className="guide-grid">
-                <article className="guide-card">
-                  <div className="guide-title"><Film size={24} /><div><h4>{t('وضع التشغيل التلقائي بلا حساب', 'Zero-Account Instant Mode')}</h4><code dir="ltr">Zero-Config · Cinemeta / TVmaze / Jikan / Subsource</code></div><span className="signal" aria-label={t('مفعّل تلقائياً', 'Enabled automatically')} /></div>
-                  <p>{t(<>تعمل البوسترات، التقييمات من مصادر متعددة، صفحات الممثلين وأعمالهم، إعلانات {L('16:9')}، والترجمة التلقائية فور التثبيت بدون أي تسجيل أو مفاتيح {L('API')}.</>, 'Posters, multi-source ratings, cast filmographies, 16:9 Home Trailers, and automatic subtitles work right after install without any login or API keys.')}</p>
-                </article>
-                <article className="guide-card">
-                  <div className="guide-title"><KeyRound size={24} /><div><h4>{t(<>إدارة المفاتيح والإضافات من الهاتف ({L('TV Hub ← Connection')})</>, 'Manage Keys & Addons from Phone (TV Hub → Connection)')}</h4><code dir="ltr">API_KEYS_SYNC · ADDONS_SYNC · WATCH_SYNC</code></div></div>
-                  <p>{t(<>عند إضافة مفاتيح اختيارية ({L('Trakt / Subsource / OpenSubtitles / TMDb')}) أو إضافات {L('Nuvio / Stremio')} على هاتفك، تُزامن تلقائياً مع الشاشة عبر الشبكة المحلية.</>, 'Optional API keys (Trakt / Subsource / OpenSubtitles / TMDb) and Nuvio / Stremio addons added on your phone sync automatically to TV over your local network.')}</p>
-                  <div className="guide-links">
-                    <a href="/apps/local-cinema#addons" className="link" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema#addons'); }}>
-                      {t('استعرض دليل الإضافات ومفاتيح API داخل صفحة التطبيق', 'View full Addons & API Guides in App Page')} <ArrowUpRight size={15} />
-                    </a>
-                  </div>
-                </article>
-              </div>
             </div>
           </section>
         )}

@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.7`)
+# MEEDX · Local Cinema (`v1.0.0-beta.8`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.7"><strong>⬇️ تحميل v1.0.0-beta.7 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.8"><strong>⬇️ تحميل v1.0.0-beta.8 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,12 +61,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.7` (`versionCode = 7`)
-- **قسم «الإعلانات» (`Trailers`) السينمائي `16:9` في الشاشة الرئيسية**: صفوف أفقية للإعلانات الرائجة، الجديدة (آخر 90 يوماً)، وقادم قريباً مع تحديث يومي تلقائي من مصادر مفتوحة (`Cinemeta` و`Jikan`) وفتح الإعلان مباشرةً في `YouTube`.
-- **استعادة زر «مشاهدة الإعلان» (`Watch Trailer`)**: متاح في صفحات جميع الأفلام والمسلسلات والكارتون/الأنمي.
-- **زر ولوحة `TV D-Pad` العائمة بسهم جانبي واحد (`‹` / `›`)**: قابل للسحب والتبديل بين اليد اليمنى واليسرى في جميع أقسام تطبيق الهاتف.
-- **مشغّل الوسائط الموحّد والتحكم الشامل**: التحكم في ستارة الإشعارات، أزرار الصوت الفيزيائية للهاتف، حفظ إعدادات الصوت والتكرار، وإصلاح عرض الفيديوهات العمودية (`9:16`) على الشاشة.
-- **تطوير المتصفح والنسخ الاحتياطي وتوحيد الثيم**: مدير تحميلات متكامل مع حذف الملفات غير المكتملة نهائياً عند الضغط على `X`، فتح الهاتف مباشرة على `TV Hub`، إظهار حساب Google في الإعدادات، فصل المسلسلات عن الأفلام بدقة، وتوحيد الثيم الداكن والذهبي مع علامة صح خضراء.
+### جديد الإصدار `v1.0.0-beta.8` (`versionCode = 8`)
+- **إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة**: أيقونات صافية، تاتش باد وجوستك قابل للتبديل، زر `QR`، وشريط بث مصغّر.
+- **تطوير محرك اقتناص وبث الفيديو (`Web Video Caster Engine`) وتوحيد الترجمة**: دعم البث بدقة عالية وتمرير الترويسات، مزامنة الترجمة الفورية وزر إعادة الفحص، وتوحيد بحث الترجمة أثناء البث بمفاتيح `Connection` تلقائياً مع تعبئة اسم الفيديو المبثوث.
+- **المحاذاة العربية (`RTL`) والطقس الحي والساعة**: إصلاح المحاذاة العربية والتنقل في صفوف الإعلانات وتفاصيل الأفلام وقوائم المشغّل، إضافة أيقونات طقس ملوّنة بالموقع الجغرافي الحقيقي، وإعداد شفافية خلفية الساعة.
+- **إغناء إعلانات قريباً والفرز والمزامنة الفورية**: توسيع قسم إعلانات «قريباً» من مصادر مفتوحة مجانية، خيارات فرز متعددة داخل قائمة البوستر، والمزامنة التلقائية لمفاتيح API وTrakt والإضافات وسجل المتصفح عند الربط.
+- **حزمة هاتف أخف (`113.64 MiB` · `arm64-v8a`)**: تقليص الحجم مع استقرار التحميل المباشر من المتصفح.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -93,10 +93,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.7` (`versionCode = 7`)
-- **Cinematic `16:9` Home Trailers & Watch Trailer Button**: Trending, New (last 90 days), and Coming Soon trailer rows updated daily from open sources (`Cinemeta` & `Jikan`) with direct `YouTube` playback.
-- **Single Side-Arrow Floating TV D-Pad & Unified Media Player**: Draggable `‹` / `›` handle on Phone, notification media controls, hardware volume keys controlling TV volume, and `9:16` vertical video fix.
-- **Browser Downloader, Theme & Library Separation**: Permanent cleanup of incomplete downloads on `X`, strict Movies/Series separation, unified Dark & Gold theme with green checkmarks, and Google profile display.
+### What's New in `v1.0.0-beta.8` (`versionCode = 8`)
+- **One-Handed Icon-Only TV Remote**: Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting bar.
+- **Upgraded Web Video Caster & LAN Proxy + Unified Casting Subtitles**: High-resolution casting with header forwarding, synced subtitles, live rescan, and saved Connection subtitle keys with auto-filled media titles.
+- **Arabic RTL Navigation, Weather & Clock Opacity**: Fixed RTL trailer strips, details alignment, and player menu layout; added location-based live weather with colored icons and customizable clock background opacity.
+- **Enriched Coming Soon Trailers, Context Sort & Instant Sync**: Expanded Coming Soon trailers from open sources, multi-criteria poster sorting, and instant automatic sync of API keys, Trakt, addons, and browser history upon pairing (`113.64 MiB arm64-v8a` Phone APK).
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
@@ -121,12 +122,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ---
 
-## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.7`)
+## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.8`)
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.7.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.7` (`7`) | `38,757,679` | `44ca11f62eed3701dbd9115f0d73f4f1765ca43c15fa4dd8579e92909f44fd87` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.7.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.7` (`7`) | `197,316,085` | `93de9c7d20ca92022e96257f4cc317ef77e31bac042b43c12c01dc536ad6d973` |
+| `LocalCinema-TV-v1.0.0-beta.8.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.8` (`8`) | `38,818,775` | `84b312fe99989b728c6d9023f27431ace251dd1490762ed5c69bf18d13def843` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.8.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.8` (`8`) | `119,159,102` | `bebc3259f4226a067e04cee28c3331c292709eca860aad34d119e86cce1032bb` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >

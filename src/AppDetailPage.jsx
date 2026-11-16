@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation, Pagination } from 'swiper/modules';
 import {
   ArrowLeft, ArrowRight, AlertTriangle, CheckCircle2, Copy, Download,
-  Maximize2, MessageSquare, Monitor, ShieldCheck, Smartphone, Sparkles, Wrench, Puzzle
+  Maximize2, MessageSquare, Monitor, ShieldCheck, Smartphone, Sparkles,
+  Wrench, Puzzle, Film, KeyRound, ArrowUpRight
 } from 'lucide-react';
 import { EquationPanel } from './EquationPanel';
 import { InteractiveShowcase } from './InteractiveShowcase';
@@ -75,9 +76,9 @@ export function AppDetailPage({
             {[tvApp, phoneApp].filter(Boolean).map((p) => {
               const isTv = p.device === 'tv';
               const versionBanner = p.versionBanner?.[lang] ?? (isTv ? t('هذه نسخة الشاشة (Android TV)', 'This is the TV Version (Android TV)') : t('هذه نسخة الهاتف (Android Phone)', 'This is the Phone Version (Android Phone)'));
-              const dlLabel = p.downloaderLabel?.[lang] ?? (isTv ? t('كود Downloader — هذه نسخة الشاشة', 'Downloader Code — This is the TV Version') : t('كود Downloader — هذه نسخة الهاتف', 'Downloader Code — This is the Phone Version'));
+              const dlLabel = p.downloaderLabel?.[lang] ?? t('كود Downloader — هذه نسخة الشاشة', 'Downloader Code — This is the TV Version');
               const dlCode = p.downloaderCode || '3213660';
-              const shortUrl = p.shortUrl || (isTv ? 'meedx.pages.dev/tv' : 'meedx.pages.dev/phone');
+              const shortUrl = p.shortUrl || 'meedx.pages.dev/tv';
               return (
                 <div key={p.id} className="detail-dl-box">
                   <div className={'device-explicit-banner ' + (isTv ? 'tv-banner' : 'phone-banner')}>
@@ -92,26 +93,28 @@ export function AppDetailPage({
                     </div>
                     <span className="badge-ok">{t('مفعّل', 'Active')}</span>
                   </div>
-                  <div className="downloader-code-box">
-                    <div className="downloader-code-meta">
-                      <span className="downloader-code-title">{dlLabel}</span>
-                      <div className="downloader-code-values">
-                        <code dir="ltr" className="downloader-num">{dlCode}</code>
-                        <span className="downloader-sep">·</span>
-                        <code dir="ltr" className="downloader-url">{shortUrl}</code>
+                  {isTv && (
+                    <div className="downloader-code-box">
+                      <div className="downloader-code-meta">
+                        <span className="downloader-code-title">{dlLabel}</span>
+                        <div className="downloader-code-values">
+                          <code dir="ltr" className="downloader-num">{dlCode}</code>
+                          <span className="downloader-sep">·</span>
+                          <code dir="ltr" className="downloader-url">{shortUrl}</code>
+                        </div>
+                      </div>
+                      <div className="downloader-code-actions">
+                        <button type="button" className="button" onClick={() => copy(dlCode)}>
+                          <Copy size={14} />
+                          <span>{t('نسخ الكود', 'Copy Code')} <bdi dir="ltr">{dlCode}</bdi></span>
+                        </button>
+                        <button type="button" className="button" onClick={() => copy('https://' + shortUrl)}>
+                          <Copy size={14} />
+                          <span>{t('نسخ الرابط المختصر', 'Copy Short Link')}</span>
+                        </button>
                       </div>
                     </div>
-                    <div className="downloader-code-actions">
-                      <button type="button" className="button" onClick={() => copy(dlCode)}>
-                        <Copy size={14} />
-                        <span>{t('نسخ الكود', 'Copy Code')} <bdi dir="ltr">{dlCode}</bdi></span>
-                      </button>
-                      <button type="button" className="button" onClick={() => copy('https://' + shortUrl)}>
-                        <Copy size={14} />
-                        <span>{t('نسخ الرابط المختصر', 'Copy Short Link')}</span>
-                      </button>
-                    </div>
-                  </div>
+                  )}
                   <div className="hash">
                     <code dir="ltr">SHA-256<br />{p.sha256}</code>
                     <button type="button" onClick={() => copy(p.sha256)} aria-label={t('نسخ بصمة ', 'Copy checksum for ') + p.name}>
@@ -196,15 +199,46 @@ export function AppDetailPage({
         </div>
       </section>
 
+      <section className="wrap section" style={{ paddingTop: 28, paddingBottom: 12 }}>
+        <div id="setup-guide" className="setup-guide" style={{ marginBlockStart: 0 }}>
+          <div className="guide-head">
+            <div>
+              <h3>{t('التشغيل التلقائي وإدارة المفاتيح والإضافات', 'Zero-Account Mode & Phone Hub Management')}</h3>
+              <p>{t(<>يعمل التطبيق تلقائياً بلا أي مفاتيح أو حسابات، ويمكنك إدارة المفاتيح الاختيارية والإضافات بسهولة من تطبيق الهاتف عبر {L('TV Hub ← Connection')}.</>, 'The app works automatically with no keys or accounts required; optional API keys and addons are managed easily from the phone app via TV Hub → Connection.')}</p>
+            </div>
+            <a
+              href="#addons"
+              className="button primary"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              {t('الانتقال إلى دليل الإضافات والتعليمات', 'Jump to Addons & Guides')}<ArrowUpRight size={16} />
+            </a>
+          </div>
+          <div className="guide-grid">
+            <article className="guide-card">
+              <div className="guide-title"><Film size={24} /><div><h4>{t('وضع التشغيل التلقائي بلا حساب', 'Zero-Account Instant Mode')}</h4><code dir="ltr">Zero-Config · Cinemeta / TVmaze / Jikan / Subsource</code></div><span className="signal" aria-label={t('مفعّل تلقائياً', 'Enabled automatically')} /></div>
+              <p>{t(<>تعمل البوسترات، التقييمات من مصادر متعددة، صفحات الممثلين وأعمالهم، إعلانات {L('16:9')}، والترجمة التلقائية فور التثبيت بدون أي تسجيل أو مفاتيح {L('API')}.</>, 'Posters, multi-source ratings, cast filmographies, 16:9 Home Trailers, and automatic subtitles work right after install without any login or API keys.')}</p>
+            </article>
+            <article className="guide-card">
+              <div className="guide-title"><KeyRound size={24} /><div><h4>{t(<>إدارة المفاتيح والإضافات من الهاتف ({L('TV Hub ← Connection')})</>, 'Manage Keys & Addons from Phone (TV Hub → Connection)')}</h4><code dir="ltr">API_KEYS_SYNC · ADDONS_SYNC · WATCH_SYNC</code></div></div>
+              <p>{t(<>عند إضافة مفاتيح اختيارية ({L('Trakt / Subsource / OpenSubtitles / TMDb')}) أو إضافات {L('Nuvio / Stremio')} على هاتفك، تُزامن تلقائياً مع الشاشة عبر الشبكة المحلية.</>, 'Optional API keys (Trakt / Subsource / OpenSubtitles / TMDb) and Nuvio / Stremio addons added on your phone sync automatically to TV over your local network.')}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <AddonsConnectionsSection t={t} L={L} copy={copy} />
 
       <section className="wrap section" aria-label={t('سجل التحديثات الكامل', 'Full Patch Notes')}>
         <div className="section-head">
           <div>
-            <h2>{t('سجل التحديثات الكامل (Patch Notes)', 'Full Patch Notes (v1.0.0-beta.6 → beta.7)')}</h2>
-            <p>{t('جميع الميزات والتحسينات المضافة في الإصدارين السادس والسابع لتطبيق الشاشة والهاتف.', 'All features and improvements across v1.0.0-beta.6 and v1.0.0-beta.7.')}</p>
+            <h2>{t('سجل التحديثات الكامل (Patch Notes)', 'Full Patch Notes (v1.0.0-beta.6 → beta.8)')}</h2>
+            <p>{t('جميع الميزات والتحسينات المضافة في الإصدارات السادس والسابع والثامن لتطبيق الشاشة والهاتف.', 'All features and improvements across v1.0.0-beta.6, beta.7, and beta.8.')}</p>
           </div>
-          <span className="gh-ver-badge" dir="ltr">v1.0.0-beta.7</span>
+          <span className="gh-ver-badge" dir="ltr">v{tvApp?.version}</span>
         </div>
 
         <div className="detail-notes-grid">
