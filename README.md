@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.6`)
+# MEEDX · Local Cinema (`v1.0.0-beta.7`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.6"><strong>⬇️ تحميل v1.0.0-beta.6 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.7"><strong>⬇️ تحميل v1.0.0-beta.7 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,12 +61,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.6` (`versionCode = 6`)
-- **وضع التشغيل الفوري بلا حساب (`Zero-Account Mode`)**: تشغيل البوسترات، صفحات الممثلين وأعمالهم، التقييمات من مصادر متعددة، والترجمة التلقائية فور التثبيت بدون أي تسجيل.
-- **معالج الصلاحيات الذكي (`Permissions Setup Wizard`) والنسخ الاحتياطي الشامل**: نافذة ترحيبية للتطبيقين تعرض حالة الصلاحيات الحية، مع نسخ احتياطي واسترجاع موحّد للهاتف والشاشة محلياً وعبر **Google Drive**.
-- **الكاش الدائم ومؤقت التحديث التلقائي للبوسترات**: حفظ دائم للبيانات والصور مع تحديث تلقائي ذكي (يومي / يومين / أسبوعي / شهري / يدوي).
-- **قسم «تمت المشاهدة» و`Up Next` والمزامنة الثنائية (`WATCH_SYNC`)**: الانتقال التلقائي للحلقة التالية ومزامنة حالة المشاهدة و`Watchlist` لحظياً بين الهاتف والشاشة عبر الشبكة المحلية.
-- **إضافات `Nuvio / Stremio` الخارجية وربط `Trakt` وحماية السكون لجميع الشاشات**: تثبيت الإضافات بضغطة واحدة أو عبر `manifest.json`، ربط `Trakt` ثنائي الاتجاه، وحماية الخلفية لشاشات `TCL (com.tcl.guard)` و`Sony / Xiaomi / Hisense / Google TV`.
+### جديد الإصدار `v1.0.0-beta.7` (`versionCode = 7`)
+- **قسم «الإعلانات» (`Trailers`) السينمائي `16:9` في الشاشة الرئيسية**: صفوف أفقية للإعلانات الرائجة، الجديدة (آخر 90 يوماً)، وقادم قريباً مع تحديث يومي تلقائي من مصادر مفتوحة (`Cinemeta` و`Jikan`) وفتح الإعلان مباشرةً في `YouTube`.
+- **استعادة زر «مشاهدة الإعلان» (`Watch Trailer`)**: متاح في صفحات جميع الأفلام والمسلسلات والكارتون/الأنمي.
+- **زر ولوحة `TV D-Pad` العائمة بسهم جانبي واحد (`‹` / `›`)**: قابل للسحب والتبديل بين اليد اليمنى واليسرى في جميع أقسام تطبيق الهاتف.
+- **مشغّل الوسائط الموحّد والتحكم الشامل**: التحكم في ستارة الإشعارات، أزرار الصوت الفيزيائية للهاتف، حفظ إعدادات الصوت والتكرار، وإصلاح عرض الفيديوهات العمودية (`9:16`) على الشاشة.
+- **تطوير المتصفح والنسخ الاحتياطي وتوحيد الثيم**: مدير تحميلات متكامل مع حذف الملفات غير المكتملة نهائياً عند الضغط على `X`، فتح الهاتف مباشرة على `TV Hub`، إظهار حساب Google في الإعدادات، فصل المسلسلات عن الأفلام بدقة، وتوحيد الثيم الداكن والذهبي مع علامة صح خضراء.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -93,10 +93,10 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.6` (`versionCode = 6`)
-- **Zero-Account Instant Mode & Persistent Poster Cache**: Posters, cast & filmographies, multi-source ratings, and automatic subtitles work right after install with persistent caching and auto-refresh.
-- **Watched Section, `Up Next` & Two-Way LAN `WATCH_SYNC`**: Automatic next-episode progression and real-time local network sync for Watched history, resume points, and Watchlist between Phone and TV.
-- **External `Nuvio / Stremio` Addons, `Trakt` Sync & Phone Hub Management**: One-tap addon install or custom `manifest.json` URLs, two-way `Trakt` sync, and pushing all API keys and addons straight from `TV Hub → Connection`.
+### What's New in `v1.0.0-beta.7` (`versionCode = 7`)
+- **Cinematic `16:9` Home Trailers & Watch Trailer Button**: Trending, New (last 90 days), and Coming Soon trailer rows updated daily from open sources (`Cinemeta` & `Jikan`) with direct `YouTube` playback.
+- **Single Side-Arrow Floating TV D-Pad & Unified Media Player**: Draggable `‹` / `›` handle on Phone, notification media controls, hardware volume keys controlling TV volume, and `9:16` vertical video fix.
+- **Browser Downloader, Theme & Library Separation**: Permanent cleanup of incomplete downloads on `X`, strict Movies/Series separation, unified Dark & Gold theme with green checkmarks, and Google profile display.
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
@@ -121,12 +121,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ---
 
-## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.6`)
+## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.7`)
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.6.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.6` (`6`) | `38,717,528` | `440229c8ac2f3d82196738a3c9211a00c27ff9bc688f9c4f4cb3bbee34420848` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.6.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.6` (`6`) | `196,918,204` | `9078ee744af44e97306912cf063cda20682eb48335f67233fed4a9e71711fd5a` |
+| `LocalCinema-TV-v1.0.0-beta.7.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.7` (`7`) | `38,757,679` | `44ca11f62eed3701dbd9115f0d73f4f1765ca43c15fa4dd8579e92909f44fd87` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.7.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.7` (`7`) | `197,316,085` | `93de9c7d20ca92022e96257f4cc317ef77e31bac042b43c12c01dc536ad6d973` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >
