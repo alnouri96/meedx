@@ -74,7 +74,7 @@
 }
 
 .ac-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.ac-card,.ac-api-card{padding:clamp(16px,2.2vw,22px);border-radius:14px;background:rgba(24,24,28,.78);backdrop-filter:blur(12px);border:1px solid rgba(229,184,75,.2);display:grid;gap:12px;align-content:start}
+.ac-card,.ac-api-card{min-width:0;padding:clamp(16px,2.2vw,22px);border-radius:14px;background:rgba(24,24,28,.78);backdrop-filter:blur(12px);border:1px solid rgba(229,184,75,.2);display:grid;gap:12px;align-content:start}
 .ac-card-head{display:flex;align-items:center;gap:12px}
 .ac-card-head h3,.ac-card-head h4{margin:2px 0 0;font-size:1.06rem;color:#fff}
 .ac-card-head code{font-size:.76rem;color:var(--color-gold)}
@@ -100,7 +100,7 @@
 .ac-zero-banner{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;background:rgba(229,184,75,.1);border:1px solid rgba(229,184,75,.32);color:#f3ebd6;font-size:.92rem;line-height:1.5}
 .ac-zero-banner svg{color:var(--color-gold);flex:none}
 
-.dl-card{display:grid;gap:14px;align-content:start}
+.dl-card{min-width:0;display:grid;gap:14px;align-content:start}
 .dl-title-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .dl-title-row h3{margin:0}
 .dl-status-pill{padding:3px 9px;border-radius:999px;background:rgba(229,184,75,.12);border:1px solid rgba(229,184,75,.35);color:var(--color-gold);font-size:.74rem;font-weight:700}
@@ -109,9 +109,9 @@
 .dl-tab:hover{border-color:rgba(251,191,36,.5);color:#fff}
 .dl-tab.active{background:rgba(229,184,75,.16);border-color:var(--color-gold);color:#fff}
 .dl-tab svg{color:var(--color-gold);flex:none}
-.dl-panel{display:grid;gap:12px}
+.dl-panel{min-width:0;display:grid;gap:12px}
 .dl-spec-grid{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.dl-spec-grid>div{padding:10px 12px;border-radius:10px;background:rgba(11,13,16,.7);border:1px solid var(--color-edge);display:grid;gap:4px}
+.dl-spec-grid>div{min-width:0;padding:10px 12px;border-radius:10px;background:rgba(11,13,16,.7);border:1px solid var(--color-edge);display:grid;gap:4px}
 .dl-spec-grid dt{font-size:.76rem;color:var(--muted)}
 .dl-spec-grid dd{margin:0;font-size:.86rem;color:#f2efe6;word-break:break-word}
 .dl-sec-dd{display:flex;align-items:flex-start;gap:6px}
