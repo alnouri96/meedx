@@ -84,7 +84,16 @@ function App() {
   }, [toast]);
 
   useEffect(() => {
-    if (window.location.pathname.replace(/\/+$/, '') === '/addons') {
+    const cleanPath = window.location.pathname.replace(/\/+$/, '');
+    if (cleanPath === '/tv' && catalog[0]?.url) {
+      window.location.replace(catalog[0].url);
+      return;
+    }
+    if (cleanPath === '/phone' && catalog[1]?.url) {
+      window.location.replace(catalog[1].url);
+      return;
+    }
+    if (cleanPath === '/addons') {
       window.history.replaceState({}, '', '/apps/local-cinema#addons');
       setRoute('/apps/local-cinema');
       setTimeout(() => document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' }), 80);
