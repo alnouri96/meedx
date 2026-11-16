@@ -4,9 +4,9 @@
     "latestVersionName": "1.0.0-beta.6",
     "versionCode": 6,
     "versionName": "1.0.0-beta.6",
-    "sizeBytes": 38708726,
-    "sha256": "7a5860843b428b2c66ec048bffd7b2d0be76dffbaac5eaedcf03dae12b95e553",
-    "changelog": "Local Cinema TV v1.0.0-beta.6 (code 6): Zero-Account instant mode, persistent poster cache, Watched & Up Next, two-way LAN WATCH_SYNC, Nuvio/Stremio addons, Trakt sync, multi-source ratings, cast pages, and phone-to-TV key/addon management.",
+    "sizeBytes": 38717528,
+    "sha256": "440229c8ac2f3d82196738a3c9211a00c27ff9bc688f9c4f4cb3bbee34420848",
+    "changelog": "Zero-Account mode, Permissions Setup Wizard, Unified Local + Google Drive Backup & Restore, Watched & Up Next, two-way LAN WATCH_SYNC, Nuvio/Stremio addons, Trakt sync, multi-source ratings, cast pages, persistent cache, and multi-brand TV sleep protection.",
     "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-TV-v1.0.0-beta.6.apk"
   },
   "phone": {
@@ -14,9 +14,9 @@
     "latestVersionName": "1.0.0-beta.6",
     "versionCode": 6,
     "versionName": "1.0.0-beta.6",
-    "sizeBytes": 196785207,
-    "sha256": "80eef6b1a238afdddc48ac7c3e0d358bf9453eae73a2f102391021d0214d25e0",
-    "changelog": "Local Cinema Manager v1.0.0-beta.6 (code 6): Manage API keys & Nuvio/Stremio addons from phone, one-tap addon installer, Trakt linking, and two-way LAN WATCH_SYNC with TV.",
+    "sizeBytes": 196918204,
+    "sha256": "9078ee744af44e97306912cf063cda20682eb48335f67233fed4a9e71711fd5a",
+    "changelog": "Permissions Setup Wizard, Unified Local + Google Drive Backup & Restore for Phone + TV, one-tap Nuvio/Stremio addon installer, Trakt linking, and two-way LAN WATCH_SYNC.",
     "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-Manager-Phone-v1.0.0-beta.6.apk"
   },
   "builds": [
@@ -35,8 +35,8 @@
         "en": "Beta · Open Source"
       },
       "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-TV-v1.0.0-beta.6.apk",
-      "sizeBytes": 38708726,
-      "sha256": "7a5860843b428b2c66ec048bffd7b2d0be76dffbaac5eaedcf03dae12b95e553",
+      "sizeBytes": 38717528,
+      "sha256": "440229c8ac2f3d82196738a3c9211a00c27ff9bc688f9c4f4cb3bbee34420848",
       "specs": {
         "platform": {
           "ar": "Android TV 7.0+",
@@ -54,8 +54,8 @@
         }
       },
       "changelog": {
-        "en": "Zero-Account mode, persistent poster cache, Watched & Up Next, two-way LAN WATCH_SYNC, Nuvio/Stremio addons, Trakt sync, multi-source ratings, cast pages, and phone-to-TV management.",
-        "ar": "وضع التشغيل الفوري بلا حساب، الكاش الدائم للبوسترات، قسم تمت المشاهدة وUp Next، المزامنة الثنائية عبر الشبكة المحلية WATCH_SYNC، إضافات Nuvio/Stremio، ربط Trakt، التقييمات المتعددة، وصفحة الممثلين."
+        "en": "Zero-Account mode, Permissions Setup Wizard, Unified Local + Google Drive Backup & Restore, Watched & Up Next, two-way LAN WATCH_SYNC, Nuvio/Stremio addons, Trakt sync, multi-source ratings, cast pages, persistent cache, and multi-brand TV sleep protection.",
+        "ar": "وضع التشغيل الفوري بلا حساب، معالج الصلاحيات الذكي، النسخ الاحتياطي الشامل (محلي + Google Drive)، تمت المشاهدة وUp Next، المزامنة الثنائية عبر الشبكة المحلية، إضافات Nuvio/Stremio، ربط Trakt، التقييمات المتعددة، صفحات الممثلين، وحماية الخلفية لجميع الشاشات."
       },
       "updateNotes": [
         {
@@ -66,37 +66,39 @@
           "whatsNew": {
             "ar": [
               "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) للبوسترات والتقييمات والممثلين والترجمة التلقائية.",
-              "قسم «تمت المشاهدة» (Watched) وقائمة المشاهدة (Watchlist) مع تلوين أزرار التحديد بالذهبي، والانتقال التلقائي للحلقة التالية (Up Next).",
-              "المزامنة الثنائية عبر الشبكة المحلية (WATCH_SYNC) لمزامنة موضع التوقف وحالة المشاهدة لحظياً بين الهاتف والشاشة.",
-              "دعم الإضافات الخارجية (Nuvio / Stremio Addons) مع التثبيت بضغطة واحدة والاكتشاف التلقائي لروابط manifest.json.",
-              "ربط ومزامنة Trakt ثنائية الاتجاه (بدعم تطبيقات PKCE / Client ID الحديثة) مع زر تحديث سريع في القائمة الجانبية.",
-              "صفحة الممثلين وأعمالهم (Cast & Crew) بصور البورتريه وعرض الصورة بالحجم الكامل والأعمال المحلية والعالمية.",
-              "التقييمات من مصادر متعددة (IMDb، Rotten Tomatoes، Metacritic، Trakt، MyAnimeList).",
-              "إدارة جميع المفاتيح والإضافات من تطبيق الهاتف (TV Hub ← Connection) ومزامنتها تلقائياً للشاشة (API_KEYS_SYNC وADDONS_SYNC)."
+              "معالج الصلاحيات الذكي عند التشغيل الأول (Permissions Setup Wizard) للتطبيقين مع شرح فائدة كل صلاحية وحالتها الحيّة.",
+              "النسخ الاحتياطي والاسترجاع الشامل للهاتف والشاشة معاً (محلياً وعبر حساب Google Drive) مع الإطلاق التلقائي للإعدادات إلى الشاشة.",
+              "قسم «تمت المشاهدة» (Watched) وقائمة المشاهدة (Watchlist) بأزرار ذهبية والانتقال التلقائي للحلقة التالية (Up Next).",
+              "المزامنة الثنائية عبر الشبكة المحلية (WATCH_SYNC) لموضع التوقف وحالة المشاهدة لحظياً.",
+              "دعم الإضافات الخارجية (Nuvio / Stremio Addons) بالتثبيت بضغطة واحدة والاكتشاف التلقائي لروابط manifest.json من الحافظة.",
+              "ربط ومزامنة Trakt ثنائية الاتجاه (PKCE / Client ID) مع زر تحديث فوري في القائمة الجانبية.",
+              "صفحة الممثلين وأعمالهم (Cast & Crew) والتقييمات من مصادر متعددة (IMDb، Rotten Tomatoes، Metacritic، Trakt، MyAnimeList).",
+              "إدارة جميع المفاتيح والإضافات من تطبيق الهاتف (TV Hub ← Connection) ومزامنتها تلقائياً للشاشة."
             ],
             "en": [
               "Zero-Account Mode for instant posters, ratings, cast filmographies, and automatic subtitles with no login.",
-              "Watched section and Watchlist with gold selection states, plus automatic Up Next episode progression.",
-              "Two-way local network WATCH_SYNC for real-time resume positions and watch status between Phone and TV.",
-              "External Nuvio / Stremio Addons support with one-tap install and manifest.json discovery.",
-              "Two-way Trakt linking and sync (modern PKCE / Client ID apps) with a quick sidebar refresh button.",
-              "Cast & Crew pages with portrait photos, full-size image viewer, and local/global filmographies.",
-              "Multi-source ratings (IMDb, Rotten Tomatoes, Metacritic, Trakt, MyAnimeList).",
-              "Manage all keys and addons from the phone app (TV Hub → Connection) with automatic TV sync (API_KEYS_SYNC & ADDONS_SYNC)."
+              "First-launch Permissions Setup Wizard for both apps explaining each permission with live status badges.",
+              "Unified Backup & Restore for Phone + TV together (local file & Google Drive) with automatic push to TV.",
+              "Watched section and Watchlist with gold buttons, plus automatic Up Next episode progression.",
+              "Two-way local network WATCH_SYNC for real-time resume positions and watch status.",
+              "External Nuvio / Stremio Addons support with one-tap install and automatic clipboard manifest.json detection.",
+              "Two-way Trakt linking and sync (PKCE / Client ID) with an instant sidebar refresh button.",
+              "Cast & Crew pages and multi-source ratings (IMDb, Rotten Tomatoes, Metacritic, Trakt, MyAnimeList).",
+              "Manage all keys and addons from the phone app (TV Hub → Connection) with automatic TV sync."
             ]
           },
           "improvements": {
             "ar": [
               "كاش دائم على القرص (Persistent Disk Cache) للبيانات والصور مع مؤقت تحديث تلقائي قابل للتخصيص (يومي / كل يومين / أسبوعي / شهري / يدوي).",
-              "إعادة تنظيم قائمة الإعدادات ووضع التحديثات في السطر الأول وحفظ موضع التركيز عند الرجوع.",
-              "إضافة دليل وحماية التشغيل في الخلفية لشاشات TCL (com.tcl.guard) لمنع انقطاع الاتصال أثناء السكون.",
-              "توحيد لغة الأوصاف والسير الذاتية مع لغة التطبيق المختارة (العربية أو الإنجليزية)."
+              "إعادة ترتيب الإعدادات وحفظ موضع التركيز عند الرجوع.",
+              "إضافة إعدادات حماية الخلفية ومنع السكون المخصصة لشاشات TCL (com.tcl.guard) وإعدادات مخصصة لبقية الشاشات (Sony, Xiaomi, Hisense, Google TV).",
+              "توحيد لغة الأوصاف والسير الذاتية مع لغة التطبيق المختارة."
             ],
             "en": [
               "Persistent Disk Cache for metadata and artwork with customizable auto-refresh intervals (daily / 2 days / weekly / monthly / manual).",
-              "Reorganized Settings menu placing App Updates on the first row with focus-position restoration on Back.",
-              "Added background guard guide for TCL TVs (com.tcl.guard) to prevent sleep disconnections.",
-              "Unified synopsis and biography language with the selected app locale (Arabic or English)."
+              "Reorganized Settings menu with focus and scroll position preservation on Back.",
+              "Dedicated background and sleep protection settings for TCL TVs (com.tcl.guard) and other TVs (Sony, Xiaomi, Hisense, Google TV).",
+              "Unified synopsis and biography language with the selected app locale."
             ]
           }
         }
@@ -117,8 +119,8 @@
         "en": "Beta · Open Source"
       },
       "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-Manager-Phone-v1.0.0-beta.6.apk",
-      "sizeBytes": 196785207,
-      "sha256": "80eef6b1a238afdddc48ac7c3e0d358bf9453eae73a2f102391021d0214d25e0",
+      "sizeBytes": 196918204,
+      "sha256": "9078ee744af44e97306912cf063cda20682eb48335f67233fed4a9e71711fd5a",
       "specs": {
         "platform": {
           "ar": "Android 7.0+",
@@ -128,7 +130,7 @@
           "ar": "arm64-v8a & armeabi-v7a",
           "en": "arm64-v8a & armeabi-v7a"
         },
-        "sizeLabel": "187.7 MiB",
+        "sizeLabel": "187.8 MiB",
         "license": "GPL-3.0",
         "security": {
           "ar": "خلو الحزمة من أي مفاتيح API مضمّنة (Zero Hardcoded Secrets)",
@@ -136,8 +138,8 @@
         }
       },
       "changelog": {
-        "en": "Manage all API keys & Nuvio/Stremio addons from phone, one-tap addon installer, Trakt linking, and two-way LAN WATCH_SYNC with TV.",
-        "ar": "إدارة جميع المفاتيح والإضافات من الهاتف، تثبيت إضافات Nuvio/Stremio بضغطة واحدة، ربط Trakt، والمزامنة الثنائية عبر الشبكة المحلية مع الشاشة."
+        "en": "Permissions Setup Wizard, Unified Local + Google Drive Backup & Restore for Phone + TV, one-tap Nuvio/Stremio addon installer, Trakt linking, and two-way LAN WATCH_SYNC.",
+        "ar": "معالج الصلاحيات الذكي، النسخ الاحتياطي والاسترجاع الشامل (محلي + Google Drive) للهاتف والشاشة، تثبيت إضافات Nuvio/Stremio بضغطة واحدة، ربط Trakt، والمزامنة الثنائية عبر الشبكة المحلية."
       },
       "updateNotes": [
         {
@@ -148,30 +150,30 @@
           "whatsNew": {
             "ar": [
               "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) مع إدارة كاملة للمفاتيح والإضافات من تطبيق الهاتف (TV Hub ← Connection).",
-              "دعم الإضافات الخارجية (Nuvio / Stremio Addons) مع التثبيت بضغطة واحدة والاكتشاف التلقائي لروابط manifest.json من الحافظة.",
-              "مزامنة المفاتيح والإضافات تلقائياً مع الشاشة عبر الشبكة المحلية (API_KEYS_SYNC وADDONS_SYNC).",
-              "المزامنة الثنائية عبر الشبكة المحلية (WATCH_SYNC) لقوائم «تمت المشاهدة» وWatchlist ومواضع التوقف بين الهاتف والشاشة.",
-              "ربط ومزامنة Trakt ثنائية الاتجاه (بدعم تطبيقات PKCE / Client ID الحديثة).",
-              "قسم «تمت المشاهدة» (Watched) والانتقال التلقائي للحلقة التالية (Up Next) وصفحات الممثلين والتقييمات المتعددة."
+              "معالج الصلاحيات الذكي عند التشغيل الأول (Permissions Setup Wizard) لتوضيح فائدة كل صلاحية وحالتها الحيّة.",
+              "النسخ الاحتياطي والاسترجاع الشامل للهاتف والشاشة معاً (محلياً وعبر Google Drive) مع الإطلاق التلقائي للإعدادات إلى الشاشة.",
+              "دعم الإضافات الخارجية (Nuvio / Stremio Addons) بالتثبيت بضغطة واحدة والاكتشاف التلقائي لروابط manifest.json من الحافظة.",
+              "المزامنة الثنائية عبر الشبكة المحلية (WATCH_SYNC) لقوائم «تمت المشاهدة» وWatchlist ومواضع التوقف لحظياً.",
+              "ربط ومزامنة Trakt ثنائية الاتجاه (PKCE / Client ID) مع التوافق الكامل مع صفحات الممثلين والتقييمات المتعددة وUp Next."
             ],
             "en": [
               "Zero-Account Mode with centralized API key and addon management directly from Phone (TV Hub → Connection).",
+              "First-launch Permissions Setup Wizard explaining each permission with live status badges.",
+              "Unified Backup & Restore for Phone + TV together (local file & Google Drive) with automatic push to TV.",
               "External Nuvio / Stremio Addons support with one-tap install and automatic clipboard manifest.json detection.",
-              "Automatic local-network sync of keys and addons to TV (API_KEYS_SYNC & ADDONS_SYNC).",
               "Two-way LAN WATCH_SYNC for Watched status, Watchlist, and playback resume positions.",
-              "Two-way Trakt linking and sync supporting modern PKCE / Client ID apps.",
-              "Full compatibility with TV Watched, Up Next, Cast & Crew pages, and Multi-Source Ratings."
+              "Two-way Trakt linking and sync (PKCE / Client ID) with full compatibility for Cast & Crew, Multi-Source Ratings, and Up Next."
             ]
           },
           "improvements": {
             "ar": [
-              "حزمة موحّدة مضغوطة للهواتف (arm64-v8a & armeabi-v7a) بحجم 187.7 MiB مع الحفاظ الكامل على المتصفح المانع للإعلانات ومشغل التورنت.",
-              "دعم دليل حماية الخلفية لشاشات TCL (com.tcl.guard) لضمان استمرار الاتصال والمزامنة.",
+              "حزمة موحّدة مضغوطة للهواتف (arm64-v8a & armeabi-v7a) بحجم 187.8 MiB مع الحفاظ الكامل على المتصفح المانع للإعلانات ومشغل التورنت.",
+              "دعم دليل حماية الخلفية لشاشات TCL (com.tcl.guard) وبقية الشاشات (Sony, Xiaomi, Hisense, Google TV).",
               "تحسين استقرار الاقتران والريموت والكتابة عن بُعد باللغتين العربية والإنجليزية."
             ],
             "en": [
-              "Unified compressed phone APK (arm64-v8a & armeabi-v7a) at 187.7 MiB keeping the Ad-Block browser and torrent engine intact.",
-              "Integrated TCL background guard guide (com.tcl.guard) to keep sync connections alive.",
+              "Unified compressed phone APK (arm64-v8a & armeabi-v7a) at 187.8 MiB keeping the Ad-Block browser and torrent engine intact.",
+              "Integrated background guard guides for TCL (com.tcl.guard) and other TVs (Sony, Xiaomi, Hisense, Google TV).",
               "Improved pairing, remote input, and bilingual Arabic/English UI responsiveness."
             ]
           }
