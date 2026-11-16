@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.8`)
+# MEEDX · Local Cinema (`v1.0.0-beta.9`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.8"><strong>⬇️ تحميل v1.0.0-beta.8 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.9"><strong>⬇️ تحميل v1.0.0-beta.9 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,12 +61,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.8` (`versionCode = 8`)
-- **إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة**: أيقونات صافية، تاتش باد وجوستك قابل للتبديل، زر `QR`، وشريط بث مصغّر.
-- **تطوير محرك اقتناص وبث الفيديو (`Web Video Caster Engine`) وتوحيد الترجمة**: دعم البث بدقة عالية وتمرير الترويسات، مزامنة الترجمة الفورية وزر إعادة الفحص، وتوحيد بحث الترجمة أثناء البث بمفاتيح `Connection` تلقائياً مع تعبئة اسم الفيديو المبثوث.
-- **المحاذاة العربية (`RTL`) والطقس الحي والساعة**: إصلاح المحاذاة العربية والتنقل في صفوف الإعلانات وتفاصيل الأفلام وقوائم المشغّل، إضافة أيقونات طقس ملوّنة بالموقع الجغرافي الحقيقي، وإعداد شفافية خلفية الساعة.
-- **إغناء إعلانات قريباً والفرز والمزامنة الفورية**: توسيع قسم إعلانات «قريباً» من مصادر مفتوحة مجانية، خيارات فرز متعددة داخل قائمة البوستر، والمزامنة التلقائية لمفاتيح API وTrakt والإضافات وسجل المتصفح عند الربط.
-- **حزمة هاتف أخف (`113.64 MiB` · `arm64-v8a`)**: تقليص الحجم مع استقرار التحميل المباشر من المتصفح.
+### جديد الإصدار `v1.0.0-beta.9` (`versionCode = 9`)
+- **استعادة شاشة المسلسلات والمواسم والحلقات**: بوسترات `2:3` ولوجو الأعمال الذهبي (`ClearLogos`) وتجميع تلقائي لمجلدات المواسم المتعددة.
+- **التقييمات المتعددة السريعة وتفاصيل الحلقات**: عرض تقييمات `IMDb` و`TMDb` و`TVmaze` و`Rotten Tomatoes` و`Metacritic` مع سنة البث والمدة الحقيقية لكل حلقة وتوحيد شارات `Dolby Vision` بدون تكرار.
+- **ثبات التبويب النشط والتركيز**: إبقاء تبويب الموسم النشط مميّزاً بالذهبي أثناء التنقل بين الحلقات، وإصلاح ثبات التركيز في شاشة الأفلام عند التحديد كمشاهد.
+- **ريموت الهاتف ومحرك `Web Video Caster` وتقليص الحجم (`113.64 MiB` · `arm64-v8a`)**: ريموت بيد واحدة مع تاتش باد وجوستك وزر `QR` وشريط بث مصغّر، اقتناص وبث احترافي مع إعادة الفحص ومزامنة الترجمة الفورية وتوحيد بحث الترجمة مع `Connection`، وتحسين أداء البث بدقة `4K`.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -93,11 +92,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.8` (`versionCode = 8`)
-- **One-Handed Icon-Only TV Remote**: Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting bar.
-- **Upgraded Web Video Caster & LAN Proxy + Unified Casting Subtitles**: High-resolution casting with header forwarding, synced subtitles, live rescan, and saved Connection subtitle keys with auto-filled media titles.
-- **Arabic RTL Navigation, Weather & Clock Opacity**: Fixed RTL trailer strips, details alignment, and player menu layout; added location-based live weather with colored icons and customizable clock background opacity.
-- **Enriched Coming Soon Trailers, Context Sort & Instant Sync**: Expanded Coming Soon trailers from open sources, multi-criteria poster sorting, and instant automatic sync of API keys, Trakt, addons, and browser history upon pairing (`113.64 MiB arm64-v8a` Phone APK).
+### What's New in `v1.0.0-beta.9` (`versionCode = 9`)
+- **Restored Series & Seasons View**: Full `2:3` season posters, ClearLogos, and automatic multi-season folder grouping.
+- **Fast Parallel Multi-Source Ratings & Accurate Episode Info**: Parallel `IMDb`, `TMDb`, `TVmaze`, `Rotten Tomatoes`, and `Metacritic` ratings, accurate per-episode air year/runtime, and deduplicated `Dolby Vision` badges.
+- **Persistent Gold Season Tab & Watched Focus Lock**: Golden active-season tab highlight across episodes and rock-solid focus retention when marking movies as watched.
+- **One-Handed Remote, Web Video Caster & `4K` Optimization**: One-handed icon-only remote with Touchpad/D-Pad slider & `QR` shortcut, upgraded browser media sniffer/proxy with live rescan & synced subtitles, and compressed `113.64 MiB` `arm64-v8a` Phone build.
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
@@ -122,12 +121,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ---
 
-## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.8`)
+## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.9`)
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.8.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.8` (`8`) | `38,818,775` | `84b312fe99989b728c6d9023f27431ace251dd1490762ed5c69bf18d13def843` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.8.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.8` (`8`) | `119,159,102` | `bebc3259f4226a067e04cee28c3331c292709eca860aad34d119e86cce1032bb` |
+| `LocalCinema-TV-v1.0.0-beta.9.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.9` (`9`) | `38,834,913` | `ba1e42f8aadc94e2ac06ecadc84818f681762e8bcd06e551f432188be015a430` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.9.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.9` (`9`) | `119,159,570` | `e020dca12c872d0e799a683e5a8d3bfa0a34f53b371e35474dac368a1b3de422` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >

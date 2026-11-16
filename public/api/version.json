@@ -1,23 +1,23 @@
 {
   "tv": {
-    "latestVersionCode": 8,
-    "latestVersionName": "1.0.0-beta.8",
-    "versionCode": 8,
-    "versionName": "1.0.0-beta.8",
-    "sizeBytes": 38818775,
-    "sha256": "84b312fe99989b728c6d9023f27431ace251dd1490762ed5c69bf18d13def843",
-    "changelog": "Redesigned one-handed TV Remote, upgraded Web Video Caster engine & LAN proxy, unified casting subtitle search, full Arabic RTL layout/trailer navigation fixes, live weather with colored icons & clock opacity, Coming Soon trailers enrichment, poster context Sort By, and instant Connection sync.",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-TV-v1.0.0-beta.8.apk"
+    "latestVersionCode": 9,
+    "latestVersionName": "1.0.0-beta.9",
+    "versionCode": 9,
+    "versionName": "1.0.0-beta.9",
+    "sizeBytes": 38834913,
+    "sha256": "ba1e42f8aadc94e2ac06ecadc84818f681762e8bcd06e551f432188be015a430",
+    "changelog": "Restored full Series & Seasons view with 2:3 posters & ClearLogos, fast parallel multi-source ratings, persistent gold active-season tab, movie watched focus retention, redesigned one-handed TV Remote, upgraded Web Video Caster engine, and arm64-v8a Phone ABI split.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.9/LocalCinema-TV-v1.0.0-beta.9.apk"
   },
   "phone": {
-    "latestVersionCode": 8,
-    "latestVersionName": "1.0.0-beta.8",
-    "versionCode": 8,
-    "versionName": "1.0.0-beta.8",
-    "sizeBytes": 119159102,
-    "sha256": "bebc3259f4226a067e04cee28c3331c292709eca860aad34d119e86cce1032bb",
-    "changelog": "Redesigned one-handed TV Remote with Touchpad/D-Pad slider & QR shortcut, upgraded Web Video Caster & LAN proxy, unified casting subtitle search, direct Cinemana downloads (113.64 MiB arm64-v8a), and instant auto-sync on pairing.",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-Manager-Phone-v1.0.0-beta.8.apk"
+    "latestVersionCode": 9,
+    "latestVersionName": "1.0.0-beta.9",
+    "versionCode": 9,
+    "versionName": "1.0.0-beta.9",
+    "sizeBytes": 119159570,
+    "sha256": "e020dca12c872d0e799a683e5a8d3bfa0a34f53b371e35474dac368a1b3de422",
+    "changelog": "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider & QR shortcut, upgraded Web Video Caster engine with live rescan & synced subtitle casting, unified Connection subtitle search, and reduced 113.64 MiB arm64-v8a build with enhanced 4K stability.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.9/LocalCinema-Manager-Phone-v1.0.0-beta.9.apk"
   },
   "builds": [
     {
@@ -27,9 +27,9 @@
       "packageId": "com.meedx.localcinema.tv",
       "name": "Local Cinema TV",
       "available": true,
-      "version": "1.0.0-beta.8",
-      "versionCode": 8,
-      "releaseDate": "2026-11-16",
+      "version": "1.0.0-beta.9",
+      "versionCode": 9,
+      "releaseDate": "2026-11-17",
       "status": {
         "ar": "تجريبي · مفتوح المصدر",
         "en": "Beta · Open Source"
@@ -44,9 +44,9 @@
         "ar": "كود Downloader — هذه نسخة الشاشة",
         "en": "Downloader Code — This is the TV Version"
       },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-TV-v1.0.0-beta.8.apk",
-      "sizeBytes": 38818775,
-      "sha256": "84b312fe99989b728c6d9023f27431ace251dd1490762ed5c69bf18d13def843",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.9/LocalCinema-TV-v1.0.0-beta.9.apk",
+      "sizeBytes": 38834913,
+      "sha256": "ba1e42f8aadc94e2ac06ecadc84818f681762e8bcd06e551f432188be015a430",
       "specs": {
         "platform": {
           "ar": "Android TV 7.0+",
@@ -56,7 +56,7 @@
           "ar": "Universal APK",
           "en": "Universal APK"
         },
-        "sizeLabel": "37.02 MiB",
+        "sizeLabel": "37.04 MiB",
         "license": "GPL-3.0",
         "security": {
           "ar": "آمن 100% — بلا أسرار مضمّنة (Zero Hardcoded Secrets)",
@@ -64,43 +64,67 @@
         }
       },
       "changelog": {
-        "en": "Redesigned one-handed TV Remote, upgraded Web Video Caster engine & LAN proxy, unified casting subtitle search, full Arabic RTL layout/trailer navigation fixes, live weather with colored icons & clock opacity, Coming Soon trailers enrichment, poster context Sort By, and instant Connection sync.",
-        "ar": "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة، تطوير محرك اقتناص وبث الفيديو، توحيد بحث الترجمة أثناء البث، إصلاح المحاذاة العربية RTL وصفوف الإعلانات، أيقونات طقس ملوّنة بالموقع الجغرافي وشفافية الساعة، إغناء إعلانات قريباً والفرز المتعدد، والمزامنة الفورية."
+        "en": "Restored full Series & Seasons view with 2:3 posters & ClearLogos, fast parallel multi-source ratings, persistent gold active-season tab, movie watched focus retention, redesigned one-handed TV Remote, upgraded Web Video Caster engine, and arm64-v8a Phone ABI split.",
+        "ar": "استعادة شاشة المسلسلات والمواسم ببوسترات 2:3 ولوجو الأعمال، التقييمات المتعددة السريعة، تمييز تبويب الموسم النشط وثبات التركيز، ريموت هاتف مطوّر بيد واحدة، محرك Web Video Caster الاحترافي، وتحسين أداء 4K."
       },
       "updateNotes": [
         {
-          "version": "1.0.0-beta.8",
-          "versionCode": 8,
-          "date": "2026-11-16",
+          "version": "1.0.0-beta.9",
+          "versionCode": 9,
+          "date": "2026-11-17",
           "latest": true,
           "whatsNew": {
             "ar": [
-              "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة بأيقونات صافية، وتاتش باد وجوستك قابل للتبديل، وزر QR، وشريط بث مصغّر.",
-              "تطوير محرك اقتناص وبث الفيديو من المتصفح (Web Video Caster Engine) لدعم البث بدقة عالية وتمرير الترويسات ومزامنة الترجمة الفورية وزر إعادة الفحص.",
-              "توحيد بحث الترجمة أثناء البث وربطه بمفاتيح Connection تلقائياً مع تعبئة اسم الفيديو المبثوث.",
-              "إضافة أيقونات طقس ملوّنة بالموقع الجغرافي الحقيقي وإعداد شفافية خلفية الساعة.",
-              "إغناء قسم إعلانات «قريباً» من مصادر مفتوحة مجانية، وإضافة خيارات الفرز المتعددة داخل قائمة البوستر.",
-              "المزامنة التلقائية الفورية لمفاتيح API وTrakt والإضافات وسجل المتصفح عند الربط."
+              "استعادة كاملة لشاشة المسلسلات والمواسم والحلقات ببوسترات 2:3 ولوجو الأعمال الذهبي وتجميع تلقائي لمجلدات المواسم المتعددة.",
+              "عرض التقييمات المتعددة السريعة (IMDb، TMDb، TVmaze، Rotten Tomatoes، Metacritic) مع سنة البث والمدة الحقيقية لكل حلقة وإزالة تكرار شارات Dolby Vision.",
+              "إبقاء تبويب الموسم النشط مميّزاً بالذهبي أثناء التنقل بين الحلقات، وإصلاح ثبات التركيز في شاشة الأفلام عند التحديد كمشاهد.",
+              "ريموت هاتف مطوّر بيد واحدة بأيقونات صافية، وتاتش باد وجوستك بالسحب، وزر مسح QR، وشريط بث مصغّر.",
+              "محرك اقتناص وبث وسائط احترافي من المتصفح (Web Video Caster Engine) مع زر إعادة الفحص ومزامنة الترجمة الفورية وتوحيد بحث الترجمة مع Connection.",
+              "تقليص حجم تطبيق الهاتف عبر تقسيم معمارية arm64-v8a وتحسين أداء البث بدقة 4K."
             ],
             "en": [
-              "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting bar.",
-              "Upgraded in-app browser media sniffer & LAN proxy for smooth high-resolution casting, synced subtitles, and live rescan.",
-              "Unified casting subtitle search with saved Connection keys and auto-filled media titles.",
-              "Location-based live weather with colored icons and customizable clock background opacity.",
-              "Expanded \"Coming Soon\" trailers from open sources and added multi-criteria sorting in poster context menus.",
-              "Instant automatic sync of API keys, Trakt, addons, and browser history upon pairing."
+              "Restored full Series & Seasons view with 2:3 season posters, ClearLogos, and automatic multi-season folder grouping.",
+              "Fast parallel multi-source ratings (IMDb, TMDb, TVmaze, Rotten Tomatoes, Metacritic), accurate per-episode air year/runtime, and deduplicated Dolby Vision badges.",
+              "Persistent golden active-season tab highlight and rock-solid focus retention when toggling watched status on movies.",
+              "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting pill.",
+              "Upgraded in-app browser media sniffer & LAN proxy with live rescan, synced subtitle casting, and unified Connection subtitle search.",
+              "Reduced Phone APK size via arm64-v8a ABI split and enhanced 4K playback stability."
             ]
           },
           "improvements": {
             "ar": [
-              "إصلاح المحاذاة العربية (RTL) والتنقل في صفوف الإعلانات وتفاصيل الأفلام وقوائم المشغّل.",
-              "توسيع قوائم الترجمة وزر إلغاء القائمة المنبثقة بعرض كامل، وإرجاع الشاشة الرئيسية للأعلى بضغطة زر الرئيسية.",
-              "تحسين استرجاع البوسترات والبيانات المفقودة وتثبيت نوافذ إعدادات المشغّل دون اختفاء."
+              "استبدال استعلامات Wikidata البطيئة بجلب متوازٍ سريع مع الحفاظ على التقييمات عبر التبويبات.",
+              "تثبيت ارتفاع شريط التفاصيل والتقييمات لمنع قص أزرار الإجراءات السفلية وإصلاح جمع الحلقات العربية."
             ],
             "en": [
-              "Full Arabic RTL navigation, details alignment, and player menu layout fixes.",
-              "Unclipped subtitle track scroll, full-width context menu cancel button, and Home rail scroll-to-top reset.",
-              "Enhanced missing poster/metadata recovery and kept player menus open during audio/subtitle tweaks."
+              "Replaced slow Wikidata SPARQL calls with fast parallel lookups preserved across Show and Season tabs.",
+              "Stabilized infoRow/ratingsRow heights to prevent bottom button clipping and refined Arabic plural counts."
+            ]
+          }
+        },
+        {
+          "version": "1.0.0-beta.8",
+          "versionCode": 8,
+          "date": "2026-11-16",
+          "latest": false,
+          "whatsNew": {
+            "ar": [
+              "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة بأيقونات صافية، وتاتش باد وجوستك قابل للتبديل، وزر QR، وشريط بث مصغّر.",
+              "تطوير محرك اقتناص وبث الفيديو من المتصفح (Web Video Caster Engine) وتوحيد بحث الترجمة مع Connection.",
+              "إضافة أيقونات طقس ملوّنة بالموقع الجغرافي الحقيقي وإعداد شفافية خلفية الساعة، وإغناء إعلانات «قريباً» وخيارات الفرز المتعددة."
+            ],
+            "en": [
+              "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting bar.",
+              "Upgraded Web Video Caster & LAN proxy and unified casting subtitle search with Connection keys.",
+              "Location-based live weather icons, clock background opacity, enriched Coming Soon trailers, and poster context Sort By."
+            ]
+          },
+          "improvements": {
+            "ar": [
+              "إصلاح المحاذاة العربية (RTL) في صفوف الإعلانات وتفاصيل الأفلام وقوائم المشغّل."
+            ],
+            "en": [
+              "Full Arabic RTL navigation, details alignment, and player menu layout fixes."
             ]
           }
         },
@@ -111,22 +135,10 @@
           "latest": false,
           "whatsNew": {
             "ar": [
-              "قسم «الإعلانات» (Trailers) السينمائي في الشاشة الرئيسية بصفوف عريضة 16:9 وتحديث يومي تلقائي من مصادر مفتوحة وفتح مباشر في YouTube.",
-              "استعادة زر «مشاهدة الإعلان» (Watch Trailer) في صفحات جميع الأفلام والمسلسلات والكارتون/الأنمي.",
-              "مشغّل الوسائط الموحّد والتحكم الشامل من ستارة الإشعارات وأزرار الصوت الفيزيائية وإصلاح عرض الفيديوهات العمودية (9:16)."
+              "قسم «الإعلانات» (Trailers) السينمائي 16:9 في الشاشة الرئيسية وزر «مشاهدة الإعلان» في YouTube، ومشغّل الوسائط الموحّد."
             ],
             "en": [
-              "Cinematic 16:9 Home Trailers rows updated daily from open sources with direct YouTube playback.",
-              "Restored Watch Trailer button across all Movies, Series, and Cartoon/Anime pages.",
-              "Unified Media Player UI, notification controls, hardware volume control, and 9:16 vertical video fix."
-            ]
-          },
-          "improvements": {
-            "ar": [
-              "توحيد الثيم الداكن والذهبي لإعدادات ونوافذ المشغّل، وفصل المسلسلات عن الأفلام بدقة، وتوحيد لغة البوسترات والعناوين."
-            ],
-            "en": [
-              "Unified Dark & Gold theme across player menus, strict Movies/Series separation, and strict locale poster matching."
+              "Cinematic 16:9 Home Trailers rows, Watch Trailer YouTube button, and Unified Media Player."
             ]
           }
         },
@@ -137,22 +149,10 @@
           "latest": false,
           "whatsNew": {
             "ar": [
-              "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) للبوسترات والتقييمات والممثلين والترجمة التلقائية.",
-              "معالج الصلاحيات الذكي عند التشغيل الأول للتطبيقين، والنسخ الاحتياطي والاسترجاع الشامل عبر Google Drive ومحلياً.",
-              "قسم «تمت المشاهدة» وWatchlist وUp Next، المزامنة الثنائية WATCH_SYNC، إضافات Nuvio / Stremio، ربط Trakt، وحماية الخلفية للشاشات."
+              "وضع التشغيل الفوري بلا حساب، معالج الصلاحيات الذكي، النسخ الاحتياطي عبر Google Drive ومحلياً، وإضافات Nuvio / Stremio وTrakt."
             ],
             "en": [
-              "Zero-Account Mode for instant posters, ratings, cast, and automatic subtitles.",
-              "First-launch Permissions Setup Wizard and Unified Google Drive + Local Backup & Restore.",
-              "Watched section, Watchlist, Up Next, WATCH_SYNC, Nuvio / Stremio addons, Trakt sync, and TV sleep protection."
-            ]
-          },
-          "improvements": {
-            "ar": [
-              "كاش دائم على القرص للبيانات والصور مع مؤقت تحديث تلقائي قابل للتخصيص وحفظ موضع التركيز عند الرجوع."
-            ],
-            "en": [
-              "Persistent Disk Cache with customizable auto-refresh timer and Back-button focus preservation."
+              "Zero-Account Mode, Permissions Setup Wizard, Google Drive + Local Backup & Restore, Nuvio / Stremio addons, and Trakt sync."
             ]
           }
         }
@@ -165,9 +165,9 @@
       "packageId": "com.meedx.localcinema.manager",
       "name": "Local Cinema Manager",
       "available": true,
-      "version": "1.0.0-beta.8",
-      "versionCode": 8,
-      "releaseDate": "2026-11-16",
+      "version": "1.0.0-beta.9",
+      "versionCode": 9,
+      "releaseDate": "2026-11-17",
       "status": {
         "ar": "تجريبي · مفتوح المصدر",
         "en": "Beta · Open Source"
@@ -176,9 +176,9 @@
         "ar": "هذه نسخة الهاتف (Android Phone)",
         "en": "This is the Phone Version (Android Phone)"
       },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-Manager-Phone-v1.0.0-beta.8.apk",
-      "sizeBytes": 119159102,
-      "sha256": "bebc3259f4226a067e04cee28c3331c292709eca860aad34d119e86cce1032bb",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.9/LocalCinema-Manager-Phone-v1.0.0-beta.9.apk",
+      "sizeBytes": 119159570,
+      "sha256": "e020dca12c872d0e799a683e5a8d3bfa0a34f53b371e35474dac368a1b3de422",
       "specs": {
         "platform": {
           "ar": "Android 7.0+",
@@ -196,39 +196,51 @@
         }
       },
       "changelog": {
-        "en": "Redesigned one-handed TV Remote with Touchpad/D-Pad slider & QR shortcut, upgraded Web Video Caster & LAN proxy, unified casting subtitle search, direct Cinemana downloads (113.64 MiB arm64-v8a), and instant auto-sync on pairing.",
-        "ar": "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة مع تاتش باد وجوستك وزر QR، تطوير محرك اقتناص وبث الفيديو، توحيد بحث الترجمة أثناء البث، حزمة أخف (113.64 MiB arm64-v8a)، والمزامنة الفورية."
+        "en": "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider & QR shortcut, upgraded Web Video Caster engine with live rescan & synced subtitle casting, unified Connection subtitle search, and reduced 113.64 MiB arm64-v8a build with enhanced 4K stability.",
+        "ar": "ريموت هاتف مطوّر بيد واحدة بأيقونات صافية وتاتش باد وجوستك وزر QR، محرك اقتناص وبث وسائط احترافي من المتصفح مع إعادة الفحص ومزامنة الترجمة، وتقليص الحجم بمعمارية arm64-v8a وتحسين بث 4K."
       },
       "updateNotes": [
         {
-          "version": "1.0.0-beta.8",
-          "versionCode": 8,
-          "date": "2026-11-16",
+          "version": "1.0.0-beta.9",
+          "versionCode": 9,
+          "date": "2026-11-17",
           "latest": true,
           "whatsNew": {
             "ar": [
-              "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة بأيقونات صافية، وتاتش باد وجوستك قابل للتبديل، وزر QR، وشريط بث مصغّر.",
-              "تطوير محرك اقتناص وبث الفيديو من المتصفح (Web Video Caster Engine) لدعم البث بدقة عالية وتمرير الترويسات ومزامنة الترجمة الفورية وزر إعادة الفحص.",
-              "توحيد بحث الترجمة أثناء البث وربطه بمفاتيح Connection تلقائياً مع تعبئة اسم الفيديو المبثوث.",
-              "المزامنة التلقائية الفورية لمفاتيح API وTrakt والإضافات وسجل المتصفح عند الربط."
+              "ريموت هاتف مطوّر بيد واحدة بأيقونات صافية، وتاتش باد وجوستك بالسحب، وزر مسح QR، وشريط بث مصغّر.",
+              "محرك اقتناص وبث وسائط احترافي من المتصفح (Web Video Caster Engine) مع زر إعادة الفحص ومزامنة الترجمة الفورية وتوحيد بحث الترجمة مع Connection.",
+              "تقليص حجم تطبيق الهاتف عبر تقسيم معمارية arm64-v8a وتحسين أداء البث بدقة 4K.",
+              "توافق كامل مع التزامن اللحظي لإعدادات الشاشة واستعادة شاشة المسلسلات والمواسم."
             ],
             "en": [
-              "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting bar.",
-              "Upgraded in-app browser media sniffer & LAN proxy for smooth high-resolution casting, synced subtitles, and live rescan.",
-              "Unified casting subtitle search with saved Connection keys and auto-filled media titles.",
-              "Instant automatic sync of API keys, Trakt, addons, and browser history upon pairing."
+              "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting pill.",
+              "Upgraded in-app browser media sniffer & LAN proxy with live rescan, synced subtitle casting, and unified Connection subtitle search.",
+              "Reduced Phone APK size via arm64-v8a ABI split and enhanced 4K playback stability.",
+              "Seamless LAN synchronization with TV settings and restored Series & Seasons browser integration."
             ]
           },
           "improvements": {
             "ar": [
-              "تقليص حجم حزمة الهاتف إلى 113.64 MiB (arm64-v8a) مع تحسين التحميل المباشر من المتصفح على Android 11+.",
-              "تفعيل التعديل الفوري لتزامن الترجمة واختيار ملفات الترجمة مباشرة من الهاتف أثناء البث.",
-              "حفظ حالة التبويب المفتوح في المتصفح ودعم الملء التلقائي (Samsung Pass / Android Autofill) واختصارات Cinemana وShabakaty."
+              "ضغط حزمة الهاتف إلى 113.64 MiB بمعمارية arm64-v8a مع ثبات أكبر أثناء البث عالي الدقة.",
+              "توحيد مفاتيح الترجمة عبر Connection وتعبئة اسم الفيديو المبثوث تلقائياً في البحث."
             ],
             "en": [
-              "Reduced Phone APK size to 113.64 MiB (arm64-v8a) and fixed Android 11+ MediaStore browser downloads.",
-              "Real-time subtitle timing offset controls and direct phone-to-TV subtitle file picker during active casts.",
-              "Preserved browser navigation state, enabled Autofill support, and updated Cinemana & Shabakaty default bookmarks."
+              "Streamlined 113.64 MiB arm64-v8a build with improved 4K casting buffering and connection stability.",
+              "Unified Connection subtitle keys and auto-filled active cast titles into subtitle search."
+            ]
+          }
+        },
+        {
+          "version": "1.0.0-beta.8",
+          "versionCode": 8,
+          "date": "2026-11-16",
+          "latest": false,
+          "whatsNew": {
+            "ar": [
+              "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة، وتطوير محرك اقتناص وبث الفيديو، والمزامنة التلقائية الفورية عند الربط."
+            ],
+            "en": [
+              "One-handed TV Remote redesign, Web Video Caster engine upgrade, and instant automatic sync upon pairing."
             ]
           }
         },
@@ -239,18 +251,10 @@
           "latest": false,
           "whatsNew": {
             "ar": [
-              "زر ولوحة TV D-Pad العائمة بسهم جانبي واحد، مشغّل الوسائط الموحّد مع أزرار الصوت الفيزيائية، ومدير تحميلات المتصفح."
+              "زر ولوحة TV D-Pad العائمة بسهم جانبي واحد ومشغّل الوسائط الموحّد مع أزرار الصوت الفيزيائية."
             ],
             "en": [
-              "Single Side-Arrow Floating TV D-Pad Handle, unified media player with hardware volume keys, and browser video downloader."
-            ]
-          },
-          "improvements": {
-            "ar": [
-              "توحيد الثيم الداكن والذهبي في نوافذ الهاتف، وحذف الملفات غير المكتملة نهائياً عند الضغط على X."
-            ],
-            "en": [
-              "Unified Dark & Gold dialogs and permanent cleanup of incomplete browser downloads on X."
+              "Single side-arrow floating TV D-Pad handle and unified media player with hardware volume control."
             ]
           }
         },
@@ -261,10 +265,10 @@
           "latest": false,
           "whatsNew": {
             "ar": [
-              "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) مع إدارة المفاتيح والإضافات من الهاتف، والنسخ الاحتياطي عبر Google Drive ومحلياً."
+              "وضع التشغيل الفوري بلا حساب، معالج الصلاحيات الذكي، والنسخ الاحتياطي الشامل عبر Google Drive ومحلياً."
             ],
             "en": [
-              "Zero-Account Mode with centralized phone key/addon management and Unified Google Drive + Local Backup & Restore."
+              "Zero-Account Mode, Permissions Setup Wizard, and Unified Google Drive + Local Backup & Restore."
             ]
           }
         }

@@ -235,8 +235,8 @@ export function AppDetailPage({
       <section className="wrap section" aria-label={t('سجل التحديثات الكامل', 'Full Patch Notes')}>
         <div className="section-head">
           <div>
-            <h2>{t('سجل التحديثات الكامل (Patch Notes)', 'Full Patch Notes (v1.0.0-beta.6 → beta.8)')}</h2>
-            <p>{t('جميع الميزات والتحسينات المضافة في الإصدارات السادس والسابع والثامن لتطبيق الشاشة والهاتف.', 'All features and improvements across v1.0.0-beta.6, beta.7, and beta.8.')}</p>
+            <h2>{t('سجل التحديثات الكامل (Patch Notes)', 'Full Patch Notes (v1.0.0-beta.6 → beta.9)')}</h2>
+            <p>{t('جميع الميزات والتحسينات المضافة منذ الإصدار السادس وحتى v1.0.0-beta.9 لتطبيق الشاشة والهاتف.', 'All features and improvements from v1.0.0-beta.6 through v1.0.0-beta.9.')}</p>
           </div>
           <span className="gh-ver-badge" dir="ltr">v{tvApp?.version}</span>
         </div>
