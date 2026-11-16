@@ -11,20 +11,20 @@
 - **مستودع GitHub العام:** `https://github.com/alnouri96/meedx`
 - **بروفايل GitHub للاستوديو:** `https://github.com/alnouri96` (مستودع `https://github.com/alnouri96/alnouri96`)
 - **صفحة الإصدارات (GitHub Releases):** `https://github.com/alnouri96/meedx/releases`
-- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.8`
+- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.9`
 
 ---
 
 ## 2. الحالة الحالية | Current State
 
-### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.8` · `versionCode = 8`)
+### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.9` · `versionCode = 9`)
 
 | التطبيق | الحزمة (`Package ID`) | الحجم (بايت) | بصمة `SHA-256` | رابط التحميل المباشر |
 | --- | --- | ---: | --- | --- |
-| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38818775` | `84b312fe99989b728c6d9023f27431ace251dd1490762ed5c69bf18d13def843` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-TV-v1.0.0-beta.8.apk` |
-| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `119159102` | `bebc3259f4226a067e04cee28c3331c292709eca860aad34d119e86cce1032bb` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-Manager-Phone-v1.0.0-beta.8.apk` |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38834913` | `ba1e42f8aadc94e2ac06ecadc84818f681762e8bcd06e551f432188be015a430` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.9/LocalCinema-TV-v1.0.0-beta.9.apk` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `119159570` | `e020dca12c872d0e799a683e5a8d3bfa0a34f53b371e35474dac368a1b3de422` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.9/LocalCinema-Manager-Phone-v1.0.0-beta.9.apk` |
 
-- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.8\`
+- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.9\`
 - **ملف تسليم التطبيقات المرجعي:** `G:\Local Cinema\AGENT_HANDOFF.md`
 
 ### ب) حالة الواجهة والمزايا المنشورة
@@ -34,7 +34,7 @@
 - **عارض الصور الاحترافي (`Zoom Lightbox`):** تخطيط Grid بثلاث مناطق مستقلة (الشريط العلوي + منطقة العرض الوسطى `1fr` + شريط التحكم السفلي) لضمان ظهور `100%` من الصورة دون قصّ، مع تكبير `100%`–`300%`، السحب والتحريك، عجلة الماوس، والقرص بالإصبعين.
 - **الدعم المالي (`ZainCash` و`QiCard`):** باركودا `ZainCash` و`QiCard` (النسخة المحدّثة في `public/assets/qr/qicard-qr.png`) قابلان للتكبير داخل `Zoom Lightbox` بخلفية بيضاء ناصعة.
 - **لوحة معادلة التطبيقات المدمجة (`EquationPanel`):** توضح دمج `7` وظائف وتطبيقات في منظومة `Local Cinema` واحدة.
-- **قسم دليل الإعداد (`#setup-guide`):** يشرح محرك البوسترات والتقييمات التلقائي بلا مفاتيح (`Zero-Config`: `Cinemeta`، `TVmaze`، `Jikan`، ويكيبيديا العربية) ودليل مفاتيح الترجمة (`Subsource` كخيار افتراضي + `OpenSubtitles` أو كليهما).
+- **قسم دليل الإعداد والإضافات (`#setup-guide` و`#addons`):** موجودان حصراً داخل صفحة التطبيق (`/apps/local-cinema`) بدون تكرار في `/downloads` أو الرئيسية، مع اقتصار صندوق كود `Downloader` (`3213660` / `meedx.pages.dev/tv`) على بطاقة نسخة الشاشة (`Android TV`) فقط.
 
 ---
 
@@ -77,3 +77,4 @@
 | `2026-11-16` | `8bb270f` | نقل قسم «الإضافات، التوصيلات ومفاتيح API والتعليمات» إلى داخل صفحة التطبيق (`/apps/local-cinema#addons`) مع إعادة التوجيه التلقائي لـ `/addons` واقتصار الشريط العلوي على 5 أقسام، إعادة تصميم الصفحة الرئيسية (`/`) لنبذة `MEEDX` ومعرض أحدث البوسترات، استبدال البانر القديم المقصوص بعارض معاينة متجاوب (`LocalCinemaPoster`) وأيقونة `local-cinema-icon.png` الرسمية، والفحص الحي بالمتصفح والنشر على Cloudflare Pages. | لا يوجد |
 | `2026-11-16` | `8cfd9e4` | إضافة شارات التمييز الصريحة («هذه نسخة الشاشة (Android TV)» و«هذه نسخة الهاتف (Android Phone)»)، وإضافة صندوق كود `Downloader` والروابط المختصرة (`meedx.pages.dev/tv` و`meedx.pages.dev/phone` عبر `public/_redirects` و`vite.config.js` بتوجيه `302` مباشر إلى GitHub Releases) لنسختي الشاشة والهاتف في `/downloads` و`/apps/local-cinema` و`siteConfig.js` و`catalog.json`، والتحقق الحي عبر المتصفح والنشر على Cloudflare Pages (`https://1da613bc.meedx.pages.dev`). | لا يوجد |
 | `2026-11-16` | `40a3d32` | تحديث الموقع وتغذية `version.json` و`catalog.json` و`_redirects` و`README.md` إلى `v1.0.0-beta.8` (`versionCode = 8`) مع Patch Notes كاملة بالعربية والإنجليزية، قصر صندوق كود Downloader (`3213660` / `meedx.pages.dev/tv`) على بطاقة الشاشة فقط، نقل قسم `#setup-guide` («التشغيل التلقائي وإدارة المفاتيح والإضافات») من `/downloads` إلى `/apps/local-cinema` بدون أي تكرار، والفحص عبر Playwright والنشر على Cloudflare Pages (`https://23a80e03.meedx.pages.dev`). | لا يوجد |
+| `2026-11-17` | `main` | تحديث الموقع و`version.json` و`catalog.json` و`_redirects` و`README.md` و`AGENT_HANDOFF.md` إلى `v1.0.0-beta.9` (`versionCode = 9`) بالبصمات والأحجام الرسمية من `G:\Local Cinema\releases\v1.0.0-beta.9\checksums.txt`، ونشر Patch Notes كاملة بالعربية والإنجليزية، والتحقق من عدم وجود `AGENT_HANDOVER.md` مكرر، وفحص الواجهة بـ Playwright، والنشر على Cloudflare Pages (`https://5d320c17.meedx.pages.dev`) وGitHub. | لا يوجد |
