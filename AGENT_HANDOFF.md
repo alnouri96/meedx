@@ -21,8 +21,8 @@
 
 | التطبيق | الحزمة (`Package ID`) | الحجم (بايت) | بصمة `SHA-256` | رابط التحميل المباشر |
 | --- | --- | ---: | --- | --- |
-| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38708726` | `7a5860843b428b2c66ec048bffd7b2d0be76dffbaac5eaedcf03dae12b95e553` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-TV-v1.0.0-beta.6.apk` |
-| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `196785207` | `80eef6b1a238afdddc48ac7c3e0d358bf9453eae73a2f102391021d0214d25e0` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-Manager-Phone-v1.0.0-beta.6.apk` |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38717528` | `440229c8ac2f3d82196738a3c9211a00c27ff9bc688f9c4f4cb3bbee34420848` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-TV-v1.0.0-beta.6.apk` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `196918204` | `9078ee744af44e97306912cf063cda20682eb48335f67233fed4a9e71711fd5a` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-Manager-Phone-v1.0.0-beta.6.apk` |
 
 - **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.6\`
 - **ملف تسليم التطبيقات المرجعي:** `G:\Local Cinema\AGENT_HANDOFF.md`
@@ -72,3 +72,4 @@
 | `2026-11-16` | `7105c58` | نقل سلايدر ومعرض لقطات الشاشة (`.gallery`) إلى بداية قسم التطبيقات مباشرة بعد الـ Hero وقبل لوحة المعادلة وأقسام الشرح التفاعلية، مع ضبط المسافات (`margin-block-end: 28px`) والنشر الحي على Cloudflare Pages (`https://480e56ac.meedx.pages.dev`). | لا يوجد |
 | `2026-11-16` | `f110d1b` | إطلاق `v1.0.0-beta.6` (`versionCode = 6`) كأحدث إصدار (`--latest`) على `alnouri96/meedx` مع حذف `v1.0.0-beta.5` ووسمه، تحديث `version.json` و`catalog.json` و`README.md`، إنشاء `public/api/config.json` و`public/api/addons.json`، إضافة قسم «الإضافات، الربط ومفاتيح API» (`#addons`)، والنشر الحي على Cloudflare Pages (`https://e7040c2f.meedx.pages.dev`). | لا يوجد |
 | `2026-11-16` | `0509cc7` | إضافة نظام «معلومات التطبيق الكاملة وملاحظات الإصدار (`Update Notes`)» في `catalog.json` و`DownloadAppCard.jsx` لكل تطبيق، وتطوير قسم `#addons` بثلاثة تبويبات تفاعلية (الإضافات والميزات الجديدة، التوصيلات وحماية `TCL com.tcl.guard`، ودليل مواقع مفاتيح API الاختيارية)، وتحديث `#setup-guide`، وضبط استجابة الهيدر على `768px` (`max-width: 900px`)، والنشر الحي على Cloudflare Pages (`https://a7988689.meedx.pages.dev`). | لا يوجد |
+| `2026-11-16` | `ab78857` | النشر الرسمي النهائي لحزمتي `v1.0.0-beta.6` (`versionCode = 6`) على GitHub Releases (`--clobber --latest`) مع Patch Notes الكاملة، تحديث `version.json` و`catalog.json` و`README.md` بالبصمات والأحجام النهائية، إضافة `googleClientId` إلى `public/api/config.json`، وتوسيع Patch Notes وقسم `#addons` (معالج الصلاحيات الذكي، النسخ الاحتياطي الشامل عبر Google Drive ومحلياً، وحماية السكون لجميع الشاشات)، والنشر الحي على Cloudflare Pages (`https://f0fb651e.meedx.pages.dev`). | لا يوجد |
