@@ -6,16 +6,16 @@
     "packageId": "com.meedx.localcinema.tv",
     "name": "Local Cinema TV",
     "available": true,
-    "version": "1.0.0-beta.6",
-    "versionCode": 6,
+    "version": "1.0.0-beta.7",
+    "versionCode": 7,
     "releaseDate": "2026-11-16",
     "status": {
       "ar": "تجريبي · مفتوح المصدر",
       "en": "Beta · Open Source"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-TV-v1.0.0-beta.6.apk",
-    "sizeBytes": 38717528,
-    "sha256": "440229c8ac2f3d82196738a3c9211a00c27ff9bc688f9c4f4cb3bbee34420848",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-TV-v1.0.0-beta.7.apk",
+    "sizeBytes": 38757679,
+    "sha256": "44ca11f62eed3701dbd9115f0d73f4f1765ca43c15fa4dd8579e92909f44fd87",
     "specs": {
       "platform": {
         "ar": "Android TV 7.0+",
@@ -25,59 +25,73 @@
         "ar": "Universal APK",
         "en": "Universal APK"
       },
-      "sizeLabel": "36.9 MiB",
+      "sizeLabel": "36.96 MiB",
       "license": "GPL-3.0",
       "security": {
-        "ar": "خلو الحزمة من أي مفاتيح API مضمّنة (Zero Hardcoded Secrets)",
-        "en": "Zero Hardcoded Secrets (audited DEX, resources & ZIP)"
+        "ar": "آمن 100% — بلا أسرار مضمّنة (Zero Hardcoded Secrets)",
+        "en": "100% Safe — Zero Hardcoded Secrets"
       }
     },
     "changelog": {
-      "en": "Zero-Account mode, Permissions Setup Wizard, Unified Local + Google Drive Backup & Restore, Watched & Up Next, two-way LAN WATCH_SYNC, Nuvio/Stremio addons, Trakt sync, multi-source ratings, cast pages, persistent cache, and multi-brand TV sleep protection.",
-      "ar": "وضع التشغيل الفوري بلا حساب، معالج الصلاحيات الذكي، النسخ الاحتياطي الشامل (محلي + Google Drive)، تمت المشاهدة وUp Next، المزامنة الثنائية عبر الشبكة المحلية، إضافات Nuvio/Stremio، ربط Trakt، التقييمات المتعددة، صفحات الممثلين، وحماية الخلفية لجميع الشاشات."
+      "en": "Cinematic 16:9 Home Trailers rows, Watch Trailer button in YouTube, unified Dark & Gold theme, strict Movies/Series separation, unified media player, and full Arabic/English poster enforcement.",
+      "ar": "قسم الإعلانات السينمائي 16:9 في الشاشة الرئيسية، استعادة زر مشاهدة الإعلان في YouTube، توحيد الثيم الداكن والذهبي، فصل المسلسلات عن الأفلام، ومشغّل وسائط موحّد."
     },
     "updateNotes": [
       {
-        "version": "1.0.0-beta.6",
-        "versionCode": 6,
+        "version": "1.0.0-beta.7",
+        "versionCode": 7,
         "date": "2026-11-16",
         "latest": true,
         "whatsNew": {
           "ar": [
-            "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) للبوسترات والتقييمات والممثلين والترجمة التلقائية.",
-            "معالج الصلاحيات الذكي عند التشغيل الأول (Permissions Setup Wizard) للتطبيقين مع شرح فائدة كل صلاحية وحالتها الحيّة.",
-            "النسخ الاحتياطي والاسترجاع الشامل للهاتف والشاشة معاً (محلياً وعبر حساب Google Drive) مع الإطلاق التلقائي للإعدادات إلى الشاشة.",
-            "قسم «تمت المشاهدة» (Watched) وقائمة المشاهدة (Watchlist) بأزرار ذهبية والانتقال التلقائي للحلقة التالية (Up Next).",
-            "المزامنة الثنائية عبر الشبكة المحلية (WATCH_SYNC) لموضع التوقف وحالة المشاهدة لحظياً.",
-            "دعم الإضافات الخارجية (Nuvio / Stremio Addons) بالتثبيت بضغطة واحدة والاكتشاف التلقائي لروابط manifest.json من الحافظة.",
-            "ربط ومزامنة Trakt ثنائية الاتجاه (PKCE / Client ID) مع زر تحديث فوري في القائمة الجانبية.",
-            "صفحة الممثلين وأعمالهم (Cast & Crew) والتقييمات من مصادر متعددة (IMDb، Rotten Tomatoes، Metacritic، Trakt، MyAnimeList).",
-            "إدارة جميع المفاتيح والإضافات من تطبيق الهاتف (TV Hub ← Connection) ومزامنتها تلقائياً للشاشة."
+            "قسم «الإعلانات» (Trailers) السينمائي في الشاشة الرئيسية: صفوف عريضة 16:9 للإعلانات الرائجة (Trending Trailers)، الإعلانات الجديدة (آخر 90 يوماً فقط)، وإعلانات قادم قريباً (الأعمال المستقبلية فقط) مع خلفية Hero ديناميكية، تحديث يومي تلقائي من مصادر مفتوحة (Cinemeta وJikan) بدون أي حساب، وفتح الإعلان مباشرةً في تطبيق YouTube.",
+            "استعادة زر «مشاهدة الإعلان» (Watch Trailer): إظهار الزر في صفحات جميع الأفلام والمسلسلات والكارتون/الأنمي مع الفتح المباشر في YouTube.",
+            "مشغّل الوسائط الموحّد والتحكم الشامل: توحيد واجهة تشغيل الموسيقى والأفلام والفيديو، إظهار التحكم في ستارة الإشعارات، تفعيل أزرار الصوت الفيزيائية للهاتف للتحكم بصوت الشاشة، حفظ إعدادات الصوت والتكرار، وإصلاح عرض الفيديوهات العمودية (9:16) على الشاشة."
           ],
           "en": [
-            "Zero-Account Mode for instant posters, ratings, cast filmographies, and automatic subtitles with no login.",
-            "First-launch Permissions Setup Wizard for both apps explaining each permission with live status badges.",
-            "Unified Backup & Restore for Phone + TV together (local file & Google Drive) with automatic push to TV.",
-            "Watched section and Watchlist with gold buttons, plus automatic Up Next episode progression.",
-            "Two-way local network WATCH_SYNC for real-time resume positions and watch status.",
-            "External Nuvio / Stremio Addons support with one-tap install and automatic clipboard manifest.json detection.",
-            "Two-way Trakt linking and sync (PKCE / Client ID) with an instant sidebar refresh button.",
-            "Cast & Crew pages and multi-source ratings (IMDb, Rotten Tomatoes, Metacritic, Trakt, MyAnimeList).",
-            "Manage all keys and addons from the phone app (TV Hub → Connection) with automatic TV sync."
+            "Cinematic Home Trailers section: wide 16:9 rows for Trending Trailers, New Trailers (last 90 days only), and Coming Soon (upcoming titles only) with dynamic Hero backdrop, daily open-source updates (Cinemeta & Jikan) with zero account, and direct YouTube playback.",
+            "Restored Watch Trailer button across all Movies, Series, and Cartoon/Anime pages with direct YouTube launch.",
+            "Unified Media Player & Control: unified music/video interface, notification shade media controls, phone hardware volume keys controlling TV volume, saved audio/repeat preferences, and 9:16 vertical video fix on TV."
           ]
         },
         "improvements": {
           "ar": [
-            "كاش دائم على القرص (Persistent Disk Cache) للبيانات والصور مع مؤقت تحديث تلقائي قابل للتخصيص (يومي / كل يومين / أسبوعي / شهري / يدوي).",
-            "إعادة ترتيب الإعدادات وحفظ موضع التركيز عند الرجوع.",
-            "إضافة إعدادات حماية الخلفية ومنع السكون المخصصة لشاشات TCL (com.tcl.guard) وإعدادات مخصصة لبقية الشاشات (Sony, Xiaomi, Hisense, Google TV).",
-            "توحيد لغة الأوصاف والسير الذاتية مع لغة التطبيق المختارة."
+            "توحيد الثيم وفصل المكتبة: فصل المسلسلات عن الأفلام بدقة، توحيد لغة البوسترات والعناوين مع لغة التطبيق، توحيد ثيم الإعدادات الداخلية ونوافذ المشغّل بالداكن والذهبي مع علامة صح خضراء، وإزالة بقايا اسم وخيارات Nova القديمة.",
+            "تحسين إطارات التركيز الذهبية الكاملة على صفوف الإعلانات وإزالة زر Trailers المستقل من القائمة الجانبية."
           ],
           "en": [
-            "Persistent Disk Cache for metadata and artwork with customizable auto-refresh intervals (daily / 2 days / weekly / monthly / manual).",
-            "Reorganized Settings menu with focus and scroll position preservation on Back.",
-            "Dedicated background and sleep protection settings for TCL TVs (com.tcl.guard) and other TVs (Sony, Xiaomi, Hisense, Google TV).",
-            "Unified synopsis and biography language with the selected app locale."
+            "Unified Theme & Library Separation: strict Movies vs Series separation, strict poster/title locale matching, unified Dark & Gold styling for legacy Preferences/Player dialogs with green checkmarks, and removed legacy Nova branding.",
+            "Full unclipped gold focus frames on trailer rows and streamlined left navigation rail."
+          ]
+        }
+      },
+      {
+        "version": "1.0.0-beta.6",
+        "versionCode": 6,
+        "date": "2026-11-16",
+        "latest": false,
+        "whatsNew": {
+          "ar": [
+            "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) للبوسترات والتقييمات والممثلين والترجمة التلقائية.",
+            "معالج الصلاحيات الذكي عند التشغيل الأول للتطبيقين مع شرح فائدة كل صلاحية وحالتها الحيّة.",
+            "النسخ الاحتياطي والاسترجاع الشامل عبر Google Drive ومحلياً مع الإطلاق التلقائي للإعدادات إلى الشاشة.",
+            "قسم «تمت المشاهدة» (Watched) وقائمة المشاهدة (Watchlist) بأزرار ذهبية والانتقال التلقائي للحلقة التالية (Up Next).",
+            "المزامنة الثنائية عبر الشبكة المحلية (WATCH_SYNC)، دعم إضافات Nuvio / Stremio، ربط Trakt ثنائي الاتجاه، صفحات الممثلين، وحماية الخلفية لشاشات TCL وبقية الشاشات."
+          ],
+          "en": [
+            "Zero-Account Mode for instant posters, ratings, cast, and automatic subtitles.",
+            "First-launch Permissions Setup Wizard for both apps with live status badges.",
+            "Unified Backup & Restore via Google Drive and local storage with automatic TV push.",
+            "Watched section, Watchlist with gold buttons, and automatic Up Next progression.",
+            "Two-way LAN WATCH_SYNC, Nuvio / Stremio addons, Trakt two-way sync, Cast pages, and multi-brand TV sleep protection."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "كاش دائم على القرص للبيانات والصور مع مؤقت تحديث تلقائي قابل للتخصيص وحفظ موضع التركيز عند الرجوع."
+          ],
+          "en": [
+            "Persistent Disk Cache with customizable auto-refresh timer and Back-button focus preservation."
           ]
         }
       }
@@ -90,16 +104,16 @@
     "packageId": "com.meedx.localcinema.manager",
     "name": "Local Cinema Manager",
     "available": true,
-    "version": "1.0.0-beta.6",
-    "versionCode": 6,
+    "version": "1.0.0-beta.7",
+    "versionCode": 7,
     "releaseDate": "2026-11-16",
     "status": {
       "ar": "تجريبي · مفتوح المصدر",
       "en": "Beta · Open Source"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-Manager-Phone-v1.0.0-beta.6.apk",
-    "sizeBytes": 196918204,
-    "sha256": "9078ee744af44e97306912cf063cda20682eb48335f67233fed4a9e71711fd5a",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-Manager-Phone-v1.0.0-beta.7.apk",
+    "sizeBytes": 197316085,
+    "sha256": "93de9c7d20ca92022e96257f4cc317ef77e31bac042b43c12c01dc536ad6d973",
     "specs": {
       "platform": {
         "ar": "Android 7.0+",
@@ -109,51 +123,67 @@
         "ar": "arm64-v8a & armeabi-v7a",
         "en": "arm64-v8a & armeabi-v7a"
       },
-      "sizeLabel": "187.8 MiB",
+      "sizeLabel": "188.18 MiB",
       "license": "GPL-3.0",
       "security": {
-        "ar": "خلو الحزمة من أي مفاتيح API مضمّنة (Zero Hardcoded Secrets)",
-        "en": "Zero Hardcoded Secrets (audited DEX, resources & ZIP)"
+        "ar": "آمن 100% — بلا أسرار مضمّنة (Zero Hardcoded Secrets)",
+        "en": "100% Safe — Zero Hardcoded Secrets"
       }
     },
     "changelog": {
-      "en": "Permissions Setup Wizard, Unified Local + Google Drive Backup & Restore for Phone + TV, one-tap Nuvio/Stremio addon installer, Trakt linking, and two-way LAN WATCH_SYNC.",
-      "ar": "معالج الصلاحيات الذكي، النسخ الاحتياطي والاسترجاع الشامل (محلي + Google Drive) للهاتف والشاشة، تثبيت إضافات Nuvio/Stremio بضغطة واحدة، ربط Trakt، والمزامنة الثنائية عبر الشبكة المحلية."
+      "en": "Single side-arrow floating TV D-Pad handle, unified media player with hardware volume control, browser video downloader with incomplete file cleanup, direct launch to TV Hub, and Google profile display.",
+      "ar": "زر ولوحة TV D-Pad العائمة بسهم جانبي واحد، مشغّل وسائط موحّد مع أزرار الصوت الفيزيائية، مدير تحميلات متكامل في المتصفح مع تنظيف الملفات غير المكتملة، وفتح الهاتف مباشرة على TV Hub."
     },
     "updateNotes": [
       {
-        "version": "1.0.0-beta.6",
-        "versionCode": 6,
+        "version": "1.0.0-beta.7",
+        "versionCode": 7,
         "date": "2026-11-16",
         "latest": true,
         "whatsNew": {
           "ar": [
-            "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) مع إدارة كاملة للمفاتيح والإضافات من تطبيق الهاتف (TV Hub ← Connection).",
-            "معالج الصلاحيات الذكي عند التشغيل الأول (Permissions Setup Wizard) لتوضيح فائدة كل صلاحية وحالتها الحيّة.",
-            "النسخ الاحتياطي والاسترجاع الشامل للهاتف والشاشة معاً (محلياً وعبر Google Drive) مع الإطلاق التلقائي للإعدادات إلى الشاشة.",
-            "دعم الإضافات الخارجية (Nuvio / Stremio Addons) بالتثبيت بضغطة واحدة والاكتشاف التلقائي لروابط manifest.json من الحافظة.",
-            "المزامنة الثنائية عبر الشبكة المحلية (WATCH_SYNC) لقوائم «تمت المشاهدة» وWatchlist ومواضع التوقف لحظياً.",
-            "ربط ومزامنة Trakt ثنائية الاتجاه (PKCE / Client ID) مع التوافق الكامل مع صفحات الممثلين والتقييمات المتعددة وUp Next."
+            "زر ولوحة TV D-Pad العائمة بسهم جانبي واحد: توحيد زر استخراج الريموت في سهم جانبي واحد (‹ / ›) قابل للسحب للأعلى والأسفل والتبديل بين اليد اليمنى واليسرى في جميع أقسام تطبيق الهاتف.",
+            "مشغّل الوسائط الموحّد والتحكم الشامل: توحيد واجهة تشغيل الموسيقى والأفلام والفيديو، إظهار التحكم في ستارة الإشعارات، وتفعيل أزرار الصوت الفيزيائية للهاتف للتحكم بصوت الشاشة في كل الأقسام.",
+            "تطوير المتصفح والنسخ الاحتياطي: دعم تحميل مقاطع الفيديو من المواقع مع مدير تحميلات متكامل (حذف بقايا الملفات غير المكتملة نهائياً عند الضغط على X، وحذف الملفات المكتملة من الجذر بالضغط المطوّل)، فتح الهاتف مباشرة على TV Hub، وإظهار صورة واسم حساب Google في الإعدادات."
           ],
           "en": [
-            "Zero-Account Mode with centralized API key and addon management directly from Phone (TV Hub → Connection).",
-            "First-launch Permissions Setup Wizard explaining each permission with live status badges.",
-            "Unified Backup & Restore for Phone + TV together (local file & Google Drive) with automatic push to TV.",
-            "External Nuvio / Stremio Addons support with one-tap install and automatic clipboard manifest.json detection.",
-            "Two-way LAN WATCH_SYNC for Watched status, Watchlist, and playback resume positions.",
-            "Two-way Trakt linking and sync (PKCE / Client ID) with full compatibility for Cast & Crew, Multi-Source Ratings, and Up Next."
+            "Single Side-Arrow Floating TV D-Pad Handle: unified draggable handle (‹ / ›) switchable between left and right hand across all phone sections.",
+            "Unified Media Player & Control: unified music/video playback UI, notification shade controls, and hardware volume buttons controlling TV volume everywhere.",
+            "Browser Video Downloader & Google Profile: integrated video download manager (permanent cleanup of incomplete files on X, long-press delete for completed files), direct launch to TV Hub, and Google account photo/name in Settings."
           ]
         },
         "improvements": {
           "ar": [
-            "حزمة موحّدة مضغوطة للهواتف (arm64-v8a & armeabi-v7a) بحجم 187.8 MiB مع الحفاظ الكامل على المتصفح المانع للإعلانات ومشغل التورنت.",
-            "دعم دليل حماية الخلفية لشاشات TCL (com.tcl.guard) وبقية الشاشات (Sony, Xiaomi, Hisense, Google TV).",
-            "تحسين استقرار الاقتران والريموت والكتابة عن بُعد باللغتين العربية والإنجليزية."
+            "توحيد الثيم الداكن والذهبي في جميع نوافذ الهاتف وتطبيق الإعدادات، واستقرار أعلى لبث 4K والتحكم عن بُعد."
           ],
           "en": [
-            "Unified compressed phone APK (arm64-v8a & armeabi-v7a) at 187.8 MiB keeping the Ad-Block browser and torrent engine intact.",
-            "Integrated background guard guides for TCL (com.tcl.guard) and other TVs (Sony, Xiaomi, Hisense, Google TV).",
-            "Improved pairing, remote input, and bilingual Arabic/English UI responsiveness."
+            "Unified Dark & Gold theme across all phone dialogs and improved 4K casting & remote stability."
+          ]
+        }
+      },
+      {
+        "version": "1.0.0-beta.6",
+        "versionCode": 6,
+        "date": "2026-11-16",
+        "latest": false,
+        "whatsNew": {
+          "ar": [
+            "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) مع إدارة جميع المفاتيح والإضافات من الهاتف (TV Hub ← Connection).",
+            "معالج الصلاحيات الذكي عند التشغيل الأول والنسخ الاحتياطي والاسترجاع الشامل عبر Google Drive ومحلياً.",
+            "دعم إضافات Nuvio / Stremio بالتثبيت بضغطة واحدة والاكتشاف التلقائي من الحافظة، والمزامنة الثنائية WATCH_SYNC وTrakt."
+          ],
+          "en": [
+            "Zero-Account Mode with centralized key and addon management from Phone (TV Hub → Connection).",
+            "First-launch Permissions Setup Wizard and Unified Google Drive + Local Backup & Restore.",
+            "One-tap Nuvio / Stremio addons, clipboard manifest detection, two-way WATCH_SYNC, and Trakt sync."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "حزمة موحّدة مضغوطة للهواتف (arm64-v8a & armeabi-v7a) ودليل حماية الشاشات (TCL وSony وXiaomi وHisense وGoogle TV)."
+          ],
+          "en": [
+            "Unified compressed Phone APK (arm64-v8a & armeabi-v7a) and multi-brand TV background guard guides."
           ]
         }
       }

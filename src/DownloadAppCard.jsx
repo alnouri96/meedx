@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   Monitor, Smartphone, Copy, Download, ShieldCheck, Sparkles,
-  Wrench, FileText, Info, CheckCircle2
+  Wrench, FileText, Info, CheckCircle2, AlertTriangle
 } from 'lucide-react';
 
 export function DownloadAppCard({ p, ar, t, L, copy, onDownload, onContact }) {
@@ -24,6 +24,11 @@ export function DownloadAppCard({ p, ar, t, L, copy, onDownload, onContact }) {
           </code>
         </div>
         <span className="signal" aria-label={t('متاح', 'Available')} />
+      </div>
+
+      <div className="semantic-row">
+        <span className="badge-ok"><CheckCircle2 size={13} /> {t('مكتمل ومفحوص ✓', 'Verified ✓')}</span>
+        <span className="badge-warn"><AlertTriangle size={13} /> {t('تفعيل مصادر غير معروفة', 'Enable Unknown Sources')}</span>
       </div>
 
       <div className="dl-tabs" role="tablist" aria-label={t('تفاصيل التطبيق وملاحظات الإصدار', 'App details and update notes')}>
