@@ -3,10 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation, Pagination } from 'swiper/modules';
 import {
   ArrowLeft, ArrowRight, AlertTriangle, CheckCircle2, Copy, Download,
-  Maximize2, MessageSquare, Monitor, ShieldCheck, Smartphone, Sparkles, Wrench
+  Maximize2, MessageSquare, Monitor, ShieldCheck, Smartphone, Sparkles, Wrench, Puzzle
 } from 'lucide-react';
 import { EquationPanel } from './EquationPanel';
 import { InteractiveShowcase } from './InteractiveShowcase';
+import { AddonsConnectionsSection } from './AddonsConnectionsSection';
 
 export function AppDetailPage({
   ar, t, L, copy, navigate, catalog, shots, slide, setSlide, setModal, contact, label, image
@@ -21,14 +22,27 @@ export function AppDetailPage({
     <div className="app-detail-page sc-animate">
       <section className="wrap section" style={{ paddingBottom: 28 }}>
         <div className="detail-top-bar">
-          <a
-            href="/apps"
-            className="button"
-            onClick={(e) => { e.preventDefault(); navigate('/apps'); }}
-          >
-            <BackArrow size={16} />
-            <span>{t('العودة إلى التطبيقات', 'Back to Apps')}</span>
-          </a>
+          <div className="semantic-row">
+            <a
+              href="/apps"
+              className="button"
+              onClick={(e) => { e.preventDefault(); navigate('/apps'); }}
+            >
+              <BackArrow size={16} />
+              <span>{t('العودة إلى التطبيقات', 'Back to Apps')}</span>
+            </a>
+            <a
+              href="#addons"
+              className="button"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <Puzzle size={16} />
+              <span>{t('الإضافات والتوصيلات ومفاتيح API', 'Plugins, Connections & APIs')}</span>
+            </a>
+          </div>
           <div className="semantic-row">
             <span className="badge-ok"><CheckCircle2 size={14} /> {t('مكتمل ومفحوص ✓', 'Verified & Audited ✓')}</span>
             <span className="badge-ok"><ShieldCheck size={14} /> {t('آمن 100% — بلا أسرار مضمّنة', '100% Safe — Zero Hardcoded Secrets')}</span>
@@ -37,7 +51,7 @@ export function AppDetailPage({
 
         <article className="detail-hero-card">
           <div className="detail-hero-head">
-            <img src="/assets/meedx.svg" alt="" className="detail-app-icon" />
+            <img src="/assets/icons/local-cinema-icon.png" alt="Local Cinema" className="detail-app-icon" />
             <div>
               <div className="gh-app-title-row">
                 <h1>Local Cinema</h1>
@@ -146,6 +160,8 @@ export function AppDetailPage({
           <InteractiveShowcase t={t} L={L} copy={copy} />
         </div>
       </section>
+
+      <AddonsConnectionsSection t={t} L={L} copy={copy} />
 
       <section className="wrap section" aria-label={t('سجل التحديثات الكامل', 'Full Patch Notes')}>
         <div className="section-head">
