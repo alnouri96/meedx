@@ -1,23 +1,23 @@
 {
   "tv": {
-    "latestVersionCode": 7,
-    "latestVersionName": "1.0.0-beta.7",
-    "versionCode": 7,
-    "versionName": "1.0.0-beta.7",
-    "sizeBytes": 38757679,
-    "sha256": "44ca11f62eed3701dbd9115f0d73f4f1765ca43c15fa4dd8579e92909f44fd87",
-    "changelog": "Cinematic 16:9 Home Trailers rows, Watch Trailer button in YouTube, unified Dark & Gold theme, strict Movies/Series separation, unified media player, and full Arabic/English poster enforcement.",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-TV-v1.0.0-beta.7.apk"
+    "latestVersionCode": 8,
+    "latestVersionName": "1.0.0-beta.8",
+    "versionCode": 8,
+    "versionName": "1.0.0-beta.8",
+    "sizeBytes": 38818775,
+    "sha256": "84b312fe99989b728c6d9023f27431ace251dd1490762ed5c69bf18d13def843",
+    "changelog": "Redesigned one-handed TV Remote, upgraded Web Video Caster engine & LAN proxy, unified casting subtitle search, full Arabic RTL layout/trailer navigation fixes, live weather with colored icons & clock opacity, Coming Soon trailers enrichment, poster context Sort By, and instant Connection sync.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-TV-v1.0.0-beta.8.apk"
   },
   "phone": {
-    "latestVersionCode": 7,
-    "latestVersionName": "1.0.0-beta.7",
-    "versionCode": 7,
-    "versionName": "1.0.0-beta.7",
-    "sizeBytes": 197316085,
-    "sha256": "93de9c7d20ca92022e96257f4cc317ef77e31bac042b43c12c01dc536ad6d973",
-    "changelog": "Single side-arrow floating TV D-Pad handle, unified media player with hardware volume control, browser video downloader with incomplete file cleanup, direct launch to TV Hub, and Google profile display.",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-Manager-Phone-v1.0.0-beta.7.apk"
+    "latestVersionCode": 8,
+    "latestVersionName": "1.0.0-beta.8",
+    "versionCode": 8,
+    "versionName": "1.0.0-beta.8",
+    "sizeBytes": 119159102,
+    "sha256": "bebc3259f4226a067e04cee28c3331c292709eca860aad34d119e86cce1032bb",
+    "changelog": "Redesigned one-handed TV Remote with Touchpad/D-Pad slider & QR shortcut, upgraded Web Video Caster & LAN proxy, unified casting subtitle search, direct Cinemana downloads (113.64 MiB arm64-v8a), and instant auto-sync on pairing.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-Manager-Phone-v1.0.0-beta.8.apk"
   },
   "builds": [
     {
@@ -27,8 +27,8 @@
       "packageId": "com.meedx.localcinema.tv",
       "name": "Local Cinema TV",
       "available": true,
-      "version": "1.0.0-beta.7",
-      "versionCode": 7,
+      "version": "1.0.0-beta.8",
+      "versionCode": 8,
       "releaseDate": "2026-11-16",
       "status": {
         "ar": "تجريبي · مفتوح المصدر",
@@ -44,9 +44,9 @@
         "ar": "كود Downloader — هذه نسخة الشاشة",
         "en": "Downloader Code — This is the TV Version"
       },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-TV-v1.0.0-beta.7.apk",
-      "sizeBytes": 38757679,
-      "sha256": "44ca11f62eed3701dbd9115f0d73f4f1765ca43c15fa4dd8579e92909f44fd87",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-TV-v1.0.0-beta.8.apk",
+      "sizeBytes": 38818775,
+      "sha256": "84b312fe99989b728c6d9023f27431ace251dd1490762ed5c69bf18d13def843",
       "specs": {
         "platform": {
           "ar": "Android TV 7.0+",
@@ -56,7 +56,7 @@
           "ar": "Universal APK",
           "en": "Universal APK"
         },
-        "sizeLabel": "36.96 MiB",
+        "sizeLabel": "37.02 MiB",
         "license": "GPL-3.0",
         "security": {
           "ar": "آمن 100% — بلا أسرار مضمّنة (Zero Hardcoded Secrets)",
@@ -64,35 +64,69 @@
         }
       },
       "changelog": {
-        "en": "Cinematic 16:9 Home Trailers rows, Watch Trailer button in YouTube, unified Dark & Gold theme, strict Movies/Series separation, unified media player, and full Arabic/English poster enforcement.",
-        "ar": "قسم الإعلانات السينمائي 16:9 في الشاشة الرئيسية، استعادة زر مشاهدة الإعلان في YouTube، توحيد الثيم الداكن والذهبي، فصل المسلسلات عن الأفلام، ومشغّل وسائط موحّد."
+        "en": "Redesigned one-handed TV Remote, upgraded Web Video Caster engine & LAN proxy, unified casting subtitle search, full Arabic RTL layout/trailer navigation fixes, live weather with colored icons & clock opacity, Coming Soon trailers enrichment, poster context Sort By, and instant Connection sync.",
+        "ar": "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة، تطوير محرك اقتناص وبث الفيديو، توحيد بحث الترجمة أثناء البث، إصلاح المحاذاة العربية RTL وصفوف الإعلانات، أيقونات طقس ملوّنة بالموقع الجغرافي وشفافية الساعة، إغناء إعلانات قريباً والفرز المتعدد، والمزامنة الفورية."
       },
       "updateNotes": [
         {
-          "version": "1.0.0-beta.7",
-          "versionCode": 7,
+          "version": "1.0.0-beta.8",
+          "versionCode": 8,
           "date": "2026-11-16",
           "latest": true,
           "whatsNew": {
             "ar": [
-              "قسم «الإعلانات» (Trailers) السينمائي في الشاشة الرئيسية: صفوف عريضة 16:9 للإعلانات الرائجة (Trending Trailers)، الإعلانات الجديدة (آخر 90 يوماً فقط)، وإعلانات قادم قريباً (الأعمال المستقبلية فقط) مع خلفية Hero ديناميكية، تحديث يومي تلقائي من مصادر مفتوحة (Cinemeta وJikan) بدون أي حساب، وفتح الإعلان مباشرةً في تطبيق YouTube.",
-              "استعادة زر «مشاهدة الإعلان» (Watch Trailer): إظهار الزر في صفحات جميع الأفلام والمسلسلات والكارتون/الأنمي مع الفتح المباشر في YouTube.",
-              "مشغّل الوسائط الموحّد والتحكم الشامل: توحيد واجهة تشغيل الموسيقى والأفلام والفيديو، إظهار التحكم في ستارة الإشعارات، تفعيل أزرار الصوت الفيزيائية للهاتف للتحكم بصوت الشاشة، حفظ إعدادات الصوت والتكرار، وإصلاح عرض الفيديوهات العمودية (9:16) على الشاشة."
+              "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة بأيقونات صافية، وتاتش باد وجوستك قابل للتبديل، وزر QR، وشريط بث مصغّر.",
+              "تطوير محرك اقتناص وبث الفيديو من المتصفح (Web Video Caster Engine) لدعم البث بدقة عالية وتمرير الترويسات ومزامنة الترجمة الفورية وزر إعادة الفحص.",
+              "توحيد بحث الترجمة أثناء البث وربطه بمفاتيح Connection تلقائياً مع تعبئة اسم الفيديو المبثوث.",
+              "إضافة أيقونات طقس ملوّنة بالموقع الجغرافي الحقيقي وإعداد شفافية خلفية الساعة.",
+              "إغناء قسم إعلانات «قريباً» من مصادر مفتوحة مجانية، وإضافة خيارات الفرز المتعددة داخل قائمة البوستر.",
+              "المزامنة التلقائية الفورية لمفاتيح API وTrakt والإضافات وسجل المتصفح عند الربط."
             ],
             "en": [
-              "Cinematic Home Trailers section: wide 16:9 rows for Trending Trailers, New Trailers (last 90 days only), and Coming Soon (upcoming titles only) with dynamic Hero backdrop, daily open-source updates (Cinemeta & Jikan) with zero account, and direct YouTube playback.",
-              "Restored Watch Trailer button across all Movies, Series, and Cartoon/Anime pages with direct YouTube launch.",
-              "Unified Media Player & Control: unified music/video interface, notification shade media controls, phone hardware volume keys controlling TV volume, saved audio/repeat preferences, and 9:16 vertical video fix on TV."
+              "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting bar.",
+              "Upgraded in-app browser media sniffer & LAN proxy for smooth high-resolution casting, synced subtitles, and live rescan.",
+              "Unified casting subtitle search with saved Connection keys and auto-filled media titles.",
+              "Location-based live weather with colored icons and customizable clock background opacity.",
+              "Expanded \"Coming Soon\" trailers from open sources and added multi-criteria sorting in poster context menus.",
+              "Instant automatic sync of API keys, Trakt, addons, and browser history upon pairing."
             ]
           },
           "improvements": {
             "ar": [
-              "توحيد الثيم وفصل المكتبة: فصل المسلسلات عن الأفلام بدقة، توحيد لغة البوسترات والعناوين مع لغة التطبيق، توحيد ثيم الإعدادات الداخلية ونوافذ المشغّل بالداكن والذهبي مع علامة صح خضراء، وإزالة بقايا اسم وخيارات Nova القديمة.",
-              "تحسين إطارات التركيز الذهبية الكاملة على صفوف الإعلانات وإزالة زر Trailers المستقل من القائمة الجانبية."
+              "إصلاح المحاذاة العربية (RTL) والتنقل في صفوف الإعلانات وتفاصيل الأفلام وقوائم المشغّل.",
+              "توسيع قوائم الترجمة وزر إلغاء القائمة المنبثقة بعرض كامل، وإرجاع الشاشة الرئيسية للأعلى بضغطة زر الرئيسية.",
+              "تحسين استرجاع البوسترات والبيانات المفقودة وتثبيت نوافذ إعدادات المشغّل دون اختفاء."
             ],
             "en": [
-              "Unified Theme & Library Separation: strict Movies vs Series separation, strict poster/title locale matching, unified Dark & Gold styling for legacy Preferences/Player dialogs with green checkmarks, and removed legacy Nova branding.",
-              "Full unclipped gold focus frames on trailer rows and streamlined left navigation rail."
+              "Full Arabic RTL navigation, details alignment, and player menu layout fixes.",
+              "Unclipped subtitle track scroll, full-width context menu cancel button, and Home rail scroll-to-top reset.",
+              "Enhanced missing poster/metadata recovery and kept player menus open during audio/subtitle tweaks."
+            ]
+          }
+        },
+        {
+          "version": "1.0.0-beta.7",
+          "versionCode": 7,
+          "date": "2026-11-16",
+          "latest": false,
+          "whatsNew": {
+            "ar": [
+              "قسم «الإعلانات» (Trailers) السينمائي في الشاشة الرئيسية بصفوف عريضة 16:9 وتحديث يومي تلقائي من مصادر مفتوحة وفتح مباشر في YouTube.",
+              "استعادة زر «مشاهدة الإعلان» (Watch Trailer) في صفحات جميع الأفلام والمسلسلات والكارتون/الأنمي.",
+              "مشغّل الوسائط الموحّد والتحكم الشامل من ستارة الإشعارات وأزرار الصوت الفيزيائية وإصلاح عرض الفيديوهات العمودية (9:16)."
+            ],
+            "en": [
+              "Cinematic 16:9 Home Trailers rows updated daily from open sources with direct YouTube playback.",
+              "Restored Watch Trailer button across all Movies, Series, and Cartoon/Anime pages.",
+              "Unified Media Player UI, notification controls, hardware volume control, and 9:16 vertical video fix."
+            ]
+          },
+          "improvements": {
+            "ar": [
+              "توحيد الثيم الداكن والذهبي لإعدادات ونوافذ المشغّل، وفصل المسلسلات عن الأفلام بدقة، وتوحيد لغة البوسترات والعناوين."
+            ],
+            "en": [
+              "Unified Dark & Gold theme across player menus, strict Movies/Series separation, and strict locale poster matching."
             ]
           }
         },
@@ -104,17 +138,13 @@
           "whatsNew": {
             "ar": [
               "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) للبوسترات والتقييمات والممثلين والترجمة التلقائية.",
-              "معالج الصلاحيات الذكي عند التشغيل الأول للتطبيقين مع شرح فائدة كل صلاحية وحالتها الحيّة.",
-              "النسخ الاحتياطي والاسترجاع الشامل عبر Google Drive ومحلياً مع الإطلاق التلقائي للإعدادات إلى الشاشة.",
-              "قسم «تمت المشاهدة» (Watched) وقائمة المشاهدة (Watchlist) بأزرار ذهبية والانتقال التلقائي للحلقة التالية (Up Next).",
-              "المزامنة الثنائية عبر الشبكة المحلية (WATCH_SYNC)، دعم إضافات Nuvio / Stremio، ربط Trakt ثنائي الاتجاه، صفحات الممثلين، وحماية الخلفية لشاشات TCL وبقية الشاشات."
+              "معالج الصلاحيات الذكي عند التشغيل الأول للتطبيقين، والنسخ الاحتياطي والاسترجاع الشامل عبر Google Drive ومحلياً.",
+              "قسم «تمت المشاهدة» وWatchlist وUp Next، المزامنة الثنائية WATCH_SYNC، إضافات Nuvio / Stremio، ربط Trakt، وحماية الخلفية للشاشات."
             ],
             "en": [
               "Zero-Account Mode for instant posters, ratings, cast, and automatic subtitles.",
-              "First-launch Permissions Setup Wizard for both apps with live status badges.",
-              "Unified Backup & Restore via Google Drive and local storage with automatic TV push.",
-              "Watched section, Watchlist with gold buttons, and automatic Up Next progression.",
-              "Two-way LAN WATCH_SYNC, Nuvio / Stremio addons, Trakt two-way sync, Cast pages, and multi-brand TV sleep protection."
+              "First-launch Permissions Setup Wizard and Unified Google Drive + Local Backup & Restore.",
+              "Watched section, Watchlist, Up Next, WATCH_SYNC, Nuvio / Stremio addons, Trakt sync, and TV sleep protection."
             ]
           },
           "improvements": {
@@ -135,36 +165,30 @@
       "packageId": "com.meedx.localcinema.manager",
       "name": "Local Cinema Manager",
       "available": true,
-      "version": "1.0.0-beta.7",
-      "versionCode": 7,
+      "version": "1.0.0-beta.8",
+      "versionCode": 8,
       "releaseDate": "2026-11-16",
       "status": {
         "ar": "تجريبي · مفتوح المصدر",
         "en": "Beta · Open Source"
       },
-      "downloaderCode": "3213660",
-      "shortUrl": "meedx.pages.dev/phone",
       "versionBanner": {
         "ar": "هذه نسخة الهاتف (Android Phone)",
         "en": "This is the Phone Version (Android Phone)"
       },
-      "downloaderLabel": {
-        "ar": "كود Downloader — هذه نسخة الهاتف",
-        "en": "Downloader Code — This is the Phone Version"
-      },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-Manager-Phone-v1.0.0-beta.7.apk",
-      "sizeBytes": 197316085,
-      "sha256": "93de9c7d20ca92022e96257f4cc317ef77e31bac042b43c12c01dc536ad6d973",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-Manager-Phone-v1.0.0-beta.8.apk",
+      "sizeBytes": 119159102,
+      "sha256": "bebc3259f4226a067e04cee28c3331c292709eca860aad34d119e86cce1032bb",
       "specs": {
         "platform": {
           "ar": "Android 7.0+",
           "en": "Android 7.0+"
         },
         "architecture": {
-          "ar": "arm64-v8a & armeabi-v7a",
-          "en": "arm64-v8a & armeabi-v7a"
+          "ar": "arm64-v8a",
+          "en": "arm64-v8a"
         },
-        "sizeLabel": "188.18 MiB",
+        "sizeLabel": "113.64 MiB",
         "license": "GPL-3.0",
         "security": {
           "ar": "آمن 100% — بلا أسرار مضمّنة (Zero Hardcoded Secrets)",
@@ -172,33 +196,61 @@
         }
       },
       "changelog": {
-        "en": "Single side-arrow floating TV D-Pad handle, unified media player with hardware volume control, browser video downloader with incomplete file cleanup, direct launch to TV Hub, and Google profile display.",
-        "ar": "زر ولوحة TV D-Pad العائمة بسهم جانبي واحد، مشغّل وسائط موحّد مع أزرار الصوت الفيزيائية، مدير تحميلات متكامل في المتصفح مع تنظيف الملفات غير المكتملة، وفتح الهاتف مباشرة على TV Hub."
+        "en": "Redesigned one-handed TV Remote with Touchpad/D-Pad slider & QR shortcut, upgraded Web Video Caster & LAN proxy, unified casting subtitle search, direct Cinemana downloads (113.64 MiB arm64-v8a), and instant auto-sync on pairing.",
+        "ar": "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة مع تاتش باد وجوستك وزر QR، تطوير محرك اقتناص وبث الفيديو، توحيد بحث الترجمة أثناء البث، حزمة أخف (113.64 MiB arm64-v8a)، والمزامنة الفورية."
       },
       "updateNotes": [
         {
-          "version": "1.0.0-beta.7",
-          "versionCode": 7,
+          "version": "1.0.0-beta.8",
+          "versionCode": 8,
           "date": "2026-11-16",
           "latest": true,
           "whatsNew": {
             "ar": [
-              "زر ولوحة TV D-Pad العائمة بسهم جانبي واحد: توحيد زر استخراج الريموت في سهم جانبي واحد (‹ / ›) قابل للسحب للأعلى والأسفل والتبديل بين اليد اليمنى واليسرى في جميع أقسام تطبيق الهاتف.",
-              "مشغّل الوسائط الموحّد والتحكم الشامل: توحيد واجهة تشغيل الموسيقى والأفلام والفيديو، إظهار التحكم في ستارة الإشعارات، وتفعيل أزرار الصوت الفيزيائية للهاتف للتحكم بصوت الشاشة في كل الأقسام.",
-              "تطوير المتصفح والنسخ الاحتياطي: دعم تحميل مقاطع الفيديو من المواقع مع مدير تحميلات متكامل (حذف بقايا الملفات غير المكتملة نهائياً عند الضغط على X، وحذف الملفات المكتملة من الجذر بالضغط المطوّل)، فتح الهاتف مباشرة على TV Hub، وإظهار صورة واسم حساب Google في الإعدادات."
+              "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة بأيقونات صافية، وتاتش باد وجوستك قابل للتبديل، وزر QR، وشريط بث مصغّر.",
+              "تطوير محرك اقتناص وبث الفيديو من المتصفح (Web Video Caster Engine) لدعم البث بدقة عالية وتمرير الترويسات ومزامنة الترجمة الفورية وزر إعادة الفحص.",
+              "توحيد بحث الترجمة أثناء البث وربطه بمفاتيح Connection تلقائياً مع تعبئة اسم الفيديو المبثوث.",
+              "المزامنة التلقائية الفورية لمفاتيح API وTrakt والإضافات وسجل المتصفح عند الربط."
             ],
             "en": [
-              "Single Side-Arrow Floating TV D-Pad Handle: unified draggable handle (‹ / ›) switchable between left and right hand across all phone sections.",
-              "Unified Media Player & Control: unified music/video playback UI, notification shade controls, and hardware volume buttons controlling TV volume everywhere.",
-              "Browser Video Downloader & Google Profile: integrated video download manager (permanent cleanup of incomplete files on X, long-press delete for completed files), direct launch to TV Hub, and Google account photo/name in Settings."
+              "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting bar.",
+              "Upgraded in-app browser media sniffer & LAN proxy for smooth high-resolution casting, synced subtitles, and live rescan.",
+              "Unified casting subtitle search with saved Connection keys and auto-filled media titles.",
+              "Instant automatic sync of API keys, Trakt, addons, and browser history upon pairing."
             ]
           },
           "improvements": {
             "ar": [
-              "توحيد الثيم الداكن والذهبي في جميع نوافذ الهاتف وتطبيق الإعدادات، واستقرار أعلى لبث 4K والتحكم عن بُعد."
+              "تقليص حجم حزمة الهاتف إلى 113.64 MiB (arm64-v8a) مع تحسين التحميل المباشر من المتصفح على Android 11+.",
+              "تفعيل التعديل الفوري لتزامن الترجمة واختيار ملفات الترجمة مباشرة من الهاتف أثناء البث.",
+              "حفظ حالة التبويب المفتوح في المتصفح ودعم الملء التلقائي (Samsung Pass / Android Autofill) واختصارات Cinemana وShabakaty."
             ],
             "en": [
-              "Unified Dark & Gold theme across all phone dialogs and improved 4K casting & remote stability."
+              "Reduced Phone APK size to 113.64 MiB (arm64-v8a) and fixed Android 11+ MediaStore browser downloads.",
+              "Real-time subtitle timing offset controls and direct phone-to-TV subtitle file picker during active casts.",
+              "Preserved browser navigation state, enabled Autofill support, and updated Cinemana & Shabakaty default bookmarks."
+            ]
+          }
+        },
+        {
+          "version": "1.0.0-beta.7",
+          "versionCode": 7,
+          "date": "2026-11-16",
+          "latest": false,
+          "whatsNew": {
+            "ar": [
+              "زر ولوحة TV D-Pad العائمة بسهم جانبي واحد، مشغّل الوسائط الموحّد مع أزرار الصوت الفيزيائية، ومدير تحميلات المتصفح."
+            ],
+            "en": [
+              "Single Side-Arrow Floating TV D-Pad Handle, unified media player with hardware volume keys, and browser video downloader."
+            ]
+          },
+          "improvements": {
+            "ar": [
+              "توحيد الثيم الداكن والذهبي في نوافذ الهاتف، وحذف الملفات غير المكتملة نهائياً عند الضغط على X."
+            ],
+            "en": [
+              "Unified Dark & Gold dialogs and permanent cleanup of incomplete browser downloads on X."
             ]
           }
         },
@@ -209,22 +261,10 @@
           "latest": false,
           "whatsNew": {
             "ar": [
-              "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) مع إدارة جميع المفاتيح والإضافات من الهاتف (TV Hub ← Connection).",
-              "معالج الصلاحيات الذكي عند التشغيل الأول والنسخ الاحتياطي والاسترجاع الشامل عبر Google Drive ومحلياً.",
-              "دعم إضافات Nuvio / Stremio بالتثبيت بضغطة واحدة والاكتشاف التلقائي من الحافظة، والمزامنة الثنائية WATCH_SYNC وTrakt."
+              "وضع التشغيل الفوري بلا حساب (Zero-Account Mode) مع إدارة المفاتيح والإضافات من الهاتف، والنسخ الاحتياطي عبر Google Drive ومحلياً."
             ],
             "en": [
-              "Zero-Account Mode with centralized key and addon management from Phone (TV Hub → Connection).",
-              "First-launch Permissions Setup Wizard and Unified Google Drive + Local Backup & Restore.",
-              "One-tap Nuvio / Stremio addons, clipboard manifest detection, two-way WATCH_SYNC, and Trakt sync."
-            ]
-          },
-          "improvements": {
-            "ar": [
-              "حزمة موحّدة مضغوطة للهواتف (arm64-v8a & armeabi-v7a) ودليل حماية الشاشات (TCL وSony وXiaomi وHisense وGoogle TV)."
-            ],
-            "en": [
-              "Unified compressed Phone APK (arm64-v8a & armeabi-v7a) and multi-brand TV background guard guides."
+              "Zero-Account Mode with centralized phone key/addon management and Unified Google Drive + Local Backup & Restore."
             ]
           }
         }
