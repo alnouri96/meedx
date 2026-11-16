@@ -63,9 +63,10 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ### جديد الإصدار `v1.0.0-beta.6` (`versionCode = 6`)
 - **وضع التشغيل الفوري بلا حساب (`Zero-Account Mode`)**: تشغيل البوسترات، صفحات الممثلين وأعمالهم، التقييمات من مصادر متعددة، والترجمة التلقائية فور التثبيت بدون أي تسجيل.
-- **الكاش الدائم ومؤقت التحديث التلقائي للبوسترات**: حفظ دائم للبيانات والصور مع تحديث تلقائي ذكي دون إبطاء التصفح.
+- **معالج الصلاحيات الذكي (`Permissions Setup Wizard`) والنسخ الاحتياطي الشامل**: نافذة ترحيبية للتطبيقين تعرض حالة الصلاحيات الحية، مع نسخ احتياطي واسترجاع موحّد للهاتف والشاشة محلياً وعبر **Google Drive**.
+- **الكاش الدائم ومؤقت التحديث التلقائي للبوسترات**: حفظ دائم للبيانات والصور مع تحديث تلقائي ذكي (يومي / يومين / أسبوعي / شهري / يدوي).
 - **قسم «تمت المشاهدة» و`Up Next` والمزامنة الثنائية (`WATCH_SYNC`)**: الانتقال التلقائي للحلقة التالية ومزامنة حالة المشاهدة و`Watchlist` لحظياً بين الهاتف والشاشة عبر الشبكة المحلية.
-- **إضافات `Nuvio / Stremio` الخارجية وربط `Trakt` وإدارة المفاتيح من الهاتف**: تثبيت الإضافات بضغطة واحدة أو عبر رابط `manifest.json`، ربط ومزامنة `Trakt` ثنائية الاتجاه، وإرسال جميع المفاتيح والإضافات من الهاتف (`TV Hub ← Connection`).
+- **إضافات `Nuvio / Stremio` الخارجية وربط `Trakt` وحماية السكون لجميع الشاشات**: تثبيت الإضافات بضغطة واحدة أو عبر `manifest.json`، ربط `Trakt` ثنائي الاتجاه، وحماية الخلفية لشاشات `TCL (com.tcl.guard)` و`Sony / Xiaomi / Hisense / Google TV`.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -124,8 +125,8 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.6.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.6` (`6`) | `38,708,726` | `7a5860843b428b2c66ec048bffd7b2d0be76dffbaac5eaedcf03dae12b95e553` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.6.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.6` (`6`) | `196,785,207` | `80eef6b1a238afdddc48ac7c3e0d358bf9453eae73a2f102391021d0214d25e0` |
+| `LocalCinema-TV-v1.0.0-beta.6.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.6` (`6`) | `38,717,528` | `440229c8ac2f3d82196738a3c9211a00c27ff9bc688f9c4f4cb3bbee34420848` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.6.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.6` (`6`) | `196,918,204` | `9078ee744af44e97306912cf063cda20682eb48335f67233fed4a9e71711fd5a` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >

@@ -241,6 +241,10 @@ export function AddonsConnectionsSection({ t, L, copy }) {
                   <code dir="ltr">04</code>
                   <span>{t(<>تعمل المزامنة الثنائية ({L('WATCH_SYNC')}) لحظياً لمواضع التوقف وقوائم المشاهدة بين الجهازين.</>, 'Two-way WATCH_SYNC keeps resume points and watchlists synchronized in real time.')}</span>
                 </li>
+                <li>
+                  <code dir="ltr">05</code>
+                  <span>{t(<><strong>النسخ الاحتياطي والاسترجاع الشامل (الهاتف + الشاشة):</strong> احفظ واستعد كل الإعدادات والمفاتيح والإضافات وسجل المشاهدة محلياً أو عبر حساب {L('Google Drive')} مع الإطلاق التلقائي للشاشة.</>, <><strong>Unified Backup & Restore (Phone + TV):</strong> Back up and restore all settings, keys, addons, and watch history locally or via {L('Google Drive')} with automatic TV push.</>)}</span>
+                </li>
               </ol>
             </article>
 
@@ -248,21 +252,21 @@ export function AddonsConnectionsSection({ t, L, copy }) {
               <div className="ac-card-head">
                 <span className="sc-gold-badge"><ShieldAlert size={20} /></span>
                 <div>
-                  <code dir="ltr">TCL TV · com.tcl.guard</code>
-                  <h3>{t('حماية الخلفية لشاشات TCL ومنع انقطاع الاتصال', 'TCL Background Guard (Prevent Standby Drops)')}</h3>
+                  <code dir="ltr">TCL (com.tcl.guard) · Sony · Xiaomi · Hisense · Google TV</code>
+                  <h3>{t('حماية الخلفية ومنع السكون لجميع الشاشات', 'Background & Sleep Protection for All TVs')}</h3>
                 </div>
               </div>
               <p className="ac-desc">
                 {t(
-                  'توقف بعض شاشات TCL خدمات الشبكة أثناء السكون؛ طبّق هذه الخطوات الأربع لضمان بقاء الريموت والمزامنة متصلين:',
-                  'Some TCL TVs restrict background services during sleep. Follow these 4 steps to keep sync and remote active:'
+                  'توقف بعض الشاشات خدمات الشبكة أثناء السكون؛ طبّق الإعداد المخصص لنوع شاشتك لضمان بقاء الريموت والمزامنة متصلين:',
+                  'Some TVs restrict background services during sleep. Apply the matching protection for your TV brand:'
                 )}
               </p>
               <ol className="guide-steps">
-                <li><code dir="ltr">01</code><span>{t(<>افتح تطبيق <strong>حارس الأمان</strong> ({L('Safety Guard')} / {L('com.tcl.guard')}) على شاشة {L('TCL')}.</>, 'Open Safety Guard (com.tcl.guard) on your TCL TV.')}</span></li>
-                <li><code dir="ltr">02</code><span>{t(<>ادخل إلى <strong>حماية الأذونات</strong> ← <strong>أذونات التشغيل التلقائي</strong>.</>, 'Go to Permission Guard → Auto-Launch Permissions.')}</span></li>
-                <li><code dir="ltr">03</code><span>{t(<>اختر تطبيق {L('Local Cinema')} وأوقف <strong>«سياسة الإدارة التلقائية»</strong>.</>, 'Select Local Cinema and disable Auto Management Policy.')}</span></li>
-                <li><code dir="ltr">04</code><span>{t(<>فعّل خياري <strong>«البدء التلقائي»</strong> و<strong>«البدء الترابطي»</strong> لمنع النظام من إغلاق الاتصال في الخلفية.</>, 'Enable both Auto-Start and Associated Start so the system never kills background sync.')}</span></li>
+                <li><code dir="ltr">01</code><span>{t(<><strong>شاشات {L('TCL')} ({L('com.tcl.guard')}):</strong> افتح حارس الأمان ← حماية الأذونات ← أذونات التشغيل التلقائي ← اختر {L('Local Cinema')}.</>, 'TCL TVs (com.tcl.guard): Open Safety Guard → Permission Guard → Auto-Launch Permissions → select Local Cinema.')}</span></li>
+                <li><code dir="ltr">02</code><span>{t(<>أوقف <strong>«سياسة الإدارة التلقائية»</strong> وفعّل <strong>«البدء التلقائي»</strong> و<strong>«البدء الترابطي»</strong>.</>, 'Disable Auto Management Policy and enable both Auto-Start and Associated Start.')}</span></li>
+                <li><code dir="ltr">03</code><span>{t(<><strong>بقية الشاشات ({L('Sony, Xiaomi, Hisense, Google TV')}):</strong> افتح إعدادات البطارية/الطاقة ← استثناء توفير الطاقة ({L('Battery Optimization')}) واختر <strong>«عدم التحسين»</strong>.</>, 'Other TVs (Sony, Xiaomi, Hisense, Google TV): Open Battery / Power settings → Battery Optimization → choose Don’t optimize.')}</span></li>
+                <li><code dir="ltr">04</code><span>{t(<>فعّل السماح بالتشغيل في الخلفية والوصول للشبكة المحلية (أو أعد فحص الصلاحيات عبر معالج الصلاحيات في الإعدادات).</>, 'Allow background execution & local network access (or verify via the Permissions Setup Wizard in Settings).')}</span></li>
               </ol>
             </article>
           </div>
