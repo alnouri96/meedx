@@ -16,6 +16,7 @@ import {screenshotCopy} from './data/screenshot-copy';
 import {Panels} from './panels';
 import {EquationPanel} from './EquationPanel';
 import {InteractiveShowcase} from './InteractiveShowcase';
+import {AddonsConnectionsSection} from './AddonsConnectionsSection';
 import './style.css';
 import './gallery.css';
 import './showcase.css';
@@ -41,7 +42,7 @@ function App(){
  useEffect(()=>{document.documentElement.lang=ar?'ar':'en';document.documentElement.dir=ar?'rtl':'ltr';document.title=t('MEEDX — استوديو تطوير التطبيقات والألعاب والحلول التقنية','MEEDX — Apps, games & tech solutions studio')},[ar]);
  useEffect(()=>{if(!toast)return;const id=setTimeout(()=>setToast(''),2200);return()=>clearTimeout(id)},[toast]);
  async function copy(value){try{await navigator.clipboard.writeText(value);setToast(t('تم النسخ','Copied'))}catch{setToast(t('تعذر النسخ. حدّد النص وانسخه يدوياً.','Select and copy the text manually.'))}}
- const links=[['apps',t('التطبيقات','Apps')],['lab',t('الألعاب والأدوات','Games & tools')],['services',t('الخدمات','Services')],['downloads',t('التحميلات','Downloads')]];
+ const links=[['apps',t('التطبيقات','Apps')],['lab',t('الألعاب والأدوات','Games & tools')],['services',t('الخدمات','Services')],['downloads',t('التحميلات','Downloads')],['addons',t('الإضافات والربط','Addons & APIs')]];
  const contact=(topic='Local Cinema',kind='feature')=>setModal({id:'telegram',topic,kind});
  const support=()=>setModal({id:'support'});
  const image=(file,alt,props)=> <img src={'/assets/screenshots/'+file} alt={alt} {...props}/>;
@@ -106,6 +107,7 @@ function App(){
    </div>
  </div>
  </section>
+ <AddonsConnectionsSection t={t} L={L} copy={copy}/>
  </main>
  <footer><div className="wrap foot"><div><a href="#" className="wordmark"><img src="/assets/meedx.svg" alt=""/>MEEDX</a><p>{t(<>{L('MEEDX')} · تطوير التطبيقات والألعاب والحلول التقنية</>,'MEEDX · Apps, games & tech solutions')}</p></div><div><h3>{t(<>ادعم تطوير {L('MEEDX')}</>,'Support MEEDX development')}</h3><button className="link" onClick={support}>ZainCash / QiCard <Heart size={17}/></button></div><button className="button" onClick={()=>contact()}>{t('اقتراح أو طلب عمل','Feedback or work request')}<MessageSquare size={17}/></button></div></footer>
  <div className="floating"><button className="primary" onClick={support}><Heart size={17}/>{t(<>ادعم {L('MEEDX')} • زين كاش / {L('Qi')}</>,'Support MEEDX • ZainCash / Qi')}</button><button aria-label={t('نموذج تلجرام','Telegram form')} onClick={()=>contact()}><MessageSquare size={20}/></button></div>
