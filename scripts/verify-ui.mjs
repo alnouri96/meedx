@@ -89,7 +89,11 @@ try{
   assert.match(draft.searchParams.get('text'),/اختبار المعاينة/);
   if(screenshots) await shot(page,prefix+'-telegram');
   await page.keyboard.press('Escape');
-  await page.locator('summary').first().click();
+  await page.getByRole('tab',{name:'ملاحظات الإصدار وما أضفناه'}).first().click();
+  await expect(page.locator('.dl-latest-badge').first()).toBeVisible();
+  await page.getByRole('tab',{name:'معلومات التطبيق والأمان'}).first().click();
+  await page.locator('#addons').getByRole('tab',{name:'نظام التوصيلات وحماية TCL'}).click();
+  await page.locator('#addons').getByRole('tab',{name:'دليل مواقع مفاتيح API الاختيارية'}).click();
   await page.getByRole('button',{name:'نسخ بصمة Local Cinema TV',exact:true}).click();
   await expect(page.getByRole('status')).toHaveText('تم النسخ');
   assert.match(await page.evaluate(()=>navigator.clipboard.readText()),/^[0-9a-f]{64}$/);
