@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import {
   Menu, X, Download, Monitor, Smartphone, MessageSquare, Heart, ShieldCheck,
   Gamepad2, Terminal, ArrowUp, ArrowUpRight, Film, KeyRound, CheckCircle2,
-  AlertTriangle, Puzzle, Wrench, Sparkles, AppWindow
+  AlertTriangle, Puzzle, Wrench, Sparkles
 } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -17,9 +17,8 @@ import screenshotGroups from './data/screenshots.json';
 import { screenshotCopy } from './data/screenshot-copy';
 import { Panels } from './panels';
 import { GoldParticles } from './GoldParticles';
-import { AppsShowcasePage } from './AppsShowcasePage';
+import { AppsShowcasePage, LocalCinemaPoster } from './AppsShowcasePage';
 import { AppDetailPage } from './AppDetailPage';
-import { AddonsConnectionsSection } from './AddonsConnectionsSection';
 import { DownloadAppCard } from './DownloadAppCard';
 import './style.css';
 import './gallery.css';
@@ -32,16 +31,15 @@ const VALID_ROUTES = new Set([
   '/software',
   '/services',
   '/downloads',
-  '/addons',
 ]);
 
 function normalizeRoute(pathname, hash) {
+  const clean = pathname.replace(/\/+$/, '') || '/';
+  if (clean === '/addons' || hash === '#addons') return '/apps/local-cinema';
   if (hash === '#apps') return '/apps';
   if (hash === '#lab' || hash === '#software') return '/software';
   if (hash === '#services') return '/services';
   if (hash === '#downloads') return '/downloads';
-  if (hash === '#addons') return '/addons';
-  const clean = pathname.replace(/\/+$/, '') || '/';
   return VALID_ROUTES.has(clean) ? clean : '/';
 }
 
@@ -86,7 +84,15 @@ function App() {
   }, [toast]);
 
   useEffect(() => {
-    if (window.location.hash === '#support') setModal({ id: 'support' });
+    if (window.location.pathname.replace(/\/+$/, '') === '/addons') {
+      window.history.replaceState({}, '', '/apps/local-cinema#addons');
+      setRoute('/apps/local-cinema');
+      setTimeout(() => document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' }), 80);
+    } else if (window.location.hash === '#addons') {
+      setTimeout(() => document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' }), 80);
+    } else if (window.location.hash === '#support') {
+      setModal({ id: 'support' });
+    }
     const onPop = () => setRoute(normalizeRoute(window.location.pathname, window.location.hash));
     const onScroll = () => setShowTop(window.scrollY > 320);
     window.addEventListener('popstate', onPop);
@@ -97,14 +103,19 @@ function App() {
     };
   }, []);
 
-  function navigate(path) {
-    const target = normalizeRoute(path, '');
-    if (target !== route) {
-      window.history.pushState({}, '', target);
-      setRoute(target);
-    }
+  function navigate(rawPath) {
+    const [pathOnly, hashPart] = rawPath.split('#');
+    const hash = hashPart ? '#' + hashPart : '';
+    const target = normalizeRoute(pathOnly || '/', hash);
+    const fullUrl = target + (target === '/apps/local-cinema' && hash === '#addons' ? '#addons' : '');
+    window.history.pushState({}, '', fullUrl);
+    setRoute(target);
     setMenu(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (hash === '#addons') {
+      setTimeout(() => document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' }), 60);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
 
   async function copy(value) {
@@ -122,51 +133,32 @@ function App() {
     ['/software', t('البرامج والألعاب', 'Software & Gaming')],
     ['/services', t('الخدمات', 'Services')],
     ['/downloads', t('التحميلات', 'Downloads')],
-    ['/addons', t('الإضافات والتوصيلات', 'Plugins & Connections')],
   ];
 
-  const homeCards = [
-    {
-      path: '/apps/local-cinema',
-      icon: AppWindow,
-      badge: `v${releaseVersion}`,
-      title: t('تطبيق Local Cinema', 'Local Cinema App'),
-      desc: t('صفحة التطبيق الكاملة: معاينة اللقطات، المواصفات، وسجل التحديثات.', 'Dedicated app page with screenshots, specs, and full patch notes.'),
-    },
-    {
-      path: '/apps',
-      icon: Sparkles,
-      badge: t('معرض التطبيقات', 'Showcase'),
-      title: t('التطبيقات', 'Apps'),
-      desc: t('استعرض بطاقات التطبيقات والمنصات المدعومة والمزايا.', 'Browse app cards, supported platforms, and features.'),
-    },
+  const showcaseItems = [
     {
       path: '/software',
       icon: Gamepad2,
-      badge: t('قريباً', 'Upcoming'),
-      title: t('البرامج والألعاب', 'Software & Gaming'),
-      desc: t('أدوات الحاسوب وسكربتات Windows وملفات تخصيص الألعاب.', 'PC software, Windows scripts, and gaming tweaks.'),
+      badge: t('قسم الألعاب', 'Gaming Hub'),
+      title: t('الألعاب وملفات التخصيص (Gaming & Tweaks)', 'Gaming & Tweaks'),
+      desc: t('إعدادات التحكم، ملفات تحسين الأداء، وأدوات تخصيص الألعاب للحاسوب والهاتف.', 'Control layouts, performance profiles, and custom gaming tweaks for PC and mobile.'),
+      cta: t('استعرض قسم الألعاب', 'Explore Gaming'),
+    },
+    {
+      path: '/software',
+      icon: Terminal,
+      badge: 'Windows · PowerShell · ADB',
+      title: t('برامج وأدوات الحاسوب (PC Software)', 'PC Software & Scripts'),
+      desc: t(<>أدوات وسكربتات {L('Windows')} و{L('PowerShell')} و{L('ADB')} لإدارة الشاشات والهواتف والأنظمة.</>, 'Windows, PowerShell, and ADB utilities for managing TVs, phones, and PCs.'),
+      cta: t('استعرض البرامج والأدوات', 'Explore Software'),
     },
     {
       path: '/services',
       icon: Wrench,
-      badge: t('دعم مباشر', 'Direct'),
-      title: t('الخدمات التقنية', 'Services'),
-      desc: t('صيانة الهواتف، تجميع الحواسيب، وتطوير حلول مخصصة.', 'Phone repair, PC builds, and custom software.'),
-    },
-    {
-      path: '/downloads',
-      icon: Download,
-      badge: 'APK · SHA-256',
-      title: t('مركز التحميل', 'Downloads'),
-      desc: t('تنزيل مباشر لحزم الشاشة والهاتف مع بصمات التحقق.', 'Direct TV & Phone APK downloads with checksum verification.'),
-    },
-    {
-      path: '/addons',
-      icon: Puzzle,
-      badge: 'Nuvio · Trakt · TCL',
-      title: t('الإضافات والتوصيلات', 'Plugins & Connections'),
-      desc: t('دليل الإضافات الخارجية، النسخ السحابي، ومفاتيح API.', 'External addons, Google backup, TV guard, and API guides.'),
+      badge: t('خدمات مباشرة', 'Direct Services'),
+      title: t('الخدمات التقنية والصيانة', 'Technical Services & Repair'),
+      desc: t('صيانة الهواتف، تجميع وصيانة الحاسوب، وتطوير تطبيقات وسكربتات مخصصة حسب الطلب.', 'Phone repair, PC assembly & maintenance, and custom app/script development.'),
+      cta: t('اطلب خدمة تقنية', 'Request a Service'),
     },
   ];
 
@@ -221,27 +213,27 @@ function App() {
               <GoldParticles />
               <div className="hero-copy">
                 <span className="badge-ok" style={{ marginBottom: 14 }}>
-                  <CheckCircle2 size={14} /> {t('متاح للتنزيل المباشر · v' + releaseVersion, 'Ready for Download · v' + releaseVersion)}
+                  <CheckCircle2 size={14} /> {t('استوديو MEEDX · حلول مفتوحة المصدر ✓', 'MEEDX Studio · Open-Source Solutions ✓')}
                 </span>
-                <h1>{t('شاشتك ومكتبتك،', 'Your TV and library,')}<br />{t('بيدك.', 'in your hands.')}</h1>
+                <h1>{t('تطبيقات وألعاب،', 'Apps, games,')}<br />{t('وحلول تقنية متكاملة.', 'and tech solutions.')}</h1>
                 <p>
                   {t(
-                    <>منظومة {L('Local Cinema')} المتكاملة تجمع مكتبة أفلامك ومسلسلاتك المحلية وعبر الويب على شاشة {L('Android TV')} بواجهة سينمائية ذكية مع قسم إعلانات {L('16:9')}، بوسترات وترجمة عربية تلقائية، وتحوّل هاتفك إلى ريموت ومركز تحكم وبث {L('4K')}. من استوديو {L('MEEDX')}.</>,
-                    'The complete Local Cinema suite brings your local and web movies and series to Android TV with a smart cinematic interface, 16:9 Home Trailers, automatic posters and Arabic subtitles—while turning your phone into a full remote and 4K streaming hub. Built by MEEDX Studio.'
+                    <>استوديو {L('MEEDX')} لتطوير تطبيقات {L('Android TV')} والهواتف الذكية مفتوحة المصدر، أدوات وسكربتات الحاسوب ({L('Windows / ADB')})، ملفات تخصيص الألعاب، وخدمات الصيانة والبرمجة المخصصة — بواجهة عربية وإنجليزية متقنة.</>,
+                    'MEEDX Studio crafts open-source Android TV and smartphone apps, Windows/ADB utilities, gaming tweaks, and custom technical services with a refined Arabic and English experience.'
                   )}
                 </p>
                 <div className="hero-buttons">
-                  <a href="/downloads" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/downloads'); }}>
-                    {t('حمّل النسخة التجريبية', 'Get the beta')}<Download size={18} />
+                  <a href="/apps/local-cinema" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}>
+                    {t(<>استكشف {L('Local Cinema')}</>, 'Explore Local Cinema')}<ArrowUpRight size={18} />
                   </a>
-                  <a href="/apps/local-cinema" className="button" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}>
-                    {t(<>صفحة {L('Local Cinema')}</>, 'Local Cinema Page')}<ArrowUpRight size={18} />
+                  <a href="/downloads" className="button" onClick={(e) => { e.preventDefault(); navigate('/downloads'); }}>
+                    {t('مركز التحميل المباشر', 'Downloads Hub')}<Download size={18} />
                   </a>
                 </div>
                 <div className="hero-meta">
                   <span className="signal" />
-                  <code dir="ltr">v{releaseVersion}</code>
-                  <span className="badge-ok">{t('مكتمل ومفحوص ✓', 'Verified ✓')}</span>
+                  <code dir="ltr">Local Cinema v{releaseVersion}</code>
+                  <span className="badge-ok">{t('متاح للتنزيل المباشر ✓', 'Ready for Download ✓')}</span>
                 </div>
               </div>
               <div className="hardware">
@@ -255,16 +247,56 @@ function App() {
               <div className="wrap section">
                 <div className="section-head">
                   <div>
-                    <h2>{t('أقسام المنظومة والاستوديو', 'Explore MEEDX Sections')}</h2>
-                    <p>{t('اختر أي قسم للانتقال المباشر إلى صفحته المخصصة.', 'Select any section to open its dedicated view.')}</p>
+                    <span className="sc-kicker"><Sparkles size={15} /> {t('أحدث الإصدارات والأقسام', 'Latest Releases & Sections')}</span>
+                    <h2>{t('التطبيقات والألعاب والبرامج', 'Apps, Games & Software')}</h2>
+                    <p>{t('أحدث ما يقدمه استوديو MEEDX مع وصول مباشر لصفحة كل منتج وتعليماته.', 'The latest releases from MEEDX Studio with direct access to each product page and guide.')}</p>
                   </div>
                 </div>
+
+                <article className="gh-app-card" style={{ marginBottom: 22 }}>
+                  <a
+                    href="/apps/local-cinema"
+                    className="gh-app-media"
+                    onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}
+                  >
+                    <LocalCinemaPoster t={t} />
+                  </a>
+                  <div className="gh-app-body">
+                    <div className="gh-app-top">
+                      <img src="/assets/icons/local-cinema-icon.png" alt="Local Cinema" className="gh-app-icon" />
+                      <div>
+                        <div className="gh-app-title-row">
+                          <h3>Local Cinema</h3>
+                          <span className="gh-ver-badge" dir="ltr">v{releaseVersion}</span>
+                          <span className="badge-ok"><CheckCircle2 size={13} /> {t('مكتمل ومفحوص ✓', 'Verified ✓')}</span>
+                        </div>
+                        <p>
+                          {t(
+                            <>منظومة سينما منزلية متكاملة تجمع شاشة {L('Android TV')} والهاتف بواجهة داكنة وذهبية مع إعلانات {L('16:9')}، بث التورنت والمباريات، ترجمة تلقائية، وإضافات {L('Nuvio / Stremio')}.</>,
+                            'Complete home cinema suite pairing Android TV and Phone with 16:9 Home Trailers, instant torrent/live casting, auto subtitles, and Nuvio / Stremio addons.'
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="gh-app-actions">
+                      <a href="/apps/local-cinema" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}>
+                        <span>{t('صفحة التطبيق والإضافات والتعليمات', 'App Page, Addons & Guides')}</span>
+                        <ArrowUpRight size={17} />
+                      </a>
+                      <a href="/downloads" className="button" onClick={(e) => { e.preventDefault(); navigate('/downloads'); }}>
+                        <Download size={17} />
+                        <span>{t('تنزيل APK المباشر', 'Direct APK Download')}</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
                 <div className="hub-grid">
-                  {homeCards.map((c) => {
+                  {showcaseItems.map((c) => {
                     const Icon = c.icon;
                     return (
                       <a
-                        key={c.path}
+                        key={c.title}
                         href={c.path}
                         className="hub-card"
                         onClick={(e) => { e.preventDefault(); navigate(c.path); }}
@@ -275,7 +307,7 @@ function App() {
                         </div>
                         <h3>{c.title}</h3>
                         <p>{c.desc}</p>
-                        <span className="hub-link">{t('فتح القسم', 'Open section')} <ArrowUpRight size={15} /></span>
+                        <span className="hub-link">{c.cta} <ArrowUpRight size={15} /></span>
                       </a>
                     );
                   })}
@@ -398,8 +430,8 @@ function App() {
                   <h3>{t('التشغيل التلقائي وإدارة المفاتيح والإضافات', 'Zero-Account Mode & Phone Hub Management')}</h3>
                   <p>{t(<>يعمل التطبيق تلقائياً بلا أي مفاتيح أو حسابات، ويمكنك إدارة المفاتيح الاختيارية والإضافات بسهولة من تطبيق الهاتف عبر {L('TV Hub ← Connection')}.</>, 'The app works automatically with no keys or accounts required; optional API keys and addons are managed easily from the phone app via TV Hub → Connection.')}</p>
                 </div>
-                <a href="/addons" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/addons'); }}>
-                  {t('الانتقال إلى دليل الإضافات والتوصيلات', 'Open Plugins & Connections Guide')}<ArrowUpRight size={16} />
+                <a href="/apps/local-cinema#addons" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema#addons'); }}>
+                  {t('الانتقال إلى دليل الإضافات والتعليمات', 'Open App Addons & Guides')}<ArrowUpRight size={16} />
                 </a>
               </div>
               <div className="guide-grid">
@@ -411,18 +443,14 @@ function App() {
                   <div className="guide-title"><KeyRound size={24} /><div><h4>{t(<>إدارة المفاتيح والإضافات من الهاتف ({L('TV Hub ← Connection')})</>, 'Manage Keys & Addons from Phone (TV Hub → Connection)')}</h4><code dir="ltr">API_KEYS_SYNC · ADDONS_SYNC · WATCH_SYNC</code></div></div>
                   <p>{t(<>عند إضافة مفاتيح اختيارية ({L('Trakt / Subsource / OpenSubtitles / TMDb')}) أو إضافات {L('Nuvio / Stremio')} على هاتفك، تُزامن تلقائياً مع الشاشة عبر الشبكة المحلية.</>, 'Optional API keys (Trakt / Subsource / OpenSubtitles / TMDb) and Nuvio / Stremio addons added on your phone sync automatically to TV over your local network.')}</p>
                   <div className="guide-links">
-                    <a href="/addons" className="link" onClick={(e) => { e.preventDefault(); navigate('/addons'); }}>
-                      {t('استعرض دليل الإضافات ومفاتيح API التفصيلي', 'View full Plugins, TV Guard & API Guides')} <ArrowUpRight size={15} />
+                    <a href="/apps/local-cinema#addons" className="link" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema#addons'); }}>
+                      {t('استعرض دليل الإضافات ومفاتيح API داخل صفحة التطبيق', 'View full Addons & API Guides in App Page')} <ArrowUpRight size={15} />
                     </a>
                   </div>
                 </article>
               </div>
             </div>
           </section>
-        )}
-
-        {route === '/addons' && (
-          <AddonsConnectionsSection t={t} L={L} copy={copy} />
         )}
       </main>
 

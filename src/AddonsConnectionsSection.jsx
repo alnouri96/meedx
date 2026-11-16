@@ -103,9 +103,9 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       <div className="wrap section">
         <div className="section-head">
           <div>
-            <span className="sc-kicker"><CheckCircle2 size={15} /> {t('الجديد في v1.0.0-beta.6 · تكامل الهاتف والشاشة', 'New in v1.0.0-beta.6 · Phone & TV Integration')}</span>
-            <h2>{t('الإضافات، التوصيلات ومفاتيح API', 'Plugins, Connections & API Guides')}</h2>
-            <p>{t('إضافات Nuvio وStremio، المزامنة الثنائية عبر الشبكة المحلية، حماية شاشات TCL، ودليل إنشاء مفاتيح API الاختيارية.', 'Nuvio & Stremio addons, two-way LAN watch sync, TCL background protection, and optional API key creation guides.')}</p>
+            <span className="sc-kicker"><CheckCircle2 size={15} /> {t('الجديد في v1.0.0-beta.7 · تكامل الهاتف والشاشة', 'New in v1.0.0-beta.7 · Phone & TV Integration')}</span>
+            <h2>{t('الإضافات، التوصيلات ومفاتيح API والتعليمات', 'Plugins, Connections, APIs & Guides')}</h2>
+            <p>{t('إضافات Nuvio وStremio، المزامنة الثنائية عبر الشبكة المحلية، حماية الشاشات (TCL وغيرها)، ودليل إنشاء مفاتيح API الاختيارية.', 'Nuvio & Stremio addons, two-way LAN watch sync, TV background protection, and optional API key creation guides.')}</p>
           </div>
           <span className="sc-lan-pill"><Tv size={14} /> <Smartphone size={14} /> {t('تشغيل فوري بلا حساب', 'Zero-Account Ready')}</span>
         </div>
