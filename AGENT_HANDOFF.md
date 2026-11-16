@@ -11,20 +11,20 @@
 - **مستودع GitHub العام:** `https://github.com/alnouri96/meedx`
 - **بروفايل GitHub للاستوديو:** `https://github.com/alnouri96` (مستودع `https://github.com/alnouri96/alnouri96`)
 - **صفحة الإصدارات (GitHub Releases):** `https://github.com/alnouri96/meedx/releases`
-- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.7`
+- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.8`
 
 ---
 
 ## 2. الحالة الحالية | Current State
 
-### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.7` · `versionCode = 7`)
+### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.8` · `versionCode = 8`)
 
 | التطبيق | الحزمة (`Package ID`) | الحجم (بايت) | بصمة `SHA-256` | رابط التحميل المباشر |
 | --- | --- | ---: | --- | --- |
-| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38757679` | `44ca11f62eed3701dbd9115f0d73f4f1765ca43c15fa4dd8579e92909f44fd87` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-TV-v1.0.0-beta.7.apk` |
-| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `197316085` | `93de9c7d20ca92022e96257f4cc317ef77e31bac042b43c12c01dc536ad6d973` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-Manager-Phone-v1.0.0-beta.7.apk` |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38818775` | `84b312fe99989b728c6d9023f27431ace251dd1490762ed5c69bf18d13def843` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-TV-v1.0.0-beta.8.apk` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `119159102` | `bebc3259f4226a067e04cee28c3331c292709eca860aad34d119e86cce1032bb` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.8/LocalCinema-Manager-Phone-v1.0.0-beta.8.apk` |
 
-- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.7\`
+- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.8\`
 - **ملف تسليم التطبيقات المرجعي:** `G:\Local Cinema\AGENT_HANDOFF.md`
 
 ### ب) حالة الواجهة والمزايا المنشورة
@@ -76,3 +76,4 @@
 | `2026-11-16` | `43c5e81` | إعادة هيكلة وتقسيم الموقع إلى مسارات مستقلة (`/`, `/apps`, `/apps/local-cinema`, `/software`, `/services`, `/downloads`, `/addons`) مع `public/_redirects`، جزيئات ذهبية في الهيرو (`GoldParticles.jsx`)، بطاقة GitHub للتطبيقات (`AppsShowcasePage.jsx`)، صفحة تفاصيل مستقلة (`AppDetailPage.jsx`) بسجل `Patch Notes` من `beta.6` إلى `beta.7`، شارات دلالية (`#22C55E` و`#EF4444` و`#E5B94C`)، زر العودة للأعلى (`↑`)، ونشر `v1.0.0-beta.7` (`versionCode = 7`) على GitHub Releases وCloudflare Pages (`https://d9fa07ea.meedx.pages.dev`). | لا يوجد |
 | `2026-11-16` | `8bb270f` | نقل قسم «الإضافات، التوصيلات ومفاتيح API والتعليمات» إلى داخل صفحة التطبيق (`/apps/local-cinema#addons`) مع إعادة التوجيه التلقائي لـ `/addons` واقتصار الشريط العلوي على 5 أقسام، إعادة تصميم الصفحة الرئيسية (`/`) لنبذة `MEEDX` ومعرض أحدث البوسترات، استبدال البانر القديم المقصوص بعارض معاينة متجاوب (`LocalCinemaPoster`) وأيقونة `local-cinema-icon.png` الرسمية، والفحص الحي بالمتصفح والنشر على Cloudflare Pages. | لا يوجد |
 | `2026-11-16` | `8cfd9e4` | إضافة شارات التمييز الصريحة («هذه نسخة الشاشة (Android TV)» و«هذه نسخة الهاتف (Android Phone)»)، وإضافة صندوق كود `Downloader` والروابط المختصرة (`meedx.pages.dev/tv` و`meedx.pages.dev/phone` عبر `public/_redirects` و`vite.config.js` بتوجيه `302` مباشر إلى GitHub Releases) لنسختي الشاشة والهاتف في `/downloads` و`/apps/local-cinema` و`siteConfig.js` و`catalog.json`، والتحقق الحي عبر المتصفح والنشر على Cloudflare Pages (`https://1da613bc.meedx.pages.dev`). | لا يوجد |
+| `2026-11-16` | `40a3d32` | تحديث الموقع وتغذية `version.json` و`catalog.json` و`_redirects` و`README.md` إلى `v1.0.0-beta.8` (`versionCode = 8`) مع Patch Notes كاملة بالعربية والإنجليزية، قصر صندوق كود Downloader (`3213660` / `meedx.pages.dev/tv`) على بطاقة الشاشة فقط، نقل قسم `#setup-guide` («التشغيل التلقائي وإدارة المفاتيح والإضافات») من `/downloads` إلى `/apps/local-cinema` بدون أي تكرار، والفحص عبر Playwright والنشر على Cloudflare Pages (`https://23a80e03.meedx.pages.dev`). | لا يوجد |
