@@ -1,66 +1,39 @@
 import React, { useState } from 'react';
 import {
   Sparkles, Link2, Puzzle, ShieldAlert, KeyRound, ExternalLink,
-  Copy, CheckCircle2, Tv, Smartphone, Subtitles, Film, RefreshCw
+  Copy, CheckCircle2, Tv, Smartphone, Subtitles, Film, RefreshCw,
+  Star, Users, HardDrive, BookmarkCheck, PlayCircle
 } from 'lucide-react';
 
 export function AddonsConnectionsSection({ t, L, copy }) {
-  const [filter, setFilter] = useState('all');
+  const [tab, setTab] = useState('plugins');
 
-  const features = [
-    {
-      id: 'zero-account',
-      icon: Sparkles,
-      badge: 'Zero-Account Mode',
-      title: t('وضع التشغيل التلقائي بلا حساب', 'Zero-Account Instant Mode'),
-      points: [
-        t(<>البوسترات، الخلفيات، التقييمات المتعددة، وصفحات الممثلين وأعمالهم تعمل <strong>تلقائياً فور التثبيت</strong> بدون تسجيل.</>, <>Posters, backdrops, multi-source ratings, and cast filmographies work <strong>immediately out of the box</strong> with no login.</>),
-        t(<>الترجمة العربية والإنجليزية التلقائية والكاش الدائم مع مؤقت التحديث التلقائي للبوسترات مفعّلة افتراضياً.</>, <>Automatic Arabic/English subtitles and persistent poster caching with auto-refresh timers are enabled by default.</>),
-      ],
-    },
-    {
-      id: 'tv-hub-sync',
-      icon: Link2,
-      badge: 'TV Hub ← Connection · WATCH_SYNC',
-      title: t('مركز التوصيلات وإدارة المفاتيح من الهاتف', 'Phone Connection Hub & Key Sync'),
-      points: [
-        t(<>من الهاتف افتح {L('TV Hub ← Connection')} لإرسال مفاتيح {L('API')} وإضافات {L('Nuvio / Stremio')} إلى الشاشة بضغطة واحدة.</>, <>From the phone, open {L('TV Hub → Connection')} to push API keys and {L('Nuvio / Stremio')} addons straight to your TV.</>),
-        t(<>مزامنة ثنائية لحظية عبر الشبكة المحلية ({L('WATCH_SYNC')}) لقوائم «متابعة المشاهدة»، «تمت المشاهدة»، والانتقال التلقائي للحلقة التالية ({L('Up Next')}) و{L('Watchlist')}.</>, <>Real-time two-way LAN sync ({L('WATCH_SYNC')}) for Continue Watching, Watched history, {L('Up Next')}, and your {L('Watchlist')}.</>),
-      ],
-    },
-    {
-      id: 'addons',
-      icon: Puzzle,
-      badge: 'Nuvio / Stremio Addons',
-      title: t('الإضافات الخارجية والتثبيت بضغطة واحدة', 'External Addons & One-Tap Install'),
-      points: [
-        t(<>إضافات متوافقة مع {L('Nuvio / Stremio')} لتوسيع مصادر البث والترجمة؛ ثبّتها بضغطة واحدة من القائمة الجاهزة داخل التطبيق.</>, <>Compatible with {L('Nuvio / Stremio')} to expand stream and subtitle sources; install with one tap from the built-in catalog.</>),
-        t(<>يمكنك أيضاً لصق أي رابط {L('manifest.json')} مخصص على الهاتف ليتم مزامنته وتشغيله تلقائياً على الشاشة.</>, <>You can also paste any custom {L('manifest.json')} URL on your phone and have it synced automatically to the TV.</>),
-      ],
-      manifestUrl: 'https://opensubtitles-v3.strem.io/manifest.json',
-    },
-    {
-      id: 'tcl-guard',
-      icon: ShieldAlert,
-      badge: 'TCL · com.tcl.guard',
-      title: t('حماية الخلفية لشاشات TCL ومنع انقطاع الاتصال', 'TCL Background Guard Protection'),
-      points: [
-        t(<>على شاشات {L('TCL')}، افتح إعدادات الحماية ({L('com.tcl.guard')} / إدارة التطبيقات) لتطبيق {L('Local Cinema TV')}.</>, <>On {L('TCL')} TVs, open System Manager / Guard ({L('com.tcl.guard')}) for {L('Local Cinema TV')}.</>),
-        t(<>أوقف <strong>«سياسة الإدارة التلقائية»</strong> وفعّل <strong>«البدء التلقائي»</strong> و<strong>«البدء الترابطي»</strong> لمنع انقطاع المزامنة والريموت أثناء السكون.</>, <>Disable <strong>Auto Management Policy</strong> and enable <strong>Auto-Start</strong> and <strong>Associated Start</strong> so sync never drops in standby.</>),
-      ],
-    },
+  const readyManifests = [
+    { name: 'OpenSubtitles v3', url: 'https://opensubtitles-v3.strem.io/manifest.json' },
+    { name: 'Torrentio', url: 'https://torrentio.strem.fun/manifest.json' },
+    { name: 'Comet', url: 'https://comet.elfhosted.com/manifest.json' },
   ];
 
-  const providers = [
+  const apiProviders = [
     {
       id: 'trakt',
       icon: RefreshCw,
       name: 'Trakt',
-      tag: t('اختياري · مزامنة السجل', 'Optional · History Sync'),
-      desc: t('لمزامنة سجل «تمت المشاهدة»، «قائمة المشاهدة» ومواضع التوقف ثنائية الاتجاه بين الأجهزة.', 'Two-way sync for Watched history, Watchlist, and playback resume positions across devices.'),
-      steps: t('افتح التطبيقات ← أنشئ تطبيق API ← انسخ Client ID والصقه في مركز التوصيلات (أو استخدم الربط السريع المدمج).', 'Open New App → Create an API app → copy Client ID into Connection Hub (or use the built-in quick link).'),
+      tag: t('اختياري · مزامنة السجل وPKCE', 'Optional · Sync & PKCE'),
+      desc: t(
+        'مزامنة ثنائية الاتجاه لسجل «تمت المشاهدة»، «قائمة المشاهدة» ومواضع التوقف مع زر تحديث سريع في القائمة الجانبية.',
+        'Two-way sync for Watched history, Watchlist, and resume positions with a quick sidebar refresh button.'
+      ),
+      steps: [
+        t(<>سجّل الدخول وافتح صفحة إنشاء تطبيق جديد في {L('Trakt')}.</>, 'Sign in and open the New OAuth Application page on Trakt.'),
+        t(<>في حقل {L('Redirect URI')} الصق القيمة الجاهزة: {L('urn:ietf:wg:oauth:2.0:oob')}.</>, 'In Redirect URI, paste: urn:ietf:wg:oauth:2.0:oob.'),
+        t(<>انسخ {L('Client ID')} فقط (اترك {L('Client Secret')} فارغاً لتطبيقات {L('PKCE')} الحديثة) وأرسله من الهاتف للشاشة.</>, 'Copy Client ID only (leave Client Secret empty for modern PKCE apps) and push it from your phone.'),
+        t(<>أدخل كود التفعيل الظاهر على الشاشة في {L('trakt.tv/activate')} لإتمام الربط.</>, 'Enter the on-screen activation code at trakt.tv/activate to finish linking.'),
+      ],
+      copyValue: { label: t('نسخ Redirect URI', 'Copy Redirect URI'), value: 'urn:ietf:wg:oauth:2.0:oob' },
       links: [
         { label: t('إنشاء تطبيق Trakt', 'Create Trakt App'), url: 'https://trakt.tv/oauth/applications/new' },
+        { label: t('تفعيل الكود', 'Activate Code'), url: 'https://trakt.tv/activate' },
       ],
     },
     {
@@ -68,22 +41,40 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       icon: Subtitles,
       name: 'Subsource',
       tag: t('اختياري · ترجمات عربية', 'Optional · Arabic Subtitles'),
-      desc: t('لجلب ترجمات عربية وإنجليزية إضافية للأفلام والمسلسلات والأنمي.', 'Fetch additional Arabic and English subtitles for movies, series, and anime.'),
-      steps: t('سجّل الدخول في subsource.net ← أنشئ مفتاح API من لوحة الحساب ← أرسله للشاشة من الهاتف.', 'Sign in at subsource.net → generate an API key from your profile → send it to TV from your phone.'),
+      desc: t(
+        'مصدر مجاني غني بالترجمات العربية والإنجليزية للأفلام والمسلسلات والأنمي.',
+        'Free subtitle provider rich in Arabic and English subtitles for movies, series, and anime.'
+      ),
+      steps: [
+        t(<>افتح موقع {L('subsource.net')} وأنشئ حساباً مجانياً وسجّل الدخول.</>, 'Open subsource.net, create a free account, and sign in.'),
+        t(<>انتقل إلى الملف الشخصي ({L('Profile')}) ثم افتح قسم {L('API')}.</>, 'Go to your Profile and open the API section.'),
+        t('أنشئ مفتاح API جديداً وانسخ النص الخاص به.', 'Generate a new API key and copy the key string.'),
+        t(<>الصق المفتاح في تطبيق الهاتف ({L('TV Hub ← Connection')}) ليصل للشاشة فوراً.</>, 'Paste the key in the phone app (TV Hub → Connection) to sync it to TV instantly.'),
+      ],
       links: [
-        { label: t('فتح Subsource', 'Open Subsource'), url: 'https://subsource.net' },
+        { label: t('فتح Subsource', 'Open Subsource'), url: 'https://subsource.net/' },
       ],
     },
     {
       id: 'opensubtitles',
       icon: Subtitles,
       name: 'OpenSubtitles',
-      tag: t('اختياري · تنبيه DNS', 'Optional · DNS Notice'),
-      desc: t('مصدر ترجمات اختياري واسع الانتشار. في حال تعذّر فتح الموقع في شبكتك فعّل DNS خاص (مثل 1.1.1.1 أو 8.8.8.8).', 'Optional global subtitle source. If blocked by your ISP, enable Private DNS (e.g. 1.1.1.1 or 8.8.8.8).'),
-      steps: t('أنشئ حساباً ← افتح API Consumers ← أنشئ Consumer وانسخ المفتاح مع بيانات الحساب.', 'Create an account → open API Consumers → create a Consumer and copy the API key.'),
+      tag: t('اختياري · تنبيه DNS خاص', 'Optional · Private DNS Notice'),
+      desc: t(
+        'مكتبة ترجمات عالمية واسعة. إذا تعذّر فتح الموقع لدى مزوّد الإنترنت، فعّل DNS خاص (1.1.1.1 أو dns.google).',
+        'Global subtitle catalog. If blocked by your ISP, enable Private DNS (1.1.1.1 or dns.google) on your device.'
+      ),
+      steps: [
+        t(<>افتح {L('opensubtitles.com')} (أو {L('.org')}) وسجّل الدخول، وإذا لم يفتح فعّل {L('DNS')} خاص.</>, 'Open opensubtitles.com (or .org) and sign in; enable Private DNS if needed.'),
+        t(<>انتقل إلى {L('API Consumers')} من ملفك الشخصي وأنشئ Consumer جديداً.</>, 'Open API Consumers from your profile and create a new Consumer.'),
+        t(<>انسخ {L('API Key')} مع اسم المستخدم وكلمة المرور لحسابك.</>, 'Copy the API Key along with your account username and password.'),
+        t(<>أرسلها للشاشة من الهاتف عبر {L('TV Hub ← Connection')}.</>, 'Push them to your TV from the phone via TV Hub → Connection.'),
+      ],
+      copyValue: { label: t('نسخ DNS: 1.1.1.1', 'Copy DNS: 1.1.1.1'), value: '1.1.1.1' },
+      copyValueAlt: { label: t('نسخ dns.google', 'Copy dns.google'), value: 'dns.google' },
       links: [
         { label: 'API Consumers (.com)', url: 'https://www.opensubtitles.com/en/consumers' },
-        { label: 'OpenSubtitles (.org)', url: 'https://www.opensubtitles.org' },
+        { label: 'OpenSubtitles (.org)', url: 'https://www.opensubtitles.org/' },
       ],
     },
     {
@@ -91,42 +82,47 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       icon: Film,
       name: 'TMDb',
       tag: t('اختياري · بوسترات وممثلين', 'Optional · Posters & Cast'),
-      desc: t('لتوسيع بيانات الممثلين والبوسترات لمن يملك مفتاحاً خاصاً (المنظومة تعمل بدونه تلقائياً).', 'Expand actor profiles and artwork with your own personal key (not required for default Zero-Account mode).'),
-      steps: t('افتح Settings ← API ← اطلب مفتاح مطوّر مجاني وانسخ API Key (v3).', 'Open Settings → API → request a developer key and copy API Key (v3).'),
+      desc: t(
+        'لتوسيع بيانات الممثلين والبوسترات والخلفيات لمن يملك مفتاحاً خاصاً (المنظومة تعمل بدونه تلقائياً).',
+        'Expand actor profiles and artwork with your personal key (the suite works out of the box without it).'
+      ),
+      steps: [
+        t(<>سجّل الدخول في {L('themoviedb.org')} وافتح {L('Settings ← API')}.</>, 'Sign in at themoviedb.org and open Settings → API.'),
+        t('اختر طلب مفتاح مطوّر مجاني (Developer) وأكمل النموذج المختصر.', 'Request a free Developer key and complete the short form.'),
+        t(<>انسخ القيمة المسماة {L('API Key (v3)')}.</>, 'Copy the value labeled API Key (v3).'),
+        t(<>ألصقها في الهاتف وأرسلها للشاشة بضغطة واحدة عبر {L('API_KEYS_SYNC')}.</>, 'Paste it on your phone and push to TV in one tap via API_KEYS_SYNC.'),
+      ],
       links: [
         { label: t('صفحة API في TMDb', 'TMDb API Settings'), url: 'https://www.themoviedb.org/settings/api' },
       ],
     },
   ];
 
-  const showFeatures = filter === 'all' || filter === 'features';
-  const showApis = filter === 'all' || filter === 'apis';
-
   return (
-    <section id="addons" className="band" aria-label={t('الإضافات، الربط ومفاتيح API', 'Plugins, Addons & Connections')}>
+    <section id="addons" className="band" aria-label={t('الإضافات، التوصيلات ومفاتيح API', 'Plugins, Connections & API Guides')}>
       <div className="wrap section">
         <div className="section-head">
           <div>
             <span className="sc-kicker"><CheckCircle2 size={15} /> {t('الجديد في v1.0.0-beta.6 · تكامل الهاتف والشاشة', 'New in v1.0.0-beta.6 · Phone & TV Integration')}</span>
-            <h2>{t('الإضافات، الربط ومفاتيح API', 'Plugins, Addons & Connections')}</h2>
-            <p>{t('كل ما تحتاجه لتشغيل الإضافات الخارجية، مزامنة المشاهدة عبر الشبكة المحلية، وحماية الاتصال على شاشات TCL.', 'Everything you need for external addons, local network watch sync, TCL background protection, and optional API keys.')}</p>
+            <h2>{t('الإضافات، التوصيلات ومفاتيح API', 'Plugins, Connections & API Guides')}</h2>
+            <p>{t('إضافات Nuvio وStremio، المزامنة الثنائية عبر الشبكة المحلية، حماية شاشات TCL، ودليل إنشاء مفاتيح API الاختيارية.', 'Nuvio & Stremio addons, two-way LAN watch sync, TCL background protection, and optional API key creation guides.')}</p>
           </div>
           <span className="sc-lan-pill"><Tv size={14} /> <Smartphone size={14} /> {t('تشغيل فوري بلا حساب', 'Zero-Account Ready')}</span>
         </div>
 
-        <div className="sc-scenarios" role="tablist" aria-label={t('تصفية دليل الإضافات والربط', 'Filter addons and API guide')} style={{ marginBottom: 22 }}>
+        <div className="sc-scenarios" role="tablist" aria-label={t('أقسام الإضافات والتوصيلات', 'Plugins and connections tabs')} style={{ marginBottom: 22 }}>
           {[
-            ['all', Sparkles, t('عرض الدليل الكامل', 'Show All')],
-            ['features', Puzzle, t('الإضافات والربط وحماية TCL', 'Addons, Sync & TCL Guard')],
-            ['apis', KeyRound, t('مواقع مفاتيح API الاختيارية', 'Optional API Key Sites')],
+            ['plugins', Puzzle, t('الإضافات والميزات الجديدة', 'Plugins & Addons')],
+            ['connection', Link2, t('نظام التوصيلات وحماية TCL', 'Connection & TCL Guard')],
+            ['apis', KeyRound, t('دليل مواقع مفاتيح API الاختيارية', 'API Creation Guides')],
           ].map(([key, Icon, label]) => (
             <button
               key={key}
               type="button"
               role="tab"
-              aria-selected={filter === key}
-              className={'sc-pill' + (filter === key ? ' active' : '')}
-              onClick={() => setFilter(key)}
+              aria-selected={tab === key}
+              className={'sc-pill' + (tab === key ? ' active' : '')}
+              onClick={() => setTab(key)}
             >
               <Icon size={17} />
               <span>{label}</span>
@@ -134,45 +130,157 @@ export function AddonsConnectionsSection({ t, L, copy }) {
           ))}
         </div>
 
-        {showFeatures && (
-          <div key={'feat-' + filter} className="ac-grid sc-animate">
-            {features.map((item) => {
-              const Icon = item.icon;
-              return (
-                <article key={item.id} className="ac-card">
-                  <div className="ac-card-head">
-                    <span className="sc-gold-badge"><Icon size={20} /></span>
+        {tab === 'plugins' && (
+          <div key="plugins" className="ac-grid sc-animate">
+            <article className="ac-card">
+              <div className="ac-card-head">
+                <span className="sc-gold-badge"><Puzzle size={20} /></span>
+                <div>
+                  <code dir="ltr">Nuvio Streams & Stremio Addons</code>
+                  <h3>{t('طرق تنصيب الإضافات الخارجية (3 طرق)', '3 Ways to Install External Addons')}</h3>
+                </div>
+              </div>
+              <ol className="guide-steps">
+                <li>
+                  <code dir="ltr">01</code>
+                  <span><strong>{t('التثبيت بضغطة واحدة:', 'One-Tap Install:')}</strong> {t('من قائمة الإضافات الجاهزة داخل تطبيق الهاتف مع مزامنة فورية للشاشة.', 'Directly from the built-in catalog in the phone app with instant TV sync.')}</span>
+                </li>
+                <li>
+                  <code dir="ltr">02</code>
+                  <span><strong>{t('الاكتشاف التلقائي من الحافظة:', 'Clipboard Auto-Detect:')}</strong> {t(<>عند نسخ أي رابط {L('manifest.json')}، يلتقطه التطبيق ويعرض تثبيته تلقائياً.</>, 'Copy any manifest.json link and the app detects and offers to install it automatically.')}</span>
+                </li>
+                <li>
+                  <code dir="ltr">03</code>
+                  <span><strong>{t('اللصق اليدوي:', 'Manual Paste:')}</strong> {t('في الإعدادات المتقدمة لإدارة وترتيب الإضافات بحرية.', 'Paste into Advanced Settings to manage and reorder addons freely.')}</span>
+                </li>
+              </ol>
+              <div className="ac-manifest-list">
+                {readyManifests.map((m) => (
+                  <div key={m.name} className="ac-copy-row">
                     <div>
-                      <code dir="ltr">{item.badge}</code>
-                      <h3>{item.title}</h3>
+                      <strong>{m.name}</strong>
+                      <code dir="ltr">{m.url}</code>
                     </div>
+                    <button type="button" className="button" onClick={() => copy(m.url)}>
+                      <Copy size={14} />
+                      <span>{t('نسخ Manifest', 'Copy Manifest')}</span>
+                    </button>
                   </div>
-                  <ul className="ac-list">
-                    {item.points.map((pt, i) => <li key={i}>{pt}</li>)}
-                  </ul>
-                  {item.manifestUrl && (
-                    <div className="ac-copy-row">
-                      <code dir="ltr">{item.manifestUrl}</code>
-                      <button type="button" className="button" onClick={() => copy(item.manifestUrl)}>
-                        <Copy size={14} />
-                        <span>{t('نسخ Manifest', 'Copy Manifest')}</span>
-                      </button>
-                    </div>
-                  )}
-                </article>
-              );
-            })}
+                ))}
+              </div>
+              <div className="ac-links">
+                <a href="https://github.com/tapframe/NuvioStreamsAddon" target="_blank" rel="noopener noreferrer" className="button">
+                  <span>NuvioStreamsAddon</span>
+                  <ExternalLink size={14} />
+                </a>
+                <a href="https://stremio-addons.net" target="_blank" rel="noopener noreferrer" className="button">
+                  <span>stremio-addons.net</span>
+                  <ExternalLink size={14} />
+                </a>
+              </div>
+            </article>
+
+            <article className="ac-card">
+              <div className="ac-card-head">
+                <span className="sc-gold-badge"><Sparkles size={20} /></span>
+                <div>
+                  <code dir="ltr">Zero-Account · Watched · Up Next · Cache</code>
+                  <h3>{t('الميزات الجديدة المدمجة في التجربة', 'Built-In Experience Upgrades')}</h3>
+                </div>
+              </div>
+              <ul className="ac-icon-list">
+                <li>
+                  <BookmarkCheck size={18} />
+                  <span><strong>{t('تمت المشاهدة وWatchlist:', 'Watched & Watchlist:')}</strong> {t('تتبّع دقيق لما شاهدته مع تلوين أزرار التحديد بالذهبي لسهولة التمييز.', 'Track finished titles and your Watchlist with gold selection highlights.')}</span>
+                </li>
+                <li>
+                  <PlayCircle size={18} />
+                  <span><strong>{t('الانتقال التلقائي (Up Next):', 'Auto Up Next:')}</strong> {t('عرض الحلقة التالية والانتقال إليها بسلاسة عند انتهاء الحلقة الحالية.', 'Automatic next-episode prompt and seamless progression.')}</span>
+                </li>
+                <li>
+                  <Users size={18} />
+                  <span><strong>{t('صفحات الممثلين وأعمالهم:', 'Cast & Crew Pages:')}</strong> {t('صور بورتريه وعرض بالحجم الكامل واستعراض أعمال الممثل محلياً وعالمياً.', 'Portrait photos, full-size viewer, and local/global filmographies.')}</span>
+                </li>
+                <li>
+                  <Star size={18} />
+                  <span><strong>{t('تقييمات من مصادر متعددة:', 'Multi-Source Ratings:')}</strong> {t(<>عرض تقييمات {L('IMDb')} و{L('Rotten Tomatoes')} و{L('Metacritic')} و{L('Trakt')} و{L('MAL')}.</>, 'Combined ratings from IMDb, Rotten Tomatoes, Metacritic, Trakt, and MAL.')}</span>
+                </li>
+                <li>
+                  <HardDrive size={18} />
+                  <span><strong>{t('الكاش الدائم على القرص:', 'Persistent Disk Cache:')}</strong> {t('حفظ دائم للصور والبيانات مع مؤقت تحديث قابل للتخصيص (يومي / يومين / أسبوعي / شهري / يدوي).', 'Persistent artwork/metadata cache with customizable refresh intervals (daily / 2 days / weekly / monthly / manual).')}</span>
+                </li>
+              </ul>
+            </article>
           </div>
         )}
 
-        {showApis && (
-          <div key={'api-' + filter} className="ac-api-wrap sc-animate">
-            <div className="ac-subhead">
-              <h3><KeyRound size={20} /> {t('دليل المواقع التي تُصنع منها مفاتيح API الاختيارية', 'Optional API Key Providers Directory')}</h3>
-              <p>{t('لا تحتاج أي مفتاح لبدء المشاهدة؛ استخدم هذه المواقع فقط إذا أردت مزامنة Trakt أو مصادر ترجمة وبيانات إضافية.', 'No key is required to start watching; use these sites only if you want Trakt sync or extra subtitle and metadata providers.')}</p>
+        {tab === 'connection' && (
+          <div key="connection" className="ac-grid sc-animate">
+            <article className="ac-card">
+              <div className="ac-card-head">
+                <span className="sc-gold-badge"><Link2 size={20} /></span>
+                <div>
+                  <code dir="ltr">TV Hub ← Connection · API_KEYS_SYNC · ADDONS_SYNC</code>
+                  <h3>{t('الاقتران وإدارة المفاتيح والإضافات من الهاتف', 'Phone-to-TV Sync & Connection Hub')}</h3>
+                </div>
+              </div>
+              <ol className="guide-steps">
+                <li>
+                  <code dir="ltr">01</code>
+                  <span>{t(<>تأكد من اتصال الهاتف والشاشة بنفس شبكة {L('Wi-Fi')} المحلية، ثم افتح {L('TV Hub ← Connection')} على الهاتف.</>, 'Ensure Phone and TV are on the same local Wi-Fi, then open TV Hub → Connection on your phone.')}</span>
+                </li>
+                <li>
+                  <code dir="ltr">02</code>
+                  <span>{t(<>اقرن الهاتف بالشاشة عبر مسح رمز {L('QR')} أو إدخال كود الاقتران اليدوي.</>, 'Pair via QR scan or manual pairing code.')}</span>
+                </li>
+                <li>
+                  <code dir="ltr">03</code>
+                  <span>{t(<>أرسل مفاتيح {L('API')} ({L('API_KEYS_SYNC')}) وإضافات {L('Nuvio / Stremio')} ({L('ADDONS_SYNC')}) من الهاتف لتصل للشاشة تلقائياً دون كتابة على التلفاز.</>, 'Push API keys (API_KEYS_SYNC) and Nuvio/Stremio addons (ADDONS_SYNC) from phone to TV automatically.')}</span>
+                </li>
+                <li>
+                  <code dir="ltr">04</code>
+                  <span>{t(<>تعمل المزامنة الثنائية ({L('WATCH_SYNC')}) لحظياً لمواضع التوقف وقوائم المشاهدة بين الجهازين.</>, 'Two-way WATCH_SYNC keeps resume points and watchlists synchronized in real time.')}</span>
+                </li>
+              </ol>
+            </article>
+
+            <article className="ac-card">
+              <div className="ac-card-head">
+                <span className="sc-gold-badge"><ShieldAlert size={20} /></span>
+                <div>
+                  <code dir="ltr">TCL TV · com.tcl.guard</code>
+                  <h3>{t('حماية الخلفية لشاشات TCL ومنع انقطاع الاتصال', 'TCL Background Guard (Prevent Standby Drops)')}</h3>
+                </div>
+              </div>
+              <p className="ac-desc">
+                {t(
+                  'توقف بعض شاشات TCL خدمات الشبكة أثناء السكون؛ طبّق هذه الخطوات الأربع لضمان بقاء الريموت والمزامنة متصلين:',
+                  'Some TCL TVs restrict background services during sleep. Follow these 4 steps to keep sync and remote active:'
+                )}
+              </p>
+              <ol className="guide-steps">
+                <li><code dir="ltr">01</code><span>{t(<>افتح تطبيق <strong>حارس الأمان</strong> ({L('Safety Guard')} / {L('com.tcl.guard')}) على شاشة {L('TCL')}.</>, 'Open Safety Guard (com.tcl.guard) on your TCL TV.')}</span></li>
+                <li><code dir="ltr">02</code><span>{t(<>ادخل إلى <strong>حماية الأذونات</strong> ← <strong>أذونات التشغيل التلقائي</strong>.</>, 'Go to Permission Guard → Auto-Launch Permissions.')}</span></li>
+                <li><code dir="ltr">03</code><span>{t(<>اختر تطبيق {L('Local Cinema')} وأوقف <strong>«سياسة الإدارة التلقائية»</strong>.</>, 'Select Local Cinema and disable Auto Management Policy.')}</span></li>
+                <li><code dir="ltr">04</code><span>{t(<>فعّل خياري <strong>«البدء التلقائي»</strong> و<strong>«البدء الترابطي»</strong> لمنع النظام من إغلاق الاتصال في الخلفية.</>, 'Enable both Auto-Start and Associated Start so the system never kills background sync.')}</span></li>
+              </ol>
+            </article>
+          </div>
+        )}
+
+        {tab === 'apis' && (
+          <div key="apis" className="ac-api-wrap sc-animate" style={{ marginTop: 0 }}>
+            <div className="ac-zero-banner">
+              <Sparkles size={20} />
+              <span>
+                {t(
+                  'جميع الميزات الأساسية (البوسترات، التقييمات، الممثلون، والترجمة التلقائية) تعمل فوراً بلا حساب (Zero-Account Mode). هذه المواقع اختيارية فقط لمن يريد مزامنة Trakt أو مصادر إضافية:',
+                  'All core features (posters, ratings, cast, and auto subtitles) work immediately in Zero-Account Mode. Use these optional sites only if you want Trakt sync or extra providers:'
+                )}
+              </span>
             </div>
             <div className="ac-api-grid">
-              {providers.map((p) => {
+              {apiProviders.map((p) => {
                 const Icon = p.icon;
                 return (
                   <article key={p.id} className="ac-api-card">
@@ -184,7 +292,14 @@ export function AddonsConnectionsSection({ t, L, copy }) {
                       </div>
                     </div>
                     <p className="ac-desc">{p.desc}</p>
-                    <p className="ac-steps">{p.steps}</p>
+                    <ol className="guide-steps">
+                      {p.steps.map((st, idx) => (
+                        <li key={idx}>
+                          <code dir="ltr">0{idx + 1}</code>
+                          <span>{st}</span>
+                        </li>
+                      ))}
+                    </ol>
                     <div className="ac-links">
                       {p.links.map((lnk) => (
                         <a key={lnk.url} href={lnk.url} target="_blank" rel="noopener noreferrer" className="button">
@@ -192,6 +307,18 @@ export function AddonsConnectionsSection({ t, L, copy }) {
                           <ExternalLink size={14} />
                         </a>
                       ))}
+                      {p.copyValue && (
+                        <button type="button" className="button" onClick={() => copy(p.copyValue.value)}>
+                          <Copy size={14} />
+                          <span>{p.copyValue.label}</span>
+                        </button>
+                      )}
+                      {p.copyValueAlt && (
+                        <button type="button" className="button" onClick={() => copy(p.copyValueAlt.value)}>
+                          <Copy size={14} />
+                          <span>{p.copyValueAlt.label}</span>
+                        </button>
+                      )}
                     </div>
                   </article>
                 );
