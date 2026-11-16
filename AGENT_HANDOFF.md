@@ -11,20 +11,20 @@
 - **مستودع GitHub العام:** `https://github.com/alnouri96/meedx`
 - **بروفايل GitHub للاستوديو:** `https://github.com/alnouri96` (مستودع `https://github.com/alnouri96/alnouri96`)
 - **صفحة الإصدارات (GitHub Releases):** `https://github.com/alnouri96/meedx/releases`
-- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.6`
+- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.7`
 
 ---
 
 ## 2. الحالة الحالية | Current State
 
-### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.6` · `versionCode = 6`)
+### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.7` · `versionCode = 7`)
 
 | التطبيق | الحزمة (`Package ID`) | الحجم (بايت) | بصمة `SHA-256` | رابط التحميل المباشر |
 | --- | --- | ---: | --- | --- |
-| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38717528` | `440229c8ac2f3d82196738a3c9211a00c27ff9bc688f9c4f4cb3bbee34420848` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-TV-v1.0.0-beta.6.apk` |
-| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `196918204` | `9078ee744af44e97306912cf063cda20682eb48335f67233fed4a9e71711fd5a` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-Manager-Phone-v1.0.0-beta.6.apk` |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38757679` | `44ca11f62eed3701dbd9115f0d73f4f1765ca43c15fa4dd8579e92909f44fd87` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-TV-v1.0.0-beta.7.apk` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `197316085` | `93de9c7d20ca92022e96257f4cc317ef77e31bac042b43c12c01dc536ad6d973` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-Manager-Phone-v1.0.0-beta.7.apk` |
 
-- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.6\`
+- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.7\`
 - **ملف تسليم التطبيقات المرجعي:** `G:\Local Cinema\AGENT_HANDOFF.md`
 
 ### ب) حالة الواجهة والمزايا المنشورة
@@ -73,3 +73,4 @@
 | `2026-11-16` | `f110d1b` | إطلاق `v1.0.0-beta.6` (`versionCode = 6`) كأحدث إصدار (`--latest`) على `alnouri96/meedx` مع حذف `v1.0.0-beta.5` ووسمه، تحديث `version.json` و`catalog.json` و`README.md`، إنشاء `public/api/config.json` و`public/api/addons.json`، إضافة قسم «الإضافات، الربط ومفاتيح API» (`#addons`)، والنشر الحي على Cloudflare Pages (`https://e7040c2f.meedx.pages.dev`). | لا يوجد |
 | `2026-11-16` | `0509cc7` | إضافة نظام «معلومات التطبيق الكاملة وملاحظات الإصدار (`Update Notes`)» في `catalog.json` و`DownloadAppCard.jsx` لكل تطبيق، وتطوير قسم `#addons` بثلاثة تبويبات تفاعلية (الإضافات والميزات الجديدة، التوصيلات وحماية `TCL com.tcl.guard`، ودليل مواقع مفاتيح API الاختيارية)، وتحديث `#setup-guide`، وضبط استجابة الهيدر على `768px` (`max-width: 900px`)، والنشر الحي على Cloudflare Pages (`https://a7988689.meedx.pages.dev`). | لا يوجد |
 | `2026-11-16` | `ab78857` | النشر الرسمي النهائي لحزمتي `v1.0.0-beta.6` (`versionCode = 6`) على GitHub Releases (`--clobber --latest`) مع Patch Notes الكاملة، تحديث `version.json` و`catalog.json` و`README.md` بالبصمات والأحجام النهائية، إضافة `googleClientId` إلى `public/api/config.json`، وتوسيع Patch Notes وقسم `#addons` (معالج الصلاحيات الذكي، النسخ الاحتياطي الشامل عبر Google Drive ومحلياً، وحماية السكون لجميع الشاشات)، والنشر الحي على Cloudflare Pages (`https://f0fb651e.meedx.pages.dev`). | لا يوجد |
+| `2026-11-16` | `43c5e81` | إعادة هيكلة وتقسيم الموقع إلى مسارات مستقلة (`/`, `/apps`, `/apps/local-cinema`, `/software`, `/services`, `/downloads`, `/addons`) مع `public/_redirects`، جزيئات ذهبية في الهيرو (`GoldParticles.jsx`)، بطاقة GitHub للتطبيقات (`AppsShowcasePage.jsx`)، صفحة تفاصيل مستقلة (`AppDetailPage.jsx`) بسجل `Patch Notes` من `beta.6` إلى `beta.7`، شارات دلالية (`#22C55E` و`#EF4444` و`#E5B94C`)، زر العودة للأعلى (`↑`)، ونشر `v1.0.0-beta.7` (`versionCode = 7`) على GitHub Releases وCloudflare Pages (`https://d9fa07ea.meedx.pages.dev`). | لا يوجد |
