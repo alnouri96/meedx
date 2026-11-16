@@ -14,6 +14,7 @@ export default defineConfig(() => {
         const output = options.dir;
         cpSync(resolve('public/assets'), resolve(output, 'assets'), { recursive: true });
         cpSync(resolve('public/_headers'), resolve(output, '_headers'));
+        cpSync(resolve('public/_redirects'), resolve(output, '_redirects'));
         cpSync(resolve('public/api'), resolve(output, 'api'), { recursive: true });
       },
     },
