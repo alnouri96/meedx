@@ -11,20 +11,20 @@
 - **مستودع GitHub العام:** `https://github.com/alnouri96/meedx`
 - **بروفايل GitHub للاستوديو:** `https://github.com/alnouri96` (مستودع `https://github.com/alnouri96/alnouri96`)
 - **صفحة الإصدارات (GitHub Releases):** `https://github.com/alnouri96/meedx/releases`
-- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.5`
+- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.6`
 
 ---
 
 ## 2. الحالة الحالية | Current State
 
-### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.5` · `versionCode = 5`)
+### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.6` · `versionCode = 6`)
 
 | التطبيق | الحزمة (`Package ID`) | الحجم (بايت) | بصمة `SHA-256` | رابط التحميل المباشر |
 | --- | --- | ---: | --- | --- |
-| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38626641` | `d81a2ce48a807f6b60c91d4f47e528aaf3ad5d6acbd7633f8599bd363a309bd5` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.5/LocalCinema-TV-v1.0.0-beta.5.apk` |
-| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `196728271` | `137d5475f2bfb587f1d9f012681e9f2eb79c39840d4e4f1585ad71ec387c45ab` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.5/LocalCinema-Manager-Phone-v1.0.0-beta.5.apk` |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `38708726` | `7a5860843b428b2c66ec048bffd7b2d0be76dffbaac5eaedcf03dae12b95e553` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-TV-v1.0.0-beta.6.apk` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `196785207` | `80eef6b1a238afdddc48ac7c3e0d358bf9453eae73a2f102391021d0214d25e0` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-Manager-Phone-v1.0.0-beta.6.apk` |
 
-- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.5\`
+- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.6\`
 - **ملف تسليم التطبيقات المرجعي:** `G:\Local Cinema\AGENT_HANDOFF.md`
 
 ### ب) حالة الواجهة والمزايا المنشورة
@@ -70,3 +70,4 @@
 | `2026-11-16` | `427a1ad` | إضافة وسوم المعاينة الاجتماعية وSEO (`Open Graph` و`Twitter Card` و`Meta Description`) في `index.html` مربوطة بـ `meedx-hero-banner.png` والنشر الحي على Cloudflare Pages. | لا يوجد |
 | `2026-11-16` | `23b9676` | تحسين تجربة المستخدم والأنيميشن للأقسام التفاعلية (`قدرات المنظومة الكاملة`، تعريب `هاتف + شاشة · شبكة محلية`، أشرطة أزرار تفاعلية واضحة مع Hover، تبديل تلقائي كل 5 ثوانٍ مع شريط تقدم ذهبي وإيقاف عند التفاعل، وانتقالات `scFadeUp` وتوهج الأيقونات) والنشر الحي على Cloudflare Pages (`https://73e8f845.meedx.pages.dev`). | لا يوجد |
 | `2026-11-16` | `7105c58` | نقل سلايدر ومعرض لقطات الشاشة (`.gallery`) إلى بداية قسم التطبيقات مباشرة بعد الـ Hero وقبل لوحة المعادلة وأقسام الشرح التفاعلية، مع ضبط المسافات (`margin-block-end: 28px`) والنشر الحي على Cloudflare Pages (`https://480e56ac.meedx.pages.dev`). | لا يوجد |
+| `2026-11-16` | `f110d1b` | إطلاق `v1.0.0-beta.6` (`versionCode = 6`) كأحدث إصدار (`--latest`) على `alnouri96/meedx` مع حذف `v1.0.0-beta.5` ووسمه، تحديث `version.json` و`catalog.json` و`README.md`، إنشاء `public/api/config.json` و`public/api/addons.json`، إضافة قسم «الإضافات، الربط ومفاتيح API» (`#addons`)، والنشر الحي على Cloudflare Pages (`https://e7040c2f.meedx.pages.dev`). | لا يوجد |
