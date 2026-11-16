@@ -34,6 +34,16 @@
         "ar": "تجريبي · مفتوح المصدر",
         "en": "Beta · Open Source"
       },
+      "downloaderCode": "3213660",
+      "shortUrl": "meedx.pages.dev/tv",
+      "versionBanner": {
+        "ar": "هذه نسخة الشاشة (Android TV)",
+        "en": "This is the TV Version (Android TV)"
+      },
+      "downloaderLabel": {
+        "ar": "كود Downloader — هذه نسخة الشاشة",
+        "en": "Downloader Code — This is the TV Version"
+      },
       "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-TV-v1.0.0-beta.7.apk",
       "sizeBytes": 38757679,
       "sha256": "44ca11f62eed3701dbd9115f0d73f4f1765ca43c15fa4dd8579e92909f44fd87",
@@ -131,6 +141,16 @@
       "status": {
         "ar": "تجريبي · مفتوح المصدر",
         "en": "Beta · Open Source"
+      },
+      "downloaderCode": "3213660",
+      "shortUrl": "meedx.pages.dev/phone",
+      "versionBanner": {
+        "ar": "هذه نسخة الهاتف (Android Phone)",
+        "en": "This is the Phone Version (Android Phone)"
+      },
+      "downloaderLabel": {
+        "ar": "كود Downloader — هذه نسخة الهاتف",
+        "en": "Downloader Code — This is the Phone Version"
       },
       "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.7/LocalCinema-Manager-Phone-v1.0.0-beta.7.apk",
       "sizeBytes": 197316085,
