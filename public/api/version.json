@@ -1,23 +1,23 @@
 {
   "tv": {
-    "latestVersionCode": 5,
-    "latestVersionName": "1.0.0-beta.5",
-    "versionCode": 5,
-    "versionName": "1.0.0-beta.5",
-    "sizeBytes": 38626641,
-    "sha256": "d81a2ce48a807f6b60c91d4f47e528aaf3ad5d6acbd7633f8599bd363a309bd5",
-    "changelog": "Local Cinema TV v1.0.0-beta.5 (code 5) matching beta.5 release with anti-standby playback and SMB sync fixes.",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.5/LocalCinema-TV-v1.0.0-beta.5.apk"
+    "latestVersionCode": 6,
+    "latestVersionName": "1.0.0-beta.6",
+    "versionCode": 6,
+    "versionName": "1.0.0-beta.6",
+    "sizeBytes": 38708726,
+    "sha256": "7a5860843b428b2c66ec048bffd7b2d0be76dffbaac5eaedcf03dae12b95e553",
+    "changelog": "Local Cinema TV v1.0.0-beta.6 (code 6): Zero-Account instant mode, persistent poster cache, Watched & Up Next, two-way LAN WATCH_SYNC, Nuvio/Stremio addons, Trakt sync, multi-source ratings, cast pages, and phone-to-TV key/addon management.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-TV-v1.0.0-beta.6.apk"
   },
   "phone": {
-    "latestVersionCode": 5,
-    "latestVersionName": "1.0.0-beta.5",
-    "versionCode": 5,
-    "versionName": "1.0.0-beta.5",
-    "sizeBytes": 196728271,
-    "sha256": "137d5475f2bfb587f1d9f012681e9f2eb79c39840d4e4f1585ad71ec387c45ab",
-    "changelog": "Local Cinema Manager v1.0.0-beta.5: Reduced APK size by ~67.5% (from 606 MB to 196.7 MB) in a single unified build for all Android phones.",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.5/LocalCinema-Manager-Phone-v1.0.0-beta.5.apk"
+    "latestVersionCode": 6,
+    "latestVersionName": "1.0.0-beta.6",
+    "versionCode": 6,
+    "versionName": "1.0.0-beta.6",
+    "sizeBytes": 196785207,
+    "sha256": "80eef6b1a238afdddc48ac7c3e0d358bf9453eae73a2f102391021d0214d25e0",
+    "changelog": "Local Cinema Manager v1.0.0-beta.6 (code 6): Manage API keys & Nuvio/Stremio addons from phone, one-tap addon installer, Trakt linking, and two-way LAN WATCH_SYNC with TV.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-Manager-Phone-v1.0.0-beta.6.apk"
   },
   "builds": [
     {
@@ -27,14 +27,14 @@
       "packageId": "com.meedx.localcinema.tv",
       "name": "Local Cinema TV",
       "available": true,
-      "version": "1.0.0-beta.5",
-      "versionCode": 5,
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.5/LocalCinema-TV-v1.0.0-beta.5.apk",
-      "sizeBytes": 38626641,
-      "sha256": "d81a2ce48a807f6b60c91d4f47e528aaf3ad5d6acbd7633f8599bd363a309bd5",
+      "version": "1.0.0-beta.6",
+      "versionCode": 6,
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-TV-v1.0.0-beta.6.apk",
+      "sizeBytes": 38708726,
+      "sha256": "7a5860843b428b2c66ec048bffd7b2d0be76dffbaac5eaedcf03dae12b95e553",
       "changelog": {
-        "en": "Local Cinema TV v1.0.0-beta.5 (code 5) matching beta.5 release with anti-standby playback and SMB sync fixes.",
-        "ar": "الإصدار التجريبي الخامس لتطبيق التلفاز (code 5) متوافقاً مع حزمة beta.5 وإصلاحات منع الاستعداد ومزامنة SMB."
+        "en": "Zero-Account mode, persistent poster cache, Watched & Up Next, two-way LAN WATCH_SYNC, Nuvio/Stremio addons, Trakt sync, multi-source ratings, cast pages, and phone-to-TV management.",
+        "ar": "وضع التشغيل الفوري بلا حساب، الكاش الدائم للبوسترات، قسم تمت المشاهدة وUp Next، المزامنة الثنائية عبر الشبكة المحلية WATCH_SYNC، إضافات Nuvio/Stremio، ربط Trakt، التقييمات المتعددة، وصفحة الممثلين."
       }
     },
     {
@@ -44,14 +44,14 @@
       "packageId": "com.meedx.localcinema.manager",
       "name": "Local Cinema Manager",
       "available": true,
-      "version": "1.0.0-beta.5",
-      "versionCode": 5,
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.5/LocalCinema-Manager-Phone-v1.0.0-beta.5.apk",
-      "sizeBytes": 196728271,
-      "sha256": "137d5475f2bfb587f1d9f012681e9f2eb79c39840d4e4f1585ad71ec387c45ab",
+      "version": "1.0.0-beta.6",
+      "versionCode": 6,
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.6/LocalCinema-Manager-Phone-v1.0.0-beta.6.apk",
+      "sizeBytes": 196785207,
+      "sha256": "80eef6b1a238afdddc48ac7c3e0d358bf9453eae73a2f102391021d0214d25e0",
       "changelog": {
-        "en": "Reduced Phone APK size by ~67.5% (from 606 MB to 196.7 MB) in a single unified build supporting all Android phones (arm64-v8a + armeabi-v7a) with 100% of features intact.",
-        "ar": "تقليص حجم تطبيق الهاتف بنسبة ~67.5% (من 606 MB إلى 196.7 MB) في نسخة موحّدة تدعم جميع الهواتف مع الحفاظ الكامل على جميع الميزات والخدمات."
+        "en": "Manage all API keys & Nuvio/Stremio addons from phone, one-tap addon installer, Trakt linking, and two-way LAN WATCH_SYNC with TV.",
+        "ar": "إدارة جميع المفاتيح والإضافات من الهاتف، تثبيت إضافات Nuvio/Stremio بضغطة واحدة، ربط Trakt، والمزامنة الثنائية عبر الشبكة المحلية مع الشاشة."
       }
     }
   ]

@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.5`)
+# MEEDX · Local Cinema (`v1.0.0-beta.6`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.5"><strong>⬇️ تحميل v1.0.0-beta.5 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.6"><strong>⬇️ تحميل v1.0.0-beta.6 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,10 +61,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.5` (`versionCode = 5`)
-- **تقليص حجم تطبيق الهاتف بنسبة ~67.5% (`~196.7 MB` بدلاً من `606 MB`)**:
-  - نسخة APK واحدة موحّدة تدعم جميع الهواتف (`arm64-v8a` + `armeabi-v7a`) مع ضغط المكتبات الأصلية وإزالة معماريات المحاكيات غير الضرورية، مع الحفاظ الكامل على جميع الميزات والخدمات (الاقتران، الريموت، لوحة المفاتيح، البث، مستخرج روابط الويب، والتحديث التلقائي).
-- *(يتضمن إصلاحات `beta.4` لمنع وضع الاستعداد للشاشة أثناء التشغيل، وإصلاحات `beta.3` لمزامنة الصوت عبر `SMB` وأزرار الضبط السريع `±50 ms` و`0 ms`).*
+### جديد الإصدار `v1.0.0-beta.6` (`versionCode = 6`)
+- **وضع التشغيل الفوري بلا حساب (`Zero-Account Mode`)**: تشغيل البوسترات، صفحات الممثلين وأعمالهم، التقييمات من مصادر متعددة، والترجمة التلقائية فور التثبيت بدون أي تسجيل.
+- **الكاش الدائم ومؤقت التحديث التلقائي للبوسترات**: حفظ دائم للبيانات والصور مع تحديث تلقائي ذكي دون إبطاء التصفح.
+- **قسم «تمت المشاهدة» و`Up Next` والمزامنة الثنائية (`WATCH_SYNC`)**: الانتقال التلقائي للحلقة التالية ومزامنة حالة المشاهدة و`Watchlist` لحظياً بين الهاتف والشاشة عبر الشبكة المحلية.
+- **إضافات `Nuvio / Stremio` الخارجية وربط `Trakt` وإدارة المفاتيح من الهاتف**: تثبيت الإضافات بضغطة واحدة أو عبر رابط `manifest.json`، ربط ومزامنة `Trakt` ثنائية الاتجاه، وإرسال جميع المفاتيح والإضافات من الهاتف (`TV Hub ← Connection`).
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -91,10 +92,10 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.5` (`versionCode = 5`)
-- **Phone APK Size Reduction (~67.5% smaller — `~196.7 MB` down from `606 MB`)**:
-  - Single unified APK supporting all Android phones (`arm64-v8a` + `armeabi-v7a`) with compressed native libraries (`useLegacyPackaging = true`), keeping 100% of features intact (pairing, remote/keyboard/gamepad, media casting, web video grabber, and OTA updates).
-- *(Includes all `beta.4` Keep Screen On / MediaSession anti-standby fixes and `beta.3` SMB A/V sync drift fixes.)*
+### What's New in `v1.0.0-beta.6` (`versionCode = 6`)
+- **Zero-Account Instant Mode & Persistent Poster Cache**: Posters, cast & filmographies, multi-source ratings, and automatic subtitles work right after install with persistent caching and auto-refresh.
+- **Watched Section, `Up Next` & Two-Way LAN `WATCH_SYNC`**: Automatic next-episode progression and real-time local network sync for Watched history, resume points, and Watchlist between Phone and TV.
+- **External `Nuvio / Stremio` Addons, `Trakt` Sync & Phone Hub Management**: One-tap addon install or custom `manifest.json` URLs, two-way `Trakt` sync, and pushing all API keys and addons straight from `TV Hub → Connection`.
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
@@ -119,12 +120,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ---
 
-## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.5`)
+## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.6`)
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.5.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.5` (`5`) | `38,626,641` | `d81a2ce48a807f6b60c91d4f47e528aaf3ad5d6acbd7633f8599bd363a309bd5` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.5.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.5` (`5`) | `196,728,271` | `137d5475f2bfb587f1d9f012681e9f2eb79c39840d4e4f1585ad71ec387c45ab` |
+| `LocalCinema-TV-v1.0.0-beta.6.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.6` (`6`) | `38,708,726` | `7a5860843b428b2c66ec048bffd7b2d0be76dffbaac5eaedcf03dae12b95e553` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.6.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.6` (`6`) | `196,785,207` | `80eef6b1a238afdddc48ac7c3e0d358bf9453eae73a2f102391021d0214d25e0` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >

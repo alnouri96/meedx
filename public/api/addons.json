@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-16",
+  "addons": [
+    {
+      "id": "opensubtitles-v3",
+      "name": "OpenSubtitles v3",
+      "category": "subtitles",
+      "description": {
+        "ar": "جلب ترجمات عربية وإنجليزية للأفلام والمسلسلات مباشرة بدون حساب.",
+        "en": "Fetch Arabic and English subtitles for movies and series without an account."
+      },
+      "manifestUrl": "https://opensubtitles-v3.strem.io/manifest.json"
+    },
+    {
+      "id": "torrentio",
+      "name": "Torrentio",
+      "category": "streams",
+      "description": {
+        "ar": "إضافة بث مصادر تورنت سريعة بجودات متعددة (4K / HDR / 1080p).",
+        "en": "Fast torrent stream resolver supporting 4K, HDR, and 1080p releases."
+      },
+      "manifestUrl": "https://torrentio.strem.fun/manifest.json"
+    },
+    {
+      "id": "comet",
+      "name": "Comet",
+      "category": "streams",
+      "description": {
+        "ar": "محرك بحث وبث إضافي لمصادر الأفلام والمسلسلات متوافق مع Stremio / Nuvio.",
+        "en": "Alternative fast movie and series stream scraper compatible with Stremio / Nuvio."
+      },
+      "manifestUrl": "https://comet.elfhosted.com/manifest.json"
+    },
+    {
+      "id": "tpb-plus",
+      "name": "ThePirateBay+",
+      "category": "streams",
+      "description": {
+        "ar": "مصدر تورنت إضافي مفتوح لمحتوى الفيديو بدقة متعددة.",
+        "en": "Open community torrent stream provider for multi-quality playback."
+      },
+      "manifestUrl": "https://thepiratebay-plus.strem.fun/manifest.json"
+    }
+  ]
+}
