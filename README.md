@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.9`)
+# MEEDX · Local Cinema (`v1.0.0-beta.10`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.9"><strong>⬇️ تحميل v1.0.0-beta.9 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.10"><strong>⬇️ تحميل v1.0.0-beta.10 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,11 +61,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.9` (`versionCode = 9`)
-- **استعادة شاشة المسلسلات والمواسم والحلقات**: بوسترات `2:3` ولوجو الأعمال الذهبي (`ClearLogos`) وتجميع تلقائي لمجلدات المواسم المتعددة.
-- **التقييمات المتعددة السريعة وتفاصيل الحلقات**: عرض تقييمات `IMDb` و`TMDb` و`TVmaze` و`Rotten Tomatoes` و`Metacritic` مع سنة البث والمدة الحقيقية لكل حلقة وتوحيد شارات `Dolby Vision` بدون تكرار.
-- **ثبات التبويب النشط والتركيز**: إبقاء تبويب الموسم النشط مميّزاً بالذهبي أثناء التنقل بين الحلقات، وإصلاح ثبات التركيز في شاشة الأفلام عند التحديد كمشاهد.
-- **ريموت الهاتف ومحرك `Web Video Caster` وتقليص الحجم (`113.64 MiB` · `arm64-v8a`)**: ريموت بيد واحدة مع تاتش باد وجوستك وزر `QR` وشريط بث مصغّر، اقتناص وبث احترافي مع إعادة الفحص ومزامنة الترجمة الفورية وتوحيد بحث الترجمة مع `Connection`، وتحسين أداء البث بدقة `4K`.
+### جديد الإصدار `v1.0.0-beta.10` (`versionCode = 10`)
+- **إصلاح أبعاد الفيديو والدوران (`4K / HEVC` والعمودية)**: ضبط نسبة العرض والتدوير (`90° / 180° / 270°`) عبر `AspectRatioFrameLayout` بوضع `RESIZE_MODE_FIT` الافتراضي، مع الحفاظ على البث الخام (`Pass-through` + `Range`) من الهاتف.
+- **نظام الترجمة المتكامل على الشاشة والهاتف**: فك ضغط ملفات Subsource (`.zip` / `.gz`) وتصحيح الترميز التلقائي (`UTF-8` / `UTF-16` / `windows-1256`)، ونوافذ `Active & Stream Subtitles` و`Cast Subtitle Settings` (المزدوجة، التزامن `±100ms / ±500ms`، الحجم، اللون، الموضع) مع واجهة بطاقات داكنة ذهبية في `Subtitle Settings`.
+- **مركز الاتصال (`Phone = Master Hub` و`TV = Persistent Receiver`)**: 5 بطاقات واضحة في الهاتف، ربط `Trakt` بضغطة واحدة عبر OAuth 2.0 PKCE، مزامنة دائمة على الشاشة، ومزامنة قوائم `Watchlist` و`Watched` و`Continue Watching` ونقاط التوقف (`Scrobble`)، وحل انقطاع WebSocket `1008`.
+- **مشغل موسيقى مستقل، الريموت العائم والمتصفح المحسّن**: شاشة `Music Player` وشريط مصغر وتبديل حي بين الهاتف والشاشة، ومؤشرات `ADB`/`Web` في الريموت، واقتناص العنوان النظيف (`UPDATE_CAST_METADATA`) وإيقاف صوت التبويبات الخلفية بشارة `🔊`.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -92,11 +92,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.9` (`versionCode = 9`)
-- **Restored Series & Seasons View**: Full `2:3` season posters, ClearLogos, and automatic multi-season folder grouping.
-- **Fast Parallel Multi-Source Ratings & Accurate Episode Info**: Parallel `IMDb`, `TMDb`, `TVmaze`, `Rotten Tomatoes`, and `Metacritic` ratings, accurate per-episode air year/runtime, and deduplicated `Dolby Vision` badges.
-- **Persistent Gold Season Tab & Watched Focus Lock**: Golden active-season tab highlight across episodes and rock-solid focus retention when marking movies as watched.
-- **One-Handed Remote, Web Video Caster & `4K` Optimization**: One-handed icon-only remote with Touchpad/D-Pad slider & `QR` shortcut, upgraded browser media sniffer/proxy with live rescan & synced subtitles, and compressed `113.64 MiB` `arm64-v8a` Phone build.
+### What's New in `v1.0.0-beta.10` (`versionCode = 10`)
+- **4K / HEVC Aspect Ratio & Vertical Video Fix**: Accurate orientation & `PAR` handling for `90° / 180° / 270°` and high-res HEVC videos via `AspectRatioFrameLayout` (`RESIZE_MODE_FIT`), plus raw byte-range `Pass-through` streaming in `PhoneVideoServer`.
+- **Complete Subtitle Suite on TV & Phone**: Auto-extracts `.zip` / `.gz` Subsource downloads and fixes `UTF-8` / `UTF-16` / `windows-1256` encoding cleanly on TV; adds `Active & Stream Subtitles`, `Cast Subtitle Settings` (dual mode, `±100ms / ±500ms` sync, size, color, height), and luxury dark-gold `Subtitle Settings` cards.
+- **Phone Master Hub & Persistent TV Receiver**: Consolidated `Connection` into 5 clean cards, 1-tap `Trakt` OAuth 2.0 PKCE linking, persistent `FULL_SYNC_STATE` storage on TV, two-way `Watchlist` / `Watched` / `Continue Watching` / `Scrobble` sync, and fixed WebSocket `1008` contention.
+- **Dedicated Music Player, Status LED Remote & Browser Persistence**: Separate Music Player Sheet + Mini Bar with live `Phone` ↔ `TV` output toggle, floating remote `ADB`/`Web` status LEDs, clean live title sync (`UPDATE_CAST_METADATA`), background tab auto-mute with `🔊` badges, and disk-cached bookmark favicons.
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
@@ -121,12 +121,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ---
 
-## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.9`)
+## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.10`)
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.9.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.9` (`9`) | `38,834,913` | `ba1e42f8aadc94e2ac06ecadc84818f681762e8bcd06e551f432188be015a430` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.9.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.9` (`9`) | `119,159,570` | `e020dca12c872d0e799a683e5a8d3bfa0a34f53b371e35474dac368a1b3de422` |
+| `LocalCinema-TV-v1.0.0-beta.10.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.10` (`10`) | `39,236,227` | `e9cfc5cc7decdcc95ded1589f2e67f4183bf2e84d0919ee15ab7a7e091cd61bb` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.10.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.10` (`10`) | `119,245,738` | `4577706adb8b3a67de9330dec01e7bbbc36e5de896aa2101c62794570402a461` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >
