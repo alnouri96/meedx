@@ -6,9 +6,9 @@
     "packageId": "com.meedx.localcinema.tv",
     "name": "Local Cinema TV",
     "available": true,
-    "version": "1.0.0-beta.9",
-    "versionCode": 9,
-    "releaseDate": "2026-11-17",
+    "version": "1.0.0-beta.10",
+    "versionCode": 10,
+    "releaseDate": "2026-11-18",
     "status": {
       "ar": "تجريبي · مفتوح المصدر",
       "en": "Beta · Open Source"
@@ -23,9 +23,9 @@
       "ar": "كود Downloader — هذه نسخة الشاشة",
       "en": "Downloader Code — This is the TV Version"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.9/LocalCinema-TV-v1.0.0-beta.9.apk",
-    "sizeBytes": 38834913,
-    "sha256": "ba1e42f8aadc94e2ac06ecadc84818f681762e8bcd06e551f432188be015a430",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.10/LocalCinema-TV-v1.0.0-beta.10.apk",
+    "sizeBytes": 39236227,
+    "sha256": "e9cfc5cc7decdcc95ded1589f2e67f4183bf2e84d0919ee15ab7a7e091cd61bb",
     "specs": {
       "platform": {
         "ar": "Android TV 7.0+",
@@ -35,7 +35,7 @@
         "ar": "Universal APK",
         "en": "Universal APK"
       },
-      "sizeLabel": "37.04 MiB",
+      "sizeLabel": "37.42 MiB",
       "license": "GPL-3.0",
       "security": {
         "ar": "آمن 100% — بلا أسرار مضمّنة (Zero Hardcoded Secrets)",
@@ -43,15 +43,49 @@
       }
     },
     "changelog": {
-      "en": "Restored full Series & Seasons view with 2:3 posters & ClearLogos, fast parallel multi-source ratings, persistent gold active-season tab, movie watched focus retention, redesigned one-handed TV Remote, upgraded Web Video Caster engine, and arm64-v8a Phone ABI split.",
-      "ar": "استعادة شاشة المسلسلات والمواسم ببوسترات 2:3 ولوجو الأعمال، التقييمات المتعددة السريعة، تمييز تبويب الموسم النشط وثبات التركيز، ريموت هاتف مطوّر بيد واحدة، محرك Web Video Caster الاحترافي، وتحسين أداء 4K."
+      "en": "Fixed 4K/HEVC & vertical video aspect ratio and rotation (90°/180°/270°) via AspectRatioFrameLayout (RESIZE_MODE_FIT), upgraded Subtitle system (auto Subsource zip/gz extraction, dual subtitles, live offset & luxury gold UI), refactored Phone=Master Hub & TV=Persistent Receiver with 1-tap Trakt OAuth PKCE & two-way Watchlist/Continue Watching sync, resolved WebSocket 1008 disconnects, and upgraded browser metadata/tab stability.",
+      "ar": "إصلاح أبعاد والدوران لفيديوهات 4K/HEVC والعمودية عبر AspectRatioFrameLayout بوضع RESIZE_MODE_FIT، ترقية نظام الترجمة الشامل وفك ضغط Subsource وتصحيح الترميز التلقائي، مركزية الاتصال (Phone=Master Hub و TV=Persistent Receiver) مع ربط Trakt PKCE بضغطة واحدة ومزامنة Watchlist/Scrobble، حل انقطاع WebSocket 1008، وتحديثات المتصفح والبث المصغر."
     },
     "updateNotes": [
+      {
+        "version": "1.0.0-beta.10",
+        "versionCode": 10,
+        "date": "2026-11-18",
+        "latest": true,
+        "whatsNew": {
+          "ar": [
+            "إصلاح أبعاد الفيديو والدوران (4K / HEVC والعمودية): حل جذري لتمطط الصورة وانقلاب الاتجاه عند تشغيل الفيديوهات عالية الدقة أو العمودية (90° / 180° / 270°) عبر AspectRatioFrameLayout بوضع RESIZE_MODE_FIT الافتراضي والحفاظ على البث الخام Pass-through.",
+            "نظام الترجمة المتكامل على الشاشة والهاتف: تنزيل وفك ضغط ملفات ترجمة Subsource (.zip / .gz) وتصحيح الترميز (UTF-8 / UTF-16 / windows-1256) تلقائياً، نافذة Active & Stream Subtitles وإعدادات Cast Subtitle Settings (الترجمة المزدوجة، التزامن ±100ms / ±500ms، الحجم، اللون، الموضع) مع تصميم بطاقات داكنة ذهبية في Subtitle Settings.",
+            "مركزية الاتصال (Phone = Master Hub و TV = Persistent Receiver): إعادة تنظيم إعدادات التلفاز في Connections & Phone Sync (3 بطاقات نظيفة) وPlayback & Subtitles، واستقبال وحفظ الإضافات ومفاتيح API وحساب Trakt دائماً على الشاشة حتى بدون الهاتف.",
+            "ربط Trakt OAuth 2.0 PKCE والمزامنة ثنائية الاتجاه: تفعيل ربط Trakt بضغطة واحدة ومزامنة قوائم Watchlist وWatched وContinue Watching ونقاط التوقف (Scrobble) مع عزل فيديوهات استوديو الهاتف عن «متابعة المشاهدة».",
+            "استقرار الربط اللحظي ومنع تضارب WebSocket (1008): استبدال اتصالات نفس الجهاز برمز الإغلاق 1000 دون قطع الجلسة أو رسائل الرفض الوهمية، مع مؤشرات ADB و Web في الريموت.",
+            "تحسينات المتصفح والبث: استخراج العنوان النظيف للعمل وإرساله حيّاً (UPDATE_CAST_METADATA)، إيقاف صوت التبويبات الخلفية تلقائياً بشارة 🔊، وحفظ أيقونات المفضلة دائماً مع حذف التورنتات المؤقتة عند الإيقاف."
+          ],
+          "en": [
+            "4K / HEVC Aspect Ratio & Rotation Fix: Eliminated stretching and sideways playback on high-res and portrait (90° / 180° / 270°) videos via AspectRatioFrameLayout defaulting to RESIZE_MODE_FIT, hardware rotation alignment on SurfaceView, accurate Matrix transforms for TextureView, and native pass-through streaming.",
+            "Complete TV & Phone Subtitle System: Auto-downloads, extracts (.zip / .gz), and normalizes Subsource/browser subtitles (UTF-8 / UTF-16 / windows-1256) on TV; adds Active & Stream Subtitles, Cast Subtitle Settings (dual subtitles, ±100ms / ±500ms sync, size, color, position), and dark-gold Subtitle Settings UI.",
+            "Persistent TV Receiver Hub: Reorganized TV settings into clean Connections & Phone Sync (3 cards) and Playback & Subtitles, committing synced Trakt credentials, addons, and keys synchronously for offline availability.",
+            "Two-Way Trakt & Library Sync (1-Tap PKCE): Added browser OAuth 2.0 PKCE sign-in plus two-way Watchlist, Watched, Continue Watching, and live player Scrobble sync while isolating phone studio clips from Continue Watching.",
+            "WebSocket 1008 Conflict Fix: Replaced stale reconnect disconnects with clean code 1000 handoff so TvHubActivity and the floating TV Remote never collide or falsely reject.",
+            "Clean Metadata & Live Title Updates: Extracts full clean movie/series titles, updates active TV casts live (UPDATE_CAST_METADATA), mutes background browser tabs with 🔊 indicators, and auto-purges temporary cast torrents."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "توحيد معرّف Trakt PKCE وتنظيف أخطاء التعريف القديمة تلقائياً بدون الحاجة لأي إعدادات مطورين.",
+            "تحسين تباعد أزرار الاستئناف في تفاصيل المسلسلات واستقرار البحث باللغة العربية التلقائية في Subsource."
+          ],
+          "en": [
+            "Auto-healed legacy Trakt Client ID strings for 1-tap PKCE auth and removed cluttered developer UI fields.",
+            "Refined episode Resume button spacing, dual-subtitle positioning, and automatic Arabic Subsource lookups."
+          ]
+        }
+      },
       {
         "version": "1.0.0-beta.9",
         "versionCode": 9,
         "date": "2026-11-17",
-        "latest": true,
+        "latest": false,
         "whatsNew": {
           "ar": [
             "استعادة كاملة لشاشة المسلسلات والمواسم والحلقات ببوسترات 2:3 ولوجو الأعمال الذهبي وتجميع تلقائي لمجلدات المواسم المتعددة.",
@@ -144,9 +178,9 @@
     "packageId": "com.meedx.localcinema.manager",
     "name": "Local Cinema Manager",
     "available": true,
-    "version": "1.0.0-beta.9",
-    "versionCode": 9,
-    "releaseDate": "2026-11-17",
+    "version": "1.0.0-beta.10",
+    "versionCode": 10,
+    "releaseDate": "2026-11-18",
     "status": {
       "ar": "تجريبي · مفتوح المصدر",
       "en": "Beta · Open Source"
@@ -155,9 +189,9 @@
       "ar": "هذه نسخة الهاتف (Android Phone)",
       "en": "This is the Phone Version (Android Phone)"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.9/LocalCinema-Manager-Phone-v1.0.0-beta.9.apk",
-    "sizeBytes": 119159570,
-    "sha256": "e020dca12c872d0e799a683e5a8d3bfa0a34f53b371e35474dac368a1b3de422",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.10/LocalCinema-Manager-Phone-v1.0.0-beta.10.apk",
+    "sizeBytes": 119245738,
+    "sha256": "4577706adb8b3a67de9330dec01e7bbbc36e5de896aa2101c62794570402a461",
     "specs": {
       "platform": {
         "ar": "Android 7.0+",
@@ -167,7 +201,7 @@
         "ar": "arm64-v8a",
         "en": "arm64-v8a"
       },
-      "sizeLabel": "113.64 MiB",
+      "sizeLabel": "113.72 MiB",
       "license": "GPL-3.0",
       "security": {
         "ar": "آمن 100% — بلا أسرار مضمّنة (Zero Hardcoded Secrets)",
@@ -175,15 +209,49 @@
       }
     },
     "changelog": {
-      "en": "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider & QR shortcut, upgraded Web Video Caster engine with live rescan & synced subtitle casting, unified Connection subtitle search, and reduced 113.64 MiB arm64-v8a build with enhanced 4K stability.",
-      "ar": "ريموت هاتف مطوّر بيد واحدة بأيقونات صافية وتاتش باد وجوستك وزر QR، محرك اقتناص وبث وسائط احترافي من المتصفح مع إعادة الفحص ومزامنة الترجمة، وتقليص الحجم بمعمارية arm64-v8a وتحسين بث 4K."
+      "en": "Master Hub Connection redesign (5 clean cards, 1-tap Trakt OAuth PKCE & FULL_SYNC_STATE), WebSocket 1008 fix & ADB/Web LED remote indicators, dedicated Music Player Sheet & Mini Bar with Phone/TV live output switch, persistent browser with disk favicon cache, clean title discovery, and raw Pass-through Range streaming for 4K/portrait video.",
+      "ar": "مركز الاتصال الموحّد (5 بطاقات نظيفة، ربط Trakt PKCE بضغطة واحدة ومزامنة FULL_SYNC_STATE)، مشغل موسيقى مستقل عن الفيديو مع شريط مصغر وتبديل فوري (Phone / TV)، ريموت بمؤشرات ADB/Web، بقاء المتصفح حياً، وحفظ البث الخام 4K بدون تمطط."
     },
     "updateNotes": [
+      {
+        "version": "1.0.0-beta.10",
+        "versionCode": 10,
+        "date": "2026-11-18",
+        "latest": true,
+        "whatsNew": {
+          "ar": [
+            "مركز الاتصال الموحّد (Phone = Master Hub): إعادة تنظيم تبويب Connection في 5 بطاقات واضحة (الشاشة والاقتران مع زر Sync All to TV، حساب Trakt بربط PKCE بضغطة واحدة، مفاتيح Subsource وTMDb، الإضافات الخارجية، معالج الصلاحيات) مع مزامنة فورية وحفظ دائم على الشاشة.",
+            "مشغل موسيقى مستقل تماماً عن مشغل الفيديو: واجهة Music Player مخصصة (بدون أي أدوات فيديو أو ترجمة) مع زر تبديل فوري بين إخراج الشاشة (TV) وسماعة الهاتف (Phone)، وقائمة تشغيل تفاعلية Playing Queue، وشريط مصغر أسفل التطبيق ومنع تداخل الصوت مع الفيديو.",
+            "لوحة تحكم الترجمة المتقدمة أثناء البث: نافذة Active & Stream Subtitles وCast Subtitle Settings للترجمة المزدوجة، وتعديل التزامن ±100ms / ±500ms والحجم واللون والموضع لحظياً على الشاشة.",
+            "ريموت عائم بسطر واحد ومؤشرات LED: عرض عنوان TV Remote بسطر واحد مع مؤشر Connected/Disconnected ومصباحي حالة متوهجين (ADB أخضر و Web أزرق) وحل مشكلة انقطاع WebSocket 1008 نهائياً.",
+            "تحسينات المتصفح والبث المصغر: اقتناص العنوان النظيف وبثه حيّاً (UPDATE_CAST_METADATA)، إيقاف صوت التبويبات الخلفية تلقائياً مع مؤشر 🔊، البقاء في نفس التبويب عند تصغير نافذة البث عبر شريط Now Casting، وحفظ أيقونات المفضلة دائماً على القرص.",
+            "الحفاظ على البث الخام Pass-through للفيديوهات في PhoneVideoServer مع دعم Range وحذف تورنتات البث المؤقتة (Stream to TV) تلقائياً عند الإيقاف."
+          ],
+          "en": [
+            "Master Hub Connection (5 Clean Cards): Unified TV Hub → Connection with TV Pairing & Sync All to TV, 1-Tap Trakt OAuth 2.0 PKCE linking, Subsource & TMDb keys, external Nuvio/Stremio addons management, and the Permissions Wizard—persisting state onto TV even when offline.",
+            "Dedicated Music Player vs Video Cast: Built an independent Music Player sheet (Play Queue, Shuffle/Repeat, Speed, live TV ↔ Phone output toggle) and compact bottom Music Mini Bar with strict Audio/Video mutual exclusion.",
+            "Rich Live Cast Subtitle Controls: Added Active & Stream Subtitles and Cast Subtitle Settings supporting dual subtitles, ±100ms / ±500ms timing sync, size, color, and vertical placement on TV.",
+            "WebSocket 1008 Conflict Fix & Status LEDs: Fixed multi-socket contention between TvHubActivity and the floating controller, kept TV Remote header single-line, and added live glowing Green ADB and Blue Web status LEDs.",
+            "Browser Persistence & Clean Discovery: Keeps browser tabs and web sessions alive across navigation, caches bookmark favicons permanently to disk, pauses background tab audio with 🔊 indicators, updates cast titles live, and keeps you in your active tab behind the Now Casting bar.",
+            "Raw Pass-Through & Zero-Clutter Torrent Streaming: PhoneVideoServer serves local 4K/portrait files with full byte-range pass-through preserving rotation metadata, and Stream-to-TV torrents auto-purge on stop, switch, or startup."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "مزامنة قوائم Watchlist وWatched وContinue Watching مع Trakt مع عزل فيديوهات استوديو الهاتف عن «متابعة المشاهدة».",
+            "حماية وضع سطح المكتب في المتصفح وتوسيع استجابة النقرات لاقتناص روابط البث بسرعة أكبر."
+          ],
+          "en": [
+            "Full two-way Trakt Watchlist/History sync with strict library-only Continue Watching isolation excluding phone local camera clips.",
+            "Reinforced browser desktop mode, top-frame title guards, and click/pointerup stream follow-up scans."
+          ]
+        }
+      },
       {
         "version": "1.0.0-beta.9",
         "versionCode": 9,
         "date": "2026-11-17",
-        "latest": true,
+        "latest": false,
         "whatsNew": {
           "ar": [
             "ريموت هاتف مطوّر بيد واحدة بأيقونات صافية، وتاتش باد وجوستك بالسحب، وزر مسح QR، وشريط بث مصغّر.",

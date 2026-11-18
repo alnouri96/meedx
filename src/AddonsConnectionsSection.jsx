@@ -19,21 +19,19 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       id: 'trakt',
       icon: RefreshCw,
       name: 'Trakt',
-      tag: t('اختياري · مزامنة السجل وPKCE', 'Optional · Sync & PKCE'),
+      tag: t('اختياري · ربط فوري PKCE بضغطة واحدة', 'Optional · 1-Tap OAuth 2.0 PKCE'),
       desc: t(
-        'مزامنة ثنائية الاتجاه لسجل «تمت المشاهدة»، «قائمة المشاهدة» ومواضع التوقف مع زر تحديث سريع في القائمة الجانبية.',
-        'Two-way sync for Watched history, Watchlist, and resume positions with a quick sidebar refresh button.'
+        'مزامنة ثنائية الاتجاه لسجل «تمت المشاهدة»، «قائمة المشاهدة» و«متابعة المشاهدة» ونقاط التوقف بربط فوري بضغطة واحدة من تطبيق الهاتف دون الحاجة لإدخال أي مفاتيح مطورين.',
+        'Two-way sync for Watched history, Watchlist, Continue Watching, and Scrobble resume positions via 1-tap OAuth 2.0 PKCE directly from the Phone app—no developer keys required.'
       ),
       steps: [
-        t(<>سجّل الدخول وافتح صفحة إنشاء تطبيق جديد في {L('Trakt')}.</>, 'Sign in and open the New OAuth Application page on Trakt.'),
-        t(<>في حقل {L('Redirect URI')} الصق القيمة الجاهزة: {L('urn:ietf:wg:oauth:2.0:oob')}.</>, 'In Redirect URI, paste: urn:ietf:wg:oauth:2.0:oob.'),
-        t(<>انسخ {L('Client ID')} فقط (اترك {L('Client Secret')} فارغاً لتطبيقات {L('PKCE')} الحديثة) وأرسله من الهاتف للشاشة.</>, 'Copy Client ID only (leave Client Secret empty for modern PKCE apps) and push it from your phone.'),
-        t(<>أدخل كود التفعيل الظاهر على الشاشة في {L('trakt.tv/activate')} لإتمام الربط.</>, 'Enter the on-screen activation code at trakt.tv/activate to finish linking.'),
+        t(<>افتح تطبيق الهاتف وانتقل إلى {L('TV Hub ← Connection')} واضغط {L('Connect Trakt Account')}.</>, 'Open the Phone app, go to TV Hub → Connection, and tap Connect Trakt Account.'),
+        t(<>سجّل الدخول ووافق على الصلاحيات في متصفح الهاتف، وسيعود التطبيق تلقائياً عبر {L('PKCE')}.</>, 'Sign in and authorize in your browser; the Phone app completes the PKCE callback automatically.'),
+        t(<>تُزامَن حالة الحساب والسجل وقائمة المشاهدة تلقائياً مع الشاشة وتحفظ بشكل دائم.</>, 'Account credentials, Watched status, and Watchlist automatically sync and persist on TV.'),
+        t(<>اضغط {L('Refresh · Sync')} أو {L('Sync from Phone Now')} للتحديث اليدوي الفوري في أي وقت.</>, 'Tap Refresh · Sync or Sync from Phone Now anytime for an instant manual refresh.'),
       ],
-      copyValue: { label: t('نسخ Redirect URI', 'Copy Redirect URI'), value: 'urn:ietf:wg:oauth:2.0:oob' },
       links: [
-        { label: t('إنشاء تطبيق Trakt', 'Create Trakt App'), url: 'https://trakt.tv/oauth/applications/new' },
-        { label: t('تفعيل الكود', 'Activate Code'), url: 'https://trakt.tv/activate' },
+        { label: t('حساب Trakt', 'Trakt Website'), url: 'https://trakt.tv/' },
       ],
     },
     {
@@ -103,7 +101,7 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       <div className="wrap section">
         <div className="section-head">
           <div>
-            <span className="sc-kicker"><CheckCircle2 size={15} /> {t('الجديد في v1.0.0-beta.9 · تكامل الهاتف والشاشة', 'New in v1.0.0-beta.9 · Phone & TV Integration')}</span>
+            <span className="sc-kicker"><CheckCircle2 size={15} /> {t('الجديد في v1.0.0-beta.10 · مركز الهاتف الموحّد وتطوير البث', 'New in v1.0.0-beta.10 · Phone Master Hub & Playback Suite')}</span>
             <h2>{t('الإضافات، التوصيلات ومفاتيح API والتعليمات', 'Plugins, Connections, APIs & Guides')}</h2>
             <p>{t('إضافات Nuvio وStremio، المزامنة الثنائية عبر الشبكة المحلية، حماية الشاشات (TCL وغيرها)، ودليل إنشاء مفاتيح API الاختيارية.', 'Nuvio & Stremio addons, two-way LAN watch sync, TV background protection, and optional API key creation guides.')}</p>
           </div>
