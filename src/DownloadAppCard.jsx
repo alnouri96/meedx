@@ -11,7 +11,7 @@ export function DownloadAppCard({ p, ar, t, L, copy, onDownload, onContact }) {
   const notes = p.updateNotes || [];
   const isTv = p.device === 'tv';
   const versionBanner = p.versionBanner?.[lang] ?? (isTv ? t('هذه نسخة الشاشة (Android TV)', 'This is the TV Version (Android TV)') : t('هذه نسخة الهاتف (Android Phone)', 'This is the Phone Version (Android Phone)'));
-  const dlLabel = p.downloaderLabel?.[lang] ?? t('كود Downloader — هذه نسخة الشاشة', 'Downloader Code — This is the TV Version');
+  const dlLabel = p.downloaderLabel?.[lang] ?? t('كود Downloader (نسخة الشاشة)', 'Downloader Code (TV Version)');
   const dlCode = p.downloaderCode || '3213660';
   const shortUrl = p.shortUrl || 'meedx.pages.dev/tv';
 
@@ -166,8 +166,8 @@ export function DownloadAppCard({ p, ar, t, L, copy, onDownload, onContact }) {
         <button type="button" className="button primary" onClick={onDownload}>
           <span>
             {isTv
-              ? t(<>تنزيل {L('APK')} — هذه نسخة الشاشة ({L('Android TV')})</>, 'Download APK — This is the TV Version (Android TV)')
-              : t(<>تنزيل {L('APK')} — هذه نسخة الهاتف ({L('Android Phone')})</>, 'Download APK — This is the Phone Version (Android Phone)')}
+              ? t(<>تنزيل {L('APK')}: نسخة الشاشة ({L('Android TV')})</>, 'Download APK: TV Version (Android TV)')
+              : t(<>تنزيل {L('APK')}: نسخة الهاتف ({L('Android Phone')})</>, 'Download APK: Phone Version (Android Phone)')}
           </span>
           <Download size={17} />
         </button>

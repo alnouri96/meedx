@@ -42,7 +42,7 @@ export function AppsShowcasePage({ t, L, navigate, version }) {
         <div>
           <span className="sc-kicker"><Sparkles size={15} /> {t('إصدارات MEEDX', 'MEEDX Releases')}</span>
           <h1>{t('التطبيقات', 'Apps')}</h1>
-          <p>{t('استعرض تطبيقات MEEDX واختر أي تطبيق لفتح صفحته المستقلة ومعاينة الصور والإضافات وسجل التحديثات.', 'Explore MEEDX apps and open any app for its dedicated page, screenshots, addons, specs, and patch notes.')}</p>
+          <p>{t('اختر التطبيق لعرض لقطات الشاشة، الإضافات، المواصفات، وسجل التحديثات.', 'Select an app to view screenshots, addons, technical specs, and patch notes.')}</p>
         </div>
         <span className="badge-ok"><CheckCircle2 size={15} /> {t('مكتمل ومفحوص ✓', 'Verified & Ready ✓')}</span>
       </div>
@@ -65,7 +65,7 @@ export function AppsShowcasePage({ t, L, navigate, version }) {
                 <span className="gh-ver-badge" dir="ltr">v{version}</span>
                 <span className="badge-ok"><ShieldCheck size={14} /> {t('متاح للتنزيل المباشر', 'Ready for Direct Download')}</span>
               </div>
-              <p>{t(<>منظومة سينما منزلية متكاملة تجمع شاشة {L('Android TV')} والهاتف بواجهة داكنة وذهبية مع إعلانات {L('16:9')}، تورنت فوري، ترجمة تلقائية، وإضافات {L('Nuvio / Stremio')}.</>, 'A complete home cinema suite pairing Android TV and Phone with 16:9 Home Trailers, instant torrent playback, auto subtitles, and Nuvio / Stremio addons.')}</p>
+              <p>{t(<>يربط شاشة {L('Android TV')} بالهاتف لتشغيل ملفات {L('4K / HDR')} المحلية، وبث التورنت، وعرض إعلانات {L('16:9')}، والترجمة المزدوجة، وإضافات {L('Nuvio / Stremio')}.</>, 'Pairs Android TV and Phone for 4K/HDR local playback, torrent streaming, 16:9 trailers, dual subtitles, and Nuvio or Stremio addons.')}</p>
             </div>
           </div>
 

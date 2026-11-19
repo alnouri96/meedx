@@ -35,8 +35,8 @@ export function InteractiveShowcase({ t, L, copy }) {
       bridgeIcon: Magnet,
       tvIcon: Tv,
       desc: t(
-        <>تصفح المواقع المحفوظة داخل الهاتف بلا إعلانات أو نوافذ منبثقة، والتقط رابط {L('Magnet')} تلقائياً لإرساله إلى الشاشة وبثّه فوراً دون انتظار أو تحميله والاحتفاظ به.</>,
-        'Browse saved sites on your phone with zero ads or popups, auto-catch Magnet links, and send them to TV to stream immediately or download and keep.'
+        <>يتصفح الهاتف المواقع المحفوظة مع حجب الإعلانات والنوافذ المنبثقة. ويلتقط روابط {L('Magnet')} لإرسالها إلى الشاشة للبث الفوري أو التحميل المحلي.</>,
+        'Browse saved sites on your phone with ad and popup blocking. Tap any Magnet link to stream it on TV or download it locally.'
       ),
     },
     {
@@ -50,8 +50,8 @@ export function InteractiveShowcase({ t, L, copy }) {
       bridgeIcon: Cast,
       tvIcon: Tv,
       desc: t(
-        'التقط أي بث مباشر أو مباراة أو فيديو من متصفح الهاتف واقذفه فوراً إلى شاشة التلفاز بضغطة زر واحدة.',
-        'Capture any live stream, sports match, or web video from the phone browser and cast it directly to your TV in one tap.'
+        'يكتشف متصفح الهاتف روابط البث المباشر والمباريات والفيديو، ويرسلها إلى شاشة التلفاز بضغطة واحدة.',
+        'The phone browser detects live streams, sports matches, and web videos, and casts them to your TV in one tap.'
       ),
     },
     {
@@ -65,8 +65,8 @@ export function InteractiveShowcase({ t, L, copy }) {
       bridgeIcon: HardDrive,
       tvIcon: Sparkles,
       desc: t(
-        <>اقرأ الأفلام والمسلسلات والموسيقى بدقتها الخام ({L('4K / HDR')}) من مجلدات الشبكة ({L('SMB')}) أو الهارد الخارجي مع جلب البوسترات والترجمة العربية تلقائياً.</>,
-        'Stream raw 4K / HDR movies, series, and music over SMB network shares or USB drives with automatic posters and Arabic subtitles.'
+        <>يشغّل التلفاز الأفلام والمسلسلات والموسيقى بدقة {L('4K / HDR')} الخام من مشاركات {L('SMB')} أو أقراص {L('USB')}، ويجلب البوسترات والترجمة العربية تلقائياً.</>,
+        'Play raw 4K/HDR movies, series, and music from SMB network shares or USB drives with automatic posters and Arabic subtitles.'
       ),
     },
     {
@@ -80,8 +80,8 @@ export function InteractiveShowcase({ t, L, copy }) {
       bridgeIcon: ArrowLeftRight,
       tvIcon: Gamepad2,
       desc: t(
-        'حوّل هاتفك إلى وحدة تحكم شاملة: ريموت ذكي، لوحة مفاتيح للصق الروابط، ماوس هوائي سلس، ويد تحكم متكاملة للألعاب على الشاشة.',
-        'Turn your phone into an all-in-one controller: smart remote, keyboard for pasting links, smooth air mouse, and full TV gamepad.'
+        'يعمل الهاتف كريموت للتلفاز، ولوحة مفاتيح لإرسال النصوص والروابط، وماوس هوائي، ويد تحكم للألعاب.',
+        'Use your phone as a TV remote, keyboard for text and links, air mouse, and gamepad.'
       ),
     },
   ];
@@ -93,8 +93,8 @@ export function InteractiveShowcase({ t, L, copy }) {
       title: t('ثبّت التطبيقين', 'Install Both Apps'),
       summary: t(<>تطبيق الشاشة {L('Local Cinema TV')} وتطبيق الهاتف {L('Local Cinema Manager')}.</>, 'Install Local Cinema TV on your screen and Local Cinema Manager on your phone.'),
       body: t(
-        <>حمّل {L('Local Cinema TV')} على شاشتك (أو عبر كود {L('Downloader')} المباشر) وحمّل {L('Local Cinema Manager')} على هاتفك — مجاني ومفتوح المصدر بالكامل.</>,
-        'Download Local Cinema TV on your TV (or via the direct Downloader code) and Local Cinema Manager on your phone — 100% free and open source.'
+        <>ثبّت {L('Local Cinema TV')} على الشاشة عبر كود {L('Downloader')} المباشر، وثبّت {L('Local Cinema Manager')} على الهاتف. التطبيقان مجانيان ومفتوحا المصدر.</>,
+        'Install Local Cinema TV on your TV with the Downloader code, and install Local Cinema Manager on your phone. Both apps are free and open source.'
       ),
       hasCode: true,
     },
@@ -104,8 +104,8 @@ export function InteractiveShowcase({ t, L, copy }) {
       title: t('تصفّح أو اربط مكتبتك', 'Browse or Link Library'),
       summary: t('مواقع أفلام محفوظة بلا إعلانات، أو ربط الشبكة والهارد.', 'Ad-free saved movie sites, or link SMB shares and external drives.'),
       body: t(
-        <>افتح مواقع تحميل الأفلام والمسلسلات المحفوظة داخل متصفح التطبيق المانع للإعلانات، أو اربط مجلدات حاسوبك ({L('SMB')}) والهارد الخارجي واقترن بالشاشة بلمسة واحدة.</>,
-        'Open saved movie and series sites in the ad-blocking browser, or connect your PC SMB folders and external drives and pair with your TV in one tap.'
+        <>افتح المواقع المحفوظة في المتصفح المانع للإعلانات، أو اربط مجلدات {L('SMB')} وأقراص {L('USB')}، ثم اقرن الهاتف بالشاشة عبر رمز {L('QR')}.</>,
+        'Open saved sites in the ad-blocking browser, or connect SMB folders and USB drives. Pair your phone with the TV using the QR code.'
       ),
     },
     {
@@ -114,8 +114,8 @@ export function InteractiveShowcase({ t, L, copy }) {
       title: t('ابثّ فوراً أو احتفظ بالجودة الخام', 'Stream Now or Keep Raw'),
       summary: t('بث فوري للتورنت والمباريات أو حفظ بجودة خام وترجمة تلقائية.', 'Instant torrent & live casting, or save raw quality with auto subtitles.'),
       body: t(
-        'التقط رابط التورنت أو البث المباشر لبثّه على الشاشة فوراً دون انتظار، أو حمّله واحتفظ به في مكتبتك مع ترجمة عربية وبوسترات وتقييمات تلقائية.',
-        'Catch any torrent link or live stream to play immediately on TV without waiting, or download and keep it in your library with automatic artwork and subtitles.'
+        'أرسل رابط التورنت أو البث المباشر ليعمل فوراً على الشاشة، أو احفظ الملف في مكتبتك مع جلب البوسترات والتقييمات والترجمة تلقائياً.',
+        'Cast any torrent link or live stream straight to the TV, or save the file to your library with automatic posters, ratings, and subtitles.'
       ),
     },
   ];
@@ -129,24 +129,24 @@ export function InteractiveShowcase({ t, L, copy }) {
         {
           icon: ShieldOff,
           title: t('متصفح يحجب الإعلانات', 'Ad-Blocking Browser'),
-          text: t('تصفح نظيف وسريع يحجب الإعلانات والنوافذ المنبثقة المزعجة تلقائياً.', 'Clean, fast browsing that automatically blocks intrusive ads and popups.'),
+          text: t('يحجب المتصفح الإعلانات والنوافذ المنبثقة تلقائياً مع تكبير الصفحة من 50% إلى 150%.', 'Blocks ads and popups automatically with 50% to 150% page zoom.'),
         },
         {
           icon: BookmarkCheck,
           title: t('مواقع أفلام ومسلسلات محفوظة', 'Saved Movie & Series Sites'),
-          text: t('قائمة مواقع جاهزة ومحفوظة داخل التطبيق للوصول السريع دون عناء البحث.', 'Pre-saved, ready-to-open movie and series sites inside the app for instant access.'),
+          text: t('قائمة مواقع محفوظة مسبقاً داخل المتصفح مع حفظ أيقوناتها على القرص.', 'Pre-saved movie and series bookmarks with offline disk favicons.'),
         },
         {
           icon: Magnet,
           title: t('التقاط تلقائي لروابط التورنت', 'Auto Magnet & Torrent Catch'),
-          text: t(<>يلتقط أي رابط تورنت ({L('Magnet / .torrent')}) بمجرد الضغط عليه داخل المتصفح.</>, 'Automatically captures any Magnet or .torrent link the moment you tap it.'),
+          text: t(<>يلتقط المتصفح روابط {L('Magnet')} وملفات {L('.torrent')} فور الضغط عليها.</>, 'Captures Magnet links and .torrent files on tap.'),
         },
         {
           icon: torrentMode === 'stream' ? Radio : Download,
           title: t('خياران من نفس البرنامج', 'Two Modes in One App'),
           text: torrentMode === 'stream'
-            ? t('بث مباشر فوري بدون تحميل: شاهد الفيلم أو الحلقة على الشاشة لحظياً أثناء القراءة المتسلسلة.', 'Instant Stream: Watch immediately on TV via sequential streaming without waiting for a full download.')
-            : t('تحميل الفيلم والاحتفاظ به: احفظ الملف بجودته الكاملة في مكتبتك لمشاهدته في أي وقت.', 'Download & Keep: Save the full-quality file locally in your library for offline playback anytime.'),
+            ? t('بث مباشر بلا انتظار: يشغّل الفيلم على الشاشة مباشرة عبر القراءة المتسلسلة مع حذف الملف المؤقت بعد الانتهاء.', 'Instant Stream: Plays on TV via sequential streaming and deletes temporary files when done.')
+            : t('تحميل وحفظ: يحفظ الملف الكامل في مكتبة الهاتف أو القرص لمشاهدته لاحقاً بدون إنترنت.', 'Download & Keep: Saves the full file to your library for offline playback.'),
           isTorrentToggle: true,
         },
       ],
@@ -159,34 +159,34 @@ export function InteractiveShowcase({ t, L, copy }) {
         {
           icon: Tv,
           title: t('بث البثوث المباشرة والمباريات', 'Live Streams & Matches'),
-          text: t('بث أي بث مباشر أو فيديو من متصفح الهاتف إلى التلفاز فوراً.', 'Cast any live stream, match, or web video from your phone browser to TV instantly.'),
+          text: t('يلتقط روابط الفيديو والبث المباشر من صفحات الويب ويرسلها إلى التلفاز مع الترجمة.', 'Captures web video and live stream links and casts them to the TV with subtitles.'),
         },
         {
           icon: FolderSync,
           title: t('بث مكتبة الهاتف', 'Phone Library Casting'),
-          text: t('نشر وتشغيل أفلام وموسيقى وصور هاتفك على شاشة التلفاز لاسلكياً.', 'Publish and stream your phone movies, music, and photos wirelessly to your TV.'),
+          text: t('ينشر أفلام وموسيقى وصور الهاتف إلى التلفاز عبر الشبكة المحلية مع زر إظهار أو إخفاء لكل مجلد.', 'Shares phone videos, music, and photos to the TV over LAN with per-folder visibility toggles.'),
         },
       ],
     },
     {
       id: 'cinema',
       icon: Sparkles,
-      label: t('التشغيل الخام والذكاء السينمائي', 'Raw Playback & Cinema AI'),
+      label: t('التشغيل الخام والبيانات التلقائية', 'Raw Playback & Auto Metadata'),
       cards: [
         {
           icon: Maximize2,
           title: t('جودة خام بلا ضغط', 'Uncompressed Raw Quality'),
-          text: t(<>تشغيل الأفلام والمسلسلات والموسيقى بدقتها الأصلية ({L('4K / HDR')}) من الشبكة ({L('SMB')}) أو الهارد الخارجي.</>, 'Play movies, series, and music in original 4K / HDR quality from SMB or USB drives.'),
+          text: t(<>يشغّل الفيديو بدقة {L('4K / HDR')} الخام من مشاركات {L('SMB')} وأقراص {L('USB')} مع ضبط الأبعاد التلقائي.</>, 'Plays raw 4K/HDR video from SMB shares and USB drives with automatic aspect-ratio fitting.'),
         },
         {
           icon: Wand2,
           title: t('بوسترات وتقييمات تلقائية', 'Zero-Config Posters & Ratings'),
-          text: t(<>جلب الأغلفة وتقييمات {L('IMDb')} والملخصات العربية بلا أي مفاتيح {L('API')}.</>, 'Automatic artwork, IMDb ratings, and synopses out of the box with zero API keys.'),
+          text: t(<>يجلب البوسترات وتقييمات {L('IMDb')} و{L('TMDb')} و{L('Rotten Tomatoes')} والملخصات بدون مفاتيح {L('API')}.</>, 'Loads posters, IMDb, TMDb, and Rotten Tomatoes ratings, and synopses without API keys.'),
         },
         {
           icon: SlidersHorizontal,
-          title: t('ترجمة ومزامنة فورية', 'Subtitles & Instant Audio Sync'),
-          text: t(<>جلب الترجمة العربية والإنجليزية تلقائياً مع أزرار ضبط تزامن الصوت ({L('-50ms / +50ms')}).</>, 'Automatic Arabic & English subtitles with instant -50ms / +50ms audio sync controls.'),
+          title: t('ترجمة مزدوجة ومزامنة فورية', 'Dual Subtitles & Timing Sync'),
+          text: t(<>يدعم الترجمة المزدوجة على الشاشة مع ضبط التزامن ({L('±100ms / ±500ms')}) والحجم واللون والموضع.</>, 'Supports dual subtitles on TV with ±100ms and ±500ms timing offset, size, color, and position controls.'),
         },
       ],
     },
@@ -198,17 +198,17 @@ export function InteractiveShowcase({ t, L, copy }) {
         {
           icon: Keyboard,
           title: t('ريموت ذكي ولوحة مفاتيح', 'Smart Remote & Keyboard'),
-          text: t('تنقل سريع ولصق الروابط والنصوص على الشاشة مباشرة من هاتفك.', 'Fast navigation and instant link or text pasting on TV directly from your phone.'),
+          text: t('يرسل أوامر التنقل والنصوص والروابط من كيبورد الهاتف إلى التلفاز عبر الشبكة المحلية.', 'Sends D-Pad navigation, text, and links from the phone keyboard to the TV over LAN.'),
         },
         {
           icon: MousePointer2,
           title: t('ماوس هوائي', 'Air Mouse & Touchpad'),
-          text: t('تحريك المؤشر على شاشة التلفاز بسلاسة تامة عبر حركة ولمس الهاتف.', 'Smooth cursor control across all Android TV apps directly from your phone.'),
+          text: t('يحرّك المؤشر على شاشة التلفاز عبر لوحة اللمس في جميع تطبيقات النظام.', 'Moves the cursor across all Android TV apps using the phone touchpad.'),
         },
         {
           icon: Gamepad2,
           title: t('يد تحكم للألعاب', 'TV Gamepad'),
-          text: t('تحويل شاشة هاتفك إلى ذراع تحكم متكاملة للألعاب على التلفاز.', 'Turn your phone screen into a responsive wireless gamepad for TV gaming.'),
+          text: t('يحوّل شاشة الهاتف إلى ذراع تحكم لاسلكية للألعاب على التلفاز.', 'Turns the phone screen into a wireless controller for Android TV games.'),
         },
       ],
     },
@@ -335,7 +335,7 @@ export function InteractiveShowcase({ t, L, copy }) {
             <div className="sc-step-actions">
               <button type="button" className="button primary" onClick={() => copy('3213660')}>
                 <Copy size={16} />
-                <span>{t('كود Downloader — هذه نسخة الشاشة:', 'Downloader Code (TV Version):')} <bdi dir="ltr">3213660</bdi></span>
+                <span>{t('كود Downloader (نسخة الشاشة):', 'Downloader Code (TV Version):')} <bdi dir="ltr">3213660</bdi></span>
               </button>
               <button type="button" className="button" onClick={() => copy('https://meedx.pages.dev/tv')}>
                 <Copy size={16} />

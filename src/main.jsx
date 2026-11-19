@@ -74,7 +74,7 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = ar ? 'ar' : 'en';
     document.documentElement.dir = ar ? 'rtl' : 'ltr';
-    document.title = t('MEEDX — استوديو تطوير التطبيقات والألعاب والحلول التقنية', 'MEEDX — Apps, games & tech solutions studio');
+    document.title = t('MEEDX: تطوير التطبيقات والألعاب والحلول التقنية', 'MEEDX: Apps, games, and tech solutions');
   }, [ar]);
 
   useEffect(() => {
@@ -222,13 +222,13 @@ function App() {
               <GoldParticles />
               <div className="hero-copy">
                 <span className="badge-ok" style={{ marginBottom: 14 }}>
-                  <CheckCircle2 size={14} /> {t('استوديو MEEDX · حلول مفتوحة المصدر ✓', 'MEEDX Studio · Open-Source Solutions ✓')}
+                  <CheckCircle2 size={14} /> {t('استوديو MEEDX · مشاريع مفتوحة المصدر ✓', 'MEEDX Studio · Open-Source Projects ✓')}
                 </span>
-                <h1>{t('تطبيقات وألعاب،', 'Apps, games,')}<br />{t('وحلول تقنية متكاملة.', 'and tech solutions.')}</h1>
+                <h1>{t('تطبيقات وألعاب،', 'Apps, games,')}<br />{t('وأدوات تقنية.', 'and tech tools.')}</h1>
                 <p>
                   {t(
-                    <>استوديو {L('MEEDX')} لتطوير تطبيقات {L('Android TV')} والهواتف الذكية مفتوحة المصدر، أدوات وسكربتات الحاسوب ({L('Windows / ADB')})، ملفات تخصيص الألعاب، وخدمات الصيانة والبرمجة المخصصة — بواجهة عربية وإنجليزية متقنة.</>,
-                    'MEEDX Studio crafts open-source Android TV and smartphone apps, Windows/ADB utilities, gaming tweaks, and custom technical services with a refined Arabic and English experience.'
+                    <>يطوّر استوديو {L('MEEDX')} تطبيقات مفتوحة المصدر لشاشات {L('Android TV')} والهواتف، وأدوات {L('Windows / ADB')}، وملفات ضبط الألعاب، باللغتين العربية والإنجليزية.</>,
+                    'MEEDX Studio builds open-source Android TV and phone apps, Windows and ADB utilities, and game configs in Arabic and English.'
                   )}
                 </p>
                 <div className="hero-buttons">
@@ -258,7 +258,7 @@ function App() {
                   <div>
                     <span className="sc-kicker"><Sparkles size={15} /> {t('أحدث الإصدارات والأقسام', 'Latest Releases & Sections')}</span>
                     <h2>{t('التطبيقات والألعاب والبرامج', 'Apps, Games & Software')}</h2>
-                    <p>{t('أحدث ما يقدمه استوديو MEEDX مع وصول مباشر لصفحة كل منتج وتعليماته.', 'The latest releases from MEEDX Studio with direct access to each product page and guide.')}</p>
+                    <p>{t('إصدارات استوديو MEEDX مع روابط التحميل المباشر وأدلة التشغيل.', 'MEEDX Studio releases with direct download links and setup guides.')}</p>
                   </div>
                 </div>
 
@@ -281,8 +281,8 @@ function App() {
                         </div>
                         <p>
                           {t(
-                            <>منظومة سينما منزلية متكاملة تجمع شاشة {L('Android TV')} والهاتف بواجهة داكنة وذهبية مع إعلانات {L('16:9')}، بث التورنت والمباريات، ترجمة تلقائية، وإضافات {L('Nuvio / Stremio')}.</>,
-                            'Complete home cinema suite pairing Android TV and Phone with 16:9 Home Trailers, instant torrent/live casting, auto subtitles, and Nuvio / Stremio addons.'
+                            <>يربط شاشة {L('Android TV')} بالهاتف لتشغيل الفيديو بدقة {L('4K / HDR')}، مع إعلانات {L('16:9')}، وبث التورنت والمباريات، والترجمة المزدوجة، وإضافات {L('Nuvio / Stremio')}.</>,
+                            'Pairs Android TV and Phone for 4K/HDR local playback, 16:9 trailers, torrent and live stream casting, dual subtitles, and Nuvio or Stremio addons.'
                           )}
                         </p>
                       </div>
@@ -354,7 +354,7 @@ function App() {
               <div>
                 <span className="sc-kicker"><Terminal size={15} /> {t('أدوات الحاسوب والألعاب', 'PC Tools & Gaming')}</span>
                 <h1>{t('البرامج والألعاب', 'Software & Gaming')}</h1>
-                <p>{t('مساحة مخصصة لأدوات الحاسوب وملفات تخصيص الألعاب القادمة.', 'A dedicated space for upcoming PC software, scripts, and gaming tweaks.')}</p>
+                <p>{t('أدوات الحاسوب وملفات ضبط الألعاب قيد الإعداد.', 'Upcoming PC utilities, scripts, and game configuration files.')}</p>
               </div>
             </div>
             <div className="lab">
@@ -366,7 +366,7 @@ function App() {
                   <Icon size={33} />
                   <h3>{name}</h3>
                   <p>{desc}</p>
-                  <span>{t('لا توجد ملفات منشورة في هذه المرحلة — قريباً', 'No files published yet — coming soon')}</span>
+                  <span>{t('لا توجد ملفات منشورة حالياً. تُضاف قريباً.', 'No files published yet. Coming soon.')}</span>
                 </article>
               ))}
             </div>
@@ -403,7 +403,7 @@ function App() {
                 <p>{t(<>ملفات النسخة التجريبية عبر {L('GitHub Releases')} وبصمات التحقق {L('SHA-256')}.</>, 'Beta release files from GitHub Releases and SHA-256 verification hashes.')}</p>
               </div>
               <div className="head-tools">
-                <span className="badge-ok"><CheckCircle2 size={14} /> {t('آمن 100% — بلا أسرار مضمّنة', '100% Safe — Zero Secrets')}</span>
+                <span className="badge-ok"><CheckCircle2 size={14} /> {t('آمن 100%: بلا مفاتيح مضمّنة', '100% Safe: Zero Secrets')}</span>
                 <a className="link" href={siteConfig.githubReleases} target="_blank" rel="noopener noreferrer">
                   GitHub Releases <ArrowUpRight size={16} />
                 </a>
@@ -414,7 +414,7 @@ function App() {
             <div className="semantic-alerts" style={{ marginBottom: 20 }}>
               <span className="badge-warn">
                 <AlertTriangle size={15} />
-                {t('تنبيه مهم قبل التثبيت: فعّل «تثبيت التطبيقات من مصادر غير معروفة» على الهاتف وشاشة Android TV.', 'Important Notice: Enable "Install from Unknown Sources" on your phone and Android TV before installing.')}
+                {t('قبل التثبيت، فعّل خيار «تثبيت التطبيقات من مصادر غير معروفة» على الهاتف وشاشة Android TV.', 'Before installing, enable "Install from Unknown Sources" on your phone and Android TV.')}
               </span>
             </div>
 

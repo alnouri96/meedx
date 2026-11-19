@@ -21,12 +21,12 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       name: 'Trakt',
       tag: t('اختياري · ربط فوري PKCE بضغطة واحدة', 'Optional · 1-Tap OAuth 2.0 PKCE'),
       desc: t(
-        'مزامنة ثنائية الاتجاه لسجل «تمت المشاهدة»، «قائمة المشاهدة» و«متابعة المشاهدة» ونقاط التوقف بربط فوري بضغطة واحدة من تطبيق الهاتف دون الحاجة لإدخال أي مفاتيح مطورين.',
-        'Two-way sync for Watched history, Watchlist, Continue Watching, and Scrobble resume positions via 1-tap OAuth 2.0 PKCE directly from the Phone app—no developer keys required.'
+        'يزامن سجل المشاهدة وقائمة المتابعة ومواضع التوقف في الاتجاهين عبر ربط OAuth 2.0 PKCE من الهاتف بلا مفاتيح مطورين.',
+        'Syncs Watched history, Watchlist, Continue Watching, and resume positions both ways via 1-tap OAuth 2.0 PKCE from the Phone app without developer keys.'
       ),
       steps: [
         t(<>افتح تطبيق الهاتف وانتقل إلى {L('TV Hub ← Connection')} واضغط {L('Connect Trakt Account')}.</>, 'Open the Phone app, go to TV Hub → Connection, and tap Connect Trakt Account.'),
-        t(<>سجّل الدخول ووافق على الصلاحيات في متصفح الهاتف، وسيعود التطبيق تلقائياً عبر {L('PKCE')}.</>, 'Sign in and authorize in your browser; the Phone app completes the PKCE callback automatically.'),
+        t(<>سجّل الدخول ووافق على الصلاحيات في متصفح الهاتف. يعود التطبيق تلقائياً عبر {L('PKCE')}.</>, 'Sign in and authorize in your browser. The Phone app completes the PKCE callback automatically.'),
         t(<>تُزامَن حالة الحساب والسجل وقائمة المشاهدة تلقائياً مع الشاشة وتحفظ بشكل دائم.</>, 'Account credentials, Watched status, and Watchlist automatically sync and persist on TV.'),
         t(<>اضغط {L('Refresh · Sync')} أو {L('Sync from Phone Now')} للتحديث اليدوي الفوري في أي وقت.</>, 'Tap Refresh · Sync or Sync from Phone Now anytime for an instant manual refresh.'),
       ],
@@ -40,8 +40,8 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       name: 'Subsource',
       tag: t('اختياري · ترجمات عربية', 'Optional · Arabic Subtitles'),
       desc: t(
-        'مصدر مجاني غني بالترجمات العربية والإنجليزية للأفلام والمسلسلات والأنمي.',
-        'Free subtitle provider rich in Arabic and English subtitles for movies, series, and anime.'
+        'يوفر ملفات ترجمة عربية وإنجليزية للأفلام والمسلسلات والأنمي.',
+        'Provides Arabic and English subtitle files for movies, series, and anime.'
       ),
       steps: [
         t(<>افتح موقع {L('subsource.net')} وأنشئ حساباً مجانياً وسجّل الدخول.</>, 'Open subsource.net, create a free account, and sign in.'),
@@ -59,11 +59,11 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       name: 'OpenSubtitles',
       tag: t('اختياري · تنبيه DNS خاص', 'Optional · Private DNS Notice'),
       desc: t(
-        'مكتبة ترجمات عالمية واسعة. إذا تعذّر فتح الموقع لدى مزوّد الإنترنت، فعّل DNS خاص (1.1.1.1 أو dns.google).',
+        'فهرس ترجمات عالمي. إذا تعذّر فتح الموقع لدى مزوّد الإنترنت، فعّل DNS خاص (1.1.1.1 أو dns.google).',
         'Global subtitle catalog. If blocked by your ISP, enable Private DNS (1.1.1.1 or dns.google) on your device.'
       ),
       steps: [
-        t(<>افتح {L('opensubtitles.com')} (أو {L('.org')}) وسجّل الدخول، وإذا لم يفتح فعّل {L('DNS')} خاص.</>, 'Open opensubtitles.com (or .org) and sign in; enable Private DNS if needed.'),
+        t(<>افتح {L('opensubtitles.com')} (أو {L('.org')}) وسجّل الدخول. فعّل {L('DNS')} خاص إذا كان الموقع محجوباً.</>, 'Open opensubtitles.com (or .org) and sign in. Enable Private DNS if the site is blocked.'),
         t(<>انتقل إلى {L('API Consumers')} من ملفك الشخصي وأنشئ Consumer جديداً.</>, 'Open API Consumers from your profile and create a new Consumer.'),
         t(<>انسخ {L('API Key')} مع اسم المستخدم وكلمة المرور لحسابك.</>, 'Copy the API Key along with your account username and password.'),
         t(<>أرسلها للشاشة من الهاتف عبر {L('TV Hub ← Connection')}.</>, 'Push them to your TV from the phone via TV Hub → Connection.'),
@@ -81,8 +81,8 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       name: 'TMDb',
       tag: t('اختياري · بوسترات وممثلين', 'Optional · Posters & Cast'),
       desc: t(
-        'لتوسيع بيانات الممثلين والبوسترات والخلفيات لمن يملك مفتاحاً خاصاً (المنظومة تعمل بدونه تلقائياً).',
-        'Expand actor profiles and artwork with your personal key (the suite works out of the box without it).'
+        'يضيف صوراً وخلفيات إضافية للممثلين والأعمال عبر مفتاحك الشخصي. يعمل التطبيق بدونه تلقائياً.',
+        'Loads additional cast photos and backdrops with your personal key. The app works without it by default.'
       ),
       steps: [
         t(<>سجّل الدخول في {L('themoviedb.org')} وافتح {L('Settings ← API')}.</>, 'Sign in at themoviedb.org and open Settings → API.'),
@@ -101,7 +101,7 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       <div className="wrap section">
         <div className="section-head">
           <div>
-            <span className="sc-kicker"><CheckCircle2 size={15} /> {t('الجديد في v1.0.0-beta.10 · مركز الهاتف الموحّد وتطوير البث', 'New in v1.0.0-beta.10 · Phone Master Hub & Playback Suite')}</span>
+            <span className="sc-kicker"><CheckCircle2 size={15} /> {t('إصدار v1.0.0-beta.11 · مركز الاتصال وإدارة الإضافات', 'Release v1.0.0-beta.11 · Connection Hub & Addons')}</span>
             <h2>{t('الإضافات، التوصيلات ومفاتيح API والتعليمات', 'Plugins, Connections, APIs & Guides')}</h2>
             <p>{t('إضافات Nuvio وStremio، المزامنة الثنائية عبر الشبكة المحلية، حماية الشاشات (TCL وغيرها)، ودليل إنشاء مفاتيح API الاختيارية.', 'Nuvio & Stremio addons, two-way LAN watch sync, TV background protection, and optional API key creation guides.')}</p>
           </div>
@@ -256,7 +256,7 @@ export function AddonsConnectionsSection({ t, L, copy }) {
               </div>
               <p className="ac-desc">
                 {t(
-                  'توقف بعض الشاشات خدمات الشبكة أثناء السكون؛ طبّق الإعداد المخصص لنوع شاشتك لضمان بقاء الريموت والمزامنة متصلين:',
+                  'توقف بعض الشاشات خدمات الشبكة أثناء السكون. طبّق الإعداد الخاص بشاشتك لإبقاء الريموت والمزامنة متصلين:',
                   'Some TVs restrict background services during sleep. Apply the matching protection for your TV brand:'
                 )}
               </p>

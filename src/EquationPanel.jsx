@@ -127,7 +127,7 @@ export function EquationPanel({ t }) {
           <img src="/assets/icons/local-cinema-icon.png" alt="Local Cinema" width="84" height="84"/>
           <div className="eq-result-copy">
             <strong dir="ltr">Local Cinema</strong>
-            <span>{t('كل هذا وأكثر في منظومة واحدة متكاملة', 'All this and more in one unified ecosystem')}</span>
+            <span>{t('7 أدوات مجتمعة في تطبيقي الشاشة والهاتف', '7 tools combined in the TV and Phone apps')}</span>
           </div>
         </div>
       </div>
