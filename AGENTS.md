@@ -9,8 +9,8 @@ Companion public website and OTA feed repository for **Local Cinema**, linked ba
 
 ## 1. Current State
 
-- **Active Release:** `v1.0.0-beta.12` (`versionCode = 12`, released `2026-11-19`; supersedes `v1.0.0-beta.11` commit `64f7237`).
-- **Latest Release Commit (pre-cleanup):** `0c5843a` on `main`.
+- **Active Release:** `v1.0.0-beta.12` (`versionCode = 12`, released `2026-11-19`).
+- **Repository State:** Clean directory layout on `main` (post-cleanup commit `1a72fcd`), synced with `v1.0.0-beta.12` metadata and deployed live on Cloudflare Pages (`https://meedx.pages.dev`).
 - **Production URLs:**
   - Live site: `https://meedx.pages.dev`
   - OTA feed: `https://meedx.pages.dev/api/version.json`
