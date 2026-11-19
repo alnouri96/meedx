@@ -132,7 +132,7 @@ export function DownloadAppCard({ p, ar, t, L, copy, onDownload, onContact }) {
       )}
 
       {panel === 'notes' && (
-        <div key="notes" className="dl-panel dl-notes-list sc-animate">
+        <div key="notes" className="dl-panel dl-notes-list sc-animate" dir={ar ? 'rtl' : 'ltr'}>
           {notes.map((release) => (
             <div key={release.version} className="dl-release-block">
               <div className="dl-release-head">
