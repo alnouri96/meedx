@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.11`)
+# MEEDX · Local Cinema (`v1.0.0-beta.12`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.11"><strong>⬇️ تحميل v1.0.0-beta.11 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.12"><strong>⬇️ تحميل v1.0.0-beta.12 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,11 +61,14 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.11` (`versionCode = 11`)
-- **إعادة هيكلة معمارية تطبيق الهاتف إلى وحدات تحكم مستقلة (`TvHubActivity` و `CinemaBrowser`)**: فصل وحدات الموسيقى (`TvHubMusicController`) والترجمة (`TvHubSubtitlesController`) والمكتبة (`TvHubLibraryController`) والاتصال (`TvHubConnectionController`) وإعدادات المتصفح (`CinemaBrowserSettingsSheet` و `CinemaBrowserMediaBridge`).
-- **ضبط أبعاد العرض الطبيعية `100%` للمتصفح مع شريط تكبير دائم (`50%–150%`)**: فتح المتصفح بأبعاد الهاتف الطبيعية `100%` عند بدء التشغيل مع تبديل فوري ونظيف بين وضعي الهاتف وسطح المكتب، وشريط تكبير دائم (`Page Zoom`) ومدير الإضافات الموحّد (`BrowserExtensions`).
-- **حماية التخزين التلقائية، قسم `Storage & Cache` بضغطة واحدة، وتوفير البطارية في الخلفية**: تحديد سقف كاش `GeckoView` عند `100 MB`، تنظيف تلقائي لملفات البث المؤقتة عند بدء التشغيل وعند انتهاء البث، إضافة قسم `Storage & Cache` مع زر `Clear Cache` آمن في الإعدادات، وإيقاف نشاط الجلسات والخوادم المحلية عند الخمول.
-- **تمييز بصري واضح باللونين الذهبي والأحمر القرمزي لأزرار حالة الترجمة واستقرار التلفاز**: إضاءة عالية التباين لأزرار الترجمة الأساسية (`Primary`) والمزدوجة (`Dual`) والإيقاف (`Off`)، واعتماد معرّفات موجبة (`900M+`) للعناصر السحابية على التلفاز مع مزامنة `Trakt OAuth 2.0 PKCE` عند التغيير أو الطلب اليدوي فقط.
+### جديد الإصدار `v1.0.0-beta.12` (`versionCode = 12`)
+- يبدأ النقر على أي حلقة داخل صف الموسم تشغيلها مباشرة دون شاشة وسيطة، ويعود التركيز إلى بطاقة الحلقة نفسها عند الخروج.
+- يضيف مشغل الشاشة زري الحلقة السابقة والحلقة التالية أثناء عرض المسلسلات، ويعيد اختيار الترجمة تفعيل مؤقت الإخفاء التلقائي لواجهة المشغل.
+- يجلب التركيز على بطاقة أي موسم إعلان الموسم أولاً مع بديل إعلان المسلسل، وتعرض بطاقات متابعة المشاهدة شارة الموسم والحلقة والوقت المتبقي في الهيدر العلوي.
+- يحفظ المشغل موضع التشغيل الدقيق بالملي ثانية كل خمس ثوانٍ وعند التقديم والترجيع والإيقاف والخروج، وتكتمل الأعمال عند نسبة 85% مع حماية الموضع المحلي من تقريب Trakt.
+- يجلب كاش الصور بيانات اللغتين العربية والإنجليزية في طلب واحد بسعة 200MB مع عرض فوري دون بطاقات سوداء، ويضيف الإعدادات صفحة التخزين والكاش.
+- أُصلحت محاذاة الواجهة العربية ومنع ظهور صف المواسم أسفل الحلقات عند التصفح يساراً، كما يحدد زر الخروج تلقائياً في نافذة التأكيد.
+- يجمع تطبيق الهاتف الترجمات المدمجة في زر واحد يظهر عند توفرها فقط ويستجيب السحب الأفقي على لوحة اللمس للتقديم والترجيع الفوري.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -92,11 +95,14 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.11` (`versionCode = 11`)
-- **Modular Phone Architecture (`TvHubActivity` & `CinemaBrowser` Controllers)**: Extracted dedicated controllers (`TvHubMusicController`, `TvHubSubtitlesController`, `TvHubLibraryController`, `TvHubConnectionController`, `CinemaBrowserSettingsSheet`, `CinemaBrowserMediaBridge`) for clean lifecycle management.
-- **Natural 100% Mobile Browser Viewport, Desktop/Mobile Mode & Persistent Page Zoom (`50%–150%`)**: Defaulted startup to a natural `100%` mobile viewport, added clean Desktop/Mobile mode switching, a persistent `50%–150%` Page Zoom slider, and a unified `Extensions` manager (`BrowserExtensions`).
-- **Automatic Storage Bloat Cleanup, `Storage & Cache` Settings & Idle Battery Optimizations**: Enforced a `100 MB` GeckoView disk cache cap, automatic startup/post-cast temp stream purge (`CinemaCacheManager`), a new `Storage & Cache` section with safe one-tap `Clear Cache` in Settings, and background session/server suspension.
-- **Clear Gold & Crimson Active Subtitle Toggles & TV Stability**: High-contrast Gold (`#E5B94C`) and Crimson (`#EF4444`) active states for Primary, Dual, and Off subtitle toggles, positive `900M+` synthetic MediaDB IDs on TV (`CinemaHomeFragment`, `CinemaWatchlistActivity`), and strict manual/on-change Trakt OAuth 2.0 PKCE sync.
+### What's New in `v1.0.0-beta.12` (`versionCode = 12`)
+- Selecting an episode in a season row starts playback directly without an intermediate dialog and restores focus to that card on exit.
+- In-player controls add Previous Episode and Next Episode buttons, and subtitle selection restarts the HUD auto-hide timer.
+- Season cards load season trailers first with show trailer fallback, while Continue Watching cards launch episodes directly with badges and remaining time.
+- Player services write exact millisecond positions every five seconds, after seeks, on pause, and on exit, auto-complete at 85%, and protect local resume timestamps from Trakt rounding.
+- Artwork loading fetches Arabic and English posters together in a 200MB HTTP disk cache with card-size decoding for zero blank cards, and Settings adds a Storage & Cache page.
+- RTL alignment is fixed across detail views without revealing the season row below episodes, and Back closes the rail, returns to Home top, or focuses the Exit button.
+- Phone playback groups built-in tracks behind one Embedded Subtitles button and handles horizontal touchpad swipes as responsive 10s or 30s seeks.
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
@@ -121,12 +127,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ---
 
-## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.11`)
+## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.12`)
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.11.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.11` (`11`) | `39,258,291` | `7bd6acac4282320b43397e5ea59a9f5298494bf22c3c33e779a027a6be0f25df` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.11.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.11` (`11`) | `119,290,066` | `c9cbffc9c11c1663b800f9e2dc7d7bfcece5026003b6095446ce8aad7e0bebbe` |
+| `LocalCinema-TV-v1.0.0-beta.12.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.12` (`12`) | `39,285,929` | `71e5af2f7e1a0435741ede68ba1f32f51f3262c61df9f98a2c771bc54351fb86` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.12.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.12` (`12`) | `119,292,370` | `4ec70f236058ee275571153726e8636815a633d5f38fd46c7e42f4768f101778` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >
