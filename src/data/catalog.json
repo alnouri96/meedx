@@ -6,8 +6,8 @@
     "packageId": "com.meedx.localcinema.tv",
     "name": "Local Cinema TV",
     "available": true,
-    "version": "1.0.0-beta.11",
-    "versionCode": 11,
+    "version": "1.0.0-beta.12",
+    "versionCode": 12,
     "releaseDate": "2026-11-19",
     "status": {
       "ar": "تجريبي · مفتوح المصدر",
@@ -23,9 +23,9 @@
       "ar": "كود Downloader (نسخة الشاشة)",
       "en": "Downloader Code (TV Version)"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.11/LocalCinema-TV-v1.0.0-beta.11.apk",
-    "sizeBytes": 39258291,
-    "sha256": "7bd6acac4282320b43397e5ea59a9f5298494bf22c3c33e779a027a6be0f25df",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.12/LocalCinema-TV-v1.0.0-beta.12.apk",
+    "sizeBytes": 39285929,
+    "sha256": "71e5af2f7e1a0435741ede68ba1f32f51f3262c61df9f98a2c771bc54351fb86",
     "specs": {
       "platform": {
         "ar": "Android TV 7.0+",
@@ -35,7 +35,7 @@
         "ar": "Universal APK",
         "en": "Universal APK"
       },
-      "sizeLabel": "37.44 MiB",
+      "sizeLabel": "37.47 MiB",
       "license": "GPL-3.0",
       "security": {
         "ar": "آمن 100%: بلا مفاتيح مضمّنة (Zero Hardcoded Secrets)",
@@ -43,15 +43,49 @@
       }
     },
     "changelog": {
-      "en": "Local Cinema TV v1.0.0-beta.11 uses positive 900M+ synthetic MediaDB IDs in CinemaHomeFragment and CinemaWatchlistActivity, runs Trakt OAuth 2.0 PKCE and Phone sync only on change or manual request, deduplicates subtitle overlays, and adjusts dual-subtitle spacing.",
-      "ar": "يعتمد معرّفات موجبة (900M+) للعناصر السحابية في الشاشة الرئيسية وقائمة المتابعة، ويقصر مزامنة Trakt PKCE والهاتف على التغيير أو الطلب اليدوي، ويمنع تكرار طبقات الترجمة مع ضبط موضع الترجمة المزدوجة."
+      "en": "Local Cinema TV v1.0.0-beta.12 starts season episodes directly on click and adds Previous and Next Episode player buttons, restarts HUD auto-hide after subtitle selection, saves exact millisecond resume timestamps every 5 seconds with 85% completion and Trakt rounding protection, caches bilingual Arabic and English posters in a 200MB disk cache, and adds Storage & Cache settings with clean RTL layout and Exit focus.",
+      "ar": "يشغّل حلقات الموسم مباشرة عند النقر مع أزرار الحلقة السابقة واللاحقة في المشغل وإخفاء الشريط بعد اختيار الترجمة، ويحفظ موضع الاستئناف بالملي ثانية كل 5 ثوانٍ مع إكمال تلقائي عند 85% وحماية الموضع المحلي من تقريب Trakt، ويوفر كاش بوسترات ثنائي اللغة بسعة 200MB وإعدادات التخزين والكاش مع ضبط محاذاة العربية وتحديد زر الخروج تلقائياً."
     },
     "updateNotes": [
+      {
+        "version": "1.0.0-beta.12",
+        "versionCode": 12,
+        "date": "2026-11-19",
+        "latest": true,
+        "whatsNew": {
+          "ar": [
+            "يبدأ النقر على أي حلقة داخل صف الموسم تشغيلها مباشرة دون شاشة وسيطة، ويعود التركيز إلى بطاقة الحلقة نفسها عند الخروج.",
+            "يضيف مشغل الشاشة زري الحلقة السابقة والحلقة التالية أثناء عرض المسلسلات، ويعيد اختيار الترجمة تفعيل مؤقت الإخفاء التلقائي لواجهة المشغل.",
+            "يجلب التركيز على بطاقة أي موسم إعلان الموسم أولاً، ويعتمد إعلان المسلسل بديلاً تلقائياً عند غياب إعلان خاص بالموسم.",
+            "تعرض بطاقات متابعة المشاهدة شارة الموسم والحلقة وتعمل مباشرة، مع إظهار اسم المسلسل واسم الحلقة والوقت المتبقي في الهيدر العلوي.",
+            "يحفظ المشغل موضع التشغيل الدقيق بالملي ثانية كل خمس ثوانٍ وعند التقديم والترجيع والإيقاف والخروج، وتكتمل الأعمال عند نسبة خمسة وثمانين في المئة مع حماية الموضع المحلي من تقريب Trakt.",
+            "يجلب كاش الصور بيانات اللغتين العربية والإنجليزية في طلب واحد بسعة مئتي ميجابايت مع عرض فوري دون بطاقات سوداء، ويضيف الإعدادات صفحة التخزين والكاش."
+          ],
+          "en": [
+            "When you select an episode in a season row, playback starts directly without an intermediate screen and returns focus to that same card on exit.",
+            "In-player controls add Previous Episode and Next Episode buttons during series playback, and subtitle selection restarts the HUD auto-hide timer.",
+            "Season cards load season trailers first with automatic series trailer fallback, while episode rows hide trailer actions.",
+            "Continue Watching cards show season and episode badges and start episodes directly while displaying the show name, episode title, and remaining time.",
+            "Player services save exact millisecond positions every five seconds, after seeks, on pause, and on exit, auto-complete at 85%, and protect local resume timestamps from Trakt rounding.",
+            "Artwork loading fetches Arabic and English posters in one request with a 200MB disk cache and card-size decoding for zero blank cards, plus Settings adds a Storage & Cache page."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "أُصلحت محاذاة الواجهة العربية ومنع ظهور صف المواسم أسفل الحلقات عند التصفح يساراً.",
+            "يطوي زر الرجوع القائمة الجانبية أو يعود لأعلى الرئيسية أو يفتح نافذة التأكيد مع تحديد زر الخروج تلقائياً."
+          ],
+          "en": [
+            "Aligned show, season, and movie detail views in Arabic RTL layout and blocked the season row from appearing below episodes.",
+            "Back closes the sidebar rail, returns to Home top, or opens the exit dialog with the Exit button pre-focused."
+          ]
+        }
+      },
       {
         "version": "1.0.0-beta.11",
         "versionCode": 11,
         "date": "2026-11-19",
-        "latest": true,
+        "latest": false,
         "whatsNew": {
           "ar": [
             "فصل وحدات الموسيقى والترجمة والمكتبة والاتصال عن TvHubActivity، وتقسيم CinemaBrowser إلى CinemaBrowserSettingsSheet و CinemaBrowserMediaBridge.",
@@ -210,8 +244,8 @@
     "packageId": "com.meedx.localcinema.manager",
     "name": "Local Cinema Manager",
     "available": true,
-    "version": "1.0.0-beta.11",
-    "versionCode": 11,
+    "version": "1.0.0-beta.12",
+    "versionCode": 12,
     "releaseDate": "2026-11-19",
     "status": {
       "ar": "تجريبي · مفتوح المصدر",
@@ -221,9 +255,9 @@
       "ar": "هذه نسخة الهاتف (Android Phone)",
       "en": "This is the Phone Version (Android Phone)"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.11/LocalCinema-Manager-Phone-v1.0.0-beta.11.apk",
-    "sizeBytes": 119290066,
-    "sha256": "c9cbffc9c11c1663b800f9e2dc7d7bfcece5026003b6095446ce8aad7e0bebbe",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.12/LocalCinema-Manager-Phone-v1.0.0-beta.12.apk",
+    "sizeBytes": 119292370,
+    "sha256": "4ec70f236058ee275571153726e8636815a633d5f38fd46c7e42f4768f101778",
     "specs": {
       "platform": {
         "ar": "Android 7.0+",
@@ -233,7 +267,7 @@
         "ar": "arm64-v8a",
         "en": "arm64-v8a"
       },
-      "sizeLabel": "113.76 MiB",
+      "sizeLabel": "113.77 MiB",
       "license": "GPL-3.0",
       "security": {
         "ar": "آمن 100%: بلا مفاتيح مضمّنة (Zero Hardcoded Secrets)",
@@ -241,15 +275,39 @@
       }
     },
     "changelog": {
-      "en": "Local Cinema Manager v1.0.0-beta.11 splits TvHubActivity and CinemaBrowser into domain controllers, adds a 100% mobile viewport with 50% to 150% Page Zoom, caps GeckoView cache at 100MB to cut storage from 1.54GB to 514MB, suspends idle background sessions, and highlights active subtitle toggles in Gold and Crimson.",
-      "ar": "يفصل TvHubActivity و CinemaBrowser إلى وحدات تحكم مستقلة، ويضبط عرض المتصفح بنسبة 100% مع تكبير من 50% إلى 150%، ويحدد سقف الكاش عند 100MB لتقليص حجم التطبيق من 1.54GB إلى 514MB، ويوقف النشاط الخامل في الخلفية، ويلوّن أزرار الترجمة بالذهبي والأحمر القرمزي."
+      "en": "Local Cinema Manager v1.0.0-beta.12 groups built-in tracks behind one Embedded Subtitles button with a scrollable primary and dual picker, and sends immediate 10s or 30s horizontal touchpad seek steps with light haptic feedback while canceling long-press hold on finger movement.",
+      "ar": "يجمع مسارات الترجمة المدمجة في زر واحد يفتح نافذة مستقلة للاختيار الأساسي أو المزدوج عند توفرها فقط، ويحسن استجابة السحب الأفقي على لوحة اللمس للتقديم والترجيع الفوري بمقدار 10 أو 30 ثانية مع إلغاء الضغط المطوّل فور تحرك الإصبع."
     },
     "updateNotes": [
+      {
+        "version": "1.0.0-beta.12",
+        "versionCode": 12,
+        "date": "2026-11-19",
+        "latest": true,
+        "whatsNew": {
+          "ar": [
+            "يجمع تطبيق الهاتف مسارات الترجمة المدمجة في زر واحد يظهر عند توفرها فقط ويفتح قائمة مستقلة للترجمة الأساسية والمزدوجة.",
+            "يرسل السحب الأفقي على لوحة اللمس خطوات تقديم وترجيع فورية بمقدار عشر أو ثلاثين ثانية مع اهتزاز خفيف، ويلغي مؤقت الضغط المطوّل فور تحرك الإصبع مع بقاء الضغط الثابت لإرسال OK."
+          ],
+          "en": [
+            "Phone playback groups built-in tracks behind one Embedded Subtitles button that shows only when tracks exist and opens a scrollable primary or dual picker.",
+            "Horizontal touchpad swipes send immediate 10-second or 30-second seek steps with light haptic feedback and cancel long-press hold detection on finger movement."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "توحيد عتبة الإكمال عند نسبة خمسة وثمانين في المئة بين تطبيق الهاتف والشاشة."
+          ],
+          "en": [
+            "Unified the 85% auto-completion threshold between Phone and TV watch sync."
+          ]
+        }
+      },
       {
         "version": "1.0.0-beta.11",
         "versionCode": 11,
         "date": "2026-11-19",
-        "latest": true,
+        "latest": false,
         "whatsNew": {
           "ar": [
             "فصل وحدات الموسيقى (TvHubMusicController) والترجمة (TvHubSubtitlesController) والمكتبة (TvHubLibraryController) والاتصال (TvHubConnectionController) عن TvHubActivity، وتقسيم المتصفح CinemaBrowser إلى CinemaBrowserSettingsSheet و CinemaBrowserMediaBridge.",
