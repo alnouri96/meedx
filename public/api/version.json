@@ -6,7 +6,7 @@
     "versionName": "1.0.0-beta.11",
     "sizeBytes": 39258291,
     "sha256": "7bd6acac4282320b43397e5ea59a9f5298494bf22c3c33e779a027a6be0f25df",
-    "changelog": "Local Cinema TV v1.0.0-beta.11: fixed synthetic MediaDB ID crash (900M+ positive IDs) in CinemaHomeFragment & CinemaWatchlistActivity, strict manual/on-change Trakt OAuth 2.0 PKCE & Phone sync, deduplicated subtitle overlays, and improved dual-subtitle positioning.",
+    "changelog": "Local Cinema TV v1.0.0-beta.11 uses positive 900M+ synthetic MediaDB IDs in CinemaHomeFragment and CinemaWatchlistActivity, runs Trakt OAuth 2.0 PKCE and Phone sync only on change or manual request, deduplicates subtitle overlays, and adjusts dual-subtitle spacing.",
     "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.11/LocalCinema-TV-v1.0.0-beta.11.apk"
   },
   "phone": {
@@ -16,7 +16,7 @@
     "versionName": "1.0.0-beta.11",
     "sizeBytes": 119290066,
     "sha256": "c9cbffc9c11c1663b800f9e2dc7d7bfcece5026003b6095446ce8aad7e0bebbe",
-    "changelog": "Local Cinema Manager v1.0.0-beta.11: modular controller architecture (TvHubActivity & CinemaBrowser), natural 100% mobile browser viewport with persistent 50%–150% Page Zoom slider & clean Desktop/Mobile switch, 100 MB GeckoView cache cap with one-tap Clear Cache in Settings & idle battery optimizations, and unmistakable Gold/Crimson active subtitle toggles.",
+    "changelog": "Local Cinema Manager v1.0.0-beta.11 splits TvHubActivity and CinemaBrowser into domain controllers, adds a 100% mobile viewport with 50% to 150% Page Zoom, caps GeckoView cache at 100MB to cut storage from 1.54GB to 514MB, suspends idle background sessions, and highlights active subtitle toggles in Gold and Crimson.",
     "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.11/LocalCinema-Manager-Phone-v1.0.0-beta.11.apk"
   },
   "builds": [
@@ -41,8 +41,8 @@
         "en": "This is the TV Version (Android TV)"
       },
       "downloaderLabel": {
-        "ar": "كود Downloader — هذه نسخة الشاشة",
-        "en": "Downloader Code — This is the TV Version"
+        "ar": "كود Downloader (نسخة الشاشة)",
+        "en": "Downloader Code (TV Version)"
       },
       "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.11/LocalCinema-TV-v1.0.0-beta.11.apk",
       "sizeBytes": 39258291,
@@ -59,13 +59,13 @@
         "sizeLabel": "37.44 MiB",
         "license": "GPL-3.0",
         "security": {
-          "ar": "آمن 100% — بلا أسرار مضمّنة (Zero Hardcoded Secrets)",
-          "en": "100% Safe — Zero Hardcoded Secrets"
+          "ar": "آمن 100%: بلا مفاتيح مضمّنة (Zero Hardcoded Secrets)",
+          "en": "100% Safe: Zero Hardcoded Secrets"
         }
       },
       "changelog": {
-        "en": "Local Cinema TV v1.0.0-beta.11: fixed synthetic MediaDB ID crash (900M+ positive IDs) in CinemaHomeFragment & CinemaWatchlistActivity, strict manual/on-change Trakt OAuth 2.0 PKCE & Phone sync, deduplicated subtitle overlays, and improved dual-subtitle positioning.",
-        "ar": "إصلاح معرّفات العناصر السحابية في الشاشة الرئيسية وقائمة المتابعة عبر اعتماد معرّفات موجبة (900M+) لمنع أي انهيار عند التشغيل، وقصر مزامنة Trakt PKCE والهاتف على التغيير أو الطلب اليدوي فقط، ومنع تكرار طبقات الترجمة مع تحسين موضع الترجمة المزدوجة."
+        "en": "Local Cinema TV v1.0.0-beta.11 uses positive 900M+ synthetic MediaDB IDs in CinemaHomeFragment and CinemaWatchlistActivity, runs Trakt OAuth 2.0 PKCE and Phone sync only on change or manual request, deduplicates subtitle overlays, and adjusts dual-subtitle spacing.",
+        "ar": "يعتمد معرّفات موجبة (900M+) للعناصر السحابية في الشاشة الرئيسية وقائمة المتابعة، ويقصر مزامنة Trakt PKCE والهاتف على التغيير أو الطلب اليدوي، ويمنع تكرار طبقات الترجمة مع ضبط موضع الترجمة المزدوجة."
       },
       "updateNotes": [
         {
@@ -75,28 +75,28 @@
           "latest": true,
           "whatsNew": {
             "ar": [
-              "إعادة هيكلة معمارية تطبيق الهاتف المرافق إلى وحدات تحكم مستقلة (TvHubActivity و CinemaBrowser): فصل وحدات الموسيقى والترجمة والمكتبة والاتصال وإعدادات المتصفح لضمان استقرار الأداء وسرعة الاستجابة.",
-              "ضبط أبعاد العرض الطبيعية 100% للمتصفح والتبديل النظيف بين وضعي الهاتف وسطح المكتب مع شريط تمرير دائم لتكبير الصفحة (Page Zoom من 50% إلى 150%) ومدير الإضافات الموحّد (BrowserExtensions).",
-              "حماية التخزين التلقائية وقسم Storage & Cache وتوفير البطارية: سقف كاش 100 MB لمحرك GeckoView، تنظيف تلقائي لملفات البث المؤقتة عند التشغيل وبعد انتهاء البث، زر Clear Cache بضغطة واحدة في الإعدادات، وإيقاف نشاط الجلسات والخوادم الخاملة في الخلفية.",
-              "تمييز بصري واضح باللونين الذهبي والأحمر القرمزي لأزرار تفعيل الترجمة الأساسية (Primary) والمزدوجة (Dual) والإيقاف (Off) مع منع تكرار طبقات الترجمة على الشاشة.",
-              "تثبيت معرّفات العناصر السحابية الموجبة (900M+) في CinemaHomeFragment و CinemaWatchlistActivity على التلفاز لمنع انهيار التشغيل، وقصر مزامنة Trakt PKCE على التغيير الفعلي أو الطلب اليدوي."
+              "فصل وحدات الموسيقى والترجمة والمكتبة والاتصال عن TvHubActivity، وتقسيم CinemaBrowser إلى CinemaBrowserSettingsSheet و CinemaBrowserMediaBridge.",
+              "فتح المتصفح بأبعاد الهاتف الطبيعية 100%، مع تبديل وضع سطح المكتب والهاتف، وتكبير الصفحة من 50% إلى 150%، ومدير الإضافات BrowserExtensions.",
+              "تحديد سقف كاش GeckoView عند 100MB وتنظيف ملفات البث المؤقتة عبر CinemaCacheManager، مما قلّص حجم تخزين التطبيق من 1.54GB إلى 514MB، مع إضافة زر Clear Cache في الإعدادات.",
+              "إيقاف نشاط جلسات المتصفح والخوادم المحلية عند الخمول لتوفير البطارية في الخلفية.",
+              "تلوين أزرار حالة الترجمة الأساسية والمزدوجة والإيقاف بالذهبي (#E5B94C) والأحمر القرمزي (#EF4444)، وتثبيت المعرّفات الموجبة (900M+) على التلفاز."
             ],
             "en": [
-              "Modular Architecture Refactor (TvHubActivity & CinemaBrowser Controllers): Extracted dedicated Music, Subtitles, Library, Connection, and Browser Settings/Media controllers for clean lifecycle ownership and crash-free stability.",
-              "Natural 100% Mobile Browser Viewport, Desktop/Mobile Mode & Persistent Page Zoom (50%–150%): Defaulted startup to a natural 100% mobile viewport, added clean Desktop/Mobile mode switching, a persistent 50%–150% Page Zoom slider, and a unified Extensions manager.",
-              "Automatic Storage Bloat Cleanup, Storage & Cache Settings & Idle Battery Optimizations: Enforced a 100 MB GeckoView disk cache cap, startup/post-cast temp stream purge, a new Storage & Cache section with safe one-tap Clear Cache in Settings, and background session/server suspension.",
-              "Clear Gold & Crimson Active Subtitle Toggles: High-contrast Gold (#E5B94C) and Crimson (#EF4444) active states for Primary, Dual, and Off subtitle toggles plus deduplicated TV subtitle overlays.",
-              "TV Synthetic MediaDB ID Fix & Strict On-Change Sync: Enforced positive 900M+ synthetic IDs in CinemaHomeFragment and CinemaWatchlistActivity and restricted Trakt OAuth 2.0 PKCE full syncs to explicit user actions or setting changes."
+              "Split TvHubActivity into dedicated Music, Subtitles, Library, and Connection controllers, and extracted CinemaBrowserSettingsSheet and CinemaBrowserMediaBridge from CinemaBrowser.",
+              "Set CinemaBrowser to a 100% mobile viewport by default, added Desktop and Mobile mode switching, a 50% to 150% Page Zoom slider, and the BrowserExtensions manager.",
+              "Capped GeckoView disk cache at 100MB and purged temporary cast files via CinemaCacheManager, reducing app storage from 1.54GB to 514MB, plus added a Clear Cache button in Settings.",
+              "Suspended background GeckoSession activity and stopped idle local media servers to save battery.",
+              "Added Gold (#E5B94C) and Crimson (#EF4444) active fills for Primary, Dual, and Off subtitle toggles, and enforced positive 900M+ synthetic MediaDB IDs on TV."
             ]
           },
           "improvements": {
             "ar": [
-              "تحسين تموضع الترجمة المزدوجة على شاشة التلفاز ومنع الوميض الناتج عن طلبات المزامنة الدورية المتكررة.",
-              "تنظيف الكاش والملفات المؤقتة بأمان تام دون المساس بحسابات المستخدم أو المفضلة أو حالة الاقتران."
+              "ضبط موضع الترجمة المزدوجة على شاشة التلفاز وإلغاء طلبات المزامنة الدورية المتكررة.",
+              "يمسح زر Clear Cache الملفات المؤقتة فقط ويحافظ على الحسابات والمفضلة والاقتران."
             ],
             "en": [
-              "Refined dual-subtitle vertical positioning on TV and eliminated UI flicker from redundant background sync polling.",
-              "Safe one-tap cache cleanup preserves all user logins, bookmarks, and paired TV credentials."
+              "Adjusted dual-subtitle vertical spacing on TV and removed periodic background sync polling.",
+              "Clear Cache removes temporary files while keeping logins, bookmarks, and paired TV credentials."
             ]
           }
         },
@@ -257,13 +257,13 @@
         "sizeLabel": "113.76 MiB",
         "license": "GPL-3.0",
         "security": {
-          "ar": "آمن 100% — بلا أسرار مضمّنة (Zero Hardcoded Secrets)",
-          "en": "100% Safe — Zero Hardcoded Secrets"
+          "ar": "آمن 100%: بلا مفاتيح مضمّنة (Zero Hardcoded Secrets)",
+          "en": "100% Safe: Zero Hardcoded Secrets"
         }
       },
       "changelog": {
-        "en": "Local Cinema Manager v1.0.0-beta.11: modular controller architecture (TvHubActivity & CinemaBrowser), natural 100% mobile browser viewport with persistent 50%–150% Page Zoom slider & clean Desktop/Mobile switch, 100 MB GeckoView cache cap with one-tap Clear Cache in Settings & idle battery optimizations, and unmistakable Gold/Crimson active subtitle toggles.",
-        "ar": "إعادة هيكلة معمارية تطبيق الهاتف إلى وحدات تحكم مستقلة (TvHubActivity و CinemaBrowser)، أبعاد عرض طبيعية 100% للمتصفح مع تبديل سطح المكتب وشريط تكبير دائم (50%–150%)، سقف كاش 100 MB مع تنظيف تلقائي وقسم Storage & Cache بضغطة واحدة وتوفير البطارية في الخلفية، وأزرار حالة ترجمة ذهبية وقرمزية واضحة."
+        "en": "Local Cinema Manager v1.0.0-beta.11 splits TvHubActivity and CinemaBrowser into domain controllers, adds a 100% mobile viewport with 50% to 150% Page Zoom, caps GeckoView cache at 100MB to cut storage from 1.54GB to 514MB, suspends idle background sessions, and highlights active subtitle toggles in Gold and Crimson.",
+        "ar": "يفصل TvHubActivity و CinemaBrowser إلى وحدات تحكم مستقلة، ويضبط عرض المتصفح بنسبة 100% مع تكبير من 50% إلى 150%، ويحدد سقف الكاش عند 100MB لتقليص حجم التطبيق من 1.54GB إلى 514MB، ويوقف النشاط الخامل في الخلفية، ويلوّن أزرار الترجمة بالذهبي والأحمر القرمزي."
       },
       "updateNotes": [
         {
@@ -273,28 +273,28 @@
           "latest": true,
           "whatsNew": {
             "ar": [
-              "إعادة هيكلة معمارية تطبيق الهاتف إلى وحدات تحكم مستقلة (TvHubActivity و CinemaBrowser): فصل وحدات الموسيقى (TvHubMusicController) والترجمة (TvHubSubtitlesController) والمكتبة (TvHubLibraryController) والاتصال (TvHubConnectionController)، وتقسيم المتصفح إلى CinemaBrowserSettingsSheet و CinemaBrowserMediaBridge.",
-              "ضبط أبعاد العرض الطبيعية 100% للمتصفح والتبديل السلس مع شريط تكبير دائم (50%–150%): فتح المتصفح بأبعاد الهاتف الطبيعية 100% عند بدء التشغيل، مع تبديل فوري ونظيف بين وضعي الهاتف وسطح المكتب، وشريط تمرير دائم لتكبير الصفحة (Page Zoom) ومدير الإضافات الموحّد (BrowserExtensions).",
-              "حماية التخزين التلقائية وقسم Storage & Cache بضغطة واحدة: تحديد سقف كاش GeckoView عند 100 MB، تنظيف تلقائي لملفات البث والترجمة المؤقتة عند بدء التشغيل وعند انتهاء البث عبر CinemaCacheManager، وإضافة قسم Storage & Cache في الإعدادات مع زر Clear Cache آمن يحافظ على الحسابات والمفضلة.",
-              "توفير استهلاك البطارية في الخلفية: إيقاف نشاط GeckoSession.setActive(false) عند الانتقال للخلفية، وجدولة فحص حالة التشغيل وإعادة الاتصال بذكاء حسب حالة الواجهة، وإيقاف خوادم البث المحلية تلقائياً عند الخمول.",
-              "تمييز بصري واضح باللونين الذهبي والأحمر القرمزي لأزرار حالة الترجمة: إضاءة عالية التباين لأزرار تفعيل الترجمة الأساسية (Primary) والمزدوجة (Dual) والإيقاف (Off) في TvHubSubtitlesController."
+              "فصل وحدات الموسيقى (TvHubMusicController) والترجمة (TvHubSubtitlesController) والمكتبة (TvHubLibraryController) والاتصال (TvHubConnectionController) عن TvHubActivity، وتقسيم المتصفح CinemaBrowser إلى CinemaBrowserSettingsSheet و CinemaBrowserMediaBridge.",
+              "فتح المتصفح بأبعاد الهاتف الطبيعية 100%، مع تبديل وضع الهاتف وسطح المكتب، وشريط تكبير الصفحة من 50% إلى 150%، ومدير الإضافات BrowserExtensions.",
+              "تحديد سقف كاش GeckoView عند 100MB وحذف ملفات البث والترجمة المؤقتة تلقائياً عبر CinemaCacheManager، مما خفّض المساحة المستهلكة من 1.54GB إلى 514MB، مع إضافة قسم Storage & Cache وزر Clear Cache في الإعدادات.",
+              "إيقاف نشاط GeckoSession.setActive(false) في الخلفية، ومواءمة مؤقتات الفحص مع حالة الشاشة، وإغلاق خوادم البث المحلية عند الخمول.",
+              "تلوين أزرار الترجمة الأساسية (Primary) والمزدوجة (Dual) والإيقاف (Off) في TvHubSubtitlesController بالذهبي (#E5B94C) والأحمر القرمزي (#EF4444)."
             ],
             "en": [
-              "Modular Architecture Refactor (TvHubActivity & CinemaBrowser Controllers): Extracted TvHubMusicController, TvHubSubtitlesController, TvHubLibraryController, TvHubConnectionController, CinemaBrowserSettingsSheet, and CinemaBrowserMediaBridge for clean, modular lifecycle management.",
-              "Natural 100% Mobile Browser Viewport, Desktop/Mobile Switching & Persistent Page Zoom (50%–150%): Defaulted CinemaBrowser startup to a natural 100% mobile viewport, added clean Desktop/Mobile mode switching, a persistent 50%–150% Page Zoom slider, and a unified Extensions manager (BrowserExtensions).",
-              "Automatic Storage Bloat Cleanup & One-Tap Clear Cache in Settings: Enforced a 100 MB GeckoView disk cache cap with startup/post-cast temp stream purge via CinemaCacheManager, and added a Storage & Cache section in Settings with a safe one-tap Clear Cache button preserving logins and bookmarks.",
-              "Idle Background Battery Optimizations: Suspends GeckoSession.setActive(false) when backgrounded, adapts playbackPoll and reconnect timers to foreground visibility, and shuts down idle local media servers when not casting.",
-              "Clear Gold & Crimson Active States for Subtitle Toggles: Upgraded Primary, Dual, and Off subtitle toggle buttons in TvHubSubtitlesController with high-contrast Gold (#E5B94C) and Crimson (#EF4444) active fills and borders."
+              "Extracted TvHubMusicController, TvHubSubtitlesController, TvHubLibraryController, and TvHubConnectionController from TvHubActivity, and split CinemaBrowser into CinemaBrowserSettingsSheet and CinemaBrowserMediaBridge.",
+              "Set CinemaBrowser startup to a 100% mobile viewport, added Desktop and Mobile mode switching, a 50% to 150% Page Zoom slider, and the BrowserExtensions manager.",
+              "Capped GeckoView disk cache at 100MB and purged temporary cast files via CinemaCacheManager, reducing app storage from 1.54GB to 514MB, and added a Storage & Cache section with a Clear Cache button in Settings.",
+              "Called GeckoSession.setActive(false) in the background, tied playbackPoll and reconnect timers to foreground state, and stopped idle local media servers.",
+              "Updated Primary, Dual, and Off subtitle buttons in TvHubSubtitlesController with Gold (#E5B94C) and Crimson (#EF4444) active fills and borders."
             ]
           },
           "improvements": {
             "ar": [
-              "قصر المزامنة الكاملة مع الشاشة و Trakt OAuth 2.0 PKCE على التغيير الفعلي في الإعدادات أو الضغط اليدوي لمنع الاستهلاك والوميض.",
-              "تحسين استقرار جلسات المتصفح والتنقل السريع بين التبويبات دون إعادة تحميل."
+              "تشغيل مزامنة الشاشة و Trakt OAuth 2.0 PKCE عند تعديل الإعدادات أو الضغط اليدوي فقط.",
+              "الحفاظ على جلسات المتصفح النشطة عند التنقل بين التبويبات دون إعادة تحميل."
             ],
             "en": [
-              "Enforced strict manual/on-change Phone-to-TV and Trakt OAuth 2.0 PKCE sync policy with zero background polling flicker.",
-              "Improved browser tab switching and persistent session stability across screen transitions."
+              "Runs Phone-to-TV and Trakt OAuth 2.0 PKCE sync only when settings change or on manual tap.",
+              "Keeps active browser sessions alive when switching tabs without reloading."
             ]
           }
         },

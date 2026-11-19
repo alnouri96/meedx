@@ -46,7 +46,7 @@ export function AppDetailPage({
           </div>
           <div className="semantic-row">
             <span className="badge-ok"><CheckCircle2 size={14} /> {t('مكتمل ومفحوص ✓', 'Verified & Audited ✓')}</span>
-            <span className="badge-ok"><ShieldCheck size={14} /> {t('آمن 100% — بلا أسرار مضمّنة', '100% Safe — Zero Hardcoded Secrets')}</span>
+            <span className="badge-ok"><ShieldCheck size={14} /> {t('آمن 100%: بلا مفاتيح مضمّنة', '100% Safe: Zero Hardcoded Secrets')}</span>
           </div>
         </div>
 
@@ -60,8 +60,8 @@ export function AppDetailPage({
               </div>
               <p>
                 {t(
-                  <>منظومة {L('MEEDX')} المتكاملة للسينما المنزلية: تطبيق شاشة {L('Android TV')} لعرض مكتبتك وإعلانات {L('16:9')} بدقة {L('4K / HDR')}، وتطبيق الهاتف المرافق ({L('TV Hub')}) للتحكم عن بُعد، بث التورنت والمباريات، وإدارة الإضافات والنسخ الاحتياطي.</>,
-                  'The complete MEEDX home cinema suite: an Android TV app for your 4K/HDR library & 16:9 Home Trailers, paired with the Phone companion (TV Hub) for remote control, torrent/live casting, addons, and cloud backup.'
+                  <>يتكوّن {L('Local Cinema')} من تطبيقين يعملان عبر الشبكة المحلية. يعرض تطبيق {L('Android TV')} مكتبتك بدقة {L('4K / HDR')} مع إعلانات {L('16:9')} وترجمة مزدوجة. ويدير تطبيق الهاتف ({L('TV Hub')}) الريموت، وبث التورنت والمباريات، والإضافات، والنسخ الاحتياطي.</>,
+                  'Local Cinema pairs two apps over your local network. The Android TV app plays your 4K/HDR library with 16:9 trailers and dual subtitles. The Phone app (TV Hub) handles remote control, torrent and live stream casting, addons, and backup.'
                 )}
               </p>
             </div>
@@ -69,14 +69,14 @@ export function AppDetailPage({
 
           <div className="semantic-alerts">
             <span className="badge-ok"><CheckCircle2 size={15} /> {t('متاح للتنزيل المباشر · Open Source GPL-3.0', 'Available for Direct Download · Open Source GPL-3.0')}</span>
-            <span className="badge-warn"><AlertTriangle size={15} /> {t('تنبيه مهم قبل التثبيت: فعّل «تثبيت التطبيقات من مصادر غير معروفة» على أندرويد والتلفاز.', 'Important Notice: Enable "Install from Unknown Sources" on Android and TV before installing.')}</span>
+            <span className="badge-warn"><AlertTriangle size={15} /> {t('قبل التثبيت، فعّل خيار «تثبيت التطبيقات من مصادر غير معروفة» على الهاتف والتلفاز.', 'Before installing, enable "Install from Unknown Sources" on your phone and TV.')}</span>
           </div>
 
           <div className="detail-dl-grid">
             {[tvApp, phoneApp].filter(Boolean).map((p) => {
               const isTv = p.device === 'tv';
               const versionBanner = p.versionBanner?.[lang] ?? (isTv ? t('هذه نسخة الشاشة (Android TV)', 'This is the TV Version (Android TV)') : t('هذه نسخة الهاتف (Android Phone)', 'This is the Phone Version (Android Phone)'));
-              const dlLabel = p.downloaderLabel?.[lang] ?? t('كود Downloader — هذه نسخة الشاشة', 'Downloader Code — This is the TV Version');
+              const dlLabel = p.downloaderLabel?.[lang] ?? t('كود Downloader (نسخة الشاشة)', 'Downloader Code (TV Version)');
               const dlCode = p.downloaderCode || '3213660';
               const shortUrl = p.shortUrl || 'meedx.pages.dev/tv';
               return (
@@ -125,8 +125,8 @@ export function AppDetailPage({
                     <button type="button" className="button primary" onClick={() => setModal({ id: 'download', file: p })}>
                       <span>
                         {isTv
-                          ? t(<>تنزيل {L('APK')} — هذه نسخة الشاشة ({L('Android TV')})</>, 'Download APK — This is the TV Version (Android TV)')
-                          : t(<>تنزيل {L('APK')} — هذه نسخة الهاتف ({L('Android Phone')})</>, 'Download APK — This is the Phone Version (Android Phone)')}
+                          ? t(<>تنزيل {L('APK')}: نسخة الشاشة ({L('Android TV')})</>, 'Download APK: TV Version (Android TV)')
+                          : t(<>تنزيل {L('APK')}: نسخة الهاتف ({L('Android Phone')})</>, 'Download APK: Phone Version (Android Phone)')}
                       </span>
                       <Download size={17} />
                     </button>
@@ -204,7 +204,7 @@ export function AppDetailPage({
           <div className="guide-head">
             <div>
               <h3>{t('التشغيل التلقائي وإدارة المفاتيح والإضافات', 'Zero-Account Mode & Phone Hub Management')}</h3>
-              <p>{t(<>يعمل التطبيق تلقائياً بلا أي مفاتيح أو حسابات، ويمكنك إدارة المفاتيح الاختيارية والإضافات بسهولة من تطبيق الهاتف عبر {L('TV Hub ← Connection')}.</>, 'The app works automatically with no keys or accounts required; optional API keys and addons are managed easily from the phone app via TV Hub → Connection.')}</p>
+              <p>{t(<>يعمل التطبيق فور التثبيت بلا حسابات أو مفاتيح. يمكنك إضافة المفاتيح الاختيارية والإضافات من الهاتف عبر {L('TV Hub ← Connection')}.</>, 'The app works right after install with no account or keys. You can manage optional API keys and addons from the phone in TV Hub → Connection.')}</p>
             </div>
             <a
               href="#addons"
@@ -220,11 +220,11 @@ export function AppDetailPage({
           <div className="guide-grid">
             <article className="guide-card">
               <div className="guide-title"><Film size={24} /><div><h4>{t('وضع التشغيل التلقائي بلا حساب', 'Zero-Account Instant Mode')}</h4><code dir="ltr">Zero-Config · Cinemeta / TVmaze / Jikan / Subsource</code></div><span className="signal" aria-label={t('مفعّل تلقائياً', 'Enabled automatically')} /></div>
-              <p>{t(<>تعمل البوسترات، التقييمات من مصادر متعددة، صفحات الممثلين وأعمالهم، إعلانات {L('16:9')}، والترجمة التلقائية فور التثبيت بدون أي تسجيل أو مفاتيح {L('API')}.</>, 'Posters, multi-source ratings, cast filmographies, 16:9 Home Trailers, and automatic subtitles work right after install without any login or API keys.')}</p>
+              <p>{t(<>يجلب التطبيق البوسترات، التقييمات المتعددة، صفحات الممثلين، إعلانات {L('16:9')}، والترجمة التلقائية فور التثبيت بلا تسجيل أو مفاتيح {L('API')}.</>, 'The app loads posters, multi-source ratings, cast pages, 16:9 trailers, and automatic subtitles after install without login or API keys.')}</p>
             </article>
             <article className="guide-card">
               <div className="guide-title"><KeyRound size={24} /><div><h4>{t(<>إدارة المفاتيح والإضافات من الهاتف ({L('TV Hub ← Connection')})</>, 'Manage Keys & Addons from Phone (TV Hub → Connection)')}</h4><code dir="ltr">API_KEYS_SYNC · ADDONS_SYNC · WATCH_SYNC</code></div></div>
-              <p>{t(<>عند إضافة مفاتيح اختيارية ({L('Trakt / Subsource / OpenSubtitles / TMDb')}) أو إضافات {L('Nuvio / Stremio')} على هاتفك، تُزامن تلقائياً مع الشاشة عبر الشبكة المحلية.</>, 'Optional API keys (Trakt / Subsource / OpenSubtitles / TMDb) and Nuvio / Stremio addons added on your phone sync automatically to TV over your local network.')}</p>
+              <p>{t(<>أضف مفاتيح {L('Trakt / Subsource / OpenSubtitles / TMDb')} أو إضافات {L('Nuvio / Stremio')} في الهاتف ليرسلها مباشرة إلى الشاشة عبر الشبكة المحلية.</>, 'Add Trakt, Subsource, OpenSubtitles, or TMDb keys and Nuvio or Stremio addons on your phone to push them to the TV over LAN.')}</p>
             </article>
           </div>
         </div>
@@ -236,7 +236,7 @@ export function AppDetailPage({
         <div className="section-head">
           <div>
             <h2>{t('سجل التحديثات الكامل (Patch Notes)', 'Full Patch Notes (v1.0.0-beta.6 → beta.11)')}</h2>
-            <p>{t('جميع الميزات والتحسينات المضافة منذ الإصدار السادس وحتى v1.0.0-beta.11 لتطبيق الشاشة والهاتف.', 'All features and improvements from v1.0.0-beta.6 through v1.0.0-beta.11.')}</p>
+            <p>{t('سجل التغييرات من الإصدار v1.0.0-beta.6 حتى v1.0.0-beta.11 لتطبيقي الشاشة والهاتف.', 'Changes from v1.0.0-beta.6 to v1.0.0-beta.11 for the TV and Phone apps.')}</p>
           </div>
           <span className="gh-ver-badge" dir="ltr">v{tvApp?.version}</span>
         </div>
