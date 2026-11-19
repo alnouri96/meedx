@@ -11,20 +11,20 @@
 - **مستودع GitHub العام:** `https://github.com/alnouri96/meedx`
 - **بروفايل GitHub للاستوديو:** `https://github.com/alnouri96` (مستودع `https://github.com/alnouri96/alnouri96`)
 - **صفحة الإصدارات (GitHub Releases):** `https://github.com/alnouri96/meedx/releases`
-- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.10`
+- **الإصدار الحالي المنشور:** `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.11`
 
 ---
 
 ## 2. الحالة الحالية | Current State
 
-### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.10` · `versionCode = 10`)
+### أ) الإصدار والملفات المنشورة (`v1.0.0-beta.11` · `versionCode = 11`)
 
 | التطبيق | الحزمة (`Package ID`) | الحجم (بايت) | بصمة `SHA-256` | رابط التحميل المباشر |
 | --- | --- | ---: | --- | --- |
-| `Local Cinema TV` | `com.meedx.localcinema.tv` | `39236227` | `e9cfc5cc7decdcc95ded1589f2e67f4183bf2e84d0919ee15ab7a7e091cd61bb` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.10/LocalCinema-TV-v1.0.0-beta.10.apk` |
-| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `119245738` | `4577706adb8b3a67de9330dec01e7bbbc36e5de896aa2101c62794570402a461` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.10/LocalCinema-Manager-Phone-v1.0.0-beta.10.apk` |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `39258291` | `7bd6acac4282320b43397e5ea59a9f5298494bf22c3c33e779a027a6be0f25df` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.11/LocalCinema-TV-v1.0.0-beta.11.apk` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `119290066` | `c9cbffc9c11c1663b800f9e2dc7d7bfcece5026003b6095446ce8aad7e0bebbe` | `https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.11/LocalCinema-Manager-Phone-v1.0.0-beta.11.apk` |
 
-- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.10\`
+- **المسار الأصلي لملفات APK (المصدر الوحيد):** `G:\Local Cinema\releases\v1.0.0-beta.11\`
 - **ملف تسليم التطبيقات المرجعي:** `G:\Local Cinema\AGENT_HANDOFF.md`
 
 ### ب) حالة الواجهة والمزايا المنشورة
@@ -79,3 +79,4 @@
 | `2026-11-16` | `40a3d32` | تحديث الموقع وتغذية `version.json` و`catalog.json` و`_redirects` و`README.md` إلى `v1.0.0-beta.8` (`versionCode = 8`) مع Patch Notes كاملة بالعربية والإنجليزية، قصر صندوق كود Downloader (`3213660` / `meedx.pages.dev/tv`) على بطاقة الشاشة فقط، نقل قسم `#setup-guide` («التشغيل التلقائي وإدارة المفاتيح والإضافات») من `/downloads` إلى `/apps/local-cinema` بدون أي تكرار، والفحص عبر Playwright والنشر على Cloudflare Pages (`https://23a80e03.meedx.pages.dev`). | لا يوجد |
 | `2026-11-17` | `main` | تحديث الموقع و`version.json` و`catalog.json` و`_redirects` و`README.md` و`AGENT_HANDOFF.md` إلى `v1.0.0-beta.9` (`versionCode = 9`) بالبصمات والأحجام الرسمية من `G:\Local Cinema\releases\v1.0.0-beta.9\checksums.txt`، ونشر Patch Notes كاملة بالعربية والإنجليزية، والتحقق من عدم وجود `AGENT_HANDOVER.md` مكرر، وفحص الواجهة بـ Playwright، والنشر على Cloudflare Pages (`https://5d320c17.meedx.pages.dev`) وGitHub. | لا يوجد |
 | `2026-11-18` | `main` | ترقية الموقع و`version.json` و`catalog.json` و`config.json` (تصحيح `traktClientId` إلى `...cygal7ZUBYSwSE`) و`_redirects` و`README.md` و`AGENT_HANDOFF.md` إلى `v1.0.0-beta.10` (`versionCode = 10`) بالبصمات والأحجام الرسمية من `G:\Local Cinema\releases\v1.0.0-beta.10\checksums.txt`، ونشر Patch Notes ثنائية اللغة الشاملة، والنشر على Cloudflare Pages (`https://4ee59850.meedx.pages.dev`) وGitHub Releases (`v1.0.0-beta.10`) مع تحقق `0` ملفات `.apk`/`.zip` في مستودع الويب. | لا يوجد |
+| `2026-11-19` | `main` | ترقية الموقع و`version.json` و`catalog.json` و`config.json` و`_redirects` و`README.md` و`AGENT_HANDOFF.md` إلى `v1.0.0-beta.11` (`versionCode = 11`) بالبصمات والأحجام الرسمية من `G:\Local Cinema\releases\v1.0.0-beta.11\checksums.txt`، ونشر GitHub Release `v1.0.0-beta.11` بتنسيق RTL عربي سليم (`<div dir="rtl" align="right">`) وPatch Notes ثنائية اللغة، مع التحقق من `0` ملفات `.apk`/`.zip` في مستودع الويب. | لا يوجد |

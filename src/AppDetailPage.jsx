@@ -235,13 +235,13 @@ export function AppDetailPage({
       <section className="wrap section" aria-label={t('سجل التحديثات الكامل', 'Full Patch Notes')}>
         <div className="section-head">
           <div>
-            <h2>{t('سجل التحديثات الكامل (Patch Notes)', 'Full Patch Notes (v1.0.0-beta.6 → beta.10)')}</h2>
-            <p>{t('جميع الميزات والتحسينات المضافة منذ الإصدار السادس وحتى v1.0.0-beta.10 لتطبيق الشاشة والهاتف.', 'All features and improvements from v1.0.0-beta.6 through v1.0.0-beta.10.')}</p>
+            <h2>{t('سجل التحديثات الكامل (Patch Notes)', 'Full Patch Notes (v1.0.0-beta.6 → beta.11)')}</h2>
+            <p>{t('جميع الميزات والتحسينات المضافة منذ الإصدار السادس وحتى v1.0.0-beta.11 لتطبيق الشاشة والهاتف.', 'All features and improvements from v1.0.0-beta.6 through v1.0.0-beta.11.')}</p>
           </div>
           <span className="gh-ver-badge" dir="ltr">v{tvApp?.version}</span>
         </div>
 
-        <div className="detail-notes-grid">
+        <div className="detail-notes-grid" dir={ar ? 'rtl' : 'ltr'}>
           {notes.map((release) => (
             <article key={release.version} className="dl-release-block">
               <div className="dl-release-head">

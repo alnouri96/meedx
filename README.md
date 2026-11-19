@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.10`)
+# MEEDX · Local Cinema (`v1.0.0-beta.11`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.10"><strong>⬇️ تحميل v1.0.0-beta.10 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.11"><strong>⬇️ تحميل v1.0.0-beta.11 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,11 +61,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.10` (`versionCode = 10`)
-- **إصلاح أبعاد الفيديو والدوران (`4K / HEVC` والعمودية)**: ضبط نسبة العرض والتدوير (`90° / 180° / 270°`) عبر `AspectRatioFrameLayout` بوضع `RESIZE_MODE_FIT` الافتراضي، مع الحفاظ على البث الخام (`Pass-through` + `Range`) من الهاتف.
-- **نظام الترجمة المتكامل على الشاشة والهاتف**: فك ضغط ملفات Subsource (`.zip` / `.gz`) وتصحيح الترميز التلقائي (`UTF-8` / `UTF-16` / `windows-1256`)، ونوافذ `Active & Stream Subtitles` و`Cast Subtitle Settings` (المزدوجة، التزامن `±100ms / ±500ms`، الحجم، اللون، الموضع) مع واجهة بطاقات داكنة ذهبية في `Subtitle Settings`.
-- **مركز الاتصال (`Phone = Master Hub` و`TV = Persistent Receiver`)**: 5 بطاقات واضحة في الهاتف، ربط `Trakt` بضغطة واحدة عبر OAuth 2.0 PKCE، مزامنة دائمة على الشاشة، ومزامنة قوائم `Watchlist` و`Watched` و`Continue Watching` ونقاط التوقف (`Scrobble`)، وحل انقطاع WebSocket `1008`.
-- **مشغل موسيقى مستقل، الريموت العائم والمتصفح المحسّن**: شاشة `Music Player` وشريط مصغر وتبديل حي بين الهاتف والشاشة، ومؤشرات `ADB`/`Web` في الريموت، واقتناص العنوان النظيف (`UPDATE_CAST_METADATA`) وإيقاف صوت التبويبات الخلفية بشارة `🔊`.
+### جديد الإصدار `v1.0.0-beta.11` (`versionCode = 11`)
+- **إعادة هيكلة معمارية تطبيق الهاتف إلى وحدات تحكم مستقلة (`TvHubActivity` و `CinemaBrowser`)**: فصل وحدات الموسيقى (`TvHubMusicController`) والترجمة (`TvHubSubtitlesController`) والمكتبة (`TvHubLibraryController`) والاتصال (`TvHubConnectionController`) وإعدادات المتصفح (`CinemaBrowserSettingsSheet` و `CinemaBrowserMediaBridge`).
+- **ضبط أبعاد العرض الطبيعية `100%` للمتصفح مع شريط تكبير دائم (`50%–150%`)**: فتح المتصفح بأبعاد الهاتف الطبيعية `100%` عند بدء التشغيل مع تبديل فوري ونظيف بين وضعي الهاتف وسطح المكتب، وشريط تكبير دائم (`Page Zoom`) ومدير الإضافات الموحّد (`BrowserExtensions`).
+- **حماية التخزين التلقائية، قسم `Storage & Cache` بضغطة واحدة، وتوفير البطارية في الخلفية**: تحديد سقف كاش `GeckoView` عند `100 MB`، تنظيف تلقائي لملفات البث المؤقتة عند بدء التشغيل وعند انتهاء البث، إضافة قسم `Storage & Cache` مع زر `Clear Cache` آمن في الإعدادات، وإيقاف نشاط الجلسات والخوادم المحلية عند الخمول.
+- **تمييز بصري واضح باللونين الذهبي والأحمر القرمزي لأزرار حالة الترجمة واستقرار التلفاز**: إضاءة عالية التباين لأزرار الترجمة الأساسية (`Primary`) والمزدوجة (`Dual`) والإيقاف (`Off`)، واعتماد معرّفات موجبة (`900M+`) للعناصر السحابية على التلفاز مع مزامنة `Trakt OAuth 2.0 PKCE` عند التغيير أو الطلب اليدوي فقط.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -92,11 +92,11 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.10` (`versionCode = 10`)
-- **4K / HEVC Aspect Ratio & Vertical Video Fix**: Accurate orientation & `PAR` handling for `90° / 180° / 270°` and high-res HEVC videos via `AspectRatioFrameLayout` (`RESIZE_MODE_FIT`), plus raw byte-range `Pass-through` streaming in `PhoneVideoServer`.
-- **Complete Subtitle Suite on TV & Phone**: Auto-extracts `.zip` / `.gz` Subsource downloads and fixes `UTF-8` / `UTF-16` / `windows-1256` encoding cleanly on TV; adds `Active & Stream Subtitles`, `Cast Subtitle Settings` (dual mode, `±100ms / ±500ms` sync, size, color, height), and luxury dark-gold `Subtitle Settings` cards.
-- **Phone Master Hub & Persistent TV Receiver**: Consolidated `Connection` into 5 clean cards, 1-tap `Trakt` OAuth 2.0 PKCE linking, persistent `FULL_SYNC_STATE` storage on TV, two-way `Watchlist` / `Watched` / `Continue Watching` / `Scrobble` sync, and fixed WebSocket `1008` contention.
-- **Dedicated Music Player, Status LED Remote & Browser Persistence**: Separate Music Player Sheet + Mini Bar with live `Phone` ↔ `TV` output toggle, floating remote `ADB`/`Web` status LEDs, clean live title sync (`UPDATE_CAST_METADATA`), background tab auto-mute with `🔊` badges, and disk-cached bookmark favicons.
+### What's New in `v1.0.0-beta.11` (`versionCode = 11`)
+- **Modular Phone Architecture (`TvHubActivity` & `CinemaBrowser` Controllers)**: Extracted dedicated controllers (`TvHubMusicController`, `TvHubSubtitlesController`, `TvHubLibraryController`, `TvHubConnectionController`, `CinemaBrowserSettingsSheet`, `CinemaBrowserMediaBridge`) for clean lifecycle management.
+- **Natural 100% Mobile Browser Viewport, Desktop/Mobile Mode & Persistent Page Zoom (`50%–150%`)**: Defaulted startup to a natural `100%` mobile viewport, added clean Desktop/Mobile mode switching, a persistent `50%–150%` Page Zoom slider, and a unified `Extensions` manager (`BrowserExtensions`).
+- **Automatic Storage Bloat Cleanup, `Storage & Cache` Settings & Idle Battery Optimizations**: Enforced a `100 MB` GeckoView disk cache cap, automatic startup/post-cast temp stream purge (`CinemaCacheManager`), a new `Storage & Cache` section with safe one-tap `Clear Cache` in Settings, and background session/server suspension.
+- **Clear Gold & Crimson Active Subtitle Toggles & TV Stability**: High-contrast Gold (`#E5B94C`) and Crimson (`#EF4444`) active states for Primary, Dual, and Off subtitle toggles, positive `900M+` synthetic MediaDB IDs on TV (`CinemaHomeFragment`, `CinemaWatchlistActivity`), and strict manual/on-change Trakt OAuth 2.0 PKCE sync.
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
@@ -121,12 +121,12 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ---
 
-## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.10`)
+## ملفات الإصدار وبصمات التحقق | Release Files & SHA-256 Checksums (`v1.0.0-beta.11`)
 
 | File | Package ID | Version (`code`) | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `LocalCinema-TV-v1.0.0-beta.10.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.10` (`10`) | `39,236,227` | `e9cfc5cc7decdcc95ded1589f2e67f4183bf2e84d0919ee15ab7a7e091cd61bb` |
-| `LocalCinema-Manager-Phone-v1.0.0-beta.10.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.10` (`10`) | `119,245,738` | `4577706adb8b3a67de9330dec01e7bbbc36e5de896aa2101c62794570402a461` |
+| `LocalCinema-TV-v1.0.0-beta.11.apk` | `com.meedx.localcinema.tv` | `1.0.0-beta.11` (`11`) | `39,258,291` | `7bd6acac4282320b43397e5ea59a9f5298494bf22c3c33e779a027a6be0f25df` |
+| `LocalCinema-Manager-Phone-v1.0.0-beta.11.apk` | `com.meedx.localcinema.manager` | `1.0.0-beta.11` (`11`) | `119,290,066` | `c9cbffc9c11c1663b800f9e2dc7d7bfcece5026003b6095446ce8aad7e0bebbe` |
 
 > قارن بصمة `SHA-256` للملف الذي قمت بتحميله مع الجدول أعلاه قبل التثبيت. تم تدقيق الحزمتين للتأكد من خلوّهما من أي مفاتيح أو أسرار تاريخية.
 >
