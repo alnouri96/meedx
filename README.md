@@ -62,13 +62,13 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 ## العربية — مميزات المنظومة والإرشادات
 
 ### جديد الإصدار `v1.0.0-beta.12` (`versionCode = 12`)
-- يبدأ النقر على أي حلقة داخل صف الموسم تشغيلها مباشرة دون شاشة وسيطة، ويعود التركيز إلى بطاقة الحلقة نفسها عند الخروج.
-- يضيف مشغل الشاشة زري الحلقة السابقة والحلقة التالية أثناء عرض المسلسلات، ويعيد اختيار الترجمة تفعيل مؤقت الإخفاء التلقائي لواجهة المشغل.
+- يشغّل النقر على أي حلقة في صف الموسم الفيديو مباشرة دون شاشة وسيطة، ويعيد الخروج التركيز إلى بطاقة الحلقة نفسها.
+- يضيف مشغل الشاشة زري الحلقة السابقة والحلقة التالية أثناء عرض المسلسلات، ويعيد اختيار الترجمة تشغيل مؤقت إخفاء الواجهة التلقائي.
 - يجلب التركيز على بطاقة أي موسم إعلان الموسم أولاً مع بديل إعلان المسلسل، وتعرض بطاقات متابعة المشاهدة شارة الموسم والحلقة والوقت المتبقي في الهيدر العلوي.
-- يحفظ المشغل موضع التشغيل الدقيق بالملي ثانية كل خمس ثوانٍ وعند التقديم والترجيع والإيقاف والخروج، وتكتمل الأعمال عند نسبة 85% مع حماية الموضع المحلي من تقريب Trakt.
-- يجلب كاش الصور بيانات اللغتين العربية والإنجليزية في طلب واحد بسعة 200MB مع عرض فوري دون بطاقات سوداء، ويضيف الإعدادات صفحة التخزين والكاش.
-- أُصلحت محاذاة الواجهة العربية ومنع ظهور صف المواسم أسفل الحلقات عند التصفح يساراً، كما يحدد زر الخروج تلقائياً في نافذة التأكيد.
-- يجمع تطبيق الهاتف الترجمات المدمجة في زر واحد يظهر عند توفرها فقط ويستجيب السحب الأفقي على لوحة اللمس للتقديم والترجيع الفوري.
+- يحفظ المشغل موضع التشغيل بالملي ثانية كل 5 ثوانٍ وعند التقديم والترجيع والإيقاف والخروج، ويكمّل الأعمال عند 85% مع حماية الموضع المحلي من تقريب Trakt.
+- يجلب كاش الصور بيانات العربية والإنجليزية في طلب واحد بسعة 200MB دون بطاقات سوداء، ويضيف الإعدادات صفحة التخزين والكاش.
+- يضبط التطبيق محاذاة الواجهة العربية ويمنع ظهور صف المواسم أسفل الحلقات، كما يحدد زر الخروج تلقائياً في نافذة التأكيد.
+- يجمع تطبيق الهاتف الترجمات المدمجة في زر `Embedded Subtitles` واحد يظهر عند توفرها فقط، ويرسل السحب الأفقي على لوحة اللمس خطوات تقديم وترجيع بمقدار 10 أو 30 ثانية.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -96,13 +96,13 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 ## English — Ecosystem Features & Setup Guide
 
 ### What's New in `v1.0.0-beta.12` (`versionCode = 12`)
-- Selecting an episode in a season row starts playback directly without an intermediate dialog and restores focus to that card on exit.
-- In-player controls add Previous Episode and Next Episode buttons, and subtitle selection restarts the HUD auto-hide timer.
-- Season cards load season trailers first with show trailer fallback, while Continue Watching cards launch episodes directly with badges and remaining time.
-- Player services write exact millisecond positions every five seconds, after seeks, on pause, and on exit, auto-complete at 85%, and protect local resume timestamps from Trakt rounding.
-- Artwork loading fetches Arabic and English posters together in a 200MB HTTP disk cache with card-size decoding for zero blank cards, and Settings adds a Storage & Cache page.
-- RTL alignment is fixed across detail views without revealing the season row below episodes, and Back closes the rail, returns to Home top, or focuses the Exit button.
-- Phone playback groups built-in tracks behind one Embedded Subtitles button and handles horizontal touchpad swipes as responsive 10s or 30s seeks.
+- Clicking an episode in a season row starts playback directly without an intermediate screen and restores focus to that card on exit.
+- In-player controls add Previous Episode and Next Episode buttons, and selecting a subtitle restarts the HUD auto-hide timer.
+- Season cards load the season trailer first and fall back to the show trailer, while Continue Watching cards start episodes directly with badges and remaining time.
+- Player services save exact millisecond positions every 5 seconds, after seeks, on pause, and on exit, auto-complete at 85%, and protect local resume timestamps from Trakt rounding.
+- Artwork loading fetches Arabic and English posters in one request inside a 200MB disk cache with card-size decoding and no blank cards, and Settings adds a Storage & Cache page.
+- The app aligns Arabic RTL detail views without revealing the season row below episodes, and Back closes the rail, returns to the top of Home, or focuses Exit.
+- Phone playback groups built-in tracks under one Embedded Subtitles button and sends immediate 10s or 30s horizontal touchpad seek steps.
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.

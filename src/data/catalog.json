@@ -43,8 +43,8 @@
       }
     },
     "changelog": {
-      "en": "Local Cinema TV v1.0.0-beta.12 starts season episodes directly on click and adds Previous and Next Episode player buttons, restarts HUD auto-hide after subtitle selection, saves exact millisecond resume timestamps every 5 seconds with 85% completion and Trakt rounding protection, caches bilingual Arabic and English posters in a 200MB disk cache, and adds Storage & Cache settings with clean RTL layout and Exit focus.",
-      "ar": "يشغّل حلقات الموسم مباشرة عند النقر مع أزرار الحلقة السابقة واللاحقة في المشغل وإخفاء الشريط بعد اختيار الترجمة، ويحفظ موضع الاستئناف بالملي ثانية كل 5 ثوانٍ مع إكمال تلقائي عند 85% وحماية الموضع المحلي من تقريب Trakt، ويوفر كاش بوسترات ثنائي اللغة بسعة 200MB وإعدادات التخزين والكاش مع ضبط محاذاة العربية وتحديد زر الخروج تلقائياً."
+      "en": "Local Cinema TV v1.0.0-beta.12 starts episodes directly on click and adds Previous and Next Episode buttons. It restarts HUD auto-hide after subtitle selection, saves exact millisecond resume timestamps every 5 seconds, and marks items watched at 85%. It also caches bilingual posters in a 200MB disk cache, adds Storage & Cache settings, aligns Arabic RTL screens, and focuses Exit.",
+      "ar": "يشغّل تطبيق الشاشة حلقات الموسم مباشرة عند النقر ويضيف زري الحلقة السابقة والحلقة التالية. يحفظ المشغل موضع الاستئناف بالملي ثانية كل 5 ثوانٍ مع إكمال تلقائي عند 85% وحماية الموضع المحلي من تقريب Trakt. يوفّر التطبيق كاش بوسترات ثنائي اللغة بسعة 200MB وصفحة التخزين والكاش مع ضبط محاذاة العربية وتحديد زر الخروج."
     },
     "updateNotes": [
       {
@@ -54,30 +54,30 @@
         "latest": true,
         "whatsNew": {
           "ar": [
-            "يبدأ النقر على أي حلقة داخل صف الموسم تشغيلها مباشرة دون شاشة وسيطة، ويعود التركيز إلى بطاقة الحلقة نفسها عند الخروج.",
-            "يضيف مشغل الشاشة زري الحلقة السابقة والحلقة التالية أثناء عرض المسلسلات، ويعيد اختيار الترجمة تفعيل مؤقت الإخفاء التلقائي لواجهة المشغل.",
-            "يجلب التركيز على بطاقة أي موسم إعلان الموسم أولاً، ويعتمد إعلان المسلسل بديلاً تلقائياً عند غياب إعلان خاص بالموسم.",
-            "تعرض بطاقات متابعة المشاهدة شارة الموسم والحلقة وتعمل مباشرة، مع إظهار اسم المسلسل واسم الحلقة والوقت المتبقي في الهيدر العلوي.",
-            "يحفظ المشغل موضع التشغيل الدقيق بالملي ثانية كل خمس ثوانٍ وعند التقديم والترجيع والإيقاف والخروج، وتكتمل الأعمال عند نسبة خمسة وثمانين في المئة مع حماية الموضع المحلي من تقريب Trakt.",
-            "يجلب كاش الصور بيانات اللغتين العربية والإنجليزية في طلب واحد بسعة مئتي ميجابايت مع عرض فوري دون بطاقات سوداء، ويضيف الإعدادات صفحة التخزين والكاش."
+            "يشغّل النقر على أي حلقة في صف الموسم الفيديو مباشرة دون شاشة وسيطة. يعيد الخروج التركيز إلى بطاقة الحلقة نفسها.",
+            "يضيف مشغل الشاشة زري الحلقة السابقة والحلقة التالية أثناء عرض المسلسلات. يعيد اختيار الترجمة تشغيل مؤقت إخفاء الواجهة التلقائي.",
+            "يجلب التركيز على بطاقة أي موسم إعلان الموسم أولاً، ويستخدم إعلان المسلسل عند غيابه. تخفي صفوف الحلقات زر الإعلان.",
+            "تعرض بطاقات متابعة المشاهدة شارة الموسم والحلقة وتبدأ التشغيل مباشرة. يظهر اسم المسلسل واسم الحلقة والوقت المتبقي في الهيدر العلوي.",
+            "يحفظ المشغل موضع التشغيل بالملي ثانية كل 5 ثوانٍ وعند التقديم والترجيع والإيقاف والخروج. يكمّل التطبيق الأعمال تلقائياً عند 85% ويحمي الموضع المحلي من تقريب Trakt.",
+            "يجلب كاش الصور بيانات العربية والإنجليزية في طلب واحد داخل كاش قرصي بسعة 200MB دون بطاقات سوداء. يضيف قسم الإعدادات صفحة التخزين والكاش."
           ],
           "en": [
-            "When you select an episode in a season row, playback starts directly without an intermediate screen and returns focus to that same card on exit.",
-            "In-player controls add Previous Episode and Next Episode buttons during series playback, and subtitle selection restarts the HUD auto-hide timer.",
-            "Season cards load season trailers first with automatic series trailer fallback, while episode rows hide trailer actions.",
-            "Continue Watching cards show season and episode badges and start episodes directly while displaying the show name, episode title, and remaining time.",
-            "Player services save exact millisecond positions every five seconds, after seeks, on pause, and on exit, auto-complete at 85%, and protect local resume timestamps from Trakt rounding.",
-            "Artwork loading fetches Arabic and English posters in one request with a 200MB disk cache and card-size decoding for zero blank cards, plus Settings adds a Storage & Cache page."
+            "Clicking an episode in a season row starts playback directly without an intermediate screen. Exiting returns focus to that same card.",
+            "In-player controls add Previous Episode and Next Episode buttons during series playback. Selecting a subtitle restarts the HUD auto-hide timer.",
+            "Season cards load the season trailer first and fall back to the series trailer. Episode rows hide trailer actions.",
+            "Continue Watching cards show season and episode badges and start playback directly. The top header displays the show name, episode title, and remaining time.",
+            "Player services save exact millisecond positions every 5 seconds, after seeks, on pause, and on exit. The app marks items watched at 85% and protects local resume timestamps from Trakt rounding.",
+            "Artwork loading fetches Arabic and English posters in one request inside a 200MB disk cache with card-size decoding and no blank cards. Settings adds a Storage & Cache page."
           ]
         },
         "improvements": {
           "ar": [
-            "أُصلحت محاذاة الواجهة العربية ومنع ظهور صف المواسم أسفل الحلقات عند التصفح يساراً.",
-            "يطوي زر الرجوع القائمة الجانبية أو يعود لأعلى الرئيسية أو يفتح نافذة التأكيد مع تحديد زر الخروج تلقائياً."
+            "يضبط التطبيق محاذاة الواجهة العربية في شاشات العرض والتفاصيل ويمنع ظهور صف المواسم أسفل الحلقات.",
+            "يطوي زر الرجوع القائمة الجانبية، أو يعود لأعلى الرئيسية، أو يفتح نافذة التأكيد مع تحديد زر الخروج تلقائياً."
           ],
           "en": [
-            "Aligned show, season, and movie detail views in Arabic RTL layout and blocked the season row from appearing below episodes.",
-            "Back closes the sidebar rail, returns to Home top, or opens the exit dialog with the Exit button pre-focused."
+            "The app aligns show, season, and movie screens in Arabic RTL layout and keeps the season row hidden below episodes.",
+            "The Back key closes the sidebar rail, returns to the top of Home, or opens the exit dialog with Exit focused."
           ]
         }
       },
@@ -275,8 +275,8 @@
       }
     },
     "changelog": {
-      "en": "Local Cinema Manager v1.0.0-beta.12 groups built-in tracks behind one Embedded Subtitles button with a scrollable primary and dual picker, and sends immediate 10s or 30s horizontal touchpad seek steps with light haptic feedback while canceling long-press hold on finger movement.",
-      "ar": "يجمع مسارات الترجمة المدمجة في زر واحد يفتح نافذة مستقلة للاختيار الأساسي أو المزدوج عند توفرها فقط، ويحسن استجابة السحب الأفقي على لوحة اللمس للتقديم والترجيع الفوري بمقدار 10 أو 30 ثانية مع إلغاء الضغط المطوّل فور تحرك الإصبع."
+      "en": "Local Cinema Manager v1.0.0-beta.12 groups built-in tracks behind one Embedded Subtitles button with a scrollable primary and dual picker. Horizontal touchpad swipes send immediate 10s or 30s seek steps with light haptic feedback and cancel long-press holds on finger movement.",
+      "ar": "يجمع تطبيق الهاتف مسارات الترجمة المدمجة في زر Embedded Subtitles واحد يفتح قائمة للاختيار الأساسي والمزدوج عند توفرها. يرسل السحب الأفقي على لوحة اللمس خطوات تقديم وترجيع فورية بمقدار 10 أو 30 ثانية ويلغي الضغط المطوّل فور تحرك الإصبع."
     },
     "updateNotes": [
       {
@@ -286,20 +286,20 @@
         "latest": true,
         "whatsNew": {
           "ar": [
-            "يجمع تطبيق الهاتف مسارات الترجمة المدمجة في زر واحد يظهر عند توفرها فقط ويفتح قائمة مستقلة للترجمة الأساسية والمزدوجة.",
-            "يرسل السحب الأفقي على لوحة اللمس خطوات تقديم وترجيع فورية بمقدار عشر أو ثلاثين ثانية مع اهتزاز خفيف، ويلغي مؤقت الضغط المطوّل فور تحرك الإصبع مع بقاء الضغط الثابت لإرسال OK."
+            "يجمع تطبيق الهاتف مسارات الترجمة المدمجة في زر Embedded Subtitles واحد يظهر عند توفرها فقط. يفتح الزر قائمة قابلة للتمرير للترجمة الأساسية والمزدوجة.",
+            "يرسل السحب الأفقي على لوحة اللمس خطوات تقديم وترجيع فورية بمقدار 10 أو 30 ثانية مع اهتزاز خفيف. يلغي التطبيق الضغط المطوّل فور تحرك الإصبع ويبقي الضغط الثابت لإرسال OK."
           ],
           "en": [
-            "Phone playback groups built-in tracks behind one Embedded Subtitles button that shows only when tracks exist and opens a scrollable primary or dual picker.",
-            "Horizontal touchpad swipes send immediate 10-second or 30-second seek steps with light haptic feedback and cancel long-press hold detection on finger movement."
+            "Phone playback groups built-in tracks under one Embedded Subtitles button that appears only when tracks exist. The button opens a scrollable primary and dual picker.",
+            "Horizontal touchpad swipes send immediate 10s or 30s seek steps with light haptic feedback. Finger movement cancels long-press hold detection while a steady press still sends OK."
           ]
         },
         "improvements": {
           "ar": [
-            "توحيد عتبة الإكمال عند نسبة خمسة وثمانين في المئة بين تطبيق الهاتف والشاشة."
+            "يوحّد التطبيق عتبة الإكمال التلقائي عند 85% بين مزامنة الهاتف والشاشة."
           ],
           "en": [
-            "Unified the 85% auto-completion threshold between Phone and TV watch sync."
+            "Watch sync uses the same 85% auto-completion threshold on Phone and TV."
           ]
         }
       },
