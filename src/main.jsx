@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import {
   Menu, X, Download, Monitor, Smartphone, MessageSquare, Heart, ShieldCheck,
   Gamepad2, Terminal, ArrowUp, ArrowUpRight, CheckCircle2,
-  AlertTriangle, Puzzle, Wrench, Sparkles
+  AlertTriangle, Wrench, Sparkles
 } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/navigation';

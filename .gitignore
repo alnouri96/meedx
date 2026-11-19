@@ -1,11 +1,25 @@
+# Dependencies and build output
 node_modules/
 dist/
+
+# Local assets, backups, and verification outputs
 backups/
 verification/
 MEEDX_Assets/
-.env*
-*.apk
-*.zip
+
+# Tooling, Wrangler, and local agent state
 .wrangler/
 .agents/
-setup_meedx_assets.py
+.vite/
+
+# Environment and secrets
+.env*
+
+# Zero-binary policy (never track APKs or archives)
+*.apk
+*.zip
+
+# OS and log files
+.DS_Store
+Thumbs.db
+*.log
