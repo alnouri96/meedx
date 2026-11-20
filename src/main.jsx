@@ -55,7 +55,7 @@ function App() {
   const t = (a, e) => (ar ? a : e);
   const L = (s) => <bdi dir="ltr">{s}</bdi>;
   const catalog = siteConfig.downloads;
-  const releaseVersion = catalog[0]?.version ?? '1.0.0-beta.12';
+  const releaseVersion = catalog[0]?.version ?? '1.0.0-beta.13';
   const shots = screenshotGroups.map((group) => {
     const [titleAr, titleEn, descriptionAr, descriptionEn] = screenshotCopy[group.id] ?? [
       <>لقطة {L('Local Cinema')}</>,

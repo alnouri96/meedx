@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.12`)
+# MEEDX · Local Cinema (`v1.0.0-beta.13`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.12"><strong>⬇️ تحميل v1.0.0-beta.12 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.13"><strong>⬇️ تحميل v1.0.0-beta.13 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,14 +61,13 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.12` (`versionCode = 12`)
-- يشغّل النقر على أي حلقة في صف الموسم الفيديو مباشرة دون شاشة وسيطة، ويعيد الخروج التركيز إلى بطاقة الحلقة نفسها.
-- يضيف مشغل الشاشة زري الحلقة السابقة والحلقة التالية أثناء عرض المسلسلات، ويعيد اختيار الترجمة تشغيل مؤقت إخفاء الواجهة التلقائي.
-- يجلب التركيز على بطاقة أي موسم إعلان الموسم أولاً مع بديل إعلان المسلسل، وتعرض بطاقات متابعة المشاهدة شارة الموسم والحلقة والوقت المتبقي في الهيدر العلوي.
-- يحفظ المشغل موضع التشغيل بالملي ثانية كل 5 ثوانٍ وعند التقديم والترجيع والإيقاف والخروج، ويكمّل الأعمال عند 85% مع حماية الموضع المحلي من تقريب Trakt.
-- يجلب كاش الصور بيانات العربية والإنجليزية في طلب واحد بسعة 200MB دون بطاقات سوداء، ويضيف الإعدادات صفحة التخزين والكاش.
-- يضبط التطبيق محاذاة الواجهة العربية ويمنع ظهور صف المواسم أسفل الحلقات، كما يحدد زر الخروج تلقائياً في نافذة التأكيد.
-- يجمع تطبيق الهاتف الترجمات المدمجة في زر `Embedded Subtitles` واحد يظهر عند توفرها فقط، ويرسل السحب الأفقي على لوحة اللمس خطوات تقديم وترجيع بمقدار 10 أو 30 ثانية.
+### جديد الإصدار `v1.0.0-beta.13` (`versionCode = 13`)
+- تبني الشاشة الرئيسية صفوف المكتبة وترتّبها ديناميكياً حسب أسماء المجلدات المشاركة تحت الجذر (`Cartoon` و `Movies` و `OTHERS` و `Shows` وأي مجلد جديد) بنفس اسم المجلد الفعلي دون تقسيم `Shows` أو `Movies` إلى صفوف فرعية أو تكرارها.
+- يوحّد الفحص العميق المتكرر لمشاركات SMB المسارات بين عنوان `IP` واسم الجهاز `Hostname` لمنع تكرار المجلدات المفهرسة أو البطاقات أو الحلقات.
+- تدمج واجهة المسلسلات البطاقات التي تختلف بوجود سنة الإصدار مثل `(2022)` وتجمع جميع مواسم المسلسل وحلقاته في بطاقة وصفحة واحدة مع التحديث التلقائي فور انتهاء الفحص.
+- ينقل الضغط على أي بوستر موسم في تبويب `Show` التركيز مباشرة إلى الحلقة قيد المشاهدة أو الحلقة الأولى `E1` مع منع الاستدعاءات الخلفية من سرقة التركيز.
+- يختفي زر الترجمة `Subtitles` في تبويب `Show` وعند الوقوف على بطاقة بوستر الموسم الكامل (`Watch season`)، ويظهر فقط عند التركيز على بطاقة حلقة فردية.
+- تحافظ العودة إلى الشاشة الرئيسية على البوسترات في `0ms` عبر كاش ذاكرة بحجم 16MB وتمنع تصفح مشاركات SMB من إنشاء أي مجلدات `Movies` تلقائياً.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -95,14 +94,13 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.12` (`versionCode = 12`)
-- Clicking an episode in a season row starts playback directly without an intermediate screen and restores focus to that card on exit.
-- In-player controls add Previous Episode and Next Episode buttons, and selecting a subtitle restarts the HUD auto-hide timer.
-- Season cards load the season trailer first and fall back to the show trailer, while Continue Watching cards start episodes directly with badges and remaining time.
-- Player services save exact millisecond positions every 5 seconds, after seeks, on pause, and on exit, auto-complete at 85%, and protect local resume timestamps from Trakt rounding.
-- Artwork loading fetches Arabic and English posters in one request inside a 200MB disk cache with card-size decoding and no blank cards, and Settings adds a Storage & Cache page.
-- The app aligns Arabic RTL detail views without revealing the season row below episodes, and Back closes the rail, returns to the top of Home, or focuses Exit.
-- Phone playback groups built-in tracks under one Embedded Subtitles button and sends immediate 10s or 30s horizontal touchpad seek steps.
+### What's New in `v1.0.0-beta.13` (`versionCode = 13`)
+- Home builds and sorts library rows dynamically from each direct top-level shared folder (`Cartoon`, `Movies`, `OTHERS`, `Shows`, and any new folder) using the exact folder name without splitting `Shows` or `Movies` into per-series rows or duplicating rows.
+- Deep recursive SMB scanning unifies `IP` and `Hostname` paths so switching between server IP and computer name never duplicates indexed folders, cards, or episodes.
+- Series views merge duplicate cards differing by a year suffix like `(2022)` and combine all seasons and episodes into one card and show page with automatic refresh when scanning finishes.
+- Clicking a season poster in the `Show` tab switches directly to that season tab and focuses the in-progress episode or `E1` while blocking async callbacks from stealing focus.
+- The `Subtitles` button hides on the `Show` tab and on the full-season poster card (`Watch season`), and appears only when an individual episode card is focused.
+- Returning to Home keeps posters visible in `0ms` from a 16MB memory cache, and SMB browsing runs read-only without creating automatic `Movies` subfolders.
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.
