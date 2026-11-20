@@ -101,7 +101,7 @@ export function AddonsConnectionsSection({ t, L, copy }) {
       <div className="wrap section">
         <div className="section-head">
           <div>
-            <span className="sc-kicker"><CheckCircle2 size={15} /> {t('إصدار v1.0.0-beta.12 · مركز الاتصال وإدارة الإضافات', 'Release v1.0.0-beta.12 · Connection Hub & Addons')}</span>
+            <span className="sc-kicker"><CheckCircle2 size={15} /> {t('إصدار v1.0.0-beta.13 · مركز الاتصال وإدارة الإضافات', 'Release v1.0.0-beta.13 · Connection Hub & Addons')}</span>
             <h2>{t('الإضافات، التوصيلات ومفاتيح API والتعليمات', 'Plugins, Connections, APIs & Guides')}</h2>
             <p>{t('إضافات Nuvio وStremio، المزامنة الثنائية عبر الشبكة المحلية، حماية الشاشات (TCL وغيرها)، ودليل إنشاء مفاتيح API الاختيارية.', 'Nuvio & Stremio addons, two-way LAN watch sync, TV background protection, and optional API key creation guides.')}</p>
           </div>

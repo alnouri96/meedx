@@ -6,9 +6,9 @@
     "packageId": "com.meedx.localcinema.tv",
     "name": "Local Cinema TV",
     "available": true,
-    "version": "1.0.0-beta.12",
-    "versionCode": 12,
-    "releaseDate": "2026-11-19",
+    "version": "1.0.0-beta.13",
+    "versionCode": 13,
+    "releaseDate": "2026-11-20",
     "status": {
       "ar": "تجريبي · مفتوح المصدر",
       "en": "Beta · Open Source"
@@ -23,9 +23,9 @@
       "ar": "كود Downloader (نسخة الشاشة)",
       "en": "Downloader Code (TV Version)"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.12/LocalCinema-TV-v1.0.0-beta.12.apk",
-    "sizeBytes": 39285929,
-    "sha256": "71e5af2f7e1a0435741ede68ba1f32f51f3262c61df9f98a2c771bc54351fb86",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.13/LocalCinema-TV-v1.0.0-beta.13.apk",
+    "sizeBytes": 39298206,
+    "sha256": "7a03d125938432ebd4a884212e493b990163bc62cf6da9f761d32bfc0bd44225",
     "specs": {
       "platform": {
         "ar": "Android TV 7.0+",
@@ -35,7 +35,7 @@
         "ar": "Universal APK",
         "en": "Universal APK"
       },
-      "sizeLabel": "37.47 MiB",
+      "sizeLabel": "37.48 MiB",
       "license": "GPL-3.0",
       "security": {
         "ar": "آمن 100%: بلا مفاتيح مضمّنة (Zero Hardcoded Secrets)",
@@ -43,15 +43,45 @@
       }
     },
     "changelog": {
-      "en": "Local Cinema TV v1.0.0-beta.12 starts episodes directly on click and adds Previous and Next Episode buttons. It restarts HUD auto-hide after subtitle selection, saves exact millisecond resume timestamps every 5 seconds, and marks items watched at 85%. It also caches bilingual posters in a 200MB disk cache, adds Storage & Cache settings, aligns Arabic RTL screens, and focuses Exit.",
-      "ar": "يشغّل تطبيق الشاشة حلقات الموسم مباشرة عند النقر ويضيف زري الحلقة السابقة والحلقة التالية. يحفظ المشغل موضع الاستئناف بالملي ثانية كل 5 ثوانٍ مع إكمال تلقائي عند 85% وحماية الموضع المحلي من تقريب Trakt. يوفّر التطبيق كاش بوسترات ثنائي اللغة بسعة 200MB وصفحة التخزين والكاش مع ضبط محاذاة العربية وتحديد زر الخروج."
+      "en": "Local Cinema TV v1.0.0-beta.13 builds dynamic Home rows directly from top-level shared folders (Cartoon, Movies, OTHERS, Shows, and future folders) without duplicate rows. It unifies SMB IP and hostname paths across deep scans, merges multi-season series into one card and show page with live refresh, keeps posters in a 16MB memory cache on Back navigation, blocks automatic SMB folder creation, focuses episode E1 when opening a season card, and hides Subtitles on the full-season poster card.",
+      "ar": "يبني تطبيق الشاشة صفوف الرئيسية ويرتّبها ديناميكياً حسب أسماء المجلدات المشاركة (Cartoon و Movies و OTHERS و Shows وغيرها) دون تكرار. يوحّد التطبيق مسارات SMB بين IP و Hostname ويدمج مواسم المسلسلات في بطاقة وصفحة واحدة مع التحديث التلقائي فور انتهاء الفحص، ويخفي زر الترجمة عن بطاقة بوستر الموسم الكامل ويظهره للحلقات الفردية فقط."
     },
     "updateNotes": [
+      {
+        "version": "1.0.0-beta.13",
+        "versionCode": 13,
+        "date": "2026-11-20",
+        "latest": true,
+        "whatsNew": {
+          "ar": [
+            "تبني الشاشة الرئيسية صفوف المكتبة وترتّبها ديناميكياً حسب أسماء المجلدات المشاركة تحت الجذر (Cartoon و Movies و OTHERS و Shows وأي مجلد جديد) بنفس اسم المجلد الفعلي دون تقسيم Shows أو Movies إلى صفوف فرعية أو تكرارها.",
+            "يوحّد الفحص العميق المتكرر لمشاركات SMB المسارات بين عنوان IP واسم الجهاز Hostname لمنع تكرار المجلدات المفهرسة أو البطاقات أو الحلقات.",
+            "تدمج واجهة المسلسلات البطاقات التي تختلف بوجود سنة الإصدار مثل (2022) وتجمع جميع مواسم المسلسل وحلقاته في بطاقة وصفحة واحدة مع التحديث التلقائي فور انتهاء الفحص.",
+            "يختفي زر الترجمة Subtitles في تبويب Show وعند الوقوف على بطاقة بوستر الموسم الكامل (Watch season)، ويظهر فقط عند التركيز على بطاقة حلقة فردية."
+          ],
+          "en": [
+            "Home builds and sorts library rows dynamically from each direct top-level shared folder (Cartoon, Movies, OTHERS, Shows, and any new folder) using the exact folder name without splitting Shows or Movies into per-series rows or duplicating rows.",
+            "Deep recursive SMB scanning unifies IP and hostname paths so switching between server IP and computer name never duplicates indexed folders, cards, or episodes.",
+            "Series views merge duplicate cards differing by a year suffix like (2022) and combine all seasons and episodes into one card and show page with automatic refresh when scanning finishes.",
+            "The Subtitles button hides on the Show tab and on the full-season poster card (Watch season), and appears only when an individual episode card is focused."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "ينقل الضغط على بوستر الموسم في تبويب Show التركيز مباشرة إلى الحلقة قيد المشاهدة أو الحلقة الأولى E1 مع منع الاستدعاءات الخلفية من سرقة التركيز.",
+            "تحافظ العودة إلى الشاشة الرئيسية على البوسترات في 0ms عبر كاش ذاكرة بحجم 16MB وتمنع تصفح مشاركات SMB من إنشاء أي مجلدات Movies تلقائياً."
+          ],
+          "en": [
+            "Clicking a season poster in the Show tab switches to that season tab and focuses the in-progress episode or E1 while blocking async callbacks from stealing focus.",
+            "Returning to Home keeps posters visible in 0ms from a 16MB memory cache, and SMB browsing runs read-only without creating automatic Movies subfolders."
+          ]
+        }
+      },
       {
         "version": "1.0.0-beta.12",
         "versionCode": 12,
         "date": "2026-11-19",
-        "latest": true,
+        "latest": false,
         "whatsNew": {
           "ar": [
             "يشغّل النقر على أي حلقة في صف الموسم الفيديو مباشرة دون شاشة وسيطة. يعيد الخروج التركيز إلى بطاقة الحلقة نفسها.",
@@ -244,9 +274,9 @@
     "packageId": "com.meedx.localcinema.manager",
     "name": "Local Cinema Manager",
     "available": true,
-    "version": "1.0.0-beta.12",
-    "versionCode": 12,
-    "releaseDate": "2026-11-19",
+    "version": "1.0.0-beta.13",
+    "versionCode": 13,
+    "releaseDate": "2026-11-20",
     "status": {
       "ar": "تجريبي · مفتوح المصدر",
       "en": "Beta · Open Source"
@@ -255,9 +285,9 @@
       "ar": "هذه نسخة الهاتف (Android Phone)",
       "en": "This is the Phone Version (Android Phone)"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.12/LocalCinema-Manager-Phone-v1.0.0-beta.12.apk",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.13/LocalCinema-Manager-Phone-v1.0.0-beta.13.apk",
     "sizeBytes": 119292370,
-    "sha256": "4ec70f236058ee275571153726e8636815a633d5f38fd46c7e42f4768f101778",
+    "sha256": "bcb554eb1a1a4bc4e43f62cccb37b60e9d9a0bbc9205ad6c0e7ef37fa1cd4a92",
     "specs": {
       "platform": {
         "ar": "Android 7.0+",
@@ -275,15 +305,39 @@
       }
     },
     "changelog": {
-      "en": "Local Cinema Manager v1.0.0-beta.12 groups built-in tracks behind one Embedded Subtitles button with a scrollable primary and dual picker. Horizontal touchpad swipes send immediate 10s or 30s seek steps with light haptic feedback and cancel long-press holds on finger movement.",
-      "ar": "يجمع تطبيق الهاتف مسارات الترجمة المدمجة في زر Embedded Subtitles واحد يفتح قائمة للاختيار الأساسي والمزدوج عند توفرها. يرسل السحب الأفقي على لوحة اللمس خطوات تقديم وترجيع فورية بمقدار 10 أو 30 ثانية ويلغي الضغط المطوّل فور تحرك الإصبع."
+      "en": "Local Cinema Manager v1.0.0-beta.13 updates companion release metadata to versionCode 13 alongside the TV v1.0.0-beta.13 SMB library and series navigation upgrades while keeping grouped Embedded Subtitles and immediate 10s or 30s touchpad seek steps.",
+      "ar": "يرفع تطبيق الهاتف رقم الإصدار إلى 13 للتوافق الكامل مع تحديثات مكتبة SMB وتصفح المسلسلات في تطبيق الشاشة v1.0.0-beta.13 مع الحفاظ على زر الترجمة المدمجة الموحّد والتقديم والترجيع الفوري على لوحة اللمس."
     },
     "updateNotes": [
+      {
+        "version": "1.0.0-beta.13",
+        "versionCode": 13,
+        "date": "2026-11-20",
+        "latest": true,
+        "whatsNew": {
+          "ar": [
+            "يرفع التطبيق رقم الإصدار إلى 13 لمزامنة التحديثات بسلاسة مع إصدار الشاشة v1.0.0-beta.13 ومعرفات المسلسلات الموحّدة.",
+            "يحافظ المشغل على زر Embedded Subtitles الموحّد وخطوات التقديم والترجيع الفورية (10 أو 30 ثانية) عبر لوحة اللمس."
+          ],
+          "en": [
+            "Updates the companion app to versionCode 13 in lockstep with the TV v1.0.0-beta.13 SMB library and series navigation release.",
+            "Retains the unified Embedded Subtitles picker and immediate 10s or 30s horizontal touchpad seek steps."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "يتكامل مع فهرسة مسارات SMB الموحّدة بين IP و Hostname على الشاشة."
+          ],
+          "en": [
+            "Pairs cleanly with host-agnostic SMB IP and hostname library paths on TV."
+          ]
+        }
+      },
       {
         "version": "1.0.0-beta.12",
         "versionCode": 12,
         "date": "2026-11-19",
-        "latest": true,
+        "latest": false,
         "whatsNew": {
           "ar": [
             "يجمع تطبيق الهاتف مسارات الترجمة المدمجة في زر Embedded Subtitles واحد يظهر عند توفرها فقط. يفتح الزر قائمة قابلة للتمرير للترجمة الأساسية والمزدوجة.",
