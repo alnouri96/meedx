@@ -10,8 +10,8 @@
     "versionCode": 14,
     "releaseDate": "2026-11-21",
     "status": {
-      "ar": "تجريبي · مفتوح المصدر",
-      "en": "Beta · Open Source"
+      "ar": "نسخة تجريبية",
+      "en": "Beta"
     },
     "downloaderCode": "3213660",
     "shortUrl": "meedx.pages.dev/tv",
@@ -28,8 +28,8 @@
     "sha256": "d85e4f5438522cca6df82b40c829b728faa16b83690bf1e54e0c31a8c3f18ec0",
     "specs": {
       "platform": {
-        "ar": "Android TV 7.0+",
-        "en": "Android TV 7.0+"
+        "ar": "Android TV 6.0+",
+        "en": "Android TV 6.0+"
       },
       "architecture": {
         "ar": "armeabi-v7a",
@@ -38,8 +38,8 @@
       "sizeLabel": "37.51 MiB",
       "license": "GPL-3.0",
       "security": {
-        "ar": "آمن 100%: بلا مفاتيح مضمّنة (Zero Hardcoded Secrets)",
-        "en": "100% Safe: Zero Hardcoded Secrets"
+        "ar": "خضع الملف لفحص مفاتيح المزوّدين المعروفة.",
+        "en": "Checked for known provider credentials."
       }
     },
     "changelog": {
@@ -304,8 +304,8 @@
     "versionCode": 14,
     "releaseDate": "2026-11-21",
     "status": {
-      "ar": "تجريبي · مفتوح المصدر",
-      "en": "Beta · Open Source"
+      "ar": "نسخة تجريبية",
+      "en": "Beta"
     },
     "versionBanner": {
       "ar": "هذه نسخة الهاتف (Android Phone)",
@@ -316,8 +316,8 @@
     "sha256": "29a6e473eab5519f362e4a43fac059eb07495e36d126d31e47327d4aa16135a0",
     "specs": {
       "platform": {
-        "ar": "Android 7.0+",
-        "en": "Android 7.0+"
+        "ar": "Android 8.0+",
+        "en": "Android 8.0+"
       },
       "architecture": {
         "ar": "arm64-v8a",
@@ -326,8 +326,8 @@
       "sizeLabel": "113.78 MiB",
       "license": "GPL-3.0",
       "security": {
-        "ar": "آمن 100%: بلا مفاتيح مضمّنة (Zero Hardcoded Secrets)",
-        "en": "100% Safe: Zero Hardcoded Secrets"
+        "ar": "خضع الملف لفحص مفاتيح المزوّدين المعروفة.",
+        "en": "Checked for known provider credentials."
       }
     },
     "changelog": {

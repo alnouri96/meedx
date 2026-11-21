@@ -1,2 +1,14 @@
 /tv https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-TV-v1.0.0-beta.14.apk 302
 /phone https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-Manager-Phone-v1.0.0-beta.14.apk 302
+/addons /apps/local-cinema#addons 302
+/addons/ /apps/local-cinema#addons 302
+/apps/ /apps 301
+/apps/local-cinema/ /apps/local-cinema 301
+/downloads/ /downloads 301
+/software/ /software 301
+/services/ /services 301
+/apps / 200
+/apps/local-cinema / 200
+/downloads / 200
+/software / 200
+/services / 200

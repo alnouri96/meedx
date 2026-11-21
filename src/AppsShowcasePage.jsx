@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  ArrowUpRight, CheckCircle2, Download, Layers, Monitor, Smartphone,
-  ShieldCheck, Sparkles, Tv, Puzzle
-} from 'lucide-react';
+import { ArrowUpRight, Monitor, Puzzle, Smartphone } from 'lucide-react';
 
 export function LocalCinemaPoster({ t }) {
   return (
@@ -27,34 +24,19 @@ export function LocalCinemaPoster({ t }) {
   );
 }
 
-export function AppsShowcasePage({ t, L, navigate, version }) {
-  const tags = [
-    { icon: Tv, label: 'Android TV' },
-    { icon: Smartphone, label: 'Android' },
-    { icon: Sparkles, label: t('إعلانات 16:9 وبث مباشر', '16:9 Trailers & Live Cast') },
-    { icon: Layers, label: t('ترجمة تلقائية', 'Auto Subtitles') },
-    { icon: CheckCircle2, label: t('مجاني ومفتوح المصدر', 'Free & Open Source') },
-  ];
-
+export function AppsShowcasePage({ t, navigate, version }) {
   return (
     <section className="wrap section sc-animate" aria-label={t('التطبيقات', 'Apps')}>
       <div className="section-head">
         <div>
-          <span className="sc-kicker"><Sparkles size={15} /> {t('إصدارات MEEDX', 'MEEDX Releases')}</span>
           <h1>{t('التطبيقات', 'Apps')}</h1>
-          <p>{t('اختر التطبيق لعرض لقطات الشاشة، الإضافات، المواصفات، وسجل التحديثات.', 'Select an app to view screenshots, addons, technical specs, and patch notes.')}</p>
         </div>
-        <span className="badge-ok"><CheckCircle2 size={15} /> {t('مكتمل ومفحوص ✓', 'Verified & Ready ✓')}</span>
       </div>
 
       <article className="gh-app-card">
-        <a
-          href="/apps/local-cinema"
-          className="gh-app-media"
-          onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}
-        >
+        <div className="gh-app-media">
           <LocalCinemaPoster t={t} />
-        </a>
+        </div>
 
         <div className="gh-app-body">
           <div className="gh-app-top">
@@ -63,22 +45,9 @@ export function AppsShowcasePage({ t, L, navigate, version }) {
               <div className="gh-app-title-row">
                 <h2>Local Cinema</h2>
                 <span className="gh-ver-badge" dir="ltr">v{version}</span>
-                <span className="badge-ok"><ShieldCheck size={14} /> {t('متاح للتنزيل المباشر', 'Ready for Direct Download')}</span>
               </div>
-              <p>{t(<>يربط شاشة {L('Android TV')} بالهاتف لتشغيل ملفات {L('4K / HDR')} المحلية، وبث التورنت، وعرض إعلانات {L('16:9')}، والترجمة المزدوجة، وإضافات {L('Nuvio / Stremio')}.</>, 'Pairs Android TV and Phone for 4K/HDR local playback, torrent streaming, 16:9 trailers, dual subtitles, and Nuvio or Stremio addons.')}</p>
+              <p>{t('مشغّل مكتبة منزلية للتلفاز، مع تطبيق هاتف للتحكم والبث.', 'A home library player for Android TV with a companion app for remote control and casting.')}</p>
             </div>
-          </div>
-
-          <div className="gh-tag-list">
-            {tags.map((tg) => {
-              const Icon = tg.icon;
-              return (
-                <span key={tg.label} className="gh-tag">
-                  <Icon size={14} />
-                  <span>{tg.label}</span>
-                </span>
-              );
-            })}
           </div>
 
           <div className="gh-app-actions">
@@ -87,7 +56,7 @@ export function AppsShowcasePage({ t, L, navigate, version }) {
               className="button primary"
               onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}
             >
-              <span>{t('فتح صفحة التطبيق والإضافات', 'Open App Page & Addons')}</span>
+              <span>{t('عرض Local Cinema', 'View Local Cinema')}</span>
               <ArrowUpRight size={17} />
             </a>
             <a
@@ -97,14 +66,6 @@ export function AppsShowcasePage({ t, L, navigate, version }) {
             >
               <Puzzle size={17} />
               <span>{t('الإضافات ومفاتيح API', 'Addons & API Guides')}</span>
-            </a>
-            <a
-              href="/downloads"
-              className="button"
-              onClick={(e) => { e.preventDefault(); navigate('/downloads'); }}
-            >
-              <Download size={17} />
-              <span>{t('مركز التحميل المباشر', 'Direct Downloads')}</span>
             </a>
           </div>
         </div>

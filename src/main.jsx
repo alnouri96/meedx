@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
-  Menu, X, Download, Monitor, Smartphone, MessageSquare, Heart, ShieldCheck,
-  Gamepad2, Terminal, ArrowUp, ArrowUpRight, CheckCircle2,
-  AlertTriangle, Wrench, Sparkles
+  Menu, X, Download, Monitor, Smartphone, MessageSquare, Heart,
+  Gamepad2, Terminal, ArrowUp, ArrowUpRight, AlertTriangle, Wrench
 } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -17,7 +16,7 @@ import screenshotGroups from './data/screenshots.json';
 import { screenshotCopy } from './data/screenshot-copy';
 import { Panels } from './panels';
 import { GoldParticles } from './GoldParticles';
-import { AppsShowcasePage, LocalCinemaPoster } from './AppsShowcasePage';
+import { AppsShowcasePage } from './AppsShowcasePage';
 import { AppDetailPage } from './AppDetailPage';
 import { DownloadAppCard } from './DownloadAppCard';
 import './style.css';
@@ -33,14 +32,21 @@ const VALID_ROUTES = new Set([
   '/downloads',
 ]);
 
-function normalizeRoute(pathname, hash) {
-  const clean = pathname.replace(/\/+$/, '') || '/';
-  if (clean === '/addons' || hash === '#addons') return '/apps/local-cinema';
-  if (hash === '#apps') return '/apps';
-  if (hash === '#lab' || hash === '#software') return '/software';
-  if (hash === '#services') return '/services';
-  if (hash === '#downloads') return '/downloads';
-  return VALID_ROUTES.has(clean) ? clean : '/';
+const LEGACY_HOME_LINKS = new Map([
+  ['#apps', '/apps'],
+  ['#lab', '/software'],
+  ['#software', '/software'],
+  ['#services', '/services'],
+  ['#downloads', '/downloads'],
+]);
+
+function resolveLocation({ pathname, hash, search }) {
+  const path = pathname.replace(/\/+$/, '') || '/';
+  if (path === '/addons' || (path === '/' && hash === '#addons')) {
+    return { route: '/apps/local-cinema', hash: '#addons', search };
+  }
+  const legacyRoute = path === '/' ? LEGACY_HOME_LINKS.get(hash) : undefined;
+  return legacyRoute ? { route: legacyRoute, hash: '', search } : { route: path, hash, search };
 }
 
 function App() {
@@ -49,13 +55,13 @@ function App() {
   const [modal, setModal] = useState(null);
   const [slide, setSlide] = useState(0);
   const [toast, setToast] = useState('');
-  const [route, setRoute] = useState(() => normalizeRoute(window.location.pathname, window.location.hash));
+  const [{ route, hash }, setLocation] = useState(() => resolveLocation(window.location));
   const [showTop, setShowTop] = useState(false);
 
   const t = (a, e) => (ar ? a : e);
   const L = (s) => <bdi dir="ltr">{s}</bdi>;
   const catalog = siteConfig.downloads;
-  const releaseVersion = catalog[0]?.version ?? '1.0.0-beta.14';
+  const releaseVersion = catalog.find((build) => build.id === 'tv')?.version;
   const shots = screenshotGroups.map((group) => {
     const [titleAr, titleEn, descriptionAr, descriptionEn] = screenshotCopy[group.id] ?? [
       <>لقطة {L('Local Cinema')}</>,
@@ -84,47 +90,52 @@ function App() {
   }, [toast]);
 
   useEffect(() => {
-    const cleanPath = window.location.pathname.replace(/\/+$/, '');
-    if (cleanPath === '/tv' && catalog[0]?.url) {
-      window.location.replace(catalog[0].url);
+    const downloadDevice = { '/tv': 'tv', '/phone': 'phone' }[window.location.pathname.replace(/\/+$/, '')];
+    if (downloadDevice) {
+      const build = catalog.find((entry) => entry.id === downloadDevice);
+      if (build) window.location.replace(build.url);
       return;
     }
-    if (cleanPath === '/phone' && catalog[1]?.url) {
-      window.location.replace(catalog[1].url);
-      return;
+
+    function syncLocation() {
+      const next = resolveLocation(window.location);
+      const { pathname, search, hash } = window.location;
+      const canonicalUrl = next.route + next.search + next.hash;
+      if (canonicalUrl !== pathname + search + hash) window.history.replaceState({}, '', canonicalUrl);
+      setLocation(next);
     }
-    if (cleanPath === '/addons') {
-      window.history.replaceState({}, '', '/apps/local-cinema#addons');
-      setRoute('/apps/local-cinema');
-      setTimeout(() => document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' }), 80);
-    } else if (window.location.hash === '#addons') {
-      setTimeout(() => document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' }), 80);
-    } else if (window.location.hash === '#support') {
-      setModal({ id: 'support' });
-    }
-    const onPop = () => setRoute(normalizeRoute(window.location.pathname, window.location.hash));
+
+    syncLocation();
     const onScroll = () => setShowTop(window.scrollY > 320);
-    window.addEventListener('popstate', onPop);
+    window.addEventListener('popstate', syncLocation);
+    window.addEventListener('hashchange', syncLocation);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => {
-      window.removeEventListener('popstate', onPop);
+      window.removeEventListener('popstate', syncLocation);
+      window.removeEventListener('hashchange', syncLocation);
       window.removeEventListener('scroll', onScroll);
     };
-  }, []);
+  }, [catalog]);
+
+  useEffect(() => {
+    if (hash === '#support') {
+      setModal({ id: 'support' });
+      return;
+    }
+    const anchor = hash && document.getElementById(hash.slice(1));
+    const frame = window.requestAnimationFrame(() => {
+      if (anchor) anchor.scrollIntoView();
+      else window.scrollTo({ top: 0, behavior: 'instant' });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [route, hash]);
 
   function navigate(rawPath) {
-    const [pathOnly, hashPart] = rawPath.split('#');
-    const hash = hashPart ? '#' + hashPart : '';
-    const target = normalizeRoute(pathOnly || '/', hash);
-    const fullUrl = target + (target === '/apps/local-cinema' && hash === '#addons' ? '#addons' : '');
-    window.history.pushState({}, '', fullUrl);
-    setRoute(target);
+    const next = resolveLocation(new URL(rawPath, window.location.origin));
+    window.history.pushState({}, '', next.route + next.search + next.hash);
+    setLocation(next);
     setMenu(false);
-    if (hash === '#addons') {
-      setTimeout(() => document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' }), 60);
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    if (next.route === route && !next.hash && !hash) window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   async function copy(value) {
@@ -146,7 +157,7 @@ function App() {
 
   const showcaseItems = [
     {
-      path: '/software',
+      path: '/software#gaming',
       icon: Gamepad2,
       badge: t('قسم الألعاب', 'Gaming Hub'),
       title: t('الألعاب وملفات التخصيص (Gaming & Tweaks)', 'Gaming & Tweaks'),
@@ -154,7 +165,7 @@ function App() {
       cta: t('استعرض قسم الألعاب', 'Explore Gaming'),
     },
     {
-      path: '/software',
+      path: '/software#pc-tools',
       icon: Terminal,
       badge: 'Windows · PowerShell · ADB',
       title: t('برامج وأدوات الحاسوب (PC Software)', 'PC Software & Scripts'),
@@ -210,7 +221,7 @@ function App() {
               </a>
             ))}
             <button onClick={() => { setMenu(false); contact(); }}>{t('اقتراح أو طلب عمل', 'Feedback or work request')}<MessageSquare size={18} /></button>
-            <button onClick={() => { setMenu(false); support(); }}>{t('زين كاش / كي كارد', 'ZainCash / QiCard')}<Heart size={18} /></button>
+            <button onClick={() => { setMenu(false); support(); }}>{t('دعم MEEDX', 'Support MEEDX')}<Heart size={18} /></button>
           </nav>
         )}
       </header>
@@ -221,9 +232,6 @@ function App() {
             <section className="wrap hero hero-with-particles">
               <GoldParticles />
               <div className="hero-copy">
-                <span className="badge-ok" style={{ marginBottom: 14 }}>
-                  <CheckCircle2 size={14} /> {t('استوديو MEEDX · مشاريع مفتوحة المصدر ✓', 'MEEDX Studio · Open-Source Projects ✓')}
-                </span>
                 <h1>{t('تطبيقات وألعاب،', 'Apps, games,')}<br />{t('وأدوات تقنية.', 'and tech tools.')}</h1>
                 <p>
                   {t(
@@ -242,7 +250,6 @@ function App() {
                 <div className="hero-meta">
                   <span className="signal" />
                   <code dir="ltr">Local Cinema v{releaseVersion}</code>
-                  <span className="badge-ok">{t('متاح للتنزيل المباشر ✓', 'Ready for Download ✓')}</span>
                 </div>
               </div>
               <div className="hardware">
@@ -256,49 +263,9 @@ function App() {
               <div className="wrap section">
                 <div className="section-head">
                   <div>
-                    <span className="sc-kicker"><Sparkles size={15} /> {t('أحدث الإصدارات والأقسام', 'Latest Releases & Sections')}</span>
-                    <h2>{t('التطبيقات والألعاب والبرامج', 'Apps, Games & Software')}</h2>
-                    <p>{t('إصدارات استوديو MEEDX مع روابط التحميل المباشر وأدلة التشغيل.', 'MEEDX Studio releases with direct download links and setup guides.')}</p>
+                    <h2>{t('البرامج والخدمات', 'Software and services')}</h2>
                   </div>
                 </div>
-
-                <article className="gh-app-card" style={{ marginBottom: 22 }}>
-                  <a
-                    href="/apps/local-cinema"
-                    className="gh-app-media"
-                    onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}
-                  >
-                    <LocalCinemaPoster t={t} />
-                  </a>
-                  <div className="gh-app-body">
-                    <div className="gh-app-top">
-                      <img src="/assets/icons/local-cinema-icon.png" alt="Local Cinema" className="gh-app-icon" />
-                      <div>
-                        <div className="gh-app-title-row">
-                          <h3>Local Cinema</h3>
-                          <span className="gh-ver-badge" dir="ltr">v{releaseVersion}</span>
-                          <span className="badge-ok"><CheckCircle2 size={13} /> {t('مكتمل ومفحوص ✓', 'Verified ✓')}</span>
-                        </div>
-                        <p>
-                          {t(
-                            <>يربط شاشة {L('Android TV')} بالهاتف لتشغيل الفيديو بدقة {L('4K / HDR')}، مع إعلانات {L('16:9')}، وبث التورنت والمباريات، والترجمة المزدوجة، وإضافات {L('Nuvio / Stremio')}.</>,
-                            'Pairs Android TV and Phone for 4K/HDR local playback, 16:9 trailers, torrent and live stream casting, dual subtitles, and Nuvio or Stremio addons.'
-                          )}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="gh-app-actions">
-                      <a href="/apps/local-cinema" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}>
-                        <span>{t('صفحة التطبيق والإضافات والتعليمات', 'App Page, Addons & Guides')}</span>
-                        <ArrowUpRight size={17} />
-                      </a>
-                      <a href="/downloads" className="button" onClick={(e) => { e.preventDefault(); navigate('/downloads'); }}>
-                        <Download size={17} />
-                        <span>{t('تنزيل APK المباشر', 'Direct APK Download')}</span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
 
                 <div className="hub-grid">
                   {showcaseItems.map((c) => {
@@ -327,7 +294,7 @@ function App() {
         )}
 
         {route === '/apps' && (
-          <AppsShowcasePage t={t} L={L} navigate={navigate} version={releaseVersion} />
+          <AppsShowcasePage t={t} navigate={navigate} version={releaseVersion} />
         )}
 
         {route === '/apps/local-cinema' && (
@@ -352,17 +319,16 @@ function App() {
           <section id="lab" className="wrap section sc-animate">
             <div className="section-head">
               <div>
-                <span className="sc-kicker"><Terminal size={15} /> {t('أدوات الحاسوب والألعاب', 'PC Tools & Gaming')}</span>
                 <h1>{t('البرامج والألعاب', 'Software & Gaming')}</h1>
                 <p>{t('أدوات الحاسوب وملفات ضبط الألعاب قيد الإعداد.', 'Upcoming PC utilities, scripts, and game configuration files.')}</p>
               </div>
             </div>
             <div className="lab">
               {[
-                [Gamepad2, 'Gaming & Tweaks', t('إعدادات التحكم وملفات تخصيص الألعاب.', 'Control layouts and game configurations.')],
-                [Terminal, 'PC Software & Scripts', t(<>أدوات {L('Windows')} و{L('PowerShell')} و{L('ADB')}.</>, 'Windows, PowerShell and ADB utilities.')],
-              ].map(([Icon, name, desc]) => (
-                <article key={name}>
+                ['gaming', Gamepad2, 'Gaming & Tweaks', t('إعدادات التحكم وملفات تخصيص الألعاب.', 'Control layouts and game configurations.')],
+                ['pc-tools', Terminal, 'PC Software & Scripts', t(<>أدوات {L('Windows')} و{L('PowerShell')} و{L('ADB')}.</>, 'Windows, PowerShell and ADB utilities.')],
+              ].map(([id, Icon, name, desc]) => (
+                <article key={id} id={id}>
                   <Icon size={33} />
                   <h3>{name}</h3>
                   <p>{desc}</p>
@@ -403,11 +369,16 @@ function App() {
                 <p>{t(<>ملفات النسخة التجريبية عبر {L('GitHub Releases')} وبصمات التحقق {L('SHA-256')}.</>, 'Beta release files from GitHub Releases and SHA-256 verification hashes.')}</p>
               </div>
               <div className="head-tools">
-                <span className="badge-ok"><CheckCircle2 size={14} /> {t('آمن 100%: بلا مفاتيح مضمّنة', '100% Safe: Zero Secrets')}</span>
                 <a className="link" href={siteConfig.githubReleases} target="_blank" rel="noopener noreferrer">
                   GitHub Releases <ArrowUpRight size={16} />
                 </a>
-                <ShieldCheck size={31} />
+                <a
+                  className="link"
+                  href="/apps/local-cinema#patch-notes"
+                  onClick={(event) => { event.preventDefault(); navigate('/apps/local-cinema#patch-notes'); }}
+                >
+                  {t('سجل التحديثات', 'Patch notes')}<ArrowUpRight size={16} />
+                </a>
               </div>
             </div>
 
@@ -422,7 +393,7 @@ function App() {
               {catalog.filter((p) => p.available).map((p) => (
                 <DownloadAppCard
                   key={p.id}
-                  p={p}
+                  build={p}
                   ar={ar}
                   t={t}
                   L={L}
@@ -432,6 +403,14 @@ function App() {
                 />
               ))}
             </div>
+          </section>
+        )}
+        {!VALID_ROUTES.has(route) && (
+          <section className="wrap section">
+            <h1>{t('الصفحة غير موجودة', 'Page not found')}</h1>
+            <a className="button" href="/" onClick={(event) => { event.preventDefault(); navigate('/'); }}>
+              {t('العودة إلى الرئيسية', 'Go to the home page')}
+            </a>
           </section>
         )}
       </main>
@@ -444,7 +423,7 @@ function App() {
           </div>
           <div>
             <h3>{t(<>ادعم تطوير {L('MEEDX')}</>, 'Support MEEDX development')}</h3>
-            <button className="link" onClick={support}>ZainCash / QiCard <Heart size={17} /></button>
+            <button className="link" onClick={support}>{t('تواصل بشأن الدعم', 'Contact about support')} <Heart size={17} /></button>
           </div>
           <button className="button" onClick={() => contact()}>{t('اقتراح أو طلب عمل', 'Feedback or work request')}<MessageSquare size={17} /></button>
         </div>
@@ -461,12 +440,7 @@ function App() {
         </button>
       )}
 
-      <div className="floating">
-        <button className="primary" onClick={support}><Heart size={17} />{t(<>ادعم {L('MEEDX')} • زين كاش / {L('Qi')}</>, 'Support MEEDX • ZainCash / Qi')}</button>
-        <button aria-label={t('نموذج تلجرام', 'Telegram form')} onClick={() => contact()}><MessageSquare size={20} /></button>
-      </div>
-
-      {modal && <Panels key={modal.id} modal={modal} setModal={setModal} close={() => setModal(null)} shots={shots} t={t} copy={copy} />}
+      {modal && <Panels key={modal.id} modal={modal} close={() => setModal(null)} shots={shots} t={t} />}
       <div className="toast" role="status">{toast}</div>
     </>
   );

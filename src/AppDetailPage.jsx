@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation, Pagination } from 'swiper/modules';
 import {
-  ArrowLeft, ArrowRight, AlertTriangle, CheckCircle2, Copy, Download,
-  Maximize2, MessageSquare, Monitor, ShieldCheck, Smartphone, Sparkles,
-  Wrench, Puzzle, Film, KeyRound, ArrowUpRight
+  ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, Download, Film,
+  KeyRound, Maximize2, MessageSquare, Puzzle, Sparkles, Wrench
 } from 'lucide-react';
-import { EquationPanel } from './EquationPanel';
 import { InteractiveShowcase } from './InteractiveShowcase';
 import { AddonsConnectionsSection } from './AddonsConnectionsSection';
 
@@ -14,10 +12,10 @@ export function AppDetailPage({
   ar, t, L, copy, navigate, catalog, shots, slide, setSlide, setModal, contact, label, image
 }) {
   const tvApp = catalog.find((p) => p.id === 'tv');
-  const phoneApp = catalog.find((p) => p.id === 'phone');
   const lang = ar ? 'ar' : 'en';
   const BackArrow = ar ? ArrowRight : ArrowLeft;
-  const notes = tvApp?.updateNotes || [];
+  const [notesDevice, setNotesDevice] = useState(tvApp.id);
+  const notes = catalog.find((build) => build.id === notesDevice).updateNotes ?? [];
 
   return (
     <div className="app-detail-page sc-animate">
@@ -33,20 +31,13 @@ export function AppDetailPage({
               <span>{t('العودة إلى التطبيقات', 'Back to Apps')}</span>
             </a>
             <a
-              href="#addons"
+              href="/apps/local-cinema#addons"
               className="button"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={(event) => { event.preventDefault(); navigate('/apps/local-cinema#addons'); }}
             >
               <Puzzle size={16} />
-              <span>{t('الإضافات والتوصيلات ومفاتيح API', 'Plugins, Connections & APIs')}</span>
+              <span>{t('دليل الإضافات', 'Add-on guide')}</span>
             </a>
-          </div>
-          <div className="semantic-row">
-            <span className="badge-ok"><CheckCircle2 size={14} /> {t('مكتمل ومفحوص ✓', 'Verified & Audited ✓')}</span>
-            <span className="badge-ok"><ShieldCheck size={14} /> {t('آمن 100%: بلا مفاتيح مضمّنة', '100% Safe: Zero Hardcoded Secrets')}</span>
           </div>
         </div>
 
@@ -60,84 +51,20 @@ export function AppDetailPage({
               </div>
               <p>
                 {t(
-                  <>يتكوّن {L('Local Cinema')} من تطبيقين يعملان عبر الشبكة المحلية. يعرض تطبيق {L('Android TV')} مكتبتك بدقة {L('4K / HDR')} مع إعلانات {L('16:9')} وترجمة مزدوجة. ويدير تطبيق الهاتف ({L('TV Hub')}) الريموت، وبث التورنت والمباريات، والإضافات، والنسخ الاحتياطي.</>,
-                  'Local Cinema pairs two apps over your local network. The Android TV app plays your 4K/HDR library with 16:9 trailers and dual subtitles. The Phone app (TV Hub) handles remote control, torrent and live stream casting, addons, and backup.'
+                  <>شغّل مكتبتك بدقة {L('4K / HDR')} على {L('Android TV')} مع ترجمة مزدوجة. استخدم هاتفك للتحكم بالشاشة وبث الفيديو عبر الشبكة المحلية.</>,
+                  'Play your 4K/HDR library with dual subtitles on Android TV. Use your phone to control the TV and cast video over your local network.'
                 )}
               </p>
             </div>
           </div>
 
-          <div className="semantic-alerts">
-            <span className="badge-ok"><CheckCircle2 size={15} /> {t('متاح للتنزيل المباشر · Open Source GPL-3.0', 'Available for Direct Download · Open Source GPL-3.0')}</span>
-            <span className="badge-warn"><AlertTriangle size={15} /> {t('قبل التثبيت، فعّل خيار «تثبيت التطبيقات من مصادر غير معروفة» على الهاتف والتلفاز.', 'Before installing, enable "Install from Unknown Sources" on your phone and TV.')}</span>
-          </div>
-
-          <div className="detail-dl-grid">
-            {[tvApp, phoneApp].filter(Boolean).map((p) => {
-              const isTv = p.device === 'tv';
-              const versionBanner = p.versionBanner?.[lang] ?? (isTv ? t('هذه نسخة الشاشة (Android TV)', 'This is the TV Version (Android TV)') : t('هذه نسخة الهاتف (Android Phone)', 'This is the Phone Version (Android Phone)'));
-              const dlLabel = p.downloaderLabel?.[lang] ?? t('كود Downloader (نسخة الشاشة)', 'Downloader Code (TV Version)');
-              const dlCode = p.downloaderCode || '3213660';
-              const shortUrl = p.shortUrl || 'meedx.pages.dev/tv';
-              return (
-                <div key={p.id} className="detail-dl-box">
-                  <div className={'device-explicit-banner ' + (isTv ? 'tv-banner' : 'phone-banner')}>
-                    {isTv ? <Monitor size={18} /> : <Smartphone size={18} />}
-                    <strong>{versionBanner}</strong>
-                  </div>
-                  <div className="file-title">
-                    {isTv ? <Monitor /> : <Smartphone />}
-                    <div>
-                      <h3>{p.name}</h3>
-                      <code dir="ltr">v{p.version} · {p.specs?.sizeLabel} · {p.specs?.platform[lang]} · {p.specs?.architecture[lang]}</code>
-                    </div>
-                    <span className="badge-ok">{t('مفعّل', 'Active')}</span>
-                  </div>
-                  {isTv && (
-                    <div className="downloader-code-box">
-                      <div className="downloader-code-meta">
-                        <span className="downloader-code-title">{dlLabel}</span>
-                        <div className="downloader-code-values">
-                          <code dir="ltr" className="downloader-num">{dlCode}</code>
-                          <span className="downloader-sep">·</span>
-                          <code dir="ltr" className="downloader-url">{shortUrl}</code>
-                        </div>
-                      </div>
-                      <div className="downloader-code-actions">
-                        <button type="button" className="button" onClick={() => copy(dlCode)}>
-                          <Copy size={14} />
-                          <span>{t('نسخ الكود', 'Copy Code')} <bdi dir="ltr">{dlCode}</bdi></span>
-                        </button>
-                        <button type="button" className="button" onClick={() => copy('https://' + shortUrl)}>
-                          <Copy size={14} />
-                          <span>{t('نسخ الرابط المختصر', 'Copy Short Link')}</span>
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                  <div className="hash">
-                    <code dir="ltr">SHA-256<br />{p.sha256}</code>
-                    <button type="button" onClick={() => copy(p.sha256)} aria-label={t('نسخ بصمة ', 'Copy checksum for ') + p.name}>
-                      <Copy size={17} />
-                    </button>
-                  </div>
-                  <div className="file-actions">
-                    <button type="button" className="button primary" onClick={() => setModal({ id: 'download', file: p })}>
-                      <span>
-                        {isTv
-                          ? t(<>تنزيل {L('APK')}: نسخة الشاشة ({L('Android TV')})</>, 'Download APK: TV Version (Android TV)')
-                          : t(<>تنزيل {L('APK')}: نسخة الهاتف ({L('Android Phone')})</>, 'Download APK: Phone Version (Android Phone)')}
-                      </span>
-                      <Download size={17} />
-                    </button>
-                    <button type="button" className="link" onClick={() => contact(p.name)}>
-                      {t('بلاغ أو اقتراح', 'Report or suggest')}
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <a
+            href="/downloads"
+            className="button primary"
+            onClick={(event) => { event.preventDefault(); navigate('/downloads'); }}
+          >
+            {t('تنزيل تطبيقَي التلفاز والهاتف', 'Get the TV and phone apps')}<Download size={17} />
+          </a>
         </article>
       </section>
 
@@ -194,8 +121,7 @@ export function AppDetailPage({
             </article>
           </div>
 
-          <EquationPanel t={t} />
-          <InteractiveShowcase t={t} L={L} copy={copy} />
+          <InteractiveShowcase t={t} L={L} />
         </div>
       </section>
 
@@ -206,16 +132,6 @@ export function AppDetailPage({
               <h3>{t('التشغيل التلقائي وإدارة المفاتيح والإضافات', 'Zero-Account Mode & Phone Hub Management')}</h3>
               <p>{t(<>يعمل التطبيق فور التثبيت بلا حسابات أو مفاتيح. يمكنك إضافة المفاتيح الاختيارية والإضافات من الهاتف عبر {L('TV Hub ← Connection')}.</>, 'The app works right after install with no account or keys. You can manage optional API keys and addons from the phone in TV Hub → Connection.')}</p>
             </div>
-            <a
-              href="#addons"
-              className="button primary"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('addons')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              {t('الانتقال إلى دليل الإضافات والتعليمات', 'Jump to Addons & Guides')}<ArrowUpRight size={16} />
-            </a>
           </div>
           <div className="guide-grid">
             <article className="guide-card">
@@ -232,13 +148,22 @@ export function AppDetailPage({
 
       <AddonsConnectionsSection t={t} L={L} copy={copy} />
 
-      <section className="wrap section" aria-label={t('سجل التحديثات الكامل', 'Full Patch Notes')}>
+      <section id="patch-notes" className="wrap section" aria-labelledby="patch-notes-title">
         <div className="section-head">
-          <div>
-            <h2>{t('سجل التحديثات الكامل (Patch Notes)', 'Full Patch Notes (v1.0.0-beta.6 → beta.13)')}</h2>
-            <p>{t('سجل التغييرات من الإصدار v1.0.0-beta.6 حتى v1.0.0-beta.14 لتطبيقي الشاشة والهاتف.', 'Changes from v1.0.0-beta.6 to v1.0.0-beta.14 for the TV and Phone apps.')}</p>
+          <h2 id="patch-notes-title">{t('سجل التحديثات', 'Patch notes')}</h2>
+          <div className="dl-tabs" role="group" aria-label={t('اختر التطبيق', 'Choose an app')}>
+            {catalog.map((build) => (
+              <button
+                key={build.id}
+                type="button"
+                className={'dl-tab' + (notesDevice === build.id ? ' active' : '')}
+                aria-pressed={notesDevice === build.id}
+                onClick={() => setNotesDevice(build.id)}
+              >
+                {build.device === 'tv' ? t('التلفاز', 'TV') : t('الهاتف', 'Phone')}
+              </button>
+            ))}
           </div>
-          <span className="gh-ver-badge" dir="ltr">v{tvApp?.version}</span>
         </div>
 
         <div className="detail-notes-grid" dir={ar ? 'rtl' : 'ltr'}>
@@ -246,7 +171,7 @@ export function AppDetailPage({
             <article key={release.version} className="dl-release-block">
               <div className="dl-release-head">
                 <code dir="ltr">v{release.version} (code {release.versionCode}) · {release.date}</code>
-                {release.latest && <span className="dl-latest-badge"><CheckCircle2 size={12} /> Latest</span>}
+                {release.latest && <span className="dl-latest-badge"><CheckCircle2 size={12} /> {t('الإصدار الحالي', 'Current release')}</span>}
               </div>
               {release.whatsNew && (
                 <div className="dl-note-group">

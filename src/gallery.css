@@ -93,15 +93,6 @@ dialog.lightbox:open {
   box-shadow:0 12px 36px #0009;
   pointer-events:none;
 }
-.zoom-stage[data-qr="true"] img {
-  background:#ffffff;
-  padding:20px;
-  border-radius:16px;
-  border:2px solid var(--color-gold);
-  min-width:min(70vw, 320px);
-  max-width:min(100%, 460px);
-  max-height:min(100%, 460px);
-}
 .zoom-controls {
   flex:0 0 auto;
   padding:10px 14px 4px;

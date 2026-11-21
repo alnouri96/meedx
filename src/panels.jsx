@@ -1,36 +1,125 @@
-import React,{useEffect,useRef,useState} from 'react';
-import {X,Copy,Download,ExternalLink,Maximize2} from 'lucide-react';
-import {ZoomViewer} from './ZoomViewer';
-import {siteConfig} from './config/siteConfig';
+import React, { useEffect, useRef, useState } from 'react';
+import { Download, ExternalLink, X } from 'lucide-react';
+import { siteConfig } from './config/siteConfig';
+import { ZoomViewer } from './ZoomViewer';
 
-export function Panels({modal,setModal,close,shots,t,copy}){
- const ref=useRef(null);
- const [device,setDevice]=useState(modal.device);
- const [index,setIndex]=useState(modal.index??0),[confirm,setConfirm]=useState(false);
- const [type,setType]=useState(modal.kind??'feature'),[topic,setTopic]=useState(modal.topic??''),[message,setMessage]=useState('');
- const types={feature:t('اقتراح ميزة','Feature suggestion'),bug:t('بلاغ عن مشكلة','Issue report'),service:t('طلب خدمة أو صيانة','Service request')};
- const telegram=siteConfig.telegramUsername.replace(/^@/,'');
- const suppliedLink=siteConfig.telegramLink?.trim().replace(/^(?:https?:\/\/)?t\.me\//i,'').replace(/\/$/,'');
- const validHandle=value=>/^[A-Za-z0-9_]{5,32}$/.test(value);
- const telegramTarget=validHandle(suppliedLink)?suppliedLink:validHandle(telegram)?telegram:'';
- const telegramReady=Boolean(telegramTarget);
- const payments=Object.entries(siteConfig.payments);
- useEffect(()=>{const before=document.activeElement;const el=ref.current;el.showModal();document.body.classList.add('locked');return()=>{el.close();document.body.classList.remove('locked');before?.focus()}},[]);
- function move(delta){setIndex(i=>(i+delta+shots.length)%shots.length)}
- const isLightbox=modal.id==='lightbox'||modal.id==='qr-lightbox';
- const title=modal.id==='support'?t(<>ادعم <bdi dir="ltr">MEEDX</bdi></>,'Support MEEDX'):modal.id==='telegram'?t('تواصل عبر تلجرام','Contact via Telegram'):modal.id==='qr-lightbox'?modal.qr.title:modal.id==='lightbox'?shots[index].name:t('تحميل النسخة التجريبية','Download the beta');
- return <dialog ref={ref} className={isLightbox?'lightbox':'sheet'} aria-labelledby="dialog-title" onCancel={e=>{e.preventDefault();close()}} onClick={e=>{if(e.target===ref.current){const r=ref.current.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close()}}} onKeyDown={e=>{if(modal.id==='lightbox' && e.target.tagName!=='INPUT'){if(e.key==='ArrowLeft')move(t(1,-1));if(e.key==='ArrowRight')move(t(-1,1))}}}>
-  <div className="dialog-head"><h2 id="dialog-title">{title}</h2><button autoFocus onClick={close} aria-label={t('إغلاق','Close')}><X/></button></div>
-  <div className="dialog-body">
-  {modal.id==='support'&&<><p>{payments.some(([,p])=>!p.configured)?t('الصور المعلّمة مؤقتة وغير صالحة للدفع.','Marked preview images are not valid for payment.'):t('امسح الرمز أو اضغط عليه للتكبير أو انسخ الرقم.','Scan the code, tap to zoom, or copy the account number.')}</p><div className="payments">{payments.map(([id,p])=>{
-    const name=id==='zaincash'?t('زين كاش','ZainCash'):t('كي كارد / الماستر','QiCard / Mastercard');
-    const openQr=()=>setModal({id:'qr-lightbox',qr:{src:p.qr,title:name,number:p.number}});
-    return <article key={id}><h3>{name}</h3><button type="button" className="qr-trigger" onClick={openQr} aria-label={t('تكبير باركود ','Zoom QR for ')+name}><img src={p.qr} alt={p.configured?t('رمز الدفع','Payment QR'):t('صورة مؤقتة غير قابلة للدفع','Non-payable preview image')} width="148" height="148"/></button><code dir="ltr">{p.number||t('الرقم غير مضاف','Number pending')}</code><div className="payment-actions"><button type="button" className="button" onClick={openQr}><Maximize2 size={15}/>{t('تكبير الباركود','Zoom QR')}</button><button className="button" onClick={()=>copy(p.number)} disabled={!p.configured||!p.number}>{t('نسخ الرقم','Copy number')}<Copy size={16}/></button></div></article>;
-  })}</div></>}
-  {modal.id==='telegram'&&<form onSubmit={e=>{e.preventDefault();if(!telegramReady)return;const text=['MEEDX',types[type],topic,message].join('\n');window.open('https://t.me/'+telegramTarget+'?text='+encodeURIComponent(text),'_blank','noopener,noreferrer')}}><label htmlFor="type">{t('نوع الرسالة','Message type')}</label><select id="type" value={type} onChange={e=>setType(e.target.value)}>{Object.entries(types).map(([id,label])=><option key={id} value={id}>{label}</option>)}</select><label htmlFor="topic">{t('القسم المعني','Topic')}</label><input id="topic" dir="auto" required maxLength={100} value={topic} onChange={e=>setTopic(e.target.value)}/><label htmlFor="message">{t('التفاصيل','Details')}</label><textarea id="message" dir="auto" rows={3} required maxLength={1200} value={message} onChange={e=>setMessage(e.target.value)}/>{!telegramReady&&<p className="notice">{t('سيُفعّل الزر عند إضافة معرّف تلجرام.','This button will be enabled when a Telegram handle is configured.')}</p>}<button className="button primary" disabled={!telegramReady}>{t('افتح المسودة في تلجرام','Open draft in Telegram')}<ExternalLink size={17}/></button></form>}
-  {modal.id==='lightbox'&&<ZoomViewer shots={shots} index={index} device={device} setDevice={setDevice} move={move} t={t}/>}
-  {modal.id==='qr-lightbox'&&<ZoomViewer qr={modal.qr} onBackToSupport={()=>setModal({id:'support'})} t={t}/>}
-  {modal.id==='download'&&<><h3>{modal.file.name}</h3><p>{t('قارن بصمة الملف بعد التنزيل مع البصمة في الكتالوج.','Compare the downloaded file checksum with the catalog.')}</p><label className="confirm"><input type="checkbox" checked={confirm} onChange={e=>setConfirm(e.target.checked)}/>{t(<>راجعت نوع ملف <bdi dir="ltr">APK</bdi></>,'I checked the APK variant')}</label>{confirm&&<a className="button primary" href={modal.file.url} rel="noopener noreferrer" download>{t(<>ابدأ تنزيل <bdi dir="ltr">APK</bdi></>,'Start APK download')}<Download size={17}/></a>}</>}
-  </div>
- </dialog>;
+function TelegramForm({ initialTopic, initialType, t }) {
+  const [topic, setTopic] = useState(initialTopic);
+  const [type, setType] = useState(initialType);
+  const [message, setMessage] = useState('');
+  const types = {
+    feature: t('اقتراح', 'Suggestion'),
+    bug: t('بلاغ عن مشكلة', 'Bug report'),
+    service: t('طلب خدمة', 'Service request'),
+  };
+
+  function openDraft(event) {
+    event.preventDefault();
+    const url = new URL(siteConfig.telegramLink);
+    url.searchParams.set('text', ['MEEDX', types[type], topic, message].join('\n'));
+    window.open(url.href, '_blank', 'noopener,noreferrer');
+  }
+
+  return (
+    <form onSubmit={openDraft}>
+      <label htmlFor="type">{t('نوع الرسالة', 'Message type')}</label>
+      <select id="type" value={type} onChange={(event) => setType(event.target.value)}>
+        {Object.entries(types).map(([id, label]) => <option key={id} value={id}>{label}</option>)}
+      </select>
+      <label htmlFor="topic">{t('الموضوع', 'Topic')}</label>
+      <input id="topic" dir="auto" required maxLength={100} value={topic} onChange={(event) => setTopic(event.target.value)} />
+      <label htmlFor="message">{t('التفاصيل', 'Details')}</label>
+      <textarea id="message" dir="auto" rows={3} required maxLength={1200} value={message} onChange={(event) => setMessage(event.target.value)} />
+      <button className="button primary">{t('افتح المسودة في تلجرام', 'Open draft in Telegram')}<ExternalLink size={17} /></button>
+    </form>
+  );
+}
+
+function DownloadConfirmation({ file, t }) {
+  const [confirm, setConfirm] = useState(false);
+  return (
+    <>
+      <h3>{file.name}</h3>
+      <p>{t('قارن بصمة الملف بعد التنزيل مع البصمة في مركز التحميل.', 'After download, compare the file checksum with the one in the Downloads hub.')}</p>
+      <label className="confirm">
+        <input type="checkbox" checked={confirm} onChange={(event) => setConfirm(event.target.checked)} />
+        {t('تحققت من نسخة التطبيق', 'I checked the APK variant')}
+      </label>
+      {confirm && (
+        <a className="button primary" href={file.url} rel="noopener noreferrer" download>
+          {t('ابدأ التنزيل', 'Start APK download')}<Download size={17} />
+        </a>
+      )}
+    </>
+  );
+}
+
+export function Panels({ modal, close, shots, t }) {
+  const ref = useRef(null);
+  const [index, setIndex] = useState(modal.index ?? 0);
+  const [device, setDevice] = useState(modal.device);
+  const isLightbox = modal.id === 'lightbox';
+  const titles = {
+    support: t('دعم MEEDX', 'Support MEEDX'),
+    telegram: t('تواصل عبر تلجرام', 'Contact via Telegram'),
+    download: t('تنزيل النسخة التجريبية', 'Download the beta'),
+  };
+
+  useEffect(() => {
+    const before = document.activeElement;
+    const dialog = ref.current;
+    dialog.showModal();
+    document.body.classList.add('locked');
+    return () => {
+      dialog.close();
+      document.body.classList.remove('locked');
+      before?.focus();
+    };
+  }, []);
+
+  function move(delta) {
+    setIndex((i) => (i + delta + shots.length) % shots.length);
+  }
+
+  function onBackdropClick(event) {
+    if (event.target !== ref.current) return;
+    const bounds = ref.current.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right ||
+        event.clientY < bounds.top || event.clientY > bounds.bottom) close();
+  }
+
+  function onKeyDown(event) {
+    if (!isLightbox || event.target.tagName === 'INPUT') return;
+    if (event.key === 'ArrowLeft') move(t(1, -1));
+    if (event.key === 'ArrowRight') move(t(-1, 1));
+  }
+
+  return (
+    <dialog
+      ref={ref}
+      className={isLightbox ? 'lightbox' : 'sheet'}
+      aria-labelledby="dialog-title"
+      onCancel={(event) => { event.preventDefault(); close(); }}
+      onClick={onBackdropClick}
+      onKeyDown={onKeyDown}
+    >
+      <div className="dialog-head">
+        <h2 id="dialog-title">{isLightbox ? shots[index].name : titles[modal.id]}</h2>
+        <button type="button" autoFocus onClick={close} aria-label={t('إغلاق', 'Close')}><X /></button>
+      </div>
+      <div className="dialog-body">
+        {modal.id === 'support' && (
+          <>
+            <p>{t('للاستفسار عن دعم المشروع، تواصل مع MEEDX عبر تلجرام.', 'Contact MEEDX on Telegram to ask about supporting the project.')}</p>
+            <a className="button primary" href={siteConfig.telegramLink} target="_blank" rel="noopener noreferrer">
+              {t('تواصل مع MEEDX', 'Contact MEEDX')}<ExternalLink size={17} />
+            </a>
+          </>
+        )}
+        {modal.id === 'telegram' && <TelegramForm initialTopic={modal.topic} initialType={modal.kind} t={t} />}
+        {isLightbox && <ZoomViewer shots={shots} index={index} device={device} setDevice={setDevice} move={move} t={t} />}
+        {modal.id === 'download' && <DownloadConfirmation file={modal.file} t={t} />}
+      </div>
+    </dialog>
+  );
 }

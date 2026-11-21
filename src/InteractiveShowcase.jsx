@@ -3,17 +3,16 @@ import {
   ShieldCheck, ShieldOff, Magnet, Cast, Radio, HardDrive, Server,
   Smartphone, Monitor, MousePointer2, Gamepad2, Download, Compass,
   PlayCircle, BookmarkCheck, Tv, FolderSync, Sparkles, Maximize2,
-  Wand2, SlidersHorizontal, Keyboard, Copy, ArrowLeftRight, Play,
-  Layers, CheckCircle2
+  Wand2, SlidersHorizontal, Keyboard, ArrowLeftRight, Play,
+  Layers
 } from 'lucide-react';
 
-export function InteractiveShowcase({ t, L, copy }) {
+export function InteractiveShowcase({ t, L }) {
   const [scenario, setScenario] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
   const [step, setStep] = useState(0);
   const [tab, setTab] = useState(0);
   const [torrentMode, setTorrentMode] = useState('stream');
-  const [activeBento, setActiveBento] = useState(0);
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -28,7 +27,7 @@ export function InteractiveShowcase({ t, L, copy }) {
       id: 'torrent',
       icon: ShieldCheck,
       label: t('متصفح مانع للإعلانات + تورنت فوري', 'Ad-Block Browser + Instant Torrent'),
-      phoneBadge: t('متصفح محمي + التقاط Magnet', 'Ad-Free Browser + Magnet Catch'),
+      phoneBadge: t('حجب الإعلانات والتقاط Magnet', 'Ad blocking and Magnet links'),
       bridgeLabel: t('بث فوري أو تحميل', 'Stream or Download'),
       tvBadge: t('تشغيل التورنت فوراً', 'Instant Torrent Playback'),
       phoneIcon: ShieldCheck,
@@ -36,7 +35,7 @@ export function InteractiveShowcase({ t, L, copy }) {
       tvIcon: Tv,
       desc: t(
         <>يتصفح الهاتف المواقع المحفوظة مع حجب الإعلانات والنوافذ المنبثقة. ويلتقط روابط {L('Magnet')} لإرسالها إلى الشاشة للبث الفوري أو التحميل المحلي.</>,
-        'Browse saved sites on your phone with ad and popup blocking. Tap any Magnet link to stream it on TV or download it locally.'
+        'Browse saved sites on your phone with ad and popup blocking. Open a supported Magnet link to stream it on TV or download it locally.'
       ),
     },
     {
@@ -50,8 +49,8 @@ export function InteractiveShowcase({ t, L, copy }) {
       bridgeIcon: Cast,
       tvIcon: Tv,
       desc: t(
-        'يكتشف متصفح الهاتف روابط البث المباشر والمباريات والفيديو، ويرسلها إلى شاشة التلفاز بضغطة واحدة.',
-        'The phone browser detects live streams, sports matches, and web videos, and casts them to your TV in one tap.'
+        'يلتقط متصفح الهاتف روابط الفيديو المباشرة لإرسالها إلى التلفاز. يتطلب تمرير البث المحمي تحديثاً لاحقاً.',
+        'The phone browser can cast direct video links to the TV. Relaying protected streams is planned for a future release.'
       ),
     },
     {
@@ -74,7 +73,7 @@ export function InteractiveShowcase({ t, L, copy }) {
       icon: Gamepad2,
       label: t('التحكم الذكي الكامل بالهاتف', 'Remote, Air Mouse & Gamepad'),
       phoneBadge: t('ريموت + ماوس + يد ألعاب', 'Remote + Air Mouse + Gamepad'),
-      bridgeLabel: t('أوامر لحظية بلا تأخير', 'Zero-Latency Control'),
+      bridgeLabel: t('تحكم عبر الشبكة المحلية', 'Local network control'),
       tvBadge: t('استجابة شاملة لكل التطبيقات', 'System-Wide TV Response'),
       phoneIcon: MousePointer2,
       bridgeIcon: ArrowLeftRight,
@@ -93,16 +92,15 @@ export function InteractiveShowcase({ t, L, copy }) {
       title: t('ثبّت التطبيقين', 'Install Both Apps'),
       summary: t(<>تطبيق الشاشة {L('Local Cinema TV')} وتطبيق الهاتف {L('Local Cinema Manager')}.</>, 'Install Local Cinema TV on your screen and Local Cinema Manager on your phone.'),
       body: t(
-        <>ثبّت {L('Local Cinema TV')} على الشاشة عبر كود {L('Downloader')} المباشر، وثبّت {L('Local Cinema Manager')} على الهاتف. التطبيقان مجانيان ومفتوحا المصدر.</>,
-        'Install Local Cinema TV on your TV with the Downloader code, and install Local Cinema Manager on your phone. Both apps are free and open source.'
+        <>نزّل تطبيق التلفاز وتطبيق الهاتف من مركز التحميل. تأكد من تثبيت الملف المخصص لكل جهاز.</>,
+        'Get both APKs from Downloads. Install the APK for each device.'
       ),
-      hasCode: true,
     },
     {
       num: '02',
       icon: Compass,
       title: t('تصفّح أو اربط مكتبتك', 'Browse or Link Library'),
-      summary: t('مواقع أفلام محفوظة بلا إعلانات، أو ربط الشبكة والهارد.', 'Ad-free saved movie sites, or link SMB shares and external drives.'),
+      summary: t('افتح موقعاً محفوظاً، أو اربط مجلد شبكة أو قرصاً خارجياً.', 'Browse a saved site, or link a network share or external drive.'),
       body: t(
         <>افتح المواقع المحفوظة في المتصفح المانع للإعلانات، أو اربط مجلدات {L('SMB')} وأقراص {L('USB')}، ثم اقرن الهاتف بالشاشة عبر رمز {L('QR')}.</>,
         'Open saved sites in the ad-blocking browser, or connect SMB folders and USB drives. Pair your phone with the TV using the QR code.'
@@ -114,8 +112,8 @@ export function InteractiveShowcase({ t, L, copy }) {
       title: t('ابثّ فوراً أو احتفظ بالجودة الخام', 'Stream Now or Keep Raw'),
       summary: t('بث فوري للتورنت والمباريات أو حفظ بجودة خام وترجمة تلقائية.', 'Instant torrent & live casting, or save raw quality with auto subtitles.'),
       body: t(
-        'أرسل رابط التورنت أو البث المباشر ليعمل فوراً على الشاشة، أو احفظ الملف في مكتبتك مع جلب البوسترات والتقييمات والترجمة تلقائياً.',
-        'Cast any torrent link or live stream straight to the TV, or save the file to your library with automatic posters, ratings, and subtitles.'
+        'ابثّ رابط تورنت أو رابط فيديو مباشر مدعوماً إلى الشاشة، أو احفظ الملف في مكتبتك.',
+        'Cast a supported torrent or direct stream to the TV. You can also save media to your library.'
       ),
     },
   ];
@@ -214,17 +212,6 @@ export function InteractiveShowcase({ t, L, copy }) {
     },
   ];
 
-  const bentoApps = [
-    { icon: ShieldCheck, name: t('متصفح مانع إعلانات', 'Ad-Block Browser'), role: t('تصفح نظيف للمواقع المحفوظة بلا نوافذ منبثقة.', 'Clean browsing on saved sites with zero popups.') },
-    { icon: Magnet, name: t('محمّل ومشغّل تورنت', 'Torrent Stream & Downloader'), role: t('التقاط Magnet وبث مباشر فوري أو تحميل كامل.', 'Auto Magnet catch for instant streaming or full download.') },
-    { icon: Play, name: 'Nova Video Player', role: t('مكتبة أفلام ذكية ببوسترات وملخصات تلقائية.', 'Smart movie library with automatic artwork and metadata.') },
-    { icon: Layers, name: 'Kodi', role: t('تشغيل الملفات الخام وقراءة الشبكة والهارد.', 'Raw media playback over local storage, USB, and SMB.') },
-    { icon: Server, name: 'Plex', role: t('تصفح منظم للمواسم والحلقات واستئناف المشاهدة.', 'Organized seasons, episodes, and seamless resume.') },
-    { icon: Cast, name: 'Web Video Caster', role: t('بث المباريات والبثوث المباشرة من المتصفح للشاشة.', 'Cast live matches and web streams to your TV in one tap.') },
-    { icon: MousePointer2, name: t('ريموت وماوس هوائي', 'Remote & Air Mouse'), role: t('لوحة لمس وماوس هوائي وكيبورد سريع للشاشة.', 'Touchpad, air mouse, and remote keyboard for TV.') },
-    { icon: Gamepad2, name: t('يد تحكم للألعاب', 'Wireless Gamepad'), role: t('ذراع ألعاب متكاملة عبر شاشة الهاتف.', 'Full wireless gamepad right on your phone screen.') },
-  ];
-
   const activeScenario = scenarios[scenario];
   const PhoneIcon = activeScenario.phoneIcon;
   const BridgeIcon = activeScenario.bridgeIcon;
@@ -237,7 +224,6 @@ export function InteractiveShowcase({ t, L, copy }) {
       <section className="sc-card sc-arch" aria-label={t('كيف يعمل التطبيقان معاً؟', 'How both apps work together')}>
         <div className="sc-head">
           <div>
-            <span className="sc-kicker"><CheckCircle2 size={15} /> {t('مجاني ومفتوح المصدر 100% · تطبيقان متكاملان', '100% Free & Open Source · Two Synchronized Apps')}</span>
             <h3>{t('كيف يعمل التطبيقان معاً؟', 'How do both apps work together?')}</h3>
           </div>
           <span className="sc-lan-pill">{t('هاتف + شاشة · شبكة محلية', 'Phone + TV · Local LAN')}</span>
@@ -331,18 +317,6 @@ export function InteractiveShowcase({ t, L, copy }) {
 
         <div key={activeStep.num} className="sc-step-detail sc-animate">
           <p>{activeStep.body}</p>
-          {activeStep.hasCode && (
-            <div className="sc-step-actions">
-              <button type="button" className="button primary" onClick={() => copy('3213660')}>
-                <Copy size={16} />
-                <span>{t('كود Downloader (نسخة الشاشة):', 'Downloader Code (TV Version):')} <bdi dir="ltr">3213660</bdi></span>
-              </button>
-              <button type="button" className="button" onClick={() => copy('https://meedx.pages.dev/tv')}>
-                <Copy size={16} />
-                <span>{t('رابط نسخة الشاشة:', 'TV Link:')} <bdi dir="ltr">meedx.pages.dev/tv</bdi></span>
-              </button>
-            </div>
-          )}
         </div>
       </section>
 
@@ -407,38 +381,6 @@ export function InteractiveShowcase({ t, L, copy }) {
         </div>
       </section>
 
-      <section className="sc-card sc-bento" aria-label={t('8 تطبيقات في منظومة واحدة', '8 apps in one suite')}>
-        <div className="sc-head">
-          <div>
-            <h3>{t('8 تطبيقات في منظومة واحدة', '8 apps replaced by one free suite')}</h3>
-            <p>{t('مرّر أو اضغط على أي أداة لمعرفة كيف تغنيك عنها المنظومة.', 'Hover or tap any tool to see what it replaces.')}</p>
-          </div>
-          <span className="sc-free-pill">{t('مجاني ومفتوح المصدر', 'Free & Open Source')}</span>
-        </div>
-
-        <div className="sc-bento-grid">
-          {bentoApps.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <button
-                key={item.name}
-                type="button"
-                className={'sc-bento-item' + (activeBento === idx ? ' active' : '')}
-                onMouseEnter={() => setActiveBento(idx)}
-                onClick={() => setActiveBento(idx)}
-              >
-                <span className="sc-gold-badge"><Icon size={19} /></span>
-                <strong>{item.name}</strong>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="sc-bento-status">
-          <strong>{bentoApps[activeBento].name}:</strong>{' '}
-          <span>{bentoApps[activeBento].role}</span>
-        </div>
-      </section>
     </div>
   );
 }
