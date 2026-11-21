@@ -24,10 +24,22 @@ With the preview running, run `npm run verify:ui` in a second terminal. It check
 ## Publish after approval
 
 1. Confirm the user authorized this version. Push the reviewed Android source and its source tag to the private repository when requested. Keep its APK distribution in the public repository.
-2. Create the public tag on the reviewed site commit. Check that GitHub has the tag. Publish the TV APK, Phone APK, and `checksums.txt` together with the approved notes. Set pre-release for betas. Use exact tagged APK URLs in the feed.
-3. Run `npm run verify -- --published`. It compares all three public asset names, byte sizes, and GitHub digests with the local originals. Keep the existing public files for all historical tags.
+2. Push the tag for the reviewed website commit. Publish the TV APK, Phone APK, and `checksums.txt` together with the approved notes. Set `--latest` and leave GitHub's Pre-release option off for the approved distribution build. A beta can retain its existing tag and product label.
+3. Run `npm run verify -- --published`. It checks GitHub Latest and compares the three asset names, byte sizes, and digests with the local originals. Keep the existing public files for historical tags.
 4. Push the verified site source to `main`. For the direct-upload Pages project, deploy the matching `dist` with `npx wrangler pages deploy dist --project-name=meedx --branch=main`. If the project uses Git integration, let the configured production build deploy that commit.
-5. Confirm the production site returns the intended `/api/version.json`. Check `/tv` and `/phone` as a visitor and compare their targets with the tag. Check `/apps/local-cinema#patch-notes`, `/apps/local-cinema#setup-guide`, and a 404 route. Record the deployed commit and URL in the Android handoff.
+5. Run `npm run verify -- --live`. It also checks the production OTA metadata and the `/tv` and `/phone` redirects. Check `/apps/local-cinema#patch-notes`, `/apps/local-cinema#setup-guide`, and a 404 route. Record the deployed commit and URL in the Android handoff.
+
+Use the approved tag, the audited APK paths, and the approved notes file in these commands:
+
+~~~powershell
+gh release create $tag $tvApk $phoneApk $checksums --repo alnouri96/meedx --title "Local Cinema $tag" --notes-file $notes --verify-tag --latest --prerelease=false
+~~~
+
+If the same approved release is already published as a pre-release, update its classification in place:
+
+~~~powershell
+gh release edit $tag --repo alnouri96/meedx --prerelease=false --latest
+~~~
 
 For website-only changes, use the current published pair for verification. Run the same local and live site checks. Keep the existing release metadata unless the task changes it.
 

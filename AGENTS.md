@@ -5,7 +5,7 @@ This public checkout serves the website, update feed, and download links for Loc
 ## Start here
 
 1. Use `git status --short --branch` to identify the checkout and any pending work.
-2. Read the Android handoff in `docs/CONTINUATION.md` in the sibling checkout. For release work, use [the website release procedure](docs/RELEASE.md).
+2. Read the Android handoff in `docs/CONTINUATION.md` in the sibling checkout. Verify the current tag with `gh api repos/alnouri96/meedx/releases/latest --jq .tag_name` before reporting release status. Follow [the website release procedure](docs/RELEASE.md) for publishing.
 3. Work locally unless the user requested publication. Before any site deployment, run `npm run verify`, `npm run build`, and the [Pages preview checks](docs/RELEASE.md#local-verification).
 
 ## Source map
@@ -24,6 +24,6 @@ This public checkout serves the website, update feed, and download links for Loc
 
 - Publish APKs to GitHub Releases in `alnouri96/meedx`. Use the Android checkout's audited archives as input. Keep APKs, ZIP archives, signing files, private source, and secrets out of this checkout.
 - Keep one site home for each action. `/apps/local-cinema` owns setup and patch notes. `/downloads` owns APKs and checksums. `/tv` and `/phone` are shortlinks to the current public APKs.
-- Use the catalog for version labels and preserve the OTA schema. Keep README and profile download links pointed to `/downloads`. Keep archived release details in the release records. A beta can be newer than GitHub's `Latest` full release.
+- Use the catalog for version labels and preserve the OTA schema. Keep README and profile download links pointed to `/downloads`. Publish each approved public app build as a regular GitHub release with `--latest`. Keep the beta suffix where applicable and run `npm run verify -- --live` after deployment.
 - Keep personal payment details, QR images, local paths, device identifiers, private notes, and raw screenshots out of the public working tree. Review images for pairing codes and personal content before adding them.
 - Use Local Cinema names in product copy. Preserve third-party notices where required. Apply `ste80-humanizer` to README, release notes, and site copy. Keep Arabic RTL and English LTR in UI checks.

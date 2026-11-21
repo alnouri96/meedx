@@ -7,9 +7,10 @@ import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
-assert.ok(args.every((arg) => arg === '--sync' || arg === '--published'), 'Use --sync to update local metadata or --published to check GitHub.');
+assert.ok(args.every((arg) => ['--sync', '--published', '--live'].includes(arg)), 'Supported options: --sync, --published, --live');
 const sync = args.includes('--sync');
-const checkPublished = args.includes('--published');
+const checkLive = args.includes('--live');
+const checkPublished = checkLive || args.includes('--published');
 const root = new URL('../', import.meta.url);
 const appRoot = process.env.LOCAL_CINEMA_ROOT || fileURLToPath(new URL('../../Local%20Cinema/', import.meta.url));
 const releasesRoot = process.env.LOCAL_CINEMA_RELEASES || resolve(appRoot, 'releases');
@@ -103,8 +104,8 @@ assert.ok(!publicFiles.some((path) => /\.(apk|zip|jks|keystore|p12)$/i.test(path
 assert.ok(!publicFiles.some((path) => /(^|[\\/])(?:qicard-qr|zaincash-qr|wallet_numbers)\.[^\\/]+$/i.test(path)), 'Review public payment assets before shipping');
 
 if (checkPublished) {
-  const release = JSON.parse(execFileSync('gh', ['api', 'repos/' + repository + '/releases/tags/' + tag], { encoding: 'utf8' }));
-  assert.equal(release.draft, false, 'GitHub release is still a draft');
+  const release = JSON.parse(execFileSync('gh', ['api', 'repos/' + repository + '/releases/latest'], { encoding: 'utf8' }));
+  assert.equal(release.tag_name, tag, 'GitHub Latest differs from the app manifest. Check the approved tag and its release classification.');
   const checksumBytes = await readFile(checksumsFile);
   expectedAssets.set('checksums.txt', {
     size: checksumBytes.length,
@@ -114,7 +115,34 @@ if (checkPublished) {
   for (const asset of release.assets) {
     assert.deepEqual({ size: asset.size, digest: asset.digest }, expectedAssets.get(asset.name), 'GitHub asset ' + asset.name);
   }
-  console.log('Verified GitHub release', tag);
+  console.log('Verified GitHub Latest and release assets', tag);
+}
+
+if (checkLive) {
+  const site = 'https://meedx.pages.dev';
+  const feedResponse = await fetch(site + '/api/version.json', { signal: AbortSignal.timeout(15000) });
+  assert.ok(feedResponse.ok, 'Live OTA feed returned HTTP ' + feedResponse.status);
+  const feed = await feedResponse.json();
+  for (const { id, url, version, versionCode, sizeBytes, sha256 } of builds) {
+    const { changelog: _changelog, ...distribution } = expectedFeed[id];
+    for (const [key, value] of Object.entries(distribution)) {
+      assert.equal(feed[id]?.[key], value, 'Live OTA ' + id + '.' + key);
+    }
+    const liveBuild = feed.builds?.find((build) => build.id === id);
+    assert.deepEqual(
+      [liveBuild?.url, liveBuild?.version, liveBuild?.versionCode, liveBuild?.sizeBytes, liveBuild?.sha256],
+      [url, version, versionCode, sizeBytes, sha256],
+      'Live catalog ' + id,
+    );
+    const download = await fetch(site + '/' + id, {
+      method: 'HEAD',
+      redirect: 'manual',
+      signal: AbortSignal.timeout(15000),
+    });
+    assert.equal(download.status, 302, 'Live /' + id + ' redirect status');
+    assert.equal(download.headers.get('location'), url, 'Live /' + id + ' APK URL');
+  }
+  console.log('Verified live OTA and APK redirects', tag);
 }
 
 if (sync) {
