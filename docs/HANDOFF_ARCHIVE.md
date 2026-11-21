@@ -35,3 +35,12 @@ This file archives the historical session logs previously stored in `AGENT_HANDO
 | `2026-11-19` | `main` | ترقية الموقع و`version.json` و`catalog.json` و`config.json` و`_redirects` و`README.md` و`AGENT_HANDOFF.md` إلى `v1.0.0-beta.11` (`versionCode = 11`) بالبصمات والأحجام الرسمية من `G:\Local Cinema\releases\v1.0.0-beta.11\checksums.txt`، ونشر GitHub Release `v1.0.0-beta.11` بتنسيق RTL عربي سليم (`<div dir="rtl" align="right">`) وPatch Notes ثنائية اللغة، مع التحقق من `0` ملفات `.apk`/`.zip` في مستودع الويب. | لا يوجد |
 | `2026-11-19` | `main` | ترقية الموقع و`version.json` و`catalog.json` و`_redirects` و`README.md` و`AGENT_HANDOFF.md` إلى `v1.0.0-beta.12` (`versionCode = 12`) بالبصمات والأحجام الرسمية من `G:\Local Cinema\releases\v1.0.0-beta.12\checksums.txt`، ونشر GitHub Release `v1.0.0-beta.12` بملاحظات `ste80-humanizer` وRTL سليم، واجتياز `npm run verify` و`npm run build` والنشر على `meedx.pages.dev`. | لا يوجد |
 | `2026-11-20` | `main` | ترقية الموقع و`version.json` و`catalog.json` و`_redirects` و`README.md` و`AGENTS.md` إلى `v1.0.0-beta.13` (`versionCode = 13`) بالبصمات والأحجام الرسمية من `G:\Local Cinema\releases\v1.0.0-beta.13\checksums.txt`، ونشر GitHub Release `v1.0.0-beta.13`، واجتياز `npm run verify` و`npm run build` والنشر على `meedx.pages.dev`. | لا يوجد |
+
+### Published APKs (`v1.0.0-beta.13`, source: `G:\Local Cinema\releases\v1.0.0-beta.13\`)
+
+Download URL pattern: `https://github.com/alnouri96/meedx/releases/download/v<version>/<file>`.
+
+| App | Package ID | File | Size (Bytes) | `SHA-256` |
+| --- | --- | --- | ---: | --- |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `LocalCinema-TV-v1.0.0-beta.13.apk` | `39298206` | `7a03d125938432ebd4a884212e493b990163bc62cf6da9f761d32bfc0bd44225` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `LocalCinema-Manager-Phone-v1.0.0-beta.13.apk` | `119292370` | `bcb554eb1a1a4bc4e43f62cccb37b60e9d9a0bbc9205ad6c0e7ef37fa1cd4a92` |

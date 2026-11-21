@@ -1,4 +1,4 @@
-# MEEDX · Local Cinema (`v1.0.0-beta.13`)
+# MEEDX · Local Cinema (`v1.0.0-beta.14`)
 
 <p align="center">
   <a href="https://meedx.pages.dev">
@@ -13,7 +13,7 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 <p align="center">
   <a href="https://meedx.pages.dev"><strong>🌐 زيارة الموقع الرسمي الحي | Visit Live Website (meedx.pages.dev)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.13"><strong>⬇️ تحميل v1.0.0-beta.13 | Releases</strong></a>
+  <a href="https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.14"><strong>⬇️ تحميل v1.0.0-beta.14 | Releases</strong></a>
   &nbsp;·&nbsp;
   <a href="https://meedx.pages.dev/#support"><strong>💛 صفحة الدعم | Support Page</strong></a>
   &nbsp;·&nbsp;
@@ -61,13 +61,19 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## العربية — مميزات المنظومة والإرشادات
 
-### جديد الإصدار `v1.0.0-beta.13` (`versionCode = 13`)
-- تبني الشاشة الرئيسية صفوف المكتبة وترتّبها ديناميكياً حسب أسماء المجلدات المشاركة تحت الجذر (`Cartoon` و `Movies` و `OTHERS` و `Shows` وأي مجلد جديد) بنفس اسم المجلد الفعلي دون تقسيم `Shows` أو `Movies` إلى صفوف فرعية أو تكرارها.
-- يوحّد الفحص العميق المتكرر لمشاركات SMB المسارات بين عنوان `IP` واسم الجهاز `Hostname` لمنع تكرار المجلدات المفهرسة أو البطاقات أو الحلقات.
-- تدمج واجهة المسلسلات البطاقات التي تختلف بوجود سنة الإصدار مثل `(2022)` وتجمع جميع مواسم المسلسل وحلقاته في بطاقة وصفحة واحدة مع التحديث التلقائي فور انتهاء الفحص.
-- ينقل الضغط على أي بوستر موسم في تبويب `Show` التركيز مباشرة إلى الحلقة قيد المشاهدة أو الحلقة الأولى `E1` مع منع الاستدعاءات الخلفية من سرقة التركيز.
-- يختفي زر الترجمة `Subtitles` في تبويب `Show` وعند الوقوف على بطاقة بوستر الموسم الكامل (`Watch season`)، ويظهر فقط عند التركيز على بطاقة حلقة فردية.
-- تحافظ العودة إلى الشاشة الرئيسية على البوسترات في `0ms` عبر كاش ذاكرة بحجم 16MB وتمنع تصفح مشاركات SMB من إنشاء أي مجلدات `Movies` تلقائياً.
+### جديد الإصدار `v1.0.0-beta.14` (`versionCode = 14`)
+
+- اضغط زر OK مرة واحدة لتشغيل الحلقة. اضغط مطولًا أو استخدم زر القائمة لعرض الخيارات.
+- تعرض «متابعة المشاهدة» تقدّم العمل بدقة أكبر وتزيل إدخال الموسم عند اكتماله.
+- يمكن تشغيل «تخطي الإعلانات» أو إيقافه من أدوات المشغّل. تظهر «المشاهدة العائلية» بحالة «قريبًا».
+- أُصلح انهيار تطبيق التلفاز عند استقبال بث وهو في الخلفية.
+- يحفظ منتقي الترجمات إعداد الترجمة المزدوجة ويعرض كل مسار في سطر واحد. يتحكم زر واحد في تفعيلها.
+- يعرض الهاتف إشعار وسائط واحدًا للبث ويحافظ على نشاط المعالج واتصال Wi-Fi أثناء التشغيل في الخلفية.
+- أوقف التشغيل من شريط الوسائط المصغّر أو درج الإشعارات. ينتقل الهاتف من واجهة الموسيقى إلى بطاقة الفيديو عند بدء التشغيل على التلفاز.
+- يكرّر الريموت العائم التقديم والترجيع وتغيير مستوى الصوت عند الضغط المطوّل. يعكس مؤشر الاتصال حالة التلفاز عبر التبويبات.
+- تصل الكتابة بالعربية والإنجليزية مباشرة إلى حقل التلفاز. يعمل الحذف وتحريك المؤشر فورًا دون زر إرسال.
+- يمكن التمرير داخل نافذة الترجمات دون إغلاقها. تخفي بطاقات الاتصال في TV Hub اسم حساب Trakt.
+- تلتقط أداة Video Grabber روابط الفيديو والترجمة المباشرة. دعم تمرير البث المحمي والمشغّلات التي تتطلب رموز وصول مؤجل إلى إصدار لاحق.
 
 ### المميزات الأساسية
 - **تشغيل ومكتبة متكاملة على Android TV**: دعم التخزين المحلي وUSB/SAF ومجلدات الشبكة (SMB) والمجلدات المنشورة من الهاتف عبر WebDAV.
@@ -94,13 +100,19 @@ The complete **Local Cinema** suite brings your local and web movies and series 
 
 ## English — Ecosystem Features & Setup Guide
 
-### What's New in `v1.0.0-beta.13` (`versionCode = 13`)
-- Home builds and sorts library rows dynamically from each direct top-level shared folder (`Cartoon`, `Movies`, `OTHERS`, `Shows`, and any new folder) using the exact folder name without splitting `Shows` or `Movies` into per-series rows or duplicating rows.
-- Deep recursive SMB scanning unifies `IP` and `Hostname` paths so switching between server IP and computer name never duplicates indexed folders, cards, or episodes.
-- Series views merge duplicate cards differing by a year suffix like `(2022)` and combine all seasons and episodes into one card and show page with automatic refresh when scanning finishes.
-- Clicking a season poster in the `Show` tab switches directly to that season tab and focuses the in-progress episode or `E1` while blocking async callbacks from stealing focus.
-- The `Subtitles` button hides on the `Show` tab and on the full-season poster card (`Watch season`), and appears only when an individual episode card is focused.
-- Returning to Home keeps posters visible in `0ms` from a 16MB memory cache, and SMB browsing runs read-only without creating automatic `Movies` subfolders.
+### What's New in `v1.0.0-beta.14` (`versionCode = 14`)
+
+- Press OK once to play an episode. Hold OK or press Menu to open its options.
+- Continue Watching matches titles with their saved progress more reliably and clears entries when a season is complete.
+- Turn Skip Ads on or off in playback controls. Family Watch is marked “Coming Soon.”
+- Fixed a crash when the TV app receives a cast while in the background.
+- The subtitle picker remembers Dual Subs and shows each track on one line. A single control toggles Dual Subs.
+- Casting uses one media notification while keeping the CPU and Wi-Fi awake during background playback.
+- Stop playback from the Local Media mini-bar or the notification shade. The phone switches from music controls to the active video card when playback starts on the TV.
+- Hold Seek or Volume on the floating remote to repeat the action. The connection indicator follows the TV connection across tabs.
+- Type Arabic or English directly into TV fields. Backspace and cursor movement work as you type, without a Send button.
+- Scroll inside the Subtitles sheet without closing it. TV Hub connection cards hide the Trakt username.
+- Video Grabber detects direct video and subtitle links. Support for relaying protected streams and embeds that require access tokens is planned for a future release.
 
 ### Core Highlights
 - **Android TV Player & Library**: Indexes local storage, USB/SAF drives, SMB network shares, and read-only WebDAV folders published by the paired phone.

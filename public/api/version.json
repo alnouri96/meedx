@@ -1,23 +1,23 @@
 {
   "tv": {
-    "latestVersionCode": 13,
-    "latestVersionName": "1.0.0-beta.13",
-    "versionCode": 13,
-    "versionName": "1.0.0-beta.13",
-    "sizeBytes": 39298206,
-    "sha256": "7a03d125938432ebd4a884212e493b990163bc62cf6da9f761d32bfc0bd44225",
-    "changelog": "Local Cinema TV v1.0.0-beta.13 builds dynamic Home rows directly from top-level shared folders (Cartoon, Movies, OTHERS, Shows, and future folders) without duplicate rows. It unifies SMB IP and hostname paths across deep scans, merges multi-season series into one card and show page with live refresh, keeps posters in a 16MB memory cache on Back navigation, blocks automatic SMB folder creation, focuses episode E1 when opening a season card, and hides Subtitles on the full-season poster card.",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.13/LocalCinema-TV-v1.0.0-beta.13.apk"
+    "latestVersionCode": 14,
+    "latestVersionName": "1.0.0-beta.14",
+    "versionCode": 14,
+    "versionName": "1.0.0-beta.14",
+    "sizeBytes": 39330117,
+    "sha256": "d85e4f5438522cca6df82b40c829b728faa16b83690bf1e54e0c31a8c3f18ec0",
+    "changelog": "Press OK once to play an episode. Hold OK or press Menu to open its options. Continue Watching matches titles with their saved progress more reliably and clears entries when a season is complete. Turn Skip Ads on or off in playback controls. Family Watch is marked “Coming Soon.” Fixed a crash when the TV app receives a cast while in the background. The subtitle picker remembers Dual Subs and shows each track on one line. A single control toggles Dual Subs.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-TV-v1.0.0-beta.14.apk"
   },
   "phone": {
-    "latestVersionCode": 13,
-    "latestVersionName": "1.0.0-beta.13",
-    "versionCode": 13,
-    "versionName": "1.0.0-beta.13",
-    "sizeBytes": 119292370,
-    "sha256": "bcb554eb1a1a4bc4e43f62cccb37b60e9d9a0bbc9205ad6c0e7ef37fa1cd4a92",
-    "changelog": "Local Cinema Manager v1.0.0-beta.13 updates companion release metadata to versionCode 13 alongside the TV v1.0.0-beta.13 SMB library and series navigation upgrades while keeping grouped Embedded Subtitles and immediate 10s or 30s touchpad seek steps.",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.13/LocalCinema-Manager-Phone-v1.0.0-beta.13.apk"
+    "latestVersionCode": 14,
+    "latestVersionName": "1.0.0-beta.14",
+    "versionCode": 14,
+    "versionName": "1.0.0-beta.14",
+    "sizeBytes": 119310506,
+    "sha256": "29a6e473eab5519f362e4a43fac059eb07495e36d126d31e47327d4aa16135a0",
+    "changelog": "Casting uses one media notification while keeping the CPU and Wi-Fi awake during background playback. Stop playback from the Local Media mini-bar or the notification shade. The phone switches from music controls to the active video card when playback starts on the TV. Hold Seek or Volume on the floating remote to repeat the action. The connection indicator follows the TV connection across tabs. Type Arabic or English directly into TV fields. Backspace and cursor movement work as you type, without a Send button. Scroll inside the Subtitles sheet without closing it. TV Hub connection cards hide the Trakt username. Video Grabber detects direct video and subtitle links. Support for relaying protected streams and embeds that require access tokens is planned for a future release.",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-Manager-Phone-v1.0.0-beta.14.apk"
   },
   "builds": [
     {
@@ -27,9 +27,9 @@
       "packageId": "com.meedx.localcinema.tv",
       "name": "Local Cinema TV",
       "available": true,
-      "version": "1.0.0-beta.13",
-      "versionCode": 13,
-      "releaseDate": "2026-11-20",
+      "version": "1.0.0-beta.14",
+      "versionCode": 14,
+      "releaseDate": "2026-11-21",
       "status": {
         "ar": "تجريبي · مفتوح المصدر",
         "en": "Beta · Open Source"
@@ -44,19 +44,19 @@
         "ar": "كود Downloader (نسخة الشاشة)",
         "en": "Downloader Code (TV Version)"
       },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.13/LocalCinema-TV-v1.0.0-beta.13.apk",
-      "sizeBytes": 39298206,
-      "sha256": "7a03d125938432ebd4a884212e493b990163bc62cf6da9f761d32bfc0bd44225",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-TV-v1.0.0-beta.14.apk",
+      "sizeBytes": 39330117,
+      "sha256": "d85e4f5438522cca6df82b40c829b728faa16b83690bf1e54e0c31a8c3f18ec0",
       "specs": {
         "platform": {
           "ar": "Android TV 7.0+",
           "en": "Android TV 7.0+"
         },
         "architecture": {
-          "ar": "Universal APK",
-          "en": "Universal APK"
+          "ar": "armeabi-v7a",
+          "en": "armeabi-v7a"
         },
-        "sizeLabel": "37.48 MiB",
+        "sizeLabel": "37.51 MiB",
         "license": "GPL-3.0",
         "security": {
           "ar": "آمن 100%: بلا مفاتيح مضمّنة (Zero Hardcoded Secrets)",
@@ -64,15 +64,41 @@
         }
       },
       "changelog": {
-        "en": "Local Cinema TV v1.0.0-beta.13 builds dynamic Home rows directly from top-level shared folders (Cartoon, Movies, OTHERS, Shows, and future folders) without duplicate rows. It unifies SMB IP and hostname paths across deep scans, merges multi-season series into one card and show page with live refresh, keeps posters in a 16MB memory cache on Back navigation, blocks automatic SMB folder creation, focuses episode E1 when opening a season card, and hides Subtitles on the full-season poster card.",
-        "ar": "يبني تطبيق الشاشة صفوف الرئيسية ويرتّبها ديناميكياً حسب أسماء المجلدات المشاركة (Cartoon و Movies و OTHERS و Shows وغيرها) دون تكرار. يوحّد التطبيق مسارات SMB بين IP و Hostname ويدمج مواسم المسلسلات في بطاقة وصفحة واحدة مع التحديث التلقائي فور انتهاء الفحص، ويخفي زر الترجمة عن بطاقة بوستر الموسم الكامل ويظهره للحلقات الفردية فقط."
+        "en": "Press OK once to play an episode. Hold OK or press Menu to open its options. Continue Watching matches titles with their saved progress more reliably and clears entries when a season is complete. Turn Skip Ads on or off in playback controls. Family Watch is marked “Coming Soon.” Fixed a crash when the TV app receives a cast while in the background. The subtitle picker remembers Dual Subs and shows each track on one line. A single control toggles Dual Subs.",
+        "ar": "اضغط زر OK مرة واحدة لتشغيل الحلقة. اضغط مطولًا أو استخدم زر القائمة لعرض الخيارات. تعرض «متابعة المشاهدة» تقدّم العمل بدقة أكبر وتزيل إدخال الموسم عند اكتماله. يمكن تشغيل «تخطي الإعلانات» أو إيقافه من أدوات المشغّل. تظهر «المشاهدة العائلية» بحالة «قريبًا». أُصلح انهيار تطبيق التلفاز عند استقبال بث وهو في الخلفية. يحفظ منتقي الترجمات إعداد الترجمة المزدوجة ويعرض كل مسار في سطر واحد. يتحكم زر واحد في تفعيلها."
       },
       "updateNotes": [
+        {
+          "version": "1.0.0-beta.14",
+          "versionCode": 14,
+          "date": "2026-11-21",
+          "latest": true,
+          "whatsNew": {
+            "en": [
+              "Press OK once to play an episode. Hold OK or press Menu to open its options.",
+              "Continue Watching matches titles with their saved progress more reliably and clears entries when a season is complete.",
+              "Turn Skip Ads on or off in playback controls. Family Watch is marked “Coming Soon.”",
+              "Fixed a crash when the TV app receives a cast while in the background.",
+              "The subtitle picker remembers Dual Subs and shows each track on one line. A single control toggles Dual Subs."
+            ],
+            "ar": [
+              "اضغط زر OK مرة واحدة لتشغيل الحلقة. اضغط مطولًا أو استخدم زر القائمة لعرض الخيارات.",
+              "تعرض «متابعة المشاهدة» تقدّم العمل بدقة أكبر وتزيل إدخال الموسم عند اكتماله.",
+              "يمكن تشغيل «تخطي الإعلانات» أو إيقافه من أدوات المشغّل. تظهر «المشاهدة العائلية» بحالة «قريبًا».",
+              "أُصلح انهيار تطبيق التلفاز عند استقبال بث وهو في الخلفية.",
+              "يحفظ منتقي الترجمات إعداد الترجمة المزدوجة ويعرض كل مسار في سطر واحد. يتحكم زر واحد في تفعيلها."
+            ]
+          },
+          "improvements": {
+            "ar": [],
+            "en": []
+          }
+        },
         {
           "version": "1.0.0-beta.13",
           "versionCode": 13,
           "date": "2026-11-20",
-          "latest": true,
+          "latest": false,
           "whatsNew": {
             "ar": [
               "تبني الشاشة الرئيسية صفوف المكتبة وترتّبها ديناميكياً حسب أسماء المجلدات المشاركة تحت الجذر (Cartoon و Movies و OTHERS و Shows وأي مجلد جديد) بنفس اسم المجلد الفعلي دون تقسيم Shows أو Movies إلى صفوف فرعية أو تكرارها.",
@@ -295,9 +321,9 @@
       "packageId": "com.meedx.localcinema.manager",
       "name": "Local Cinema Manager",
       "available": true,
-      "version": "1.0.0-beta.13",
-      "versionCode": 13,
-      "releaseDate": "2026-11-20",
+      "version": "1.0.0-beta.14",
+      "versionCode": 14,
+      "releaseDate": "2026-11-21",
       "status": {
         "ar": "تجريبي · مفتوح المصدر",
         "en": "Beta · Open Source"
@@ -306,9 +332,9 @@
         "ar": "هذه نسخة الهاتف (Android Phone)",
         "en": "This is the Phone Version (Android Phone)"
       },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.13/LocalCinema-Manager-Phone-v1.0.0-beta.13.apk",
-      "sizeBytes": 119292370,
-      "sha256": "bcb554eb1a1a4bc4e43f62cccb37b60e9d9a0bbc9205ad6c0e7ef37fa1cd4a92",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-Manager-Phone-v1.0.0-beta.14.apk",
+      "sizeBytes": 119310506,
+      "sha256": "29a6e473eab5519f362e4a43fac059eb07495e36d126d31e47327d4aa16135a0",
       "specs": {
         "platform": {
           "ar": "Android 7.0+",
@@ -318,7 +344,7 @@
           "ar": "arm64-v8a",
           "en": "arm64-v8a"
         },
-        "sizeLabel": "113.77 MiB",
+        "sizeLabel": "113.78 MiB",
         "license": "GPL-3.0",
         "security": {
           "ar": "آمن 100%: بلا مفاتيح مضمّنة (Zero Hardcoded Secrets)",
@@ -326,15 +352,43 @@
         }
       },
       "changelog": {
-        "en": "Local Cinema Manager v1.0.0-beta.13 updates companion release metadata to versionCode 13 alongside the TV v1.0.0-beta.13 SMB library and series navigation upgrades while keeping grouped Embedded Subtitles and immediate 10s or 30s touchpad seek steps.",
-        "ar": "يرفع تطبيق الهاتف رقم الإصدار إلى 13 للتوافق الكامل مع تحديثات مكتبة SMB وتصفح المسلسلات في تطبيق الشاشة v1.0.0-beta.13 مع الحفاظ على زر الترجمة المدمجة الموحّد والتقديم والترجيع الفوري على لوحة اللمس."
+        "en": "Casting uses one media notification while keeping the CPU and Wi-Fi awake during background playback. Stop playback from the Local Media mini-bar or the notification shade. The phone switches from music controls to the active video card when playback starts on the TV. Hold Seek or Volume on the floating remote to repeat the action. The connection indicator follows the TV connection across tabs. Type Arabic or English directly into TV fields. Backspace and cursor movement work as you type, without a Send button. Scroll inside the Subtitles sheet without closing it. TV Hub connection cards hide the Trakt username. Video Grabber detects direct video and subtitle links. Support for relaying protected streams and embeds that require access tokens is planned for a future release.",
+        "ar": "يعرض الهاتف إشعار وسائط واحدًا للبث ويحافظ على نشاط المعالج واتصال Wi-Fi أثناء التشغيل في الخلفية. أوقف التشغيل من شريط الوسائط المصغّر أو درج الإشعارات. ينتقل الهاتف من واجهة الموسيقى إلى بطاقة الفيديو عند بدء التشغيل على التلفاز. يكرّر الريموت العائم التقديم والترجيع وتغيير مستوى الصوت عند الضغط المطوّل. يعكس مؤشر الاتصال حالة التلفاز عبر التبويبات. تصل الكتابة بالعربية والإنجليزية مباشرة إلى حقل التلفاز. يعمل الحذف وتحريك المؤشر فورًا دون زر إرسال. يمكن التمرير داخل نافذة الترجمات دون إغلاقها. تخفي بطاقات الاتصال في TV Hub اسم حساب Trakt. تلتقط أداة Video Grabber روابط الفيديو والترجمة المباشرة. دعم تمرير البث المحمي والمشغّلات التي تتطلب رموز وصول مؤجل إلى إصدار لاحق."
       },
       "updateNotes": [
+        {
+          "version": "1.0.0-beta.14",
+          "versionCode": 14,
+          "date": "2026-11-21",
+          "latest": true,
+          "whatsNew": {
+            "en": [
+              "Casting uses one media notification while keeping the CPU and Wi-Fi awake during background playback.",
+              "Stop playback from the Local Media mini-bar or the notification shade. The phone switches from music controls to the active video card when playback starts on the TV.",
+              "Hold Seek or Volume on the floating remote to repeat the action. The connection indicator follows the TV connection across tabs.",
+              "Type Arabic or English directly into TV fields. Backspace and cursor movement work as you type, without a Send button.",
+              "Scroll inside the Subtitles sheet without closing it. TV Hub connection cards hide the Trakt username.",
+              "Video Grabber detects direct video and subtitle links. Support for relaying protected streams and embeds that require access tokens is planned for a future release."
+            ],
+            "ar": [
+              "يعرض الهاتف إشعار وسائط واحدًا للبث ويحافظ على نشاط المعالج واتصال Wi-Fi أثناء التشغيل في الخلفية.",
+              "أوقف التشغيل من شريط الوسائط المصغّر أو درج الإشعارات. ينتقل الهاتف من واجهة الموسيقى إلى بطاقة الفيديو عند بدء التشغيل على التلفاز.",
+              "يكرّر الريموت العائم التقديم والترجيع وتغيير مستوى الصوت عند الضغط المطوّل. يعكس مؤشر الاتصال حالة التلفاز عبر التبويبات.",
+              "تصل الكتابة بالعربية والإنجليزية مباشرة إلى حقل التلفاز. يعمل الحذف وتحريك المؤشر فورًا دون زر إرسال.",
+              "يمكن التمرير داخل نافذة الترجمات دون إغلاقها. تخفي بطاقات الاتصال في TV Hub اسم حساب Trakt.",
+              "تلتقط أداة Video Grabber روابط الفيديو والترجمة المباشرة. دعم تمرير البث المحمي والمشغّلات التي تتطلب رموز وصول مؤجل إلى إصدار لاحق."
+            ]
+          },
+          "improvements": {
+            "ar": [],
+            "en": []
+          }
+        },
         {
           "version": "1.0.0-beta.13",
           "versionCode": 13,
           "date": "2026-11-20",
-          "latest": true,
+          "latest": false,
           "whatsNew": {
             "ar": [
               "يرفع التطبيق رقم الإصدار إلى 13 لمزامنة التحديثات بسلاسة مع إصدار الشاشة v1.0.0-beta.13 ومعرفات المسلسلات الموحّدة.",

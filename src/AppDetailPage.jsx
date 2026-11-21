@@ -236,7 +236,7 @@ export function AppDetailPage({
         <div className="section-head">
           <div>
             <h2>{t('سجل التحديثات الكامل (Patch Notes)', 'Full Patch Notes (v1.0.0-beta.6 → beta.13)')}</h2>
-            <p>{t('سجل التغييرات من الإصدار v1.0.0-beta.6 حتى v1.0.0-beta.13 لتطبيقي الشاشة والهاتف.', 'Changes from v1.0.0-beta.6 to v1.0.0-beta.13 for the TV and Phone apps.')}</p>
+            <p>{t('سجل التغييرات من الإصدار v1.0.0-beta.6 حتى v1.0.0-beta.14 لتطبيقي الشاشة والهاتف.', 'Changes from v1.0.0-beta.6 to v1.0.0-beta.14 for the TV and Phone apps.')}</p>
           </div>
           <span className="gh-ver-badge" dir="ltr">v{tvApp?.version}</span>
         </div>

@@ -10,18 +10,18 @@ Public website and OTA feed repository for **Local Cinema**. Core app monorepo: 
 
 ## 1. Current State
 
-- **Last published release:** `v1.0.0-beta.13` (`versionCode = 13`, released `2026-11-20`), live on Cloudflare Pages.
+- **Last published release:** `v1.0.0-beta.14` (`versionCode = 14`, released `2026-11-21`), live on Cloudflare Pages.
 - **Active cycle:** `v1.0.0-beta.14` (`versionCode = 14`) on branch `main` here; app work runs on branch `upgrade-6.6.4` in `G:\Local Cinema`.
-- **Live endpoints:** OTA feed `https://meedx.pages.dev/api/version.json` · GitHub Releases `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.13`
+- **Live endpoints:** OTA feed `https://meedx.pages.dev/api/version.json` · GitHub Releases `https://github.com/alnouri96/meedx/releases/tag/v1.0.0-beta.14`
 
-### Published APKs (`v1.0.0-beta.13`, source: `G:\Local Cinema\releases\v1.0.0-beta.13\`)
+### Published APKs (`v1.0.0-beta.14`, source: `G:\Local Cinema\releases\v1.0.0-beta.14\`)
 
 Download URL pattern: `https://github.com/alnouri96/meedx/releases/download/v<version>/<file>`.
 
 | App | Package ID | File | Size (Bytes) | `SHA-256` |
 | --- | --- | --- | ---: | --- |
-| `Local Cinema TV` | `com.meedx.localcinema.tv` | `LocalCinema-TV-v1.0.0-beta.13.apk` | `39298206` | `7a03d125938432ebd4a884212e493b990163bc62cf6da9f761d32bfc0bd44225` |
-| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `LocalCinema-Manager-Phone-v1.0.0-beta.13.apk` | `119292370` | `bcb554eb1a1a4bc4e43f62cccb37b60e9d9a0bbc9205ad6c0e7ef37fa1cd4a92` |
+| `Local Cinema TV` | `com.meedx.localcinema.tv` | `LocalCinema-TV-v1.0.0-beta.14.apk` | `39330117` | `d85e4f5438522cca6df82b40c829b728faa16b83690bf1e54e0c31a8c3f18ec0` |
+| `Local Cinema Manager` | `com.meedx.localcinema.manager` | `LocalCinema-Manager-Phone-v1.0.0-beta.14.apk` | `119310506` | `29a6e473eab5519f362e4a43fac059eb07495e36d126d31e47327d4aa16135a0` |
 
 ### Live UI State
 
