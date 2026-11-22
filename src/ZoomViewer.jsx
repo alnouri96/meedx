@@ -115,7 +115,7 @@ export function ZoomViewer({shots, index, device, setDevice, move, t}) {
   const photo = shot.images.find(photo => photo.device === device) ?? shot.images[0];
   const label = (device) => ({ tv: t('التلفاز', 'TV'), phone: t('الهاتف', 'Phone'), pc: t('الحاسوب', 'Windows PC') }[device]);
   return <div className="zoom-viewer">
-    <ZoomImage key={photo.file} src={'/assets/screenshots/' + photo.file}
+    <ZoomImage key={photo.file} src={photo.file}
       alt={shot.name + ' · ' + label(photo.device)} t={t}/>
     <div className="zoom-footer">
       <div className="zoom-nav">

@@ -1,183 +1,32 @@
 [
   {
-    "id": "19-41-02",
+    "id": "file-sources",
     "images": [
       {
         "device": "tv",
-        "file": "tv_2026-11-15_19-41-02.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_19-41-02.png"
+        "file": "/assets/screenshots/tv_2026-11-15_15-49-53.png"
       }
     ]
   },
   {
-    "id": "15-59-12",
+    "id": "original-artwork",
     "images": [
       {
         "device": "tv",
-        "file": "tv_2026-11-15_15-59-12.png"
+        "file": "/assets/artwork/local-cinema-poster.webp"
       },
       {
         "device": "phone",
-        "file": "phone_2026-11-15_15-59-12.png"
+        "file": "/assets/artwork/local-cinema-manager.webp"
       }
     ]
   },
   {
-    "id": "20-28-48",
+    "id": "audio-visualizer",
     "images": [
       {
         "device": "tv",
-        "file": "tv_2026-11-15_20-28-48.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_20-28-48.png"
-      }
-    ]
-  },
-  {
-    "id": "15-19-11",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_15-19-11.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_15-19-11.png"
-      }
-    ]
-  },
-  {
-    "id": "15-48-40",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_15-48-40.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_15-48-40.png"
-      }
-    ]
-  },
-  {
-    "id": "15-49-53",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_15-49-53.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_15-49-53.png"
-      }
-    ]
-  },
-  {
-    "id": "15-55-13",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_15-55-13.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_15-55-13.png"
-      }
-    ]
-  },
-  {
-    "id": "15-58-19",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_15-58-19.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_15-58-19.png"
-      }
-    ]
-  },
-  {
-    "id": "19-42-17",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_19-42-17.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_19-42-17.png"
-      }
-    ]
-  },
-  {
-    "id": "20-40-20",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_20-40-20.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_20-40-20.png"
-      }
-    ]
-  },
-  {
-    "id": "20-41-41",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_20-41-41.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_20-41-41.png"
-      }
-    ]
-  },
-  {
-    "id": "20-43-18",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_20-43-18.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_20-43-18.png"
-      }
-    ]
-  },
-  {
-    "id": "20-44-16",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_20-44-16.png"
-      },
-      {
-        "device": "phone",
-        "file": "phone_2026-11-15_20-44-16.png"
-      }
-    ]
-  },
-  {
-    "id": "20-54-00",
-    "images": [
-      {
-        "device": "tv",
-        "file": "tv_2026-11-15_20-54-00.jpg"
-      },
-      {
-        "device": "pc",
-        "file": "pc_2026-11-15_20-54-00.png"
+        "file": "/assets/screenshots/tv_2026-11-15_15-55-13.png"
       }
     ]
   }

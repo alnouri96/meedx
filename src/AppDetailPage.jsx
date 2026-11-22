@@ -72,8 +72,8 @@ export function AppDetailPage({
         <div className="wrap section">
           <div className="section-head">
             <div>
-              <h2>{t('معاينة لقطات الشاشة', 'Screenshots Preview')}</h2>
-              <p>{t('اضغط على أي لقطة للتكبير والاستعراض بالحجم الكامل.', 'Click any screenshot to zoom and inspect in full resolution.')}</p>
+              <h2>{t('معرض Local Cinema', 'Local Cinema gallery')}</h2>
+              <p>{t('اختر صورة لتكبيرها.', 'Select an image to zoom in.')}</p>
             </div>
             <code dir="ltr">{shots.length} {t('شريحة', 'slides')}</code>
           </div>

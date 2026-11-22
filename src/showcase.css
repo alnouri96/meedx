@@ -126,12 +126,9 @@
 
 .gh-app-card{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);border-radius:16px;overflow:hidden;background:rgba(24,24,28,.85);border:1px solid rgba(229,184,75,.28)}
 .gh-app-media{position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#1c1910,#090a0d 78%);min-height:260px;padding:18px;text-decoration:none}
-.lc-poster-stage{width:100%;display:grid;grid-template-columns:minmax(0,3.6fr) minmax(0,1fr);align-items:center;gap:14px}
-.lc-stage-tv,.lc-stage-phone{min-width:0;display:grid;gap:6px;padding:6px;border-radius:10px;background:#0b0c10;border:1.5px solid rgba(229,185,76,.42);box-shadow:0 12px 28px rgba(0,0,0,.55)}
-.lc-stage-phone{border-radius:14px}
-.lc-stage-tv img{width:100%;aspect-ratio:16/9;object-fit:contain;background:#07080a;border-radius:6px;display:block}
-.lc-stage-phone img{width:100%;aspect-ratio:1080/2340;object-fit:contain;background:#07080a;border-radius:9px;display:block}
-.lc-device-tag{display:inline-flex;align-items:center;justify-content:center;gap:5px;font:600 .72rem/1.2 'JetBrains Mono',monospace;color:#e5b94c}
+.lc-poster-link{display:block;min-width:0;width:100%;overflow:hidden;border:1px solid #e5a93b;border-radius:16px;background:#171717}
+.lc-poster-link img{display:block;width:100%;height:auto}
+.lc-poster-link:focus-visible{outline:2px solid #e5a93b;outline-offset:4px}
 .gh-ver-badge{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;background:rgba(229,185,76,.16);border:1px solid #e5b94c;color:#e5b94c;font:700 .78rem/1.2 'JetBrains Mono',monospace}
 .gh-app-body{padding:clamp(20px,3vw,30px);display:grid;gap:16px;align-content:center}
 .gh-app-top{display:flex;align-items:flex-start;gap:14px}

@@ -2,12 +2,14 @@
 
 <div dir="rtl" align="right">
 
-<p>يشغّل Local Cinema مكتبتك على Android TV. استخدم Local Cinema Manager للتحكم بالتلفاز وبث الفيديو عبر الشبكة المحلية.</p>
-<p><a href="https://meedx.pages.dev/downloads">تنزيل التطبيقين وبصمات التحقق</a> · <a href="https://meedx.pages.dev/apps/local-cinema">دليل الإعداد والإضافات</a> · <a href="https://meedx.pages.dev/#support">تواصل بشأن الدعم</a></p>
+<p>تطبيقا Local Cinema وLocal Cinema Manager مجانيان بالكامل. يشغّل Local Cinema مكتبتك على Android TV. استخدم Local Cinema Manager للتحكم بالتلفاز وبث الفيديو عبر الشبكة المحلية.</p>
+<p><a href="https://meedx.pages.dev">الموقع الرسمي</a> · <a href="https://meedx.pages.dev/downloads">تنزيل التطبيقين وبصمات التحقق</a> · <a href="https://meedx.pages.dev/apps/local-cinema">دليل الإعداد والإضافات</a> · <a href="https://meedx.pages.dev/#support">تواصل بشأن الدعم</a></p>
 
 </div>
 
 ## Local Cinema downloads
+
+Both apps are 100% free. Visit the [official MEEDX website](https://meedx.pages.dev).
 
 [Download TV and Phone APKs](https://meedx.pages.dev/downloads) · [Setup and add-ons](https://meedx.pages.dev/apps/local-cinema#setup-guide) · [Patch notes](https://meedx.pages.dev/apps/local-cinema#patch-notes)
 

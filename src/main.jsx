@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
-  Menu, X, Download, Monitor, Smartphone, MessageSquare, Heart,
+  Menu, X, Download, MessageSquare, Heart,
   Gamepad2, Terminal, ArrowUp, ArrowUpRight, AlertTriangle, Wrench
 } from 'lucide-react';
 import 'swiper/css';
@@ -16,7 +16,7 @@ import screenshotGroups from './data/screenshots.json';
 import { screenshotCopy } from './data/screenshot-copy';
 import { Panels } from './panels';
 import { GoldParticles } from './GoldParticles';
-import { AppsShowcasePage } from './AppsShowcasePage';
+import { AppsShowcasePage, LocalCinemaPoster } from './AppsShowcasePage';
 import { AppDetailPage } from './AppDetailPage';
 import { DownloadAppCard } from './DownloadAppCard';
 import './style.css';
@@ -72,9 +72,6 @@ function App() {
     return { ...group, name: t(titleAr, titleEn), text: t(descriptionAr, descriptionEn) };
   });
 
-  const hero = shots.find((shot) => shot.id === '15-19-11') ?? shots[0];
-  const heroTv = hero.images.find((photo) => photo.device === 'tv');
-  const heroPhone = hero.images.find((photo) => photo.device === 'phone');
   const label = (device) => (device === 'tv' ? t('التلفاز', 'TV') : device === 'pc' ? t('الحاسوب', 'Windows PC') : t('الهاتف', 'Phone'));
 
   useEffect(() => {
@@ -184,7 +181,7 @@ function App() {
 
   const contact = (topic = 'Local Cinema', kind = 'feature') => setModal({ id: 'telegram', topic, kind });
   const support = () => setModal({ id: 'support' });
-  const image = (file, alt, props) => <img src={'/assets/screenshots/' + file} alt={alt} {...props} />;
+  const image = (file, alt, props) => <img src={file} alt={alt} {...props} />;
 
   return (
     <>
@@ -235,8 +232,8 @@ function App() {
                 <h1>{t('تطبيقات وألعاب،', 'Apps, games,')}<br />{t('وأدوات تقنية.', 'and tech tools.')}</h1>
                 <p>
                   {t(
-                    <>يطوّر استوديو {L('MEEDX')} تطبيقات مفتوحة المصدر لشاشات {L('Android TV')} والهواتف، وأدوات {L('Windows / ADB')}، وملفات ضبط الألعاب، باللغتين العربية والإنجليزية.</>,
-                    'MEEDX Studio builds open-source Android TV and phone apps, Windows and ADB utilities, and game configs in Arabic and English.'
+                    <>يطوّر استوديو {L('MEEDX')} تطبيقات مجانية للتلفاز والهاتف، وأدوات {L('Windows / ADB')}، وملفات ضبط الألعاب بالعربية والإنجليزية.</>,
+                    'MEEDX Studio builds free Android TV and phone apps, Windows and ADB tools, and game configs in Arabic and English.'
                   )}
                 </p>
                 <div className="hero-buttons">
@@ -248,15 +245,11 @@ function App() {
                   </a>
                 </div>
                 <div className="hero-meta">
-                  <span className="signal" />
+                  <span className="gh-ver-badge">{t('مجاني بالكامل', '100% Free')}</span>
                   <code dir="ltr">Local Cinema v{releaseVersion}</code>
                 </div>
               </div>
-              <div className="hardware">
-                <div className="tv-frame">{image(heroTv.file, hero.name, { fetchPriority: 'high', width: 1920, height: 1080 })}<div className="bezel"><span>LOCAL CINEMA</span><i /></div><div className="stand" /></div>
-                <div className="phone-frame">{image(heroPhone.file, hero.name, { width: 1080, height: 2340 })}</div>
-                <div className="frame-meta"><span><Monitor size={16} /> Android TV</span><span><Smartphone size={16} /> Android</span></div>
-              </div>
+              <LocalCinemaPoster t={t} eager />
             </section>
 
             <section className="band">
@@ -369,7 +362,7 @@ function App() {
                 <p>{t(<>ملفات النسخة التجريبية عبر {L('GitHub Releases')} وبصمات التحقق {L('SHA-256')}.</>, 'Beta release files from GitHub Releases and SHA-256 verification hashes.')}</p>
               </div>
               <div className="head-tools">
-                <a className="link" href={siteConfig.githubReleases} target="_blank" rel="noopener noreferrer">
+                <a className="link" href={siteConfig.githubProject} target="_blank" rel="noopener noreferrer">
                   GitHub Releases <ArrowUpRight size={16} />
                 </a>
                 <a

@@ -23,14 +23,14 @@ async function openAppFromHome(page) {
 
 async function checkGallery(page, context, width) {
   await page.locator('.swiper-button-next').click();
-  await expect(page.locator('.gallery-info h3')).toHaveText('المواسم واستئناف الحلقة');
+  await expect(page.locator('.gallery-info h3')).toHaveText('بوسترات Local Cinema');
   const pair = page.locator('.swiper-slide-active');
   await expect(pair.locator('img')).toHaveCount(2);
   await expect.poll(() => pair.locator('img').evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
   await pair.getByRole('button', { name: 'تكبير لقطة التلفاز', exact: true }).click();
   const dialog = page.getByRole('dialog');
   const stage = dialog.locator('.zoom-stage');
-  await expect(stage.locator('img')).toHaveAttribute('src', /tv_.*15-59-12/);
+  await expect(stage.locator('img')).toHaveAttribute('src', /local-cinema-poster[.]webp/);
   await dialog.getByRole('button', { name: 'تكبير', exact: true }).click();
   await expect(dialog.locator('output')).toHaveText('125%');
   await dialog.getByRole('slider').press('End');
@@ -47,7 +47,7 @@ async function checkGallery(page, context, width) {
   await expect(dialog.locator('output')).not.toHaveText('300%');
 
   await dialog.getByRole('button', { name: 'الهاتف', exact: true }).click();
-  await expect(stage.locator('img')).toHaveAttribute('src', /phone_.*15-59-12/);
+  await expect(stage.locator('img')).toHaveAttribute('src', /local-cinema-manager[.]webp/);
   await expect(dialog.locator('output')).toHaveText('100%');
 
   if (width === 390) {
@@ -63,7 +63,7 @@ async function checkGallery(page, context, width) {
   }
 
   await dialog.getByRole('button', { name: 'الشريحة السابقة' }).click();
-  await expect(stage.locator('img')).toHaveAttribute('src', /phone_.*19-41-02/);
+  await expect(stage.locator('img')).toHaveAttribute('src', /tv_.*15-49-53/);
   await page.keyboard.press('Escape');
 }
 

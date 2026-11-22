@@ -1,26 +1,19 @@
 import React from 'react';
-import { ArrowUpRight, Monitor, Puzzle, Smartphone } from 'lucide-react';
+import { ArrowUpRight, Puzzle } from 'lucide-react';
+import { siteConfig } from './config/siteConfig';
 
-export function LocalCinemaPoster({ t }) {
+export function LocalCinemaPoster({ t, eager = false }) {
   return (
-    <div className="lc-poster-stage" aria-label={t('معاينة شاشة التلفاز والهاتف لتطبيق Local Cinema', 'Local Cinema TV and Phone framed preview')}>
-      <div className="lc-stage-tv">
-        <img
-          src="/assets/screenshots/tv_2026-11-15_19-41-02.png"
-          alt={t('واجهة Local Cinema على Android TV', 'Local Cinema on Android TV')}
-          loading="eager"
-        />
-        <span className="lc-device-tag"><Monitor size={12} /> Android TV · 4K</span>
-      </div>
-      <div className="lc-stage-phone">
-        <img
-          src="/assets/screenshots/phone_2026-11-15_19-41-02.png"
-          alt={t('واجهة Local Cinema Manager على الهاتف', 'Local Cinema Manager on Phone')}
-          loading="eager"
-        />
-        <span className="lc-device-tag"><Smartphone size={12} /> TV Hub</span>
-      </div>
-    </div>
+    <a className="lc-poster-link" href={siteConfig.homeUrl}>
+      <img
+        src="/assets/artwork/local-cinema-poster.webp"
+        alt={t('الموقع الرسمي لتطبيق Local Cinema', 'Local Cinema official website')}
+        width={1536}
+        height={1024}
+        loading={eager ? 'eager' : 'lazy'}
+        fetchPriority={eager ? 'high' : 'auto'}
+      />
+    </a>
   );
 }
 
@@ -45,6 +38,7 @@ export function AppsShowcasePage({ t, navigate, version }) {
               <div className="gh-app-title-row">
                 <h2>Local Cinema</h2>
                 <span className="gh-ver-badge" dir="ltr">v{version}</span>
+                <span className="gh-ver-badge">{t('مجاني بالكامل', '100% Free')}</span>
               </div>
               <p>{t('مشغّل مكتبة منزلية للتلفاز، مع تطبيق هاتف للتحكم والبث.', 'A home library player for Android TV with a companion app for remote control and casting.')}</p>
             </div>
