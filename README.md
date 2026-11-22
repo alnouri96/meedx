@@ -1,8 +1,10 @@
 # MEEDX Studio
 
+Local Cinema is open source and 100% free. [Source code](https://github.com/alnouri96/local-cinema) · [Third-party licenses](https://github.com/alnouri96/local-cinema/blob/main/docs/THIRD_PARTY.md)
+
 <div dir="rtl" align="right">
 
-<p>تطبيقا Local Cinema وLocal Cinema Manager مجانيان بالكامل. يشغّل Local Cinema مكتبتك على Android TV. استخدم Local Cinema Manager للتحكم بالتلفاز وبث الفيديو عبر الشبكة المحلية.</p>
+<p>تطبيقا Local Cinema وLocal Cinema Manager مفتوحا المصدر ومجانيان بالكامل. يشغّل Local Cinema مكتبتك على Android TV. استخدم Local Cinema Manager للتحكم بالتلفاز وبث الفيديو عبر الشبكة المحلية.</p>
 <p><a href="https://meedx.pages.dev">الموقع الرسمي</a> · <a href="https://meedx.pages.dev/downloads">تنزيل التطبيقين وبصمات التحقق</a> · <a href="https://meedx.pages.dev/apps/local-cinema">دليل الإعداد والإضافات</a> · <a href="https://meedx.pages.dev/#support">تواصل بشأن الدعم</a></p>
 
 </div>

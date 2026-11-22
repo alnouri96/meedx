@@ -87,7 +87,7 @@ for (const { id, packageId, prefix } of targets) {
     changelog: { ...build.changelog, en: release.changelog },
   });
   const { fileName: _fileName, releaseDate: _releaseDate, ...ota } = release;
-  expectedFeed[id] = ota;
+  expectedFeed[id] = { ...ota, changelog: { en: release.changelog, ar: build.changelog.ar } };
   console.log('Verified local APK', fileName, release.sizeBytes, digest);
 }
 expectedFeed.builds = builds;
@@ -128,6 +128,7 @@ if (checkLive) {
     for (const [key, value] of Object.entries(distribution)) {
       assert.equal(feed[id]?.[key], value, 'Live OTA ' + id + '.' + key);
     }
+    assert.deepEqual(feed[id]?.changelog, expectedFeed[id].changelog, 'Live OTA notes ' + id);
     const liveBuild = feed.builds?.find((build) => build.id === id);
     assert.deepEqual(
       [liveBuild?.url, liveBuild?.version, liveBuild?.versionCode, liveBuild?.sizeBytes, liveBuild?.sha256],

@@ -8,13 +8,21 @@ export function DownloadAppCard({ build, ar, t, L, copy, onDownload, onContact }
   const DeviceIcon = isTv ? Monitor : Smartphone;
 
   return (
-    <article className="dl-card">
+    <article className={'dl-card cinema-download-card cinema-download-' + device}>
       <div className="file-title">
         <DeviceIcon />
         <div>
           <h2>{name}</h2>
           <code dir="ltr">v{version} · {t('رقم البناء', 'build')} {versionCode}</code>
         </div>
+      </div>
+
+      <div className="file-actions">
+        <a className="button primary" href={isTv ? '/tv' : '/phone'}>
+          {isTv ? t('تنزيل التلفاز مباشرةً', 'Download TV APK') : t('تنزيل الهاتف مباشرةً', 'Download Phone APK')}
+          <Download size={17} />
+        </a>
+        <button type="button" className="link" onClick={onDownload}>{t('خيارات التنزيل', 'Download options')}</button>
       </div>
 
       <dl className="dl-spec-grid">
@@ -61,13 +69,7 @@ export function DownloadAppCard({ build, ar, t, L, copy, onDownload, onContact }
         </button>
       </div>
 
-      <div className="file-actions">
-        <button type="button" className="button primary" onClick={onDownload}>
-          <span>{isTv ? t(<>تنزيل {L('APK')} للتلفاز</>, 'Download TV APK') : t(<>تنزيل {L('APK')} للهاتف</>, 'Download Phone APK')}</span>
-          <Download size={17} />
-        </button>
-        <button type="button" className="link" onClick={onContact}>{t('بلاغ أو اقتراح', 'Report or suggest')}</button>
-      </div>
+      <button type="button" className="link" onClick={onContact}>{t('بلاغ أو اقتراح', 'Report or suggest')}</button>
     </article>
   );
 }

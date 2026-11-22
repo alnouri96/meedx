@@ -15,7 +15,6 @@ import { siteConfig } from './config/siteConfig';
 import screenshotGroups from './data/screenshots.json';
 import { screenshotCopy } from './data/screenshot-copy';
 import { Panels } from './panels';
-import { GoldParticles } from './GoldParticles';
 import { AppsShowcasePage, LocalCinemaPoster } from './AppsShowcasePage';
 import { AppDetailPage } from './AppDetailPage';
 import { DownloadAppCard } from './DownloadAppCard';
@@ -226,27 +225,26 @@ function App() {
       <main id="main">
         {route === '/' && (
           <>
-            <section className="wrap hero hero-with-particles">
-              <GoldParticles />
+            <section className="wrap hero cinema-hero" aria-labelledby="cinema-home-title">
               <div className="hero-copy">
-                <h1>{t('تطبيقات وألعاب،', 'Apps, games,')}<br />{t('وأدوات تقنية.', 'and tech tools.')}</h1>
-                <p>
-                  {t(
-                    <>يطوّر استوديو {L('MEEDX')} تطبيقات مجانية للتلفاز والهاتف، وأدوات {L('Windows / ADB')}، وملفات ضبط الألعاب بالعربية والإنجليزية.</>,
-                    'MEEDX Studio builds free Android TV and phone apps, Windows and ADB tools, and game configs in Arabic and English.'
-                  )}
-                </p>
+                <span className="cinema-source-badge">{t('مفتوح المصدر ومجاني بالكامل', 'Open source & 100% free')}</span>
+                <h1 id="cinema-home-title"><bdi>Local Cinema</bdi></h1>
+                <p>{t(
+                  'شغّل مكتبتك على تلفاز أندرويد. استخدم هاتفك للتحكم بالتشغيل وبث الوسائط عبر شبكتك المحلية.',
+                  'Play your library on Android TV. Use your phone to control playback and cast media over your local network.'
+                )}</p>
                 <div className="hero-buttons">
-                  <a href="/apps/local-cinema" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}>
-                    {t(<>استكشف {L('Local Cinema')}</>, 'Explore Local Cinema')}<ArrowUpRight size={18} />
+                  <a href="/downloads" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/downloads'); }}>
+                    <Download size={18} />{t('تنزيل التطبيقين', 'Get the apps')}
                   </a>
-                  <a href="/downloads" className="button" onClick={(e) => { e.preventDefault(); navigate('/downloads'); }}>
-                    {t('مركز التحميل المباشر', 'Downloads Hub')}<Download size={18} />
+                  <a href={siteConfig.source} className="button">
+                    {t('الكود المصدري', 'Source code')}<ArrowUpRight size={18} />
                   </a>
                 </div>
-                <div className="hero-meta">
-                  <span className="gh-ver-badge">{t('مجاني بالكامل', '100% Free')}</span>
-                  <code dir="ltr">Local Cinema v{releaseVersion}</code>
+                <div className="cinema-quick-downloads">
+                  <a href="/tv">{t('تنزيل التلفاز مباشرةً', 'Direct TV download')}</a>
+                  <a href="/phone">{t('تنزيل الهاتف مباشرةً', 'Direct phone download')}</a>
+                  <a href={siteConfig.releases}><bdi>v{releaseVersion}</bdi></a>
                 </div>
               </div>
               <LocalCinemaPoster t={t} eager />
@@ -362,8 +360,11 @@ function App() {
                 <p>{t(<>ملفات النسخة التجريبية عبر {L('GitHub Releases')} وبصمات التحقق {L('SHA-256')}.</>, 'Beta release files from GitHub Releases and SHA-256 verification hashes.')}</p>
               </div>
               <div className="head-tools">
-                <a className="link" href={siteConfig.githubProject} target="_blank" rel="noopener noreferrer">
-                  GitHub Releases <ArrowUpRight size={16} />
+                <a className="link" href={siteConfig.releases} target="_blank" rel="noopener noreferrer">
+                  {t('إصدارات GitHub', 'GitHub Releases')} <ArrowUpRight size={16} />
+                </a>
+                <a className="link" href={siteConfig.source}>
+                  {t('الكود المصدري', 'Source code')}<ArrowUpRight size={16} />
                 </a>
                 <a
                   className="link"

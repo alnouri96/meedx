@@ -1,23 +1,29 @@
 {
   "tv": {
-    "latestVersionCode": 14,
-    "latestVersionName": "1.0.0-beta.14",
-    "versionCode": 14,
-    "versionName": "1.0.0-beta.14",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-TV-v1.0.0-beta.14.apk",
-    "sizeBytes": 39330117,
-    "sha256": "d85e4f5438522cca6df82b40c829b728faa16b83690bf1e54e0c31a8c3f18ec0",
-    "changelog": "Press OK once to play an episode. Hold OK or press Menu to open its options. Continue Watching matches titles with their saved progress more reliably and clears entries when a season is complete. Turn Skip Ads on or off in playback controls. Family Watch is marked “Coming Soon.” Fixed a crash when the TV app receives a cast while in the background. The subtitle picker remembers Dual Subs and shows each track on one line. A single control toggles Dual Subs."
+    "latestVersionCode": 15,
+    "latestVersionName": "1.0.0-beta.15",
+    "versionCode": 15,
+    "versionName": "1.0.0-beta.15",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.15/LocalCinema-TV-v1.0.0-beta.15.apk",
+    "sizeBytes": 44915313,
+    "sha256": "6d404c2ab8ba12cfb157df83c27a2a14fd299657827de1ab3e060feb6236a235",
+    "changelog": {
+      "en": "TV Live refreshes the Iraqi Nexonic playlist automatically. Search for a country and save favorite countries or channels. TR TV&Mov combines streams from enabled add-ons. Watch a trailer on YouTube or choose a source by language, quality, size, and seed count. Torrent playback prepares the first pieces and the media index before starting. Press Back to leave a live channel and return to the channel list. Set a preferred audio language. Open the source code and third-party licenses from Settings.",
+      "ar": "يحدّث البث المباشر قائمة Nexonic العراقية تلقائيًا. ابحث عن دولة واحفظ الدول والقنوات المفضلة. تجمع واجهة TR TV&Mov مصادر الإضافات المفعّلة. شاهد الإعلان على يوتيوب أو اختر المصدر حسب اللغة والجودة والحجم وعدد المشاركين. يهيّئ مشغّل التورنت القطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع لمغادرة البث المباشر والعودة إلى قائمة القنوات. اختر لغة الصوت المفضلة. افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات."
+    }
   },
   "phone": {
-    "latestVersionCode": 14,
-    "latestVersionName": "1.0.0-beta.14",
-    "versionCode": 14,
-    "versionName": "1.0.0-beta.14",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-Manager-Phone-v1.0.0-beta.14.apk",
-    "sizeBytes": 119310506,
-    "sha256": "29a6e473eab5519f362e4a43fac059eb07495e36d126d31e47327d4aa16135a0",
-    "changelog": "Casting uses one media notification while keeping the CPU and Wi-Fi awake during background playback. Stop playback from the Local Media mini-bar or the notification shade. The phone switches from music controls to the active video card when playback starts on the TV. Hold Seek or Volume on the floating remote to repeat the action. The connection indicator follows the TV connection across tabs. Type Arabic or English directly into TV fields. Backspace and cursor movement work as you type, without a Send button. Scroll inside the Subtitles sheet without closing it. TV Hub connection cards hide the Trakt username. Video Grabber detects direct video and subtitle links. Support for relaying protected streams and embeds that require access tokens is planned for a future release."
+    "latestVersionCode": 15,
+    "latestVersionName": "1.0.0-beta.15",
+    "versionCode": 15,
+    "versionName": "1.0.0-beta.15",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.15/LocalCinema-Manager-Phone-v1.0.0-beta.15.apk",
+    "sizeBytes": 111383262,
+    "sha256": "f4a656a07af750a0e727dbda21b4ff1d129c080dae4f408fc414038fed2aea05",
+    "changelog": {
+      "en": "The floating remote stays available across tabs and while live channels play. Swipe down on the remote header to close it. The browser toolbar opens RSS. The Downloader tab opens Download Center. Fixed a browser startup crash in the optimized release build. Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible. Sync supported settings and channel favorites from TV Hub. Find the source code and third-party licenses in About. About shows the Local Cinema Manager logo and credits MEEDX. It identifies LibreTorrent as part of Download Center.",
+      "ar": "يبقى الريموت العائم متاحًا بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها. افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». أُصلح انهيار المتصفح عند بدء تشغيل نسخة Release. تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكم في عرض معلومات المقطوعة على التلفاز ومدته من إعدادات الموسيقى. زامن الإعدادات المدعومة والقنوات المفضلة من TV Hub. اعثر على الكود المصدري وتراخيص الجهات الخارجية في «حول التطبيق». تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل."
+    }
   },
   "builds": [
     {
@@ -27,9 +33,9 @@
       "packageId": "com.meedx.localcinema.tv",
       "name": "Local Cinema TV",
       "available": true,
-      "version": "1.0.0-beta.14",
-      "versionCode": 14,
-      "releaseDate": "2026-11-21",
+      "version": "1.0.0-beta.15",
+      "versionCode": 15,
+      "releaseDate": "2026-11-22",
       "status": {
         "ar": "نسخة تجريبية",
         "en": "Beta"
@@ -44,9 +50,9 @@
         "ar": "كود Downloader (نسخة الشاشة)",
         "en": "Downloader Code (TV Version)"
       },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-TV-v1.0.0-beta.14.apk",
-      "sizeBytes": 39330117,
-      "sha256": "d85e4f5438522cca6df82b40c829b728faa16b83690bf1e54e0c31a8c3f18ec0",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.15/LocalCinema-TV-v1.0.0-beta.15.apk",
+      "sizeBytes": 44915313,
+      "sha256": "6d404c2ab8ba12cfb157df83c27a2a14fd299657827de1ab3e060feb6236a235",
       "specs": {
         "platform": {
           "ar": "Android TV 6.0+",
@@ -56,23 +62,47 @@
           "ar": "armeabi-v7a",
           "en": "armeabi-v7a"
         },
-        "sizeLabel": "37.51 MiB",
-        "license": "GPL-3.0",
+        "sizeLabel": "42.83 MiB",
+        "license": "Apache-2.0",
         "security": {
           "ar": "خضع الملف لفحص مفاتيح المزوّدين المعروفة.",
           "en": "Checked for known provider credentials."
         }
       },
       "changelog": {
-        "en": "Press OK once to play an episode. Hold OK or press Menu to open its options. Continue Watching matches titles with their saved progress more reliably and clears entries when a season is complete. Turn Skip Ads on or off in playback controls. Family Watch is marked “Coming Soon.” Fixed a crash when the TV app receives a cast while in the background. The subtitle picker remembers Dual Subs and shows each track on one line. A single control toggles Dual Subs.",
-        "ar": "اضغط زر OK مرة واحدة لتشغيل الحلقة. اضغط مطولًا أو استخدم زر القائمة لعرض الخيارات. تعرض «متابعة المشاهدة» تقدّم العمل بدقة أكبر وتزيل إدخال الموسم عند اكتماله. يمكن تشغيل «تخطي الإعلانات» أو إيقافه من أدوات المشغّل. تظهر «المشاهدة العائلية» بحالة «قريبًا». أُصلح انهيار تطبيق التلفاز عند استقبال بث وهو في الخلفية. يحفظ منتقي الترجمات إعداد الترجمة المزدوجة ويعرض كل مسار في سطر واحد. يتحكم زر واحد في تفعيلها."
+        "en": "TV Live refreshes the Iraqi Nexonic playlist automatically. Search for a country and save favorite countries or channels. TR TV&Mov combines streams from enabled add-ons. Watch a trailer on YouTube or choose a source by language, quality, size, and seed count. Torrent playback prepares the first pieces and the media index before starting. Press Back to leave a live channel and return to the channel list. Set a preferred audio language. Open the source code and third-party licenses from Settings.",
+        "ar": "يحدّث البث المباشر قائمة Nexonic العراقية تلقائيًا. ابحث عن دولة واحفظ الدول والقنوات المفضلة. تجمع واجهة TR TV&Mov مصادر الإضافات المفعّلة. شاهد الإعلان على يوتيوب أو اختر المصدر حسب اللغة والجودة والحجم وعدد المشاركين. يهيّئ مشغّل التورنت القطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع لمغادرة البث المباشر والعودة إلى قائمة القنوات. اختر لغة الصوت المفضلة. افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات."
       },
       "updateNotes": [
+        {
+          "version": "1.0.0-beta.15",
+          "versionCode": 15,
+          "date": "2026-11-22",
+          "latest": true,
+          "whatsNew": {
+            "en": [
+              "TV Live refreshes the Iraqi Nexonic playlist automatically. Search for a country and save favorite countries or channels.",
+              "TR TV&Mov combines streams from enabled add-ons. Watch a trailer on YouTube or choose a source by language, quality, size, and seed count.",
+              "Torrent playback prepares the first pieces and the media index before starting. Press Back to leave a live channel and return to the channel list.",
+              "Set a preferred audio language. Open the source code and third-party licenses from Settings."
+            ],
+            "ar": [
+              "يحدّث البث المباشر قائمة Nexonic العراقية تلقائيًا. ابحث عن دولة واحفظ الدول والقنوات المفضلة.",
+              "تجمع واجهة TR TV&Mov مصادر الإضافات المفعّلة. شاهد الإعلان على يوتيوب أو اختر المصدر حسب اللغة والجودة والحجم وعدد المشاركين.",
+              "يهيّئ مشغّل التورنت القطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع لمغادرة البث المباشر والعودة إلى قائمة القنوات.",
+              "اختر لغة الصوت المفضلة. افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات."
+            ]
+          },
+          "improvements": {
+            "ar": [],
+            "en": []
+          }
+        },
         {
           "version": "1.0.0-beta.14",
           "versionCode": 14,
           "date": "2026-11-21",
-          "latest": true,
+          "latest": false,
           "whatsNew": {
             "en": [
               "Press OK once to play an episode. Hold OK or press Menu to open its options.",
@@ -321,9 +351,9 @@
       "packageId": "com.meedx.localcinema.manager",
       "name": "Local Cinema Manager",
       "available": true,
-      "version": "1.0.0-beta.14",
-      "versionCode": 14,
-      "releaseDate": "2026-11-21",
+      "version": "1.0.0-beta.15",
+      "versionCode": 15,
+      "releaseDate": "2026-11-22",
       "status": {
         "ar": "نسخة تجريبية",
         "en": "Beta"
@@ -332,9 +362,9 @@
         "ar": "هذه نسخة الهاتف (Android Phone)",
         "en": "This is the Phone Version (Android Phone)"
       },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.14/LocalCinema-Manager-Phone-v1.0.0-beta.14.apk",
-      "sizeBytes": 119310506,
-      "sha256": "29a6e473eab5519f362e4a43fac059eb07495e36d126d31e47327d4aa16135a0",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.15/LocalCinema-Manager-Phone-v1.0.0-beta.15.apk",
+      "sizeBytes": 111383262,
+      "sha256": "f4a656a07af750a0e727dbda21b4ff1d129c080dae4f408fc414038fed2aea05",
       "specs": {
         "platform": {
           "ar": "Android 8.0+",
@@ -344,23 +374,49 @@
           "ar": "arm64-v8a",
           "en": "arm64-v8a"
         },
-        "sizeLabel": "113.78 MiB",
-        "license": "GPL-3.0",
+        "sizeLabel": "106.22 MiB",
+        "license": "GPL-3.0-or-later",
         "security": {
           "ar": "خضع الملف لفحص مفاتيح المزوّدين المعروفة.",
           "en": "Checked for known provider credentials."
         }
       },
       "changelog": {
-        "en": "Casting uses one media notification while keeping the CPU and Wi-Fi awake during background playback. Stop playback from the Local Media mini-bar or the notification shade. The phone switches from music controls to the active video card when playback starts on the TV. Hold Seek or Volume on the floating remote to repeat the action. The connection indicator follows the TV connection across tabs. Type Arabic or English directly into TV fields. Backspace and cursor movement work as you type, without a Send button. Scroll inside the Subtitles sheet without closing it. TV Hub connection cards hide the Trakt username. Video Grabber detects direct video and subtitle links. Support for relaying protected streams and embeds that require access tokens is planned for a future release.",
-        "ar": "يعرض الهاتف إشعار وسائط واحدًا للبث ويحافظ على نشاط المعالج واتصال Wi-Fi أثناء التشغيل في الخلفية. أوقف التشغيل من شريط الوسائط المصغّر أو درج الإشعارات. ينتقل الهاتف من واجهة الموسيقى إلى بطاقة الفيديو عند بدء التشغيل على التلفاز. يكرّر الريموت العائم التقديم والترجيع وتغيير مستوى الصوت عند الضغط المطوّل. يعكس مؤشر الاتصال حالة التلفاز عبر التبويبات. تصل الكتابة بالعربية والإنجليزية مباشرة إلى حقل التلفاز. يعمل الحذف وتحريك المؤشر فورًا دون زر إرسال. يمكن التمرير داخل نافذة الترجمات دون إغلاقها. تخفي بطاقات الاتصال في TV Hub اسم حساب Trakt. تلتقط أداة Video Grabber روابط الفيديو والترجمة المباشرة. دعم تمرير البث المحمي والمشغّلات التي تتطلب رموز وصول مؤجل إلى إصدار لاحق."
+        "en": "The floating remote stays available across tabs and while live channels play. Swipe down on the remote header to close it. The browser toolbar opens RSS. The Downloader tab opens Download Center. Fixed a browser startup crash in the optimized release build. Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible. Sync supported settings and channel favorites from TV Hub. Find the source code and third-party licenses in About. About shows the Local Cinema Manager logo and credits MEEDX. It identifies LibreTorrent as part of Download Center.",
+        "ar": "يبقى الريموت العائم متاحًا بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها. افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». أُصلح انهيار المتصفح عند بدء تشغيل نسخة Release. تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكم في عرض معلومات المقطوعة على التلفاز ومدته من إعدادات الموسيقى. زامن الإعدادات المدعومة والقنوات المفضلة من TV Hub. اعثر على الكود المصدري وتراخيص الجهات الخارجية في «حول التطبيق». تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل."
       },
       "updateNotes": [
+        {
+          "version": "1.0.0-beta.15",
+          "versionCode": 15,
+          "date": "2026-11-22",
+          "latest": true,
+          "whatsNew": {
+            "en": [
+              "The floating remote stays available across tabs and while live channels play. Swipe down on the remote header to close it.",
+              "The browser toolbar opens RSS. The Downloader tab opens Download Center. Fixed a browser startup crash in the optimized release build.",
+              "Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible.",
+              "Sync supported settings and channel favorites from TV Hub. Find the source code and third-party licenses in About.",
+              "About shows the Local Cinema Manager logo and credits MEEDX. It identifies LibreTorrent as part of Download Center."
+            ],
+            "ar": [
+              "يبقى الريموت العائم متاحًا بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها.",
+              "افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». أُصلح انهيار المتصفح عند بدء تشغيل نسخة Release.",
+              "تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكم في عرض معلومات المقطوعة على التلفاز ومدته من إعدادات الموسيقى.",
+              "زامن الإعدادات المدعومة والقنوات المفضلة من TV Hub. اعثر على الكود المصدري وتراخيص الجهات الخارجية في «حول التطبيق».",
+              "تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل."
+            ]
+          },
+          "improvements": {
+            "ar": [],
+            "en": []
+          }
+        },
         {
           "version": "1.0.0-beta.14",
           "versionCode": 14,
           "date": "2026-11-21",
-          "latest": true,
+          "latest": false,
           "whatsNew": {
             "en": [
               "Casting uses one media notification while keeping the CPU and Wi-Fi awake during background playback.",

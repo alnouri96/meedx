@@ -2,7 +2,8 @@ import catalog from '../data/catalog.json';
 
 export const siteConfig = {
   telegramLink: 'https://t.me/MEEDXAPP',
-  githubProject: 'https://github.com/alnouri96/meedx',
+  source: 'https://github.com/alnouri96/local-cinema',
+  releases: 'https://github.com/alnouri96/meedx/releases',
   homeUrl: 'https://meedx.pages.dev',
   downloads: catalog,
 };

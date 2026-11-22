@@ -19,6 +19,7 @@ async function openAppFromHome(page) {
   }
   await page.getByRole('link', { name: 'عرض Local Cinema' }).click();
   await expect(page.getByRole('heading', { name: 'Local Cinema', level: 1 })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'الكود المصدري', exact: true })).toHaveAttribute('href', 'https://github.com/alnouri96/local-cinema');
 }
 
 async function checkGallery(page, context, width) {
@@ -111,11 +112,13 @@ try {
     await page.getByRole('button', { name: 'نسخ بصمة Local Cinema TV' }).click();
     assert.equal(await page.evaluate(() => navigator.clipboard.readText()), feed.tv.sha256);
 
-    for (const [device, label] of [['tv', 'تنزيل APK للتلفاز'], ['phone', 'تنزيل APK للهاتف']]) {
+    for (const [device, label] of [['tv', 'تنزيل التلفاز مباشرةً'], ['phone', 'تنزيل الهاتف مباشرةً']]) {
       const shortLink = await page.request.get(base + '/' + device, { maxRedirects: 0 });
       assert.equal(shortLink.status(), 302);
       assert.equal(shortLink.headers().location, feed[device].apkUrl);
-      await page.getByRole('button', { name: label, exact: true }).click();
+      const card = page.locator('.cinema-download-' + device);
+      await expect(card.getByRole('link', { name: label, exact: true })).toHaveAttribute('href', '/' + device);
+      await card.getByRole('button', { name: 'خيارات التنزيل', exact: true }).click();
       await expect(dialog.getByRole('link')).toHaveCount(0);
       await dialog.getByRole('checkbox').check();
       await expect(dialog.getByRole('link')).toHaveAttribute('href', feed[device].apkUrl);

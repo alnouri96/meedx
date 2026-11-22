@@ -6,6 +6,7 @@ import {
   KeyRound, Maximize2, MessageSquare, Puzzle, Sparkles, Wrench
 } from 'lucide-react';
 import { InteractiveShowcase } from './InteractiveShowcase';
+import { siteConfig } from './config/siteConfig';
 import { AddonsConnectionsSection } from './AddonsConnectionsSection';
 
 export function AppDetailPage({
@@ -47,7 +48,8 @@ export function AppDetailPage({
             <div>
               <div className="gh-app-title-row">
                 <h1>Local Cinema</h1>
-                <span className="gh-ver-badge" dir="ltr">v{tvApp?.version} · code {tvApp?.versionCode}</span>
+                <span className="gh-ver-badge" dir="ltr">v{tvApp?.version}</span>
+                <span className="cinema-source-badge">{t('مفتوح المصدر ومجاني بالكامل', 'Open source & 100% free')}</span>
               </div>
               <p>
                 {t(
@@ -58,17 +60,29 @@ export function AppDetailPage({
             </div>
           </div>
 
-          <a
-            href="/downloads"
-            className="button primary"
-            onClick={(event) => { event.preventDefault(); navigate('/downloads'); }}
-          >
-            {t('تنزيل تطبيقَي التلفاز والهاتف', 'Get the TV and phone apps')}<Download size={17} />
-          </a>
+          <div className="cinema-detail-actions">
+            <a
+              href="/downloads"
+              className="button primary"
+              onClick={(event) => { event.preventDefault(); navigate('/downloads'); }}
+            >
+              {t('تنزيل التطبيقين', 'Get the apps')}<Download size={17} />
+            </a>
+            <a className="button" href={siteConfig.source}>
+              {t('الكود المصدري', 'Source code')}<ArrowUpRight size={16} />
+            </a>
+            <a className="link" href={siteConfig.source + '/blob/main/docs/THIRD_PARTY.md'}>
+              {t('التراخيص', 'Licenses')}
+            </a>
+          </div>
         </article>
       </section>
 
-      <section className="band" style={{ paddingBlock: 12 }}>
+      <section className="wrap section cinema-feature-section">
+        <InteractiveShowcase t={t} L={L} />
+      </section>
+
+      <section className="band cinema-gallery-section">
         <div className="wrap section">
           <div className="section-head">
             <div>
@@ -121,7 +135,6 @@ export function AppDetailPage({
             </article>
           </div>
 
-          <InteractiveShowcase t={t} L={L} />
         </div>
       </section>
 
@@ -150,7 +163,10 @@ export function AppDetailPage({
 
       <section id="patch-notes" className="wrap section" aria-labelledby="patch-notes-title">
         <div className="section-head">
-          <h2 id="patch-notes-title">{t('سجل التحديثات', 'Patch notes')}</h2>
+          <div>
+            <h2 id="patch-notes-title">{t('سجل التحديثات', 'Patch notes')}</h2>
+            <a className="link" href={siteConfig.releases}>{t('كل الإصدارات على GitHub', 'All releases on GitHub')}<ArrowUpRight size={16} /></a>
+          </div>
           <div className="dl-tabs" role="group" aria-label={t('اختر التطبيق', 'Choose an app')}>
             {catalog.map((build) => (
               <button

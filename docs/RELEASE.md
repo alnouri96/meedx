@@ -23,7 +23,7 @@ With the preview running, run `npm run verify:ui` in a second terminal. It check
 
 ## Publish after approval
 
-1. Confirm the user authorized this version. Push the reviewed Android source and its source tag to the private repository when requested. Keep its APK distribution in the public repository.
+1. Confirm the user authorized this version. Push the reviewed Android source and its source tag to the public Android source repository. Keep its APK distribution in the public repository.
 2. Push the tag for the reviewed website commit. Publish the TV APK, Phone APK, and `checksums.txt` together with the approved notes. Set `--latest` and leave GitHub's Pre-release option off for the approved distribution build. A beta can retain its existing tag and product label.
 3. Run `npm run verify -- --published`. It checks GitHub Latest and compares the three asset names, byte sizes, and digests with the local originals. Keep the existing public files for historical tags.
 4. Push the verified site source to `main`. For the direct-upload Pages project, deploy the matching `dist` with `npx wrangler pages deploy dist --project-name=meedx --branch=main`. If the project uses Git integration, let the configured production build deploy that commit.

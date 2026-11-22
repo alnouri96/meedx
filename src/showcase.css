@@ -166,3 +166,27 @@
 
 .dl-card .file-title h2{font-size:1.2rem}
 .downloader-code-meta p{margin-block:4px 0}
+
+.cinema-hero{min-height:0;padding-block:clamp(48px,8vw,110px);grid-template-columns:minmax(0,1fr) minmax(0,1.35fr)}
+.cinema-hero h1{margin-block:18px 14px;font-size:clamp(3.15rem,6.6vw,7rem);line-height:1.05}
+.cinema-hero .hero-copy p{margin-block:0 26px}
+.cinema-hero .lc-poster-link{border-color:#574529;border-radius:14px}
+.cinema-source-badge{display:inline-block;color:#e5a93b;font-size:.9rem;font-weight:700}
+.cinema-quick-downloads,.cinema-detail-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+.cinema-quick-downloads{margin-block-start:22px;padding-block-start:12px;border-block-start:1px solid #463922}
+.cinema-quick-downloads a{display:inline-flex;min-height:44px;align-items:center;color:#fff;text-underline-offset:4px}
+.cinema-gallery-section{padding-block:16px}
+.cinema-feature-section{padding-block:clamp(20px,4vw,52px)}
+.cinema-download-card{padding:clamp(18px,3vw,32px);border-block-start:3px solid #e5a93b;background:#171717}
+.cinema-download-card .file-actions{justify-content:flex-start;padding-block:4px 12px}
+.cinema-download-card .hash{margin-block:12px}
+@media(max-width:767px){.cinema-hero h1{font-size:clamp(3rem,12vw,5rem)}.cinema-detail-actions .button{flex:1 0 auto}.cinema-download-card .file-actions .primary{width:100%;justify-content:center}}
+
+#downloads .section-head{align-items:flex-end}
+#downloads .section-head h1{font-size:clamp(2.4rem,5vw,4.6rem);line-height:1.12}
+#downloads .section-head p{margin-block:12px 0;max-width:46ch}
+#downloads .head-tools{display:flex;flex-wrap:wrap;gap:8px 16px}
+#downloads .head-tools a{min-height:44px}
+@media(max-width:767px){
+  #downloads .section-head{flex-direction:column;align-items:flex-start;gap:16px}
+}
