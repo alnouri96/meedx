@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Download, ExternalLink, X } from 'lucide-react';
+import { ExternalLink, X } from 'lucide-react';
 import { siteConfig } from './config/siteConfig';
 import { ZoomViewer } from './ZoomViewer';
+import { CurrentChangelog } from './ReleaseChangelog';
 
 function TelegramForm({ initialTopic, initialType, t }) {
   const [topic, setTopic] = useState(initialTopic);
@@ -35,26 +36,7 @@ function TelegramForm({ initialTopic, initialType, t }) {
   );
 }
 
-function DownloadConfirmation({ file, t }) {
-  const [confirm, setConfirm] = useState(false);
-  return (
-    <>
-      <h3>{file.name}</h3>
-      <p>{t('قارن بصمة الملف بعد التنزيل مع البصمة في مركز التحميل.', 'After download, compare the file checksum with the one in the Downloads hub.')}</p>
-      <label className="confirm">
-        <input type="checkbox" checked={confirm} onChange={(event) => setConfirm(event.target.checked)} />
-        {t('تحققت من نسخة التطبيق', 'I checked the APK variant')}
-      </label>
-      {confirm && (
-        <a className="button primary" href={file.url} rel="noopener noreferrer" download>
-          {t('ابدأ التنزيل', 'Start APK download')}<Download size={17} />
-        </a>
-      )}
-    </>
-  );
-}
-
-export function Panels({ modal, close, shots, t }) {
+export function Panels({ modal, close, shots, t, ar }) {
   const ref = useRef(null);
   const [index, setIndex] = useState(modal.index ?? 0);
   const [device, setDevice] = useState(modal.device);
@@ -62,7 +44,7 @@ export function Panels({ modal, close, shots, t }) {
   const titles = {
     support: t('دعم MEEDX', 'Support MEEDX'),
     telegram: t('تواصل عبر تلجرام', 'Contact via Telegram'),
-    download: t('تنزيل النسخة التجريبية', 'Download the beta'),
+    changelog: t('سجل التغييرات', 'Changelog'),
   };
 
   useEffect(() => {
@@ -97,7 +79,7 @@ export function Panels({ modal, close, shots, t }) {
   return (
     <dialog
       ref={ref}
-      className={isLightbox ? 'lightbox' : 'sheet'}
+      className={isLightbox ? 'lightbox' : modal.id === 'changelog' ? 'sheet changelog-sheet' : 'sheet'}
       aria-labelledby="dialog-title"
       onCancel={(event) => { event.preventDefault(); close(); }}
       onClick={onBackdropClick}
@@ -118,7 +100,7 @@ export function Panels({ modal, close, shots, t }) {
         )}
         {modal.id === 'telegram' && <TelegramForm initialTopic={modal.topic} initialType={modal.kind} t={t} />}
         {isLightbox && <ZoomViewer shots={shots} index={index} device={device} setDevice={setDevice} move={move} t={t} />}
-        {modal.id === 'download' && <DownloadConfirmation file={modal.file} t={t} />}
+        {modal.id === 'changelog' && <CurrentChangelog builds={modal.builds} t={t} ar={ar} />}
       </div>
     </dialog>
   );

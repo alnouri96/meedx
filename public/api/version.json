@@ -8,8 +8,8 @@
     "sizeBytes": 44915313,
     "sha256": "6d404c2ab8ba12cfb157df83c27a2a14fd299657827de1ab3e060feb6236a235",
     "changelog": {
-      "en": "TV Live refreshes the Iraqi Nexonic playlist automatically. Search for a country and save favorite countries or channels. TR TV&Mov combines streams from enabled add-ons. Watch a trailer on YouTube or choose a source by language, quality, size, and seed count. Torrent playback prepares the first pieces and the media index before starting. Press Back to leave a live channel and return to the channel list. Set a preferred audio language. Open the source code and third-party licenses from Settings.",
-      "ar": "يحدّث البث المباشر قائمة Nexonic العراقية تلقائيًا. ابحث عن دولة واحفظ الدول والقنوات المفضلة. تجمع واجهة TR TV&Mov مصادر الإضافات المفعّلة. شاهد الإعلان على يوتيوب أو اختر المصدر حسب اللغة والجودة والحجم وعدد المشاركين. يهيّئ مشغّل التورنت القطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع لمغادرة البث المباشر والعودة إلى قائمة القنوات. اختر لغة الصوت المفضلة. افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات."
+      "en": "Install Stremio stream and catalog add-ons. Enable or disable them individually or in groups. The source picker combines results from enabled add-ons and shows the provider, language, quality, file size, and seed count. Browse movies and series in TR TV&Mov. Pick an episode or movie to open its source list. Watch official trailers on YouTube and use automatic dual subtitles when matching tracks are available and dual subtitles are enabled. TV Live opens with Iraq by default. Search for a country by name or first letter. Save favorite countries and pin favorite channels to the top of the list. Refresh the Iraqi Nexonic playlist automatically or on demand. Open IPTV separately from TV Live. Add M3U and M3U8 playlists or Xtream Codes. Enable the Arabic and open channel lists in settings. The app caches channel logos and keeps channel favorites. Choose a preferred audio language in Settings. The player selects a matching track when it is available. The torrent player prioritizes the first pieces and the media index before playback. Press Back during a live channel to return to the channel list. Add-on settings use larger cards and show the active count and per-provider status. You can exclude add-on streams from Continue Watching. Open the source code and third-party licenses from Settings. Help and support links open the Local Cinema site.",
+      "ar": "ثبّت إضافات Stremio للبث والفهارس. فعّلها أو عطّلها بشكل فردي أو جماعي. تجمع قائمة المصادر نتائج الإضافات المفعّلة وتعرض اسم المزوّد واللغة والجودة والحجم وعدد الباذرين. تصفّح الأفلام والمسلسلات في TR TV&Mov. اختر فيلمًا أو حلقة لعرض المصادر. شاهد الإعلانات الرسمية على يوتيوب واستخدم الترجمة المزدوجة التلقائية عند تفعيلها وتوفر المسارات المطابقة. يفتح قسم TV Live على العراق افتراضيًا. ابحث عن الدولة باسمها أو بحرفها الأول. احفظ الدول المفضلة وثبّت القنوات المفضلة في أعلى القائمة. حدّث قائمة Nexonic العراقية تلقائيًا أو عند الطلب. افتح قسم IPTV مستقلاً عن البث المباشر. أضف قوائم M3U وM3U8 أو بيانات Xtream Codes. فعّل قوائم القنوات العربية والمفتوحة من الإعدادات. يحفظ التطبيق الشعارات مؤقتًا ويحتفظ بالقنوات المفضلة. اختر لغة الصوت المفضلة من الإعدادات. يستخدم المشغّل المسار المطابق عند توفره. يعطي مشغّل التورنت الأولوية للقطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع أثناء البث المباشر للعودة إلى قائمة القنوات. تعرض إعدادات الإضافات بطاقات أكبر وعدد الإضافات المفعّلة وحالة كل مزوّد. يمكنك استبعاد مشاهدات الإضافات من «متابعة المشاهدة». افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات. تفتح روابط المساعدة والدعم موقع Local Cinema."
     }
   },
   "phone": {
@@ -21,8 +21,8 @@
     "sizeBytes": 111383262,
     "sha256": "f4a656a07af750a0e727dbda21b4ff1d129c080dae4f408fc414038fed2aea05",
     "changelog": {
-      "en": "The floating remote stays available across tabs and while live channels play. Swipe down on the remote header to close it. The browser toolbar opens RSS. The Downloader tab opens Download Center. Fixed a browser startup crash in the optimized release build. Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible. Sync supported settings and channel favorites from TV Hub. Find the source code and third-party licenses in About. About shows the Local Cinema Manager logo and credits MEEDX. It identifies LibreTorrent as part of Download Center.",
-      "ar": "يبقى الريموت العائم متاحًا بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها. افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». أُصلح انهيار المتصفح عند بدء تشغيل نسخة Release. تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكم في عرض معلومات المقطوعة على التلفاز ومدته من إعدادات الموسيقى. زامن الإعدادات المدعومة والقنوات المفضلة من TV Hub. اعثر على الكود المصدري وتراخيص الجهات الخارجية في «حول التطبيق». تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل."
+      "en": "Add Stremio stream and catalog add-ons from TV Hub or open a stremio:// install link. Expand or collapse External Add-ons in Connection. Changes to add-ons sync to the paired TV. Use the floating TV remote across tabs and during live channels. Swipe down on its header to close the remote panel. Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible. Open RSS from the browser toolbar and Download Center from the Downloader tab. Use Sync Now in TV Hub to send supported settings and channel favorites. Fixed a GeckoView startup crash in the optimized release build. About shows the Local Cinema Manager logo and credits MEEDX. It describes LibreTorrent as part of Download Center. It also links to the source code and third-party licenses.",
+      "ar": "أضف إضافات Stremio للبث والفهارس من TV Hub أو افتح رابط تثبيت stremio://. اطوِ قائمة الإضافات الخارجية أو وسّعها داخل تبويب الاتصال. تتزامن التغييرات عند تعديل الإضافات مع التلفاز المقترن. استخدم الريموت العائم بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها. تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكّم من إعدادات الموسيقى في ظهور معلومات المقطوعة على التلفاز ومدة بقائها. افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». استخدم «المزامنة الآن» في TV Hub لإرسال الإعدادات المدعومة والقنوات المفضلة. أُصلح انهيار GeckoView عند بدء تشغيل نسخة الإصدار المحسّنة. تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل وتربط بالكود المصدري وتراخيص الجهات الخارجية."
     }
   },
   "builds": [
@@ -70,8 +70,8 @@
         }
       },
       "changelog": {
-        "en": "TV Live refreshes the Iraqi Nexonic playlist automatically. Search for a country and save favorite countries or channels. TR TV&Mov combines streams from enabled add-ons. Watch a trailer on YouTube or choose a source by language, quality, size, and seed count. Torrent playback prepares the first pieces and the media index before starting. Press Back to leave a live channel and return to the channel list. Set a preferred audio language. Open the source code and third-party licenses from Settings.",
-        "ar": "يحدّث البث المباشر قائمة Nexonic العراقية تلقائيًا. ابحث عن دولة واحفظ الدول والقنوات المفضلة. تجمع واجهة TR TV&Mov مصادر الإضافات المفعّلة. شاهد الإعلان على يوتيوب أو اختر المصدر حسب اللغة والجودة والحجم وعدد المشاركين. يهيّئ مشغّل التورنت القطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع لمغادرة البث المباشر والعودة إلى قائمة القنوات. اختر لغة الصوت المفضلة. افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات."
+        "ar": "ثبّت إضافات Stremio للبث والفهارس. فعّلها أو عطّلها بشكل فردي أو جماعي. تجمع قائمة المصادر نتائج الإضافات المفعّلة وتعرض اسم المزوّد واللغة والجودة والحجم وعدد الباذرين. تصفّح الأفلام والمسلسلات في TR TV&Mov. اختر فيلمًا أو حلقة لعرض المصادر. شاهد الإعلانات الرسمية على يوتيوب واستخدم الترجمة المزدوجة التلقائية عند تفعيلها وتوفر المسارات المطابقة. يفتح قسم TV Live على العراق افتراضيًا. ابحث عن الدولة باسمها أو بحرفها الأول. احفظ الدول المفضلة وثبّت القنوات المفضلة في أعلى القائمة. حدّث قائمة Nexonic العراقية تلقائيًا أو عند الطلب. افتح قسم IPTV مستقلاً عن البث المباشر. أضف قوائم M3U وM3U8 أو بيانات Xtream Codes. فعّل قوائم القنوات العربية والمفتوحة من الإعدادات. يحفظ التطبيق الشعارات مؤقتًا ويحتفظ بالقنوات المفضلة. اختر لغة الصوت المفضلة من الإعدادات. يستخدم المشغّل المسار المطابق عند توفره. يعطي مشغّل التورنت الأولوية للقطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع أثناء البث المباشر للعودة إلى قائمة القنوات. تعرض إعدادات الإضافات بطاقات أكبر وعدد الإضافات المفعّلة وحالة كل مزوّد. يمكنك استبعاد مشاهدات الإضافات من «متابعة المشاهدة». افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات. تفتح روابط المساعدة والدعم موقع Local Cinema.",
+        "en": "Install Stremio stream and catalog add-ons. Enable or disable them individually or in groups. The source picker combines results from enabled add-ons and shows the provider, language, quality, file size, and seed count. Browse movies and series in TR TV&Mov. Pick an episode or movie to open its source list. Watch official trailers on YouTube and use automatic dual subtitles when matching tracks are available and dual subtitles are enabled. TV Live opens with Iraq by default. Search for a country by name or first letter. Save favorite countries and pin favorite channels to the top of the list. Refresh the Iraqi Nexonic playlist automatically or on demand. Open IPTV separately from TV Live. Add M3U and M3U8 playlists or Xtream Codes. Enable the Arabic and open channel lists in settings. The app caches channel logos and keeps channel favorites. Choose a preferred audio language in Settings. The player selects a matching track when it is available. The torrent player prioritizes the first pieces and the media index before playback. Press Back during a live channel to return to the channel list. Add-on settings use larger cards and show the active count and per-provider status. You can exclude add-on streams from Continue Watching. Open the source code and third-party licenses from Settings. Help and support links open the Local Cinema site."
       },
       "updateNotes": [
         {
@@ -80,22 +80,32 @@
           "date": "2026-11-22",
           "latest": true,
           "whatsNew": {
-            "en": [
-              "TV Live refreshes the Iraqi Nexonic playlist automatically. Search for a country and save favorite countries or channels.",
-              "TR TV&Mov combines streams from enabled add-ons. Watch a trailer on YouTube or choose a source by language, quality, size, and seed count.",
-              "Torrent playback prepares the first pieces and the media index before starting. Press Back to leave a live channel and return to the channel list.",
-              "Set a preferred audio language. Open the source code and third-party licenses from Settings."
-            ],
             "ar": [
-              "يحدّث البث المباشر قائمة Nexonic العراقية تلقائيًا. ابحث عن دولة واحفظ الدول والقنوات المفضلة.",
-              "تجمع واجهة TR TV&Mov مصادر الإضافات المفعّلة. شاهد الإعلان على يوتيوب أو اختر المصدر حسب اللغة والجودة والحجم وعدد المشاركين.",
-              "يهيّئ مشغّل التورنت القطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع لمغادرة البث المباشر والعودة إلى قائمة القنوات.",
-              "اختر لغة الصوت المفضلة. افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات."
+              "ثبّت إضافات Stremio للبث والفهارس. فعّلها أو عطّلها بشكل فردي أو جماعي. تجمع قائمة المصادر نتائج الإضافات المفعّلة وتعرض اسم المزوّد واللغة والجودة والحجم وعدد الباذرين.",
+              "تصفّح الأفلام والمسلسلات في TR TV&Mov. اختر فيلمًا أو حلقة لعرض المصادر. شاهد الإعلانات الرسمية على يوتيوب واستخدم الترجمة المزدوجة التلقائية عند تفعيلها وتوفر المسارات المطابقة.",
+              "يفتح قسم TV Live على العراق افتراضيًا. ابحث عن الدولة باسمها أو بحرفها الأول. احفظ الدول المفضلة وثبّت القنوات المفضلة في أعلى القائمة. حدّث قائمة Nexonic العراقية تلقائيًا أو عند الطلب.",
+              "افتح قسم IPTV مستقلاً عن البث المباشر. أضف قوائم M3U وM3U8 أو بيانات Xtream Codes. فعّل قوائم القنوات العربية والمفتوحة من الإعدادات. يحفظ التطبيق الشعارات مؤقتًا ويحتفظ بالقنوات المفضلة.",
+              "اختر لغة الصوت المفضلة من الإعدادات. يستخدم المشغّل المسار المطابق عند توفره."
+            ],
+            "en": [
+              "Install Stremio stream and catalog add-ons. Enable or disable them individually or in groups. The source picker combines results from enabled add-ons and shows the provider, language, quality, file size, and seed count.",
+              "Browse movies and series in TR TV&Mov. Pick an episode or movie to open its source list. Watch official trailers on YouTube and use automatic dual subtitles when matching tracks are available and dual subtitles are enabled.",
+              "TV Live opens with Iraq by default. Search for a country by name or first letter. Save favorite countries and pin favorite channels to the top of the list. Refresh the Iraqi Nexonic playlist automatically or on demand.",
+              "Open IPTV separately from TV Live. Add M3U and M3U8 playlists or Xtream Codes. Enable the Arabic and open channel lists in settings. The app caches channel logos and keeps channel favorites.",
+              "Choose a preferred audio language in Settings. The player selects a matching track when it is available."
             ]
           },
           "improvements": {
-            "ar": [],
-            "en": []
+            "ar": [
+              "يعطي مشغّل التورنت الأولوية للقطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع أثناء البث المباشر للعودة إلى قائمة القنوات.",
+              "تعرض إعدادات الإضافات بطاقات أكبر وعدد الإضافات المفعّلة وحالة كل مزوّد. يمكنك استبعاد مشاهدات الإضافات من «متابعة المشاهدة».",
+              "افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات. تفتح روابط المساعدة والدعم موقع Local Cinema."
+            ],
+            "en": [
+              "The torrent player prioritizes the first pieces and the media index before playback. Press Back during a live channel to return to the channel list.",
+              "Add-on settings use larger cards and show the active count and per-provider status. You can exclude add-on streams from Continue Watching.",
+              "Open the source code and third-party licenses from Settings. Help and support links open the Local Cinema site."
+            ]
           }
         },
         {
@@ -382,8 +392,8 @@
         }
       },
       "changelog": {
-        "en": "The floating remote stays available across tabs and while live channels play. Swipe down on the remote header to close it. The browser toolbar opens RSS. The Downloader tab opens Download Center. Fixed a browser startup crash in the optimized release build. Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible. Sync supported settings and channel favorites from TV Hub. Find the source code and third-party licenses in About. About shows the Local Cinema Manager logo and credits MEEDX. It identifies LibreTorrent as part of Download Center.",
-        "ar": "يبقى الريموت العائم متاحًا بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها. افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». أُصلح انهيار المتصفح عند بدء تشغيل نسخة Release. تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكم في عرض معلومات المقطوعة على التلفاز ومدته من إعدادات الموسيقى. زامن الإعدادات المدعومة والقنوات المفضلة من TV Hub. اعثر على الكود المصدري وتراخيص الجهات الخارجية في «حول التطبيق». تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل."
+        "ar": "أضف إضافات Stremio للبث والفهارس من TV Hub أو افتح رابط تثبيت stremio://. اطوِ قائمة الإضافات الخارجية أو وسّعها داخل تبويب الاتصال. تتزامن التغييرات عند تعديل الإضافات مع التلفاز المقترن. استخدم الريموت العائم بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها. تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكّم من إعدادات الموسيقى في ظهور معلومات المقطوعة على التلفاز ومدة بقائها. افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». استخدم «المزامنة الآن» في TV Hub لإرسال الإعدادات المدعومة والقنوات المفضلة. أُصلح انهيار GeckoView عند بدء تشغيل نسخة الإصدار المحسّنة. تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل وتربط بالكود المصدري وتراخيص الجهات الخارجية.",
+        "en": "Add Stremio stream and catalog add-ons from TV Hub or open a stremio:// install link. Expand or collapse External Add-ons in Connection. Changes to add-ons sync to the paired TV. Use the floating TV remote across tabs and during live channels. Swipe down on its header to close the remote panel. Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible. Open RSS from the browser toolbar and Download Center from the Downloader tab. Use Sync Now in TV Hub to send supported settings and channel favorites. Fixed a GeckoView startup crash in the optimized release build. About shows the Local Cinema Manager logo and credits MEEDX. It describes LibreTorrent as part of Download Center. It also links to the source code and third-party licenses."
       },
       "updateNotes": [
         {
@@ -392,24 +402,28 @@
           "date": "2026-11-22",
           "latest": true,
           "whatsNew": {
-            "en": [
-              "The floating remote stays available across tabs and while live channels play. Swipe down on the remote header to close it.",
-              "The browser toolbar opens RSS. The Downloader tab opens Download Center. Fixed a browser startup crash in the optimized release build.",
-              "Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible.",
-              "Sync supported settings and channel favorites from TV Hub. Find the source code and third-party licenses in About.",
-              "About shows the Local Cinema Manager logo and credits MEEDX. It identifies LibreTorrent as part of Download Center."
-            ],
             "ar": [
-              "يبقى الريموت العائم متاحًا بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها.",
-              "افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». أُصلح انهيار المتصفح عند بدء تشغيل نسخة Release.",
-              "تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكم في عرض معلومات المقطوعة على التلفاز ومدته من إعدادات الموسيقى.",
-              "زامن الإعدادات المدعومة والقنوات المفضلة من TV Hub. اعثر على الكود المصدري وتراخيص الجهات الخارجية في «حول التطبيق».",
-              "تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل."
+              "أضف إضافات Stremio للبث والفهارس من TV Hub أو افتح رابط تثبيت stremio://. اطوِ قائمة الإضافات الخارجية أو وسّعها داخل تبويب الاتصال. تتزامن التغييرات عند تعديل الإضافات مع التلفاز المقترن.",
+              "استخدم الريموت العائم بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها.",
+              "تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكّم من إعدادات الموسيقى في ظهور معلومات المقطوعة على التلفاز ومدة بقائها.",
+              "افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». استخدم «المزامنة الآن» في TV Hub لإرسال الإعدادات المدعومة والقنوات المفضلة."
+            ],
+            "en": [
+              "Add Stremio stream and catalog add-ons from TV Hub or open a stremio:// install link. Expand or collapse External Add-ons in Connection. Changes to add-ons sync to the paired TV.",
+              "Use the floating TV remote across tabs and during live channels. Swipe down on its header to close the remote panel.",
+              "Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible.",
+              "Open RSS from the browser toolbar and Download Center from the Downloader tab. Use Sync Now in TV Hub to send supported settings and channel favorites."
             ]
           },
           "improvements": {
-            "ar": [],
-            "en": []
+            "ar": [
+              "أُصلح انهيار GeckoView عند بدء تشغيل نسخة الإصدار المحسّنة.",
+              "تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل وتربط بالكود المصدري وتراخيص الجهات الخارجية."
+            ],
+            "en": [
+              "Fixed a GeckoView startup crash in the optimized release build.",
+              "About shows the Local Cinema Manager logo and credits MEEDX. It describes LibreTorrent as part of Download Center. It also links to the source code and third-party licenses."
+            ]
           }
         },
         {

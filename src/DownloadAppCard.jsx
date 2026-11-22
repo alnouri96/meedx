@@ -1,7 +1,7 @@
 import React from 'react';
-import { Copy, Download, Monitor, Smartphone } from 'lucide-react';
+import { Copy, Download, List, Monitor, Smartphone } from 'lucide-react';
 
-export function DownloadAppCard({ build, ar, t, L, copy, onDownload, onContact }) {
+export function DownloadAppCard({ build, ar, t, L, copy, onChangelog, onContact }) {
   const lang = ar ? 'ar' : 'en';
   const { device, name, version, versionCode, releaseDate, specs, sizeBytes, sha256, downloaderCode, shortUrl } = build;
   const isTv = device === 'tv';
@@ -22,7 +22,7 @@ export function DownloadAppCard({ build, ar, t, L, copy, onDownload, onContact }
           {isTv ? t('تنزيل التلفاز مباشرةً', 'Download TV APK') : t('تنزيل الهاتف مباشرةً', 'Download Phone APK')}
           <Download size={17} />
         </a>
-        <button type="button" className="link" onClick={onDownload}>{t('خيارات التنزيل', 'Download options')}</button>
+        <button type="button" className="button" onClick={onChangelog}><List size={17} />{t('سجل التغييرات', 'Changelog')}</button>
       </div>
 
       <dl className="dl-spec-grid">

@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation, Pagination } from 'swiper/modules';
 import {
-  ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, Download, Film,
-  KeyRound, Maximize2, MessageSquare, Puzzle, Sparkles, Wrench
+  ArrowLeft, ArrowRight, ArrowUpRight, Download, Film, List,
+  KeyRound, Maximize2, MessageSquare, Puzzle,
 } from 'lucide-react';
 import { InteractiveShowcase } from './InteractiveShowcase';
 import { siteConfig } from './config/siteConfig';
 import { AddonsConnectionsSection } from './AddonsConnectionsSection';
+import { ReleaseNotes } from './ReleaseChangelog';
 
 export function AppDetailPage({
-  ar, t, L, copy, navigate, catalog, shots, slide, setSlide, setModal, contact, label, image
+  ar, t, L, copy, navigate, catalog, shots, slide, setSlide, setModal, openChangelog, contact, label, image
 }) {
   const tvApp = catalog.find((p) => p.id === 'tv');
   const lang = ar ? 'ar' : 'en';
@@ -165,6 +166,9 @@ export function AppDetailPage({
         <div className="section-head">
           <div>
             <h2 id="patch-notes-title">{t('سجل التحديثات', 'Patch notes')}</h2>
+            <button type="button" className="button" onClick={() => openChangelog(catalog.find((build) => build.id === notesDevice))}>
+              <List size={17} />{t('سجل التغييرات', 'Changelog')}
+            </button>
             <a className="link" href={siteConfig.releases}>{t('كل الإصدارات على GitHub', 'All releases on GitHub')}<ArrowUpRight size={16} /></a>
           </div>
           <div className="dl-tabs" role="group" aria-label={t('اختر التطبيق', 'Choose an app')}>
@@ -183,30 +187,7 @@ export function AppDetailPage({
         </div>
 
         <div className="detail-notes-grid" dir={ar ? 'rtl' : 'ltr'}>
-          {notes.map((release) => (
-            <article key={release.version} className="dl-release-block">
-              <div className="dl-release-head">
-                <code dir="ltr">v{release.version} (code {release.versionCode}) · {release.date}</code>
-                {release.latest && <span className="dl-latest-badge"><CheckCircle2 size={12} /> {t('الإصدار الحالي', 'Current release')}</span>}
-              </div>
-              {release.whatsNew && (
-                <div className="dl-note-group">
-                  <h4><Sparkles size={15} /> {t("ما أُضيف حديثاً (What's New)", "What's New")}</h4>
-                  <ul>
-                    {release.whatsNew[lang].map((item, idx) => <li key={idx}>{item}</li>)}
-                  </ul>
-                </div>
-              )}
-              {release.improvements && (
-                <div className="dl-note-group">
-                  <h4><Wrench size={15} /> {t('التحسينات والإصلاحات (Improvements & Fixes)', 'Improvements & Fixes')}</h4>
-                  <ul>
-                    {release.improvements[lang].map((item, idx) => <li key={idx}>{item}</li>)}
-                  </ul>
-                </div>
-              )}
-            </article>
-          ))}
+          {notes.map((release) => <ReleaseNotes key={release.version} release={release} lang={lang} />)}
         </div>
       </section>
     </div>

@@ -15,7 +15,7 @@ import { siteConfig } from './config/siteConfig';
 import screenshotGroups from './data/screenshots.json';
 import { screenshotCopy } from './data/screenshot-copy';
 import { Panels } from './panels';
-import { AppsShowcasePage, LocalCinemaPoster } from './AppsShowcasePage';
+import { AppsShowcasePage, LocalCinemaAppCard, LocalCinemaPoster } from './AppsShowcasePage';
 import { AppDetailPage } from './AppDetailPage';
 import { DownloadAppCard } from './DownloadAppCard';
 import './style.css';
@@ -151,32 +151,27 @@ function App() {
     ['/downloads', t('التحميلات', 'Downloads')],
   ];
 
-  const showcaseItems = [
+  const softwareItems = [
     {
-      path: '/software#gaming',
-      icon: Gamepad2,
-      badge: t('قسم الألعاب', 'Gaming Hub'),
-      title: t('الألعاب وملفات التخصيص (Gaming & Tweaks)', 'Gaming & Tweaks'),
-      desc: t('إعدادات التحكم، ملفات تحسين الأداء، وأدوات تخصيص الألعاب للحاسوب والهاتف.', 'Control layouts, performance profiles, and custom gaming tweaks for PC and mobile.'),
-      cta: t('استعرض قسم الألعاب', 'Explore Gaming'),
-    },
-    {
+      id: 'pc-tools',
       path: '/software#pc-tools',
       icon: Terminal,
-      badge: 'Windows · PowerShell · ADB',
-      title: t('برامج وأدوات الحاسوب (PC Software)', 'PC Software & Scripts'),
-      desc: t(<>أدوات وسكربتات {L('Windows')} و{L('PowerShell')} و{L('ADB')} لإدارة الشاشات والهواتف والأنظمة.</>, 'Windows, PowerShell, and ADB utilities for managing TVs, phones, and PCs.'),
-      cta: t('استعرض البرامج والأدوات', 'Explore Software'),
+      title: t('برامج الحاسوب وأدواته', 'PC software and tools'),
+      description: t(<>أدوات {L('Windows')} و{L('PowerShell')} و{L('ADB')} لإدارة الحواسيب والأجهزة.</>, 'Windows, PowerShell, and ADB tools for managing computers and devices.'),
     },
     {
-      path: '/services',
-      icon: Wrench,
-      badge: t('خدمات مباشرة', 'Direct Services'),
-      title: t('الخدمات التقنية والصيانة', 'Technical Services & Repair'),
-      desc: t('صيانة الهواتف، تجميع وصيانة الحاسوب، وتطوير تطبيقات وسكربتات مخصصة حسب الطلب.', 'Phone repair, PC assembly & maintenance, and custom app/script development.'),
-      cta: t('اطلب خدمة تقنية', 'Request a Service'),
+      id: 'gaming',
+      path: '/software#gaming',
+      icon: Gamepad2,
+      title: t('أدوات الألعاب', 'Gaming tools'),
+      description: t('إعدادات التحكم وملفات تخصيص الألعاب.', 'Control layouts and game configuration files.'),
     },
   ];
+  const upcoming = [t('سمارت', 'Smart'), t('فايبر / البيبر', 'Viper / Paper')];
+  const openChangelog = (build) => {
+    const ordered = build ? [build, ...catalog.filter((entry) => entry.id !== build.id)] : catalog;
+    setModal({ id: 'changelog', builds: ordered });
+  };
 
   const contact = (topic = 'Local Cinema', kind = 'feature') => setModal({ id: 'telegram', topic, kind });
   const support = () => setModal({ id: 'support' });
@@ -235,10 +230,10 @@ function App() {
                 )}</p>
                 <div className="hero-buttons">
                   <a href="/downloads" className="button primary" onClick={(e) => { e.preventDefault(); navigate('/downloads'); }}>
-                    <Download size={18} />{t('تنزيل التطبيقين', 'Get the apps')}
+                    <Download size={18} />{t('تنزيل التطبيقين', 'Download Apps')}
                   </a>
-                  <a href={siteConfig.source} className="button">
-                    {t('الكود المصدري', 'Source code')}<ArrowUpRight size={18} />
+                  <a href="/apps/local-cinema" className="button" onClick={(e) => { e.preventDefault(); navigate('/apps/local-cinema'); }}>
+                    {t('عرض التطبيق', 'View Local Cinema')}<ArrowUpRight size={18} />
                   </a>
                 </div>
                 <div className="cinema-quick-downloads">
@@ -247,38 +242,36 @@ function App() {
                   <a href={siteConfig.releases}><bdi>v{releaseVersion}</bdi></a>
                 </div>
               </div>
-              <LocalCinemaPoster t={t} eager />
+              <LocalCinemaPoster t={t} navigate={navigate} eager />
             </section>
 
-            <section className="band">
-              <div className="wrap section">
-                <div className="section-head">
-                  <div>
-                    <h2>{t('البرامج والخدمات', 'Software and services')}</h2>
-                  </div>
-                </div>
+            <section className="wrap home-section" aria-labelledby="home-apps">
+              <h2 id="home-apps">{t('التطبيقات', 'Apps')}</h2>
+              <LocalCinemaAppCard t={t} navigate={navigate} version={releaseVersion} />
+            </section>
 
-                <div className="hub-grid">
-                  {showcaseItems.map((c) => {
-                    const Icon = c.icon;
-                    return (
-                      <a
-                        key={c.title}
-                        href={c.path}
-                        className="hub-card"
-                        onClick={(e) => { e.preventDefault(); navigate(c.path); }}
-                      >
-                        <div className="hub-card-top">
-                          <span className="sc-gold-badge"><Icon size={20} /></span>
-                          <span className="gh-ver-badge" dir="ltr">{c.badge}</span>
-                        </div>
-                        <h3>{c.title}</h3>
-                        <p>{c.desc}</p>
-                        <span className="hub-link">{c.cta} <ArrowUpRight size={15} /></span>
-                      </a>
-                    );
-                  })}
-                </div>
+            <section className="wrap home-section" aria-labelledby="home-programs">
+              <h2 id="home-programs">{t('البرامج والأدوات', 'Programs & Software')}</h2>
+              <div className="home-card-grid">
+                {softwareItems.map(({ id, path, icon: Icon, title, description }) => (
+                  <a key={id} href={path} className="hub-card" onClick={(event) => { event.preventDefault(); navigate(path); }}>
+                    <div className="hub-card-top"><Icon size={23} /><ArrowUpRight size={18} /></div>
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                  </a>
+                ))}
+              </div>
+            </section>
+
+            <section className="wrap home-section home-upcoming" aria-labelledby="home-upcoming">
+              <h2 id="home-upcoming">{t('قادم قريباً', 'Coming Soon')}</h2>
+              <div className="home-card-grid">
+                {upcoming.map((title) => (
+                  <article className="hub-card upcoming-card" key={title}>
+                    <h3><bdi>{title}</bdi></h3>
+                    <span className="gh-ver-badge">{t('قريباً', 'Coming Soon')}</span>
+                  </article>
+                ))}
               </div>
             </section>
           </>
@@ -300,6 +293,7 @@ function App() {
             slide={slide}
             setSlide={setSlide}
             setModal={setModal}
+            openChangelog={openChangelog}
             contact={contact}
             label={label}
             image={image}
@@ -315,15 +309,12 @@ function App() {
               </div>
             </div>
             <div className="lab">
-              {[
-                ['gaming', Gamepad2, 'Gaming & Tweaks', t('إعدادات التحكم وملفات تخصيص الألعاب.', 'Control layouts and game configurations.')],
-                ['pc-tools', Terminal, 'PC Software & Scripts', t(<>أدوات {L('Windows')} و{L('PowerShell')} و{L('ADB')}.</>, 'Windows, PowerShell and ADB utilities.')],
-              ].map(([id, Icon, name, desc]) => (
+              {softwareItems.map(({ id, icon: Icon, title, description }) => (
                 <article key={id} id={id}>
                   <Icon size={33} />
-                  <h3>{name}</h3>
-                  <p>{desc}</p>
-                  <span>{t('لا توجد ملفات منشورة حالياً. تُضاف قريباً.', 'No files published yet. Coming soon.')}</span>
+                  <h2>{title}</h2>
+                  <p>{description}</p>
+                  <span>{t('الملفات قيد الإعداد.', 'Files are in preparation.')}</span>
                 </article>
               ))}
             </div>
@@ -356,8 +347,8 @@ function App() {
           <section id="downloads" className="wrap section sc-animate">
             <div className="section-head">
               <div>
-                <h1>{t('مركز التحميل', 'Downloads hub')}</h1>
-                <p>{t(<>ملفات النسخة التجريبية عبر {L('GitHub Releases')} وبصمات التحقق {L('SHA-256')}.</>, 'Beta release files from GitHub Releases and SHA-256 verification hashes.')}</p>
+                <h1>{t('مركز التحميل', 'Download Center')}</h1>
+                <p>{t(<>ملفات النسخة التجريبية عبر {L('GitHub Releases')} وبصمات التحقق {L('SHA-256')}.</>, 'Download apps and verify their SHA-256 checksums.')}</p>
               </div>
               <div className="head-tools">
                 <a className="link" href={siteConfig.releases} target="_blank" rel="noopener noreferrer">
@@ -365,13 +356,6 @@ function App() {
                 </a>
                 <a className="link" href={siteConfig.source}>
                   {t('الكود المصدري', 'Source code')}<ArrowUpRight size={16} />
-                </a>
-                <a
-                  className="link"
-                  href="/apps/local-cinema#patch-notes"
-                  onClick={(event) => { event.preventDefault(); navigate('/apps/local-cinema#patch-notes'); }}
-                >
-                  {t('سجل التحديثات', 'Patch notes')}<ArrowUpRight size={16} />
                 </a>
               </div>
             </div>
@@ -383,20 +367,20 @@ function App() {
               </span>
             </div>
 
-            <div className="downloads">
-              {catalog.filter((p) => p.available).map((p) => (
-                <DownloadAppCard
-                  key={p.id}
-                  build={p}
-                  ar={ar}
-                  t={t}
-                  L={L}
-                  copy={copy}
-                  onDownload={() => setModal({ id: 'download', file: p })}
-                  onContact={() => contact(p.name)}
-                />
-              ))}
-            </div>
+            <section className="download-program" aria-labelledby="download-local-cinema">
+              <div className="download-program-head">
+                <h2 id="download-local-cinema">Local Cinema</h2>
+                <a className="link" href="/apps/local-cinema" onClick={(event) => { event.preventDefault(); navigate('/apps/local-cinema'); }}>
+                  {t('عرض التطبيق', 'View Local Cinema')}<ArrowUpRight size={16} />
+                </a>
+              </div>
+              <div className="downloads">
+                {catalog.filter((build) => build.available).map((build) => (
+                  <DownloadAppCard key={build.id} build={build} ar={ar} t={t} L={L} copy={copy}
+                    onChangelog={() => openChangelog(build)} onContact={() => contact(build.name)} />
+                ))}
+              </div>
+            </section>
           </section>
         )}
         {!VALID_ROUTES.has(route) && (
@@ -434,7 +418,7 @@ function App() {
         </button>
       )}
 
-      {modal && <Panels key={modal.id} modal={modal} close={() => setModal(null)} shots={shots} t={t} />}
+      {modal && <Panels key={modal.id} modal={modal} close={() => setModal(null)} shots={shots} t={t} ar={ar} />}
       <div className="toast" role="status">{toast}</div>
     </>
   );

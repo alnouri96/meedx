@@ -87,6 +87,23 @@ try {
     await page.goto(base);
     await page.evaluate(() => document.fonts.ready);
     await pageFits(page);
+    const homeTitle = page.locator('#cinema-home-title bdi');
+    assert.equal(await homeTitle.evaluate((title) => {
+      const range = document.createRange();
+      range.selectNodeContents(title);
+      return range.getClientRects().length;
+    }), 1, 'The product name must fit on one line');
+    const hero = page.locator('.cinema-hero');
+    const poster = hero.getByRole('link', { name: 'بوستر تطبيق Local Cinema' });
+    await expect(poster).toHaveAttribute('href', '/apps/local-cinema');
+    await expect.poll(() => poster.locator('img').evaluate((img) => img.naturalWidth / img.naturalHeight)).toBeGreaterThan(1.76);
+    await expect(hero.getByRole('link', { name: 'تنزيل التطبيقين' })).toHaveAttribute('href', '/downloads');
+    await expect(hero.getByRole('link', { name: 'عرض التطبيق' })).toHaveAttribute('href', '/apps/local-cinema');
+    await expect(page.locator('.home-section > h2')).toHaveText(['التطبيقات', 'البرامج والأدوات', 'قادم قريباً']);
+    await expect(page.locator('.upcoming-card h3')).toHaveText(['سمارت', 'فايبر / البيبر']);
+    await poster.click();
+    await expect(page).toHaveURL(/\/apps\/local-cinema$/);
+    await page.goto(base);
     await openAppFromHome(page);
     await expect(page.getByRole('button', { name: /تنزيل.*APK/ })).toHaveCount(0);
     await checkGallery(page, context, width);
@@ -107,7 +124,9 @@ try {
     await page.goto(base + (width === 360 ? '/#downloads' : '/downloads'));
     await expect(page).toHaveURL(/\/downloads$/);
     const feed = await (await page.request.get(base + '/api/version.json')).json();
-    await expect(page.locator('.dl-card')).toHaveCount(2);
+    const group = page.getByRole('region', { name: 'Local Cinema', exact: true });
+    await expect(group.locator('.dl-card')).toHaveCount(2);
+    await expect(page.locator('#downloads .head-tools').getByText('سجل التحديثات')).toHaveCount(0);
     await expect(page.locator('.downloader-code-box')).toHaveCount(1);
     await page.getByRole('button', { name: 'نسخ بصمة Local Cinema TV' }).click();
     assert.equal(await page.evaluate(() => navigator.clipboard.readText()), feed.tv.sha256);
@@ -118,17 +137,29 @@ try {
       assert.equal(shortLink.headers().location, feed[device].apkUrl);
       const card = page.locator('.cinema-download-' + device);
       await expect(card.getByRole('link', { name: label, exact: true })).toHaveAttribute('href', '/' + device);
-      await card.getByRole('button', { name: 'خيارات التنزيل', exact: true }).click();
-      await expect(dialog.getByRole('link')).toHaveCount(0);
-      await dialog.getByRole('checkbox').check();
-      await expect(dialog.getByRole('link')).toHaveAttribute('href', feed[device].apkUrl);
+      const changelog = card.getByRole('button', { name: 'سجل التغييرات', exact: true });
+      await changelog.click();
+      await expect(dialog.getByRole('heading', { name: 'سجل التغييرات', exact: true })).toBeVisible();
+      await expect(dialog.locator('code')).toHaveText('v' + feed[device].versionName);
+      await expect(dialog.locator('.changelog-notes h3').first()).toHaveText(device === 'tv' ? 'Local Cinema TV' : 'Local Cinema Manager');
+      await expect(dialog.locator('.changelog-notes h3')).toHaveCount(2);
+      await expect(dialog.locator('.changelog-notes')).toHaveAttribute('dir', 'rtl');
+      await expect(dialog.locator('.changelog-notes')).toContainText('Nexonic');
+      await dialog.getByRole('button', { name: 'English', exact: true }).click();
+      await expect(dialog.locator('.changelog-notes')).toHaveAttribute('dir', 'ltr');
+      await expect(dialog.locator('.changelog-notes')).toContainText('Xtream Codes');
+      await expect(dialog.locator('.changelog-notes')).toContainText('External Add-ons');
       await page.keyboard.press('Escape');
+      await expect(changelog).toBeFocused();
     }
     await pageFits(page);
-    await page.getByRole('link', { name: 'سجل التحديثات', exact: true }).click();
+    await page.goto(base + '/apps/local-cinema#patch-notes');
     await expect(page.locator('#patch-notes-title')).toBeInViewport();
     await page.locator('#patch-notes').getByRole('button', { name: 'الهاتف', exact: true }).click();
     await expect(page.locator('#patch-notes .dl-release-head').first()).toContainText(feed.phone.versionName);
+    await page.locator('#patch-notes').getByRole('button', { name: 'سجل التغييرات', exact: true }).click();
+    await expect(dialog.locator('.changelog-notes h3').first()).toHaveText('Local Cinema Manager');
+    await page.keyboard.press('Escape');
 
     await page.goto(base + '/services');
     await page.getByRole('button', { name: 'اطلب عبر تلجرام' }).first().click();
@@ -140,12 +171,18 @@ try {
     assert.match(draft.searchParams.get('text'), /اختبار المعاينة/);
     await page.keyboard.press('Escape');
 
-    await page.goto(base + '/software#pc-tools');
+    await page.goto(base);
+    await page.locator('#home-programs + .home-card-grid').getByRole('link', { name: /برامج الحاسوب/ }).click();
+    await expect(page).toHaveURL(/\/software#pc-tools$/);
     await expect(page.locator('#pc-tools')).toBeInViewport();
     await page.getByRole('button', { name: 'Switch to English' }).click();
     await expect(page.locator('html')).toHaveAttribute('dir', 'ltr');
     await expect(page.getByRole('heading', { name: 'Software & Gaming', level: 1 })).toBeVisible();
     await pageFits(page);
+    await page.locator('header .wordmark').click();
+    await expect(page.locator('#cinema-home-title bdi')).toHaveText('Local Cinema');
+    await expect(page.locator('.home-section > h2')).toHaveText(['Apps', 'Programs & Software', 'Coming Soon']);
+    await expect(page.locator('.cinema-hero').getByRole('link', { name: 'View Local Cinema' })).toBeVisible();
 
     assert.equal((await page.goto(base + '/audit-missing')).status(), 404);
     await expect(page.getByRole('heading', { name: 'الصفحة غير موجودة', level: 1 })).toBeVisible();
