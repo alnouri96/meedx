@@ -30,4 +30,5 @@ Public repo for the MEEDX website, OTA feed, and Local Cinema downloads (`alnour
 - Publish audited APKs only to `alnouri96/meedx` GitHub Releases (never commit APKs, ZIPs, signing files, secrets, payment info, QRs, local paths, device IDs, or personal screenshots).
 - One home per action: `/apps/local-cinema` (setup/notes), `/downloads` (APKs/checksums), `/tv` & `/phone` (current APK links).
 - Preserve OTA schema, keep `v1.0.0-beta.16` as `Latest` until explicit release approval, publish regular Releases with `--latest`, and run `npm run verify -- --live` after deploy.
+- **Single-Branch & Asset Hygiene:** `main` is the sole default branch of `alnouri96/meedx` (delete temporary cleanup branches locally and remotely after merge), and `upgrade-6.6.4` is the sole default branch of `alnouri96/local-cinema`. Before every release, check `public/` for unused assets and verify clean branches plus matching `Latest` via `gh api`.
 - Apply `ste80-humanizer` to `README.md`, release notes, and public copy; keep AR RTL/EN LTR verified; never bloat `AGENTS.md` with changelogs or SHA-256 hashes.
