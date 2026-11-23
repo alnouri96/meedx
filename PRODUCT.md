@@ -1,16 +1,20 @@
 # MEEDX
+
 <!-- impeccable:product-schema 1 -->
-## Platform
-web
-## Stack
-React + Vite + Tailwind CSS + Swiper, explicitly requested.
+## Platform & Stack
+Web — React, Vite, Tailwind CSS, and Swiper hosted on Cloudflare Pages (`meedx.pages.dev`).
+
 ## Product Purpose
-Arabic-first portfolio and download hub for MEEDX software, gaming, and tech solutions studio. English toggle, APK downloads, technical services, donation and Telegram entry points.
+Arabic-first studio site and open-source distribution hub for Local Cinema (Android TV) and Local Cinema Manager (Android phone), with an English toggle, verified APK downloads, setup guides, and bilingual patch notes.
+
 ## Users
-Visitors evaluating Local Cinema, gamers seeking documented configurations, and clients requesting hardware/software services.
-## Capabilities and Constraints
-Only verified files get download buttons. No invented game tools, performance gains, payment numbers or contact handles. YouTube detection is incomplete. APK release signer is the workstation debug certificate per the source handoff. Static UI cannot enforce anti-bot security by itself.
-## Evidence on Hand
-Local Cinema beta.1 release files and handoff; live ADB screenshots, 2026-11-15. Payment QR, account numbers, public release availability and Telegram handle remain open.
+Android TV and phone users downloading or setting up Local Cinema, reviewing release notes, and verifying APK SHA-256 checksums.
+
+## Capabilities & Constraints
+Only audited, published release files appear on `/downloads` and in `public/api/version.json`. Public copy follows `ste80-humanizer` with no invented metrics, fake tools, or personal data. Keep APKs, ZIPs, and secrets out of this repository.
+
+## Current Baseline
+Published GitHub Latest: `v1.0.0-beta.15` (`alnouri96/meedx`), with public Android source at `alnouri96/local-cinema`.
+
 ## Brand Commitments
-User-pinned carbon and metallic gold hardware lab identity, Arabic IBM Plex Sans Arabic and JetBrains Mono for data. No emoji or generic marketing claims.
+Carbon dark surfaces (`#0B0B0D` / `#121215`) and warm metallic gold (`#E5B84B`), self-hosted IBM Plex Sans Arabic for prose and JetBrains Mono for versions, sizes, and hashes.

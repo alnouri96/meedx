@@ -1,0 +1,1 @@
+Start with [AGENTS.md](AGENTS.md) and [docs/RELEASE.md](docs/RELEASE.md). Published `Latest` is `v1.0.0-beta.15`; local `v1.0.0-beta.16` work lives in the sibling `Local Cinema` checkout and is not published yet.

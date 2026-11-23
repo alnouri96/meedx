@@ -1,29 +1,33 @@
 # MEEDX WEB agent guide
 
-This public checkout serves the website, update feed, and download links for Local Cinema. Its production repository is `alnouri96/meedx` on `main`. The Android source lives in the sibling Local Cinema checkout.
+Public repo for the MEEDX website, OTA feed, and Local Cinema downloads (`alnouri96/meedx`, `main`). Android source lives in sibling `Local Cinema` (`alnouri96/local-cinema`, `upgrade-6.6.4`).
 
 ## Start here
 
-1. Use `git status --short --branch` to identify the checkout and any pending work.
-2. Read the Android handoff in `docs/CONTINUATION.md` in the sibling checkout. Verify the current tag with `gh api repos/alnouri96/meedx/releases/latest --jq .tag_name` before reporting release status. Follow [the website release procedure](docs/RELEASE.md) for publishing.
-3. Work locally unless the user requested publication. Before any site deployment, run `npm run verify`, `npm run build`, and the [Pages preview checks](docs/RELEASE.md#local-verification).
+1. Run `git status --short --branch` and check published Latest (`v1.0.0-beta.15` until approved release) via `gh api repos/alnouri96/meedx/releases/latest --jq .tag_name`.
+2. Read [docs/RELEASE.md](docs/RELEASE.md) only when staging/publishing a release. Work locally unless publication is requested; run `npm run verify`, `npm run build`, and [Pages preview checks](docs/RELEASE.md#local-verification) before deploy.
+
+## Permanent engineering rules
+
+1. **Modular & Isolated Code:** Put new sections, dialogs, or helpers in focused `src/` files and add them to the source map below immediately.
+2. **No Duplication / Reuse Existing Components:** Reuse existing cards, modals, data helpers, and CSS tokens instead of building duplicate variants.
+3. **Targeted Read Policy:** Read only this file and open target files via `rg`; skip Android repos and unrelated docs. Read [DESIGN.md](DESIGN.md) or `ui-ux-pro-max` only for UI/UX tasks.
 
 ## Source map
 
 | Path | Purpose |
 | --- | --- |
-| `src/main.jsx` | Routes, section links, Arabic and English navigation |
-| `src/AppDetailPage.jsx` | Setup, add-ons, screenshots, and both apps' patch notes |
-| `src/DownloadAppCard.jsx` | APK downloads, build details, and checksums |
-| `src/data/catalog.json` | Website metadata and bilingual patch notes |
-| `public/api/version.json` | OTA feed. Generate with `npm run sync:release` |
-| `public/api/config.json` and `public/api/addons.json` | Public app configuration and curated add-ons |
-| `public/_redirects` and `public/_headers` | Pages routes, APK shortlinks, and response headers |
+| `src/main.jsx` | Routes, anchors, AR RTL / EN LTR navigation |
+| `src/AppsShowcasePage.jsx`, `src/AppDetailPage.jsx` | Apps overview, setup, add-ons, screenshots, patch notes |
+| `src/DownloadAppCard.jsx`, `src/ReleaseChangelog.jsx` | APK cards, build metadata, checksums, bilingual changelog modal |
+| `src/AddonsConnectionsSection.jsx`, `src/InteractiveShowcase.jsx`, `src/ZoomViewer.jsx`, `src/panels.jsx`, `src/GoldParticles.jsx` | Showcase, add-ons, lightbox, and visual panels |
+| `src/config/siteConfig.js`, `src/data/catalog.json`, `src/data/screenshots.json`, `src/data/screenshot-copy.js` | Site config, version metadata, screenshots, bilingual copy |
+| `public/api/version.json`, `public/api/config.json`, `public/api/addons.json` | OTA feed (`npm run sync:release`), public config, curated add-ons |
+| `public/_redirects`, `public/_headers`, `scripts/` | Pages routes, `/tv` & `/phone` shortlinks, headers, verify scripts |
 
-## Publication rules
+## Publication & safety rules
 
-- Publish APKs to GitHub Releases in `alnouri96/meedx`. Use the Android checkout's audited archives as input. Keep APKs, ZIP archives, signing files, private source, and secrets out of this checkout.
-- Keep one site home for each action. `/apps/local-cinema` owns setup and patch notes. `/downloads` owns APKs and checksums. `/tv` and `/phone` are shortlinks to the current public APKs.
-- Use the catalog for version labels and preserve the OTA schema. Keep README and profile download links pointed to `/downloads`. Publish each approved public app build as a regular GitHub release with `--latest`. Keep the beta suffix where applicable and run `npm run verify -- --live` after deployment.
-- Keep personal payment details, QR images, local paths, device identifiers, private notes, and raw screenshots out of the public working tree. Review images for pairing codes and personal content before adding them.
-- Use Local Cinema names in product copy. Preserve third-party notices where required. Apply `ste80-humanizer` to README, release notes, and site copy. Keep Arabic RTL and English LTR in UI checks.
+- Publish audited APKs only to `alnouri96/meedx` GitHub Releases (never commit APKs, ZIPs, signing files, secrets, payment info, QRs, local paths, device IDs, or personal screenshots).
+- One home per action: `/apps/local-cinema` (setup/notes), `/downloads` (APKs/checksums), `/tv` & `/phone` (current APK links).
+- Preserve OTA schema, keep `v1.0.0-beta.15` as `Latest` until explicit release approval, publish regular Releases with `--latest`, and run `npm run verify -- --live` after deploy.
+- Apply `ste80-humanizer` to `README.md`, release notes, and public copy; keep AR RTL/EN LTR verified; never bloat `AGENTS.md` with changelogs or SHA-256 hashes.
