@@ -48,3 +48,8 @@ For website-only changes, use the current published pair for verification. Run t
 Use `/downloads` in profile and README links. GitHub's `/releases/latest` excludes pre-releases. Keep the shortlinks pointed to versioned APK URLs in the public repository. Verify any published Downloader code independently. A code can open the Downloads hub while `/tv` links directly to the APK.
 
 If deployment serves broken distribution metadata, restore the last verified Pages deployment and correct the source on `main`. Keep the older APK URLs live. Avoid changing version codes or overwriting published files during recovery.
+
+## OTA Migration Plan: meedx -> local-cinema
+
+- **`v1.0.0-beta.17` (bridge release):** Do not rename `alnouri96/meedx` or switch it to `Private` before or during `beta.17`; keep APKs hosted on public `alnouri96/meedx` so existing `beta.15`/`beta.16` users update over OTA cleanly.
+- **`v1.0.0-beta.18+` (full cutover):** After hosting APKs on `alnouri96/local-cinema`, updating `scripts/verify-downloads.mjs` and `src/config/siteConfig.js`, running `npm run sync:release`, deploying Cloudflare Pages, and passing `npm run verify -- --live`, set `alnouri96/meedx` to `private: true` and rename it to `meedx-web` (`alnouri96/meedx-web`) via `gh api`, update `origin` in `G:/MEEDX WEB` to `https://github.com/alnouri96/meedx-web.git`, and verify `https://meedx.pages.dev` remains public and live.
