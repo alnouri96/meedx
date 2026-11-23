@@ -1,28 +1,28 @@
 {
   "tv": {
-    "latestVersionCode": 16,
-    "latestVersionName": "1.0.0-beta.16",
-    "versionCode": 16,
-    "versionName": "1.0.0-beta.16",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.16/LocalCinema-TV-v1.0.0-beta.16.apk",
-    "sizeBytes": 48739840,
-    "sha256": "59e8e001aa3a002c5f225bbabd54ba3f3c050c0899c1bc3e5fc90c0c0a45f0fd",
+    "latestVersionCode": 17,
+    "latestVersionName": "1.0.0-beta.17",
+    "versionCode": 17,
+    "versionName": "1.0.0-beta.17",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.17/LocalCinema-TV-v1.0.0-beta.17.apk",
+    "sizeBytes": 48768208,
+    "sha256": "539b38314f456192e0c784c172aa914bc05ecf8d0051b45a2c4e98e244f4d3fc",
     "changelog": {
-      "en": "Redesigned Add-ons as a square six-column grid with official logos, custom ordering, and a top settings button. Added Persian Stremio, separated TR TV & Mov, fixed FayaTV, and displayed channel icons in a 1:1 square layout. Added the Art and Screensaver section. Art Mode includes five museum paintings, resizable mat frames, color filters, an optional clock, and pixel shift protection. YouTube 4K Screensaver adds a category dropdown, built-in search, and looping playback in SmartTube or the built-in player. Unified File Browser to manage video, image, and subtitle files in one place. Long-press opens select, copy, move, paste, and delete actions. Art Mode and subtitle picking now open this browser directly. Updated movie and series details screens by removing the intermediate Watch Now and Trailer dialog and adding audio language priority, quick audio and trailer buttons, full season titles, and unclipped focus rings. Enabled multi-source subtitle search across OpenSubtitles v3, Wyzie, and Subsource with automatic query pre-fill. Sped up torrent playback startup and showed live peer counts and download speed. Removed the exit confirmation dialog on Back, hid seek controls during live channels, removed the 10-second seek buttons from the player bar, and focused TV Live on Favorite Countries.",
-      "ar": "يعيد قسم الإضافات عرض البطاقات في شبكة مربعة من 6 بطاقات في الصف بشعارات رسمية مع إمكانية ترتيب الإضافات ونقل زر الضبط للأعلى. يضيف التطبيق Persian Stremio ويفصل TR TV & Mov ويصلح FayaTV ويعرض أيقونات القنوات بنسبة مربعة 1:1. يضيف التطبيق قسم الفن وشاشة التوقف. يضم وضع الفن خمس لوحات متحفية مدمجة وإطارات ورقية قابلة لتغيير الحجم وفلاتر لونية وساعة اختيارية وحماية بكسل. توفر شاشة توقف يوتيوب 4K قائمة تصنيفات منسدلة وبحثًا مدمجًا وتشغيلاً متكررًا عبر SmartTube أو المشغّل الداخلي. يوحّد مستعرض الملفات تصفح ملفات الفيديو والصور والترجمات في مكان واحد. تفتح قائمة الضغط المطوّل خيارات التحديد والنسخ والنقل واللصق والحذف. يرتبط وضع الفن واختيار الترجمات مباشرة بهذا المستعرض. تحدّث شاشة تفاصيل الأفلام والمسلسلات بتصميم مضغوط يزيل نافذة «مشاهدة الآن / الإعلان» ويعرض أزرار الصوت والإعلان وأولوية اللغات. يصلح التحديث قصّ إطارات التركيز وأسماء المواسم، ويفعّل البحث متعدد المصادر للترجمات عبر OpenSubtitles v3 وWyzie وSubsource بالتعبئة التلقائية. يسرّع المشغّل بدء بث التورنت ويعرض عدد الموزعين وسرعة التحميل الحية. يلغي التحديث نافذة تأكيد الإيقاف عند الضغط على رجوع، ويخفي التقديم والترجيع في البث المباشر، ويزيل أزرار 10 ثوانٍ من شريط المشغّل، ويبقي قسم البث التلفزيوني على الدول المفضلة فقط."
+      "en": "Upgraded TV Live with automatic focus on the first channel card, split and translated bilingual categories with saved selection, merged Favorite Countries channels with a searchable country picker, and global Nexonic IPTV alongside iptv-org. Rebuilt Add-ons Settings with clear high-contrast checkboxes, a dedicated Manage Installed Add-ons button, and separate per-add-on settings with instant two-way sync. Live add-on channels now play directly without the torrent source picker, pass full proxy headers, auto-switch between HLS and MPEG-TS streams, fail over to alternate links, and clean up retired broken add-ons such as Best Torrents. Added ordered audio language priority (1, 2, 3...) across Movies and Series, unified Movie and Series action bars with Language Priority inside Audio Tracks, restructured Main Settings without duplicates, enabled All Files Access in File Browser and the Permissions Wizard, and prepared OTA updates for future repository migration.",
+      "ar": "يطوّر التحديث شاشة البث التلفزيوني المباشر بتركيز أولي تلقائي على أول بطاقة قناة، وتفكيك التصنيفات المركّبة وتعريبها بالكامل مع حفظ آخر تصنيف مختار، ودمج قنوات جميع الدول المفضلة في قائمة واحدة مع منتقي دول عالمي مزوّد بشريط بحث، وترقية مصدر Nexonic IPTV ليعمل عالمياً بجانب iptv-org. يعيد التحديث تنظيم إعدادات الإضافات بمربعات اختيار ذهبية عالية التباين وزر مستقل لإدارة الإضافات المثبتة، مع فصل الإعدادات الخاصة بكل إضافة داخل صفحتها وربطها بمزامنة فورية ثنائية الاتجاه. يشغّل التطبيق قنوات الإضافات المباشرة فوراً دون نافذة مصادر التورنت، ويمرّر جميع ترويسات البروكسي، ويبدّل تلقائياً بين صيغتي HLS وMPEG-TS مع انتقال تلقائي للروابط البديلة وتنظيف تلقائي لإضافة Best Torrents المغلقة. يضيف التحديث قائمة أولوية لغات صوت مرتّبة بالتسلسل (1، 2، 3...) تُطبَّق تلقائياً في الأفلام والمسلسلات، ويوحّد أزرار تفاصيل الأفلام والمسلسلات، ويقسّم الإعدادات الرئيسية بلا تكرار، ويمكّن صلاحية إدارة جميع الملفات لحذف ونقل الملفات من مستعرض الملفات."
     }
   },
   "phone": {
-    "latestVersionCode": 16,
-    "latestVersionName": "1.0.0-beta.16",
-    "versionCode": 16,
-    "versionName": "1.0.0-beta.16",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.16/LocalCinema-Manager-Phone-v1.0.0-beta.16.apk",
-    "sizeBytes": 111387262,
-    "sha256": "7aaeb852958850688e1792adbace2a534a812db8db0adb0b378d0c058ddbd76d",
+    "latestVersionCode": 17,
+    "latestVersionName": "1.0.0-beta.17",
+    "versionCode": 17,
+    "versionName": "1.0.0-beta.17",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.17/LocalCinema-Manager-Phone-v1.0.0-beta.17.apk",
+    "sizeBytes": 111388910,
+    "sha256": "9bdde0aee0c228da32a819706597ce8796f6a756cccd447e0aa3ab4e7631ffc3",
     "changelog": {
-      "en": "Synced TV Live favorite countries automatically from the TV and included them in Google Drive cloud backups. Improved initial peer connection settings for the torrent engine and removed duplicate bottom banners after cloud backup uploads finish.",
-      "ar": "يزامن الهاتف الدول المفضلة للبث التلفزيوني تلقائيًا من التلفاز ويحفظها ضمن النسخة الاحتياطية السحابية على Google Drive. يحسّن التطبيق إعدادات الاتصال الأولي لمحرك التورنت ويزيل التنبيهات السفلية المكررة عند اكتمال رفع النسخة السحابية."
+      "en": "Updated shared Stremio add-ons and Live TV preferences to support full proxy headers, automatic cleanup of retired broken add-ons, and Favorite Countries view mode parity with TV. Prepared the in-app updater allowlist for upcoming repository migration and fixed the third-party licenses link.",
+      "ar": "يحدّث التطبيق وحدة الإضافات المشتركة لتمرير ترويسات البروكسي الكاملة وتنظيف الإضافات المعطّلة تلقائياً، ويحافظ على توافق تفضيلات البث المباشر مع وضع الدول المفضلة المدمج، ويصلح رابط تراخيص الجهات الخارجية ويجهّز التحديث التلقائي للمرحلة القادمة."
     }
   },
   "builds": [
@@ -33,8 +33,8 @@
       "packageId": "com.meedx.localcinema.tv",
       "name": "Local Cinema TV",
       "available": true,
-      "version": "1.0.0-beta.16",
-      "versionCode": 16,
+      "version": "1.0.0-beta.17",
+      "versionCode": 17,
       "releaseDate": "2026-11-23",
       "status": {
         "ar": "نسخة تجريبية",
@@ -50,9 +50,9 @@
         "ar": "كود Downloader (نسخة الشاشة)",
         "en": "Downloader Code (TV Version)"
       },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.16/LocalCinema-TV-v1.0.0-beta.16.apk",
-      "sizeBytes": 48739840,
-      "sha256": "59e8e001aa3a002c5f225bbabd54ba3f3c050c0899c1bc3e5fc90c0c0a45f0fd",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.17/LocalCinema-TV-v1.0.0-beta.17.apk",
+      "sizeBytes": 48768208,
+      "sha256": "539b38314f456192e0c784c172aa914bc05ecf8d0051b45a2c4e98e244f4d3fc",
       "specs": {
         "platform": {
           "ar": "Android TV 6.0+",
@@ -62,7 +62,7 @@
           "ar": "armeabi-v7a",
           "en": "armeabi-v7a"
         },
-        "sizeLabel": "46.48 MiB",
+        "sizeLabel": "46.51 MiB",
         "license": "Apache-2.0",
         "security": {
           "ar": "خضع الملف لفحص مفاتيح المزوّدين المعروفة.",
@@ -70,15 +70,43 @@
         }
       },
       "changelog": {
-        "ar": "يعيد قسم الإضافات عرض البطاقات في شبكة مربعة من 6 بطاقات في الصف بشعارات رسمية مع إمكانية ترتيب الإضافات ونقل زر الضبط للأعلى. يضيف التطبيق Persian Stremio ويفصل TR TV & Mov ويصلح FayaTV ويعرض أيقونات القنوات بنسبة مربعة 1:1. يضيف التطبيق قسم الفن وشاشة التوقف. يضم وضع الفن خمس لوحات متحفية مدمجة وإطارات ورقية قابلة لتغيير الحجم وفلاتر لونية وساعة اختيارية وحماية بكسل. توفر شاشة توقف يوتيوب 4K قائمة تصنيفات منسدلة وبحثًا مدمجًا وتشغيلاً متكررًا عبر SmartTube أو المشغّل الداخلي. يوحّد مستعرض الملفات تصفح ملفات الفيديو والصور والترجمات في مكان واحد. تفتح قائمة الضغط المطوّل خيارات التحديد والنسخ والنقل واللصق والحذف. يرتبط وضع الفن واختيار الترجمات مباشرة بهذا المستعرض. تحدّث شاشة تفاصيل الأفلام والمسلسلات بتصميم مضغوط يزيل نافذة «مشاهدة الآن / الإعلان» ويعرض أزرار الصوت والإعلان وأولوية اللغات. يصلح التحديث قصّ إطارات التركيز وأسماء المواسم، ويفعّل البحث متعدد المصادر للترجمات عبر OpenSubtitles v3 وWyzie وSubsource بالتعبئة التلقائية. يسرّع المشغّل بدء بث التورنت ويعرض عدد الموزعين وسرعة التحميل الحية. يلغي التحديث نافذة تأكيد الإيقاف عند الضغط على رجوع، ويخفي التقديم والترجيع في البث المباشر، ويزيل أزرار 10 ثوانٍ من شريط المشغّل، ويبقي قسم البث التلفزيوني على الدول المفضلة فقط.",
-        "en": "Redesigned Add-ons as a square six-column grid with official logos, custom ordering, and a top settings button. Added Persian Stremio, separated TR TV & Mov, fixed FayaTV, and displayed channel icons in a 1:1 square layout. Added the Art and Screensaver section. Art Mode includes five museum paintings, resizable mat frames, color filters, an optional clock, and pixel shift protection. YouTube 4K Screensaver adds a category dropdown, built-in search, and looping playback in SmartTube or the built-in player. Unified File Browser to manage video, image, and subtitle files in one place. Long-press opens select, copy, move, paste, and delete actions. Art Mode and subtitle picking now open this browser directly. Updated movie and series details screens by removing the intermediate Watch Now and Trailer dialog and adding audio language priority, quick audio and trailer buttons, full season titles, and unclipped focus rings. Enabled multi-source subtitle search across OpenSubtitles v3, Wyzie, and Subsource with automatic query pre-fill. Sped up torrent playback startup and showed live peer counts and download speed. Removed the exit confirmation dialog on Back, hid seek controls during live channels, removed the 10-second seek buttons from the player bar, and focused TV Live on Favorite Countries."
+        "ar": "يطوّر التحديث شاشة البث التلفزيوني المباشر بتركيز أولي تلقائي على أول بطاقة قناة، وتفكيك التصنيفات المركّبة وتعريبها بالكامل مع حفظ آخر تصنيف مختار، ودمج قنوات جميع الدول المفضلة في قائمة واحدة مع منتقي دول عالمي مزوّد بشريط بحث، وترقية مصدر Nexonic IPTV ليعمل عالمياً بجانب iptv-org. يعيد التحديث تنظيم إعدادات الإضافات بمربعات اختيار ذهبية عالية التباين وزر مستقل لإدارة الإضافات المثبتة، مع فصل الإعدادات الخاصة بكل إضافة داخل صفحتها وربطها بمزامنة فورية ثنائية الاتجاه. يشغّل التطبيق قنوات الإضافات المباشرة فوراً دون نافذة مصادر التورنت، ويمرّر جميع ترويسات البروكسي، ويبدّل تلقائياً بين صيغتي HLS وMPEG-TS مع انتقال تلقائي للروابط البديلة وتنظيف تلقائي لإضافة Best Torrents المغلقة. يضيف التحديث قائمة أولوية لغات صوت مرتّبة بالتسلسل (1، 2، 3...) تُطبَّق تلقائياً في الأفلام والمسلسلات، ويوحّد أزرار تفاصيل الأفلام والمسلسلات، ويقسّم الإعدادات الرئيسية بلا تكرار، ويمكّن صلاحية إدارة جميع الملفات لحذف ونقل الملفات من مستعرض الملفات.",
+        "en": "Upgraded TV Live with automatic focus on the first channel card, split and translated bilingual categories with saved selection, merged Favorite Countries channels with a searchable country picker, and global Nexonic IPTV alongside iptv-org. Rebuilt Add-ons Settings with clear high-contrast checkboxes, a dedicated Manage Installed Add-ons button, and separate per-add-on settings with instant two-way sync. Live add-on channels now play directly without the torrent source picker, pass full proxy headers, auto-switch between HLS and MPEG-TS streams, fail over to alternate links, and clean up retired broken add-ons such as Best Torrents. Added ordered audio language priority (1, 2, 3...) across Movies and Series, unified Movie and Series action bars with Language Priority inside Audio Tracks, restructured Main Settings without duplicates, enabled All Files Access in File Browser and the Permissions Wizard, and prepared OTA updates for future repository migration."
       },
       "updateNotes": [
+        {
+          "version": "1.0.0-beta.17",
+          "versionCode": 17,
+          "date": "2026-11-23",
+          "latest": true,
+          "whatsNew": {
+            "ar": [
+              "يطوّر التحديث شاشة البث التلفزيوني المباشر بتركيز أولي تلقائي على أول قناة، وتصنيفات فردية معرّبة ومحفوظة، ودمج قنوات جميع الدول المفضلة مع منتقي دول عالمي مزوّد بشريط بحث، ومصدر Nexonic IPTV العالمي بجانب iptv-org.",
+              "يضيف التحديث قائمة أولوية لغات صوت مرتّبة بالتسلسل (1، 2، 3...) تُطبَّق تلقائياً على الأفلام والمسلسلات، ويمكّن صلاحية إدارة جميع الملفات لحذف ونقل الملفات في مستعرض الملفات مع بطاقة تفعيل في معالج الصلاحيات.",
+              "يشغّل التطبيق قنوات الإضافات المباشرة فوراً دون نافذة مصادر التورنت، ويمرّر كامل ترويسات البروكسي مع تبديل تلقائي بين HLS وMPEG-TS وانتقال للروابط البديلة في FayaTV وPersian Stremio وتنظيف تلقائي لإضافة Best Torrents المغلقة."
+            ],
+            "en": [
+              "Upgraded TV Live with automatic initial focus on the first channel card, clean bilingual categories split from compound M3U groups and persisted across sessions, merged Favorite Countries with a searchable world country picker, and multi-country Nexonic IPTV alongside iptv-org.",
+              "Added an ordered Audio Language Priority list (1, 2, 3...) applied sequentially across Movies and Series, and enabled All Files Access for File Browser deletion and moving with a dedicated Permissions Wizard card.",
+              "Played live add-on channels directly without the torrent source picker, forwarded full proxy headers, added automatic HLS and MPEG-TS fallback plus alternate stream failover for FayaTV and Persian Stremio, and automatically cleaned up the paywalled Best Torrents add-on."
+            ]
+          },
+          "improvements": {
+            "ar": [
+              "يعيد التحديث تنظيم إعدادات الإضافات بمربعات اختيار ذهبية عالية التباين وزر مستقل لإدارة الإضافات المثبتة، مع إعدادات مخصصة لكل إضافة ومزامنة فورية ثنائية الاتجاه.",
+              "يوحّد التحديث أزرار تفاصيل الأفلام والمسلسلات مع نقل «أولوية اللغات» إلى داخل «مسارات الصوت» ووضع «الإعلان» بجانب «تحديد كمشاهد»، ويقسّم الإعدادات الرئيسية إلى مجموعات واضحة بلا تكرار، ويجهّز التحديث التلقائي للمرحلة القادمة."
+            ],
+            "en": [
+              "Redesigned Add-ons Settings with high-contrast gold checkboxes, a dedicated Manage Installed Add-ons view, and separate per-add-on settings with instant two-way sync.",
+              "Unified Movie and Series details buttons with Language Priority inside Audio Tracks and Trailer next to Mark as Watched, reorganized Main Settings without duplicates, and prepared OTA updates for future repository migration."
+            ]
+          }
+        },
         {
           "version": "1.0.0-beta.16",
           "versionCode": 16,
           "date": "2026-11-23",
-          "latest": true,
+          "latest": false,
           "whatsNew": {
             "ar": [
               "يعيد قسم الإضافات عرض البطاقات في شبكة مربعة من 6 بطاقات في الصف بشعارات رسمية مع إمكانية ترتيب الإضافات ونقل زر الضبط للأعلى. يضيف التطبيق Persian Stremio ويفصل TR TV & Mov ويصلح FayaTV ويعرض أيقونات القنوات بنسبة مربعة 1:1.",
@@ -389,8 +417,8 @@
       "packageId": "com.meedx.localcinema.manager",
       "name": "Local Cinema Manager",
       "available": true,
-      "version": "1.0.0-beta.16",
-      "versionCode": 16,
+      "version": "1.0.0-beta.17",
+      "versionCode": 17,
       "releaseDate": "2026-11-23",
       "status": {
         "ar": "نسخة تجريبية",
@@ -400,9 +428,9 @@
         "ar": "هذه نسخة الهاتف (Android Phone)",
         "en": "This is the Phone Version (Android Phone)"
       },
-      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.16/LocalCinema-Manager-Phone-v1.0.0-beta.16.apk",
-      "sizeBytes": 111387262,
-      "sha256": "7aaeb852958850688e1792adbace2a534a812db8db0adb0b378d0c058ddbd76d",
+      "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.17/LocalCinema-Manager-Phone-v1.0.0-beta.17.apk",
+      "sizeBytes": 111388910,
+      "sha256": "9bdde0aee0c228da32a819706597ce8796f6a756cccd447e0aa3ab4e7631ffc3",
       "specs": {
         "platform": {
           "ar": "Android 8.0+",
@@ -420,15 +448,37 @@
         }
       },
       "changelog": {
-        "ar": "يزامن الهاتف الدول المفضلة للبث التلفزيوني تلقائيًا من التلفاز ويحفظها ضمن النسخة الاحتياطية السحابية على Google Drive. يحسّن التطبيق إعدادات الاتصال الأولي لمحرك التورنت ويزيل التنبيهات السفلية المكررة عند اكتمال رفع النسخة السحابية.",
-        "en": "Synced TV Live favorite countries automatically from the TV and included them in Google Drive cloud backups. Improved initial peer connection settings for the torrent engine and removed duplicate bottom banners after cloud backup uploads finish."
+        "ar": "يحدّث التطبيق وحدة الإضافات المشتركة لتمرير ترويسات البروكسي الكاملة وتنظيف الإضافات المعطّلة تلقائياً، ويحافظ على توافق تفضيلات البث المباشر مع وضع الدول المفضلة المدمج، ويصلح رابط تراخيص الجهات الخارجية ويجهّز التحديث التلقائي للمرحلة القادمة.",
+        "en": "Updated shared Stremio add-ons and Live TV preferences to support full proxy headers, automatic cleanup of retired broken add-ons, and Favorite Countries view mode parity with TV. Prepared the in-app updater allowlist for upcoming repository migration and fixed the third-party licenses link."
       },
       "updateNotes": [
+        {
+          "version": "1.0.0-beta.17",
+          "versionCode": 17,
+          "date": "2026-11-23",
+          "latest": true,
+          "whatsNew": {
+            "ar": [
+              "يحدّث التطبيق وحدة الإضافات المشتركة لتمرير ترويسات البروكسي الكاملة وتنقية العناصر غير القابلة للتشغيل وتنظيف الإضافات المعطّلة تلقائياً."
+            ],
+            "en": [
+              "Updated shared Stremio add-on parsing to forward full request proxy headers, filter non-playable entries, and automatically clean up retired broken add-ons."
+            ]
+          },
+          "improvements": {
+            "ar": [
+              "يحافظ التطبيق على توافق تفضيلات البث المباشر مع وضع الدول المفضلة المدمج، ويصلح رابط تراخيص الجهات الخارجية، ويجهّز قائمة التحديث التلقائي للمرحلة القادمة."
+            ],
+            "en": [
+              "Kept Live TV preferences compatible with Favorite Countries merged mode, fixed the third-party licenses link, and prepared the OTA updater allowlist for upcoming repository migration."
+            ]
+          }
+        },
         {
           "version": "1.0.0-beta.16",
           "versionCode": 16,
           "date": "2026-11-23",
-          "latest": true,
+          "latest": false,
           "whatsNew": {
             "ar": [
               "يزامن الهاتف الدول المفضلة للبث التلفزيوني تلقائيًا من التلفاز ويحفظها ضمن النسخة الاحتياطية السحابية على Google Drive."
