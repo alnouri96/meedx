@@ -1,1 +1,1 @@
-Start with [AGENTS.md](AGENTS.md) and [docs/RELEASE.md](docs/RELEASE.md). Published `Latest` is `v1.0.0-beta.15`; local `v1.0.0-beta.16` work lives in the sibling `Local Cinema` checkout and is not published yet.
+Start with [AGENTS.md](AGENTS.md) and [docs/RELEASE.md](docs/RELEASE.md). Published `Latest` is `v1.0.0-beta.16` (`versionCode = 16`, 2026-11-23), matching Android source commit `4029e011` (`v1.0.0-beta.16`) on `alnouri96/local-cinema`.

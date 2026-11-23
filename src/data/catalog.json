@@ -6,9 +6,9 @@
     "packageId": "com.meedx.localcinema.tv",
     "name": "Local Cinema TV",
     "available": true,
-    "version": "1.0.0-beta.15",
-    "versionCode": 15,
-    "releaseDate": "2026-11-22",
+    "version": "1.0.0-beta.16",
+    "versionCode": 16,
+    "releaseDate": "2026-11-23",
     "status": {
       "ar": "نسخة تجريبية",
       "en": "Beta"
@@ -23,9 +23,9 @@
       "ar": "كود Downloader (نسخة الشاشة)",
       "en": "Downloader Code (TV Version)"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.15/LocalCinema-TV-v1.0.0-beta.15.apk",
-    "sizeBytes": 44915313,
-    "sha256": "6d404c2ab8ba12cfb157df83c27a2a14fd299657827de1ab3e060feb6236a235",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.16/LocalCinema-TV-v1.0.0-beta.16.apk",
+    "sizeBytes": 48739840,
+    "sha256": "59e8e001aa3a002c5f225bbabd54ba3f3c050c0899c1bc3e5fc90c0c0a45f0fd",
     "specs": {
       "platform": {
         "ar": "Android TV 6.0+",
@@ -35,7 +35,7 @@
         "ar": "armeabi-v7a",
         "en": "armeabi-v7a"
       },
-      "sizeLabel": "42.83 MiB",
+      "sizeLabel": "46.48 MiB",
       "license": "Apache-2.0",
       "security": {
         "ar": "خضع الملف لفحص مفاتيح المزوّدين المعروفة.",
@@ -43,15 +43,43 @@
       }
     },
     "changelog": {
-      "ar": "ثبّت إضافات Stremio للبث والفهارس. فعّلها أو عطّلها بشكل فردي أو جماعي. تجمع قائمة المصادر نتائج الإضافات المفعّلة وتعرض اسم المزوّد واللغة والجودة والحجم وعدد الباذرين. تصفّح الأفلام والمسلسلات في TR TV&Mov. اختر فيلمًا أو حلقة لعرض المصادر. شاهد الإعلانات الرسمية على يوتيوب واستخدم الترجمة المزدوجة التلقائية عند تفعيلها وتوفر المسارات المطابقة. يفتح قسم TV Live على العراق افتراضيًا. ابحث عن الدولة باسمها أو بحرفها الأول. تظهر الدول المفضلة قرب أعلى منتقي الدول. تظهر القنوات المفضلة أولاً في قائمة القنوات. حدّث قائمة Nexonic العراقية تلقائيًا أو عند الطلب. افتح قسم IPTV مستقلاً عن البث المباشر. أضف قوائم M3U وM3U8 أو بيانات Xtream Codes. فعّل قوائم القنوات العربية والمفتوحة من الإعدادات. يحفظ التطبيق الشعارات مؤقتًا ويحتفظ بالقنوات المفضلة. اختر لغة الصوت المفضلة من الإعدادات. يستخدم المشغّل المسار المطابق عند توفره. يعطي مشغّل التورنت الأولوية للقطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع أثناء البث المباشر للعودة إلى قائمة القنوات. تعرض إعدادات الإضافات بطاقات أكبر وعدد الإضافات المفعّلة وحالة كل مزوّد. يمكنك استبعاد مشاهدات الإضافات من «متابعة المشاهدة». افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات. تفتح روابط المساعدة والدعم موقع Local Cinema.",
-      "en": "Install Stremio stream and catalog add-ons. Enable or disable them individually or in groups. The source picker combines results from enabled add-ons and shows the provider, language, quality, file size, and seed count. Browse movies and series in TR TV&Mov. Pick an episode or movie to open its source list. Watch official trailers on YouTube and use automatic dual subtitles when matching tracks are available and dual subtitles are enabled. TV Live opens with Iraq by default. Search for a country by name or first letter. Favorite countries appear near the top of the picker. Favorite channels appear first in the channel list. Refresh the Iraqi Nexonic playlist automatically or on demand. Open IPTV separately from TV Live. Add M3U and M3U8 playlists or Xtream Codes. Enable the Arabic and open channel lists in settings. The app caches channel logos and keeps channel favorites. Choose a preferred audio language in Settings. The player selects a matching track when it is available. The torrent player prioritizes the first pieces and the media index before playback. Press Back during a live channel to return to the channel list. Add-on settings use larger cards and show the active count and per-provider status. You can exclude add-on streams from Continue Watching. Open the source code and third-party licenses from Settings. Help and support links open the Local Cinema site."
+      "ar": "يعيد قسم الإضافات عرض البطاقات في شبكة مربعة من 6 بطاقات في الصف بشعارات رسمية مع إمكانية ترتيب الإضافات ونقل زر الضبط للأعلى. يضيف التطبيق Persian Stremio ويفصل TR TV & Mov ويصلح FayaTV ويعرض أيقونات القنوات بنسبة مربعة 1:1. يضيف التطبيق قسم الفن وشاشة التوقف. يضم وضع الفن خمس لوحات متحفية مدمجة وإطارات ورقية قابلة لتغيير الحجم وفلاتر لونية وساعة اختيارية وحماية بكسل. توفر شاشة توقف يوتيوب 4K قائمة تصنيفات منسدلة وبحثًا مدمجًا وتشغيلاً متكررًا عبر SmartTube أو المشغّل الداخلي. يوحّد مستعرض الملفات تصفح ملفات الفيديو والصور والترجمات في مكان واحد. تفتح قائمة الضغط المطوّل خيارات التحديد والنسخ والنقل واللصق والحذف. يرتبط وضع الفن واختيار الترجمات مباشرة بهذا المستعرض. تحدّث شاشة تفاصيل الأفلام والمسلسلات بتصميم مضغوط يزيل نافذة «مشاهدة الآن / الإعلان» ويعرض أزرار الصوت والإعلان وأولوية اللغات. يصلح التحديث قصّ إطارات التركيز وأسماء المواسم، ويفعّل البحث متعدد المصادر للترجمات عبر OpenSubtitles v3 وWyzie وSubsource بالتعبئة التلقائية. يسرّع المشغّل بدء بث التورنت ويعرض عدد الموزعين وسرعة التحميل الحية. يلغي التحديث نافذة تأكيد الإيقاف عند الضغط على رجوع، ويخفي التقديم والترجيع في البث المباشر، ويزيل أزرار 10 ثوانٍ من شريط المشغّل، ويبقي قسم البث التلفزيوني على الدول المفضلة فقط.",
+      "en": "Redesigned Add-ons as a square six-column grid with official logos, custom ordering, and a top settings button. Added Persian Stremio, separated TR TV & Mov, fixed FayaTV, and displayed channel icons in a 1:1 square layout. Added the Art and Screensaver section. Art Mode includes five museum paintings, resizable mat frames, color filters, an optional clock, and pixel shift protection. YouTube 4K Screensaver adds a category dropdown, built-in search, and looping playback in SmartTube or the built-in player. Unified File Browser to manage video, image, and subtitle files in one place. Long-press opens select, copy, move, paste, and delete actions. Art Mode and subtitle picking now open this browser directly. Updated movie and series details screens by removing the intermediate Watch Now and Trailer dialog and adding audio language priority, quick audio and trailer buttons, full season titles, and unclipped focus rings. Enabled multi-source subtitle search across OpenSubtitles v3, Wyzie, and Subsource with automatic query pre-fill. Sped up torrent playback startup and showed live peer counts and download speed. Removed the exit confirmation dialog on Back, hid seek controls during live channels, removed the 10-second seek buttons from the player bar, and focused TV Live on Favorite Countries."
     },
     "updateNotes": [
+      {
+        "version": "1.0.0-beta.16",
+        "versionCode": 16,
+        "date": "2026-11-23",
+        "latest": true,
+        "whatsNew": {
+          "ar": [
+            "يعيد قسم الإضافات عرض البطاقات في شبكة مربعة من 6 بطاقات في الصف بشعارات رسمية مع إمكانية ترتيب الإضافات ونقل زر الضبط للأعلى. يضيف التطبيق Persian Stremio ويفصل TR TV & Mov ويصلح FayaTV ويعرض أيقونات القنوات بنسبة مربعة 1:1.",
+            "يضيف التطبيق قسم الفن وشاشة التوقف. يضم وضع الفن خمس لوحات متحفية مدمجة وإطارات ورقية قابلة لتغيير الحجم وفلاتر لونية وساعة اختيارية وحماية بكسل. توفر شاشة توقف يوتيوب 4K قائمة تصنيفات منسدلة وبحثًا مدمجًا وتشغيلاً متكررًا عبر SmartTube أو المشغّل الداخلي.",
+            "يوحّد مستعرض الملفات تصفح ملفات الفيديو والصور والترجمات في مكان واحد. تفتح قائمة الضغط المطوّل خيارات التحديد والنسخ والنقل واللصق والحذف. يرتبط وضع الفن واختيار الترجمات مباشرة بهذا المستعرض."
+          ],
+          "en": [
+            "Redesigned Add-ons as a square six-column grid with official logos, custom ordering, and a top settings button. Added Persian Stremio, separated TR TV & Mov, fixed FayaTV, and displayed channel icons in a 1:1 square layout.",
+            "Added the Art and Screensaver section. Art Mode includes five museum paintings, resizable mat frames, color filters, an optional clock, and pixel shift protection. YouTube 4K Screensaver adds a category dropdown, built-in search, and looping playback in SmartTube or the built-in player.",
+            "Unified File Browser to manage video, image, and subtitle files in one place. Long-press opens select, copy, move, paste, and delete actions. Art Mode and subtitle picking now open this browser directly."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "تحدّث شاشة تفاصيل الأفلام والمسلسلات بتصميم مضغوط يزيل نافذة «مشاهدة الآن / الإعلان» ويعرض أزرار الصوت والإعلان وأولوية اللغات. يصلح التحديث قصّ إطارات التركيز وأسماء المواسم، ويفعّل البحث متعدد المصادر للترجمات عبر OpenSubtitles v3 وWyzie وSubsource بالتعبئة التلقائية.",
+            "يسرّع المشغّل بدء بث التورنت ويعرض عدد الموزعين وسرعة التحميل الحية. يلغي التحديث نافذة تأكيد الإيقاف عند الضغط على رجوع، ويخفي التقديم والترجيع في البث المباشر، ويزيل أزرار 10 ثوانٍ من شريط المشغّل، ويبقي قسم البث التلفزيوني على الدول المفضلة فقط."
+          ],
+          "en": [
+            "Updated movie and series details screens by removing the intermediate Watch Now and Trailer dialog and adding audio language priority, quick audio and trailer buttons, full season titles, and unclipped focus rings. Enabled multi-source subtitle search across OpenSubtitles v3, Wyzie, and Subsource with automatic query pre-fill.",
+            "Sped up torrent playback startup and showed live peer counts and download speed. Removed the exit confirmation dialog on Back, hid seek controls during live channels, removed the 10-second seek buttons from the player bar, and focused TV Live on Favorite Countries."
+          ]
+        }
+      },
       {
         "version": "1.0.0-beta.15",
         "versionCode": 15,
         "date": "2026-11-22",
-        "latest": true,
+        "latest": false,
         "whatsNew": {
           "ar": [
             "ثبّت إضافات Stremio للبث والفهارس. فعّلها أو عطّلها بشكل فردي أو جماعي. تجمع قائمة المصادر نتائج الإضافات المفعّلة وتعرض اسم المزوّد واللغة والجودة والحجم وعدد الباذرين.",
@@ -334,9 +362,9 @@
     "packageId": "com.meedx.localcinema.manager",
     "name": "Local Cinema Manager",
     "available": true,
-    "version": "1.0.0-beta.15",
-    "versionCode": 15,
-    "releaseDate": "2026-11-22",
+    "version": "1.0.0-beta.16",
+    "versionCode": 16,
+    "releaseDate": "2026-11-23",
     "status": {
       "ar": "نسخة تجريبية",
       "en": "Beta"
@@ -345,9 +373,9 @@
       "ar": "هذه نسخة الهاتف (Android Phone)",
       "en": "This is the Phone Version (Android Phone)"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.15/LocalCinema-Manager-Phone-v1.0.0-beta.15.apk",
-    "sizeBytes": 111383262,
-    "sha256": "f4a656a07af750a0e727dbda21b4ff1d129c080dae4f408fc414038fed2aea05",
+    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.16/LocalCinema-Manager-Phone-v1.0.0-beta.16.apk",
+    "sizeBytes": 111387262,
+    "sha256": "7aaeb852958850688e1792adbace2a534a812db8db0adb0b378d0c058ddbd76d",
     "specs": {
       "platform": {
         "ar": "Android 8.0+",
@@ -357,7 +385,7 @@
         "ar": "arm64-v8a",
         "en": "arm64-v8a"
       },
-      "sizeLabel": "106.22 MiB",
+      "sizeLabel": "106.23 MiB",
       "license": "GPL-3.0-or-later",
       "security": {
         "ar": "خضع الملف لفحص مفاتيح المزوّدين المعروفة.",
@@ -365,15 +393,37 @@
       }
     },
     "changelog": {
-      "ar": "أضف إضافات Stremio للبث والفهارس من TV Hub أو افتح رابط تثبيت stremio://. اطوِ قائمة الإضافات الخارجية أو وسّعها داخل تبويب الاتصال. تتزامن التغييرات عند تعديل الإضافات مع التلفاز المقترن. استخدم الريموت العائم بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها. تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكّم من إعدادات الموسيقى في ظهور معلومات المقطوعة على التلفاز ومدة بقائها. افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». استخدم «المزامنة الآن» في TV Hub لإرسال الإعدادات المدعومة والقنوات المفضلة. أُصلح انهيار GeckoView عند بدء تشغيل نسخة الإصدار المحسّنة. تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل وتربط بالكود المصدري وتراخيص الجهات الخارجية.",
-      "en": "Add Stremio stream and catalog add-ons from TV Hub or open a stremio:// install link. Expand or collapse External Add-ons in Connection. Changes to add-ons sync to the paired TV. Use the floating TV remote across tabs and during live channels. Swipe down on its header to close the remote panel. Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible. Open RSS from the browser toolbar and Download Center from the Downloader tab. Use Sync Now in TV Hub to send supported settings and channel favorites. Fixed a GeckoView startup crash in the optimized release build. About shows the Local Cinema Manager logo and credits MEEDX. It describes LibreTorrent as part of Download Center. It also links to the source code and third-party licenses."
+      "ar": "يزامن الهاتف الدول المفضلة للبث التلفزيوني تلقائيًا من التلفاز ويحفظها ضمن النسخة الاحتياطية السحابية على Google Drive. يحسّن التطبيق إعدادات الاتصال الأولي لمحرك التورنت ويزيل التنبيهات السفلية المكررة عند اكتمال رفع النسخة السحابية.",
+      "en": "Synced TV Live favorite countries automatically from the TV and included them in Google Drive cloud backups. Improved initial peer connection settings for the torrent engine and removed duplicate bottom banners after cloud backup uploads finish."
     },
     "updateNotes": [
+      {
+        "version": "1.0.0-beta.16",
+        "versionCode": 16,
+        "date": "2026-11-23",
+        "latest": true,
+        "whatsNew": {
+          "ar": [
+            "يزامن الهاتف الدول المفضلة للبث التلفزيوني تلقائيًا من التلفاز ويحفظها ضمن النسخة الاحتياطية السحابية على Google Drive."
+          ],
+          "en": [
+            "Synced TV Live favorite countries automatically from the TV and included them in Google Drive cloud backups."
+          ]
+        },
+        "improvements": {
+          "ar": [
+            "يحسّن التطبيق إعدادات الاتصال الأولي لمحرك التورنت ويزيل التنبيهات السفلية المكررة عند اكتمال رفع النسخة السحابية."
+          ],
+          "en": [
+            "Improved initial peer connection settings for the torrent engine and removed duplicate bottom banners after cloud backup uploads finish."
+          ]
+        }
+      },
       {
         "version": "1.0.0-beta.15",
         "versionCode": 15,
         "date": "2026-11-22",
-        "latest": true,
+        "latest": false,
         "whatsNew": {
           "ar": [
             "أضف إضافات Stremio للبث والفهارس من TV Hub أو افتح رابط تثبيت stremio://. اطوِ قائمة الإضافات الخارجية أو وسّعها داخل تبويب الاتصال. تتزامن التغييرات عند تعديل الإضافات مع التلفاز المقترن.",

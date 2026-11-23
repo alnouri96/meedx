@@ -4,7 +4,7 @@ Public repo for the MEEDX website, OTA feed, and Local Cinema downloads (`alnour
 
 ## Start here
 
-1. Run `git status --short --branch` and check published Latest (`v1.0.0-beta.15` until approved release) via `gh api repos/alnouri96/meedx/releases/latest --jq .tag_name`.
+1. Run `git status --short --branch` and check published Latest (`v1.0.0-beta.16` until approved release) via `gh api repos/alnouri96/meedx/releases/latest --jq .tag_name`.
 2. Read [docs/RELEASE.md](docs/RELEASE.md) only when staging/publishing a release. Work locally unless publication is requested; run `npm run verify`, `npm run build`, and [Pages preview checks](docs/RELEASE.md#local-verification) before deploy.
 
 ## Permanent engineering rules
@@ -29,5 +29,5 @@ Public repo for the MEEDX website, OTA feed, and Local Cinema downloads (`alnour
 
 - Publish audited APKs only to `alnouri96/meedx` GitHub Releases (never commit APKs, ZIPs, signing files, secrets, payment info, QRs, local paths, device IDs, or personal screenshots).
 - One home per action: `/apps/local-cinema` (setup/notes), `/downloads` (APKs/checksums), `/tv` & `/phone` (current APK links).
-- Preserve OTA schema, keep `v1.0.0-beta.15` as `Latest` until explicit release approval, publish regular Releases with `--latest`, and run `npm run verify -- --live` after deploy.
+- Preserve OTA schema, keep `v1.0.0-beta.16` as `Latest` until explicit release approval, publish regular Releases with `--latest`, and run `npm run verify -- --live` after deploy.
 - Apply `ste80-humanizer` to `README.md`, release notes, and public copy; keep AR RTL/EN LTR verified; never bloat `AGENTS.md` with changelogs or SHA-256 hashes.
