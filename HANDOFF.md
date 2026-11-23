@@ -1,1 +1,3 @@
 Start with [AGENTS.md](AGENTS.md) and [docs/RELEASE.md](docs/RELEASE.md). Published `Latest` is `v1.0.0-beta.16` (`versionCode = 16`, 2026-11-23), matching Android source commit `4029e011` (`v1.0.0-beta.16`) on `alnouri96/local-cinema`.
+
+- **OTA Migration Plan (`meedx` -> `local-cinema`):** Keep `alnouri96/meedx` public through bridge release `v1.0.0-beta.17` (dual `UpdateConfig` allowlist) so `beta.15`/`beta.16` users update cleanly. On `v1.0.0-beta.18+`, move APK hosting to `alnouri96/local-cinema`, update `scripts/verify-downloads.mjs` + `src/config/siteConfig.js`, run `npm run sync:release`, deploy Cloudflare Pages, then switch `alnouri96/meedx` to `Private` (`meedx.pages.dev` remains public).
