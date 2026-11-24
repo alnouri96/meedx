@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation, Pagination } from 'swiper/modules';
 import {
@@ -16,8 +16,7 @@ export function AppDetailPage({
   const tvApp = catalog.find((p) => p.id === 'tv');
   const lang = ar ? 'ar' : 'en';
   const BackArrow = ar ? ArrowRight : ArrowLeft;
-  const [notesDevice, setNotesDevice] = useState(tvApp.id);
-  const notes = catalog.find((build) => build.id === notesDevice).updateNotes ?? [];
+  const notes = tvApp?.updateNotes ?? [];
 
   return (
     <div className="app-detail-page sc-animate">
@@ -166,23 +165,10 @@ export function AppDetailPage({
         <div className="section-head">
           <div>
             <h2 id="patch-notes-title">{t('سجل التحديثات', 'Patch notes')}</h2>
-            <button type="button" className="button" onClick={() => openChangelog(catalog.find((build) => build.id === notesDevice))}>
+            <button type="button" className="button" onClick={() => openChangelog(tvApp)}>
               <List size={17} />{t('سجل التغييرات', 'Changelog')}
             </button>
             <a className="link" href={siteConfig.releases}>{t('كل الإصدارات على GitHub', 'All releases on GitHub')}<ArrowUpRight size={16} /></a>
-          </div>
-          <div className="dl-tabs" role="group" aria-label={t('اختر التطبيق', 'Choose an app')}>
-            {catalog.map((build) => (
-              <button
-                key={build.id}
-                type="button"
-                className={'dl-tab' + (notesDevice === build.id ? ' active' : '')}
-                aria-pressed={notesDevice === build.id}
-                onClick={() => setNotesDevice(build.id)}
-              >
-                {build.device === 'tv' ? t('التلفاز', 'TV') : t('الهاتف', 'Phone')}
-              </button>
-            ))}
           </div>
         </div>
 

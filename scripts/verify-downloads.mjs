@@ -14,7 +14,8 @@ const checkPublished = checkLive || args.includes('--published');
 const root = new URL('../', import.meta.url);
 const appRoot = process.env.LOCAL_CINEMA_ROOT || fileURLToPath(new URL('../../Local%20Cinema/', import.meta.url));
 const releasesRoot = process.env.LOCAL_CINEMA_RELEASES || resolve(appRoot, 'releases');
-const repository = 'alnouri96/meedx';
+const repository = 'alnouri96/local-cinema';
+const bridgeRepository = 'alnouri96/meedx';
 const catalogFile = new URL('src/data/catalog.json', root);
 const bridgeFile = new URL('src/data/ota-bridge-v18.json', root);
 const legacyFeedFile = new URL('public/api/version.json', root);
@@ -156,7 +157,7 @@ if (checkPublished) {
   console.log('Verified GitHub Latest and release assets', tag);
 
   if (bridgeActive && bridgeTag) {
-    const bridgeRel = JSON.parse(execFileSync('gh', ['api', 'repos/' + repository + '/releases/tags/' + bridgeTag], { encoding: 'utf8' }));
+    const bridgeRel = JSON.parse(execFileSync('gh', ['api', 'repos/' + bridgeRepository + '/releases/tags/' + bridgeTag], { encoding: 'utf8' }));
     for (const [name, meta] of expectedBridgeAssets.entries()) {
       const found = bridgeRel.assets.find((a) => a.name === name);
       assert.ok(found, 'Missing bridge GitHub asset ' + name);

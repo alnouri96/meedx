@@ -6,12 +6,12 @@
     "packageId": "com.meedx.localcinema.tv",
     "name": "Local Cinema TV",
     "available": true,
-    "version": "1.0.0-beta.17",
-    "versionCode": 17,
-    "releaseDate": "2026-11-23",
+    "version": "1.0.0-beta.19",
+    "versionCode": 19,
+    "releaseDate": "2026-11-24",
     "status": {
-      "ar": "نسخة تجريبية",
-      "en": "Beta"
+      "ar": "آخر نسخة تجريبية",
+      "en": "Final Beta"
     },
     "downloaderCode": "3213660",
     "shortUrl": "meedx.pages.dev/tv",
@@ -23,9 +23,9 @@
       "ar": "كود Downloader (نسخة الشاشة)",
       "en": "Downloader Code (TV Version)"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.17/LocalCinema-TV-v1.0.0-beta.17.apk",
-    "sizeBytes": 48768208,
-    "sha256": "539b38314f456192e0c784c172aa914bc05ecf8d0051b45a2c4e98e244f4d3fc",
+    "url": "https://github.com/alnouri96/local-cinema/releases/download/v1.0.0-beta.19/LocalCinema-TV-v1.0.0-beta.19.apk",
+    "sizeBytes": 48978332,
+    "sha256": "19d98263bcdaf1f7f93977555922ebd7ce4dec7e8c3a37c1cdc76ed5d608a2c6",
     "specs": {
       "platform": {
         "ar": "Android TV 6.0+",
@@ -35,7 +35,7 @@
         "ar": "armeabi-v7a",
         "en": "armeabi-v7a"
       },
-      "sizeLabel": "46.51 MiB",
+      "sizeLabel": "46.71 MiB",
       "license": "Apache-2.0",
       "security": {
         "ar": "خضع الملف لفحص مفاتيح المزوّدين المعروفة.",
@@ -43,341 +43,37 @@
       }
     },
     "changelog": {
-      "ar": "يطوّر التحديث شاشة البث التلفزيوني المباشر بتركيز أولي تلقائي على أول بطاقة قناة، وتفكيك التصنيفات المركّبة وتعريبها بالكامل مع حفظ آخر تصنيف مختار، ودمج قنوات جميع الدول المفضلة في قائمة واحدة مع منتقي دول عالمي مزوّد بشريط بحث، وترقية مصدر Nexonic IPTV ليعمل عالمياً بجانب iptv-org. يعيد التحديث تنظيم إعدادات الإضافات بمربعات اختيار ذهبية عالية التباين وزر مستقل لإدارة الإضافات المثبتة، مع فصل الإعدادات الخاصة بكل إضافة داخل صفحتها وربطها بمزامنة فورية ثنائية الاتجاه. يشغّل التطبيق قنوات الإضافات المباشرة فوراً دون نافذة مصادر التورنت، ويمرّر جميع ترويسات البروكسي، ويبدّل تلقائياً بين صيغتي HLS وMPEG-TS مع انتقال تلقائي للروابط البديلة وتنظيف تلقائي لإضافة Best Torrents المغلقة. يضيف التحديث قائمة أولوية لغات صوت مرتّبة بالتسلسل (1، 2، 3...) تُطبَّق تلقائياً في الأفلام والمسلسلات، ويوحّد أزرار تفاصيل الأفلام والمسلسلات، ويقسّم الإعدادات الرئيسية بلا تكرار، ويمكّن صلاحية إدارة جميع الملفات لحذف ونقل الملفات من مستعرض الملفات.",
-      "en": "Upgraded TV Live with automatic focus on the first channel card, split and translated bilingual categories with saved selection, merged Favorite Countries channels with a searchable country picker, and global Nexonic IPTV alongside iptv-org. Rebuilt Add-ons Settings with clear high-contrast checkboxes, a dedicated Manage Installed Add-ons button, and separate per-add-on settings with instant two-way sync. Live add-on channels now play directly without the torrent source picker, pass full proxy headers, auto-switch between HLS and MPEG-TS streams, fail over to alternate links, and clean up retired broken add-ons such as Best Torrents. Added ordered audio language priority (1, 2, 3...) across Movies and Series, unified Movie and Series action bars with Language Priority inside Audio Tracks, restructured Main Settings without duplicates, enabled All Files Access in File Browser and the Permissions Wizard, and prepared OTA updates for future repository migration."
+      "ar": "تحديث موحّد وشامل للشاشة والهاتف: ترتيب مواقع المتصفح (MEEDX WEB ثم Cinemana ثم YTS ثم TorrentGalaxy) مع ميزة إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات في الهاتف مع التثبيت المباشر على الشاشة (Install on TV)، تنظيم الإعدادات وأزرار النسخ السحابي بسطر واحد، نظام الترجمة الموحّد والمزامنة السحابية، ونافذة التحديث الجديدة بدعم ريموت التلفاز وكود Downloader 3213660.",
+      "en": "Unified the TV subtitle system around one central config (UnifiedSubtitleConfig) synced across TV, Phone, and Google Cloud Backup, with grouped embedded video subtitles, a live timing overlay bar, one-click Arabic translation, and strict search filtering. Added direct Install on TV support from Phone, upgraded the in-app update dialog for the main v2 update channel with D-Pad focus and Downloader code 3213660, and improved safe cache maintenance."
     },
     "updateNotes": [
       {
-        "version": "1.0.0-beta.17",
-        "versionCode": 17,
-        "date": "2026-11-23",
+        "version": "1.0.0-beta.19",
+        "versionCode": 19,
+        "date": "2026-11-24",
         "latest": true,
         "whatsNew": {
           "ar": [
-            "يطوّر التحديث شاشة البث التلفزيوني المباشر بتركيز أولي تلقائي على أول قناة، وتصنيفات فردية معرّبة ومحفوظة، ودمج قنوات جميع الدول المفضلة مع منتقي دول عالمي مزوّد بشريط بحث، ومصدر Nexonic IPTV العالمي بجانب iptv-org.",
-            "يضيف التحديث قائمة أولوية لغات صوت مرتّبة بالتسلسل (1، 2، 3...) تُطبَّق تلقائياً على الأفلام والمسلسلات، ويمكّن صلاحية إدارة جميع الملفات لحذف ونقل الملفات في مستعرض الملفات مع بطاقة تفعيل في معالج الصلاحيات.",
-            "يشغّل التطبيق قنوات الإضافات المباشرة فوراً دون نافذة مصادر التورنت، ويمرّر كامل ترويسات البروكسي مع تبديل تلقائي بين HLS وMPEG-TS وانتقال للروابط البديلة في FayaTV وPersian Stremio وتنظيف تلقائي لإضافة Best Torrents المغلقة."
+            "مواقع المتصفح في الهاتف: تحديث الترتيب الافتراضي ليبدأ بـ MEEDX WEB ثم Cinemana ثم YTS ثم إضافة TorrentGalaxy، مع إمكانية نقل وإعادة ترتيب أي موقع محفوظ بالضغط المطوّل وحفظ الترتيب محلياً.",
+            "تثبيت الإضافات مباشرةً على الشاشة (Install on TV): تخفيف قسم الإضافات في الهاتف بحذف القائمة الثقيلة و+ Paste URL وSearch & Stream، وتطوير تصميم 1-Click Curated Addons، وتحويل روابط stremio:// والدليل إلى نافذة تأكيد ترسل وتثبّت الإضافة مباشرةً على Android TV.",
+            "نظام الترجمة الموحّد في الشاشة: إعداد مركزي واحد يتزامن مع الهاتف وGoogle Cloud Backup، مع تجميع ترجمة الفيديو المدمجة في قائمة منسدلة نظيفة، وشريط التوقيت المباشر، والترجمة للعربية بضغطة واحدة.",
+            "نظام نافذة التحديث الجديدة (v19+): فحص صامت في الخلفية عبر القناة الرسمية الجديدة مع نافذة تحديث تدعم العربية والإنجليزية وتركيز ريموت التلفاز وعرض رابط الموقع وكود Downloader (3213660)."
           ],
           "en": [
-            "Upgraded TV Live with automatic initial focus on the first channel card, clean bilingual categories split from compound M3U groups and persisted across sessions, merged Favorite Countries with a searchable world country picker, and multi-country Nexonic IPTV alongside iptv-org.",
-            "Added an ordered Audio Language Priority list (1, 2, 3...) applied sequentially across Movies and Series, and enabled All Files Access for File Browser deletion and moving with a dedicated Permissions Wizard card.",
-            "Played live add-on channels directly without the torrent source picker, forwarded full proxy headers, added automatic HLS and MPEG-TS fallback plus alternate stream failover for FayaTV and Persian Stremio, and automatically cleaned up the paywalled Best Torrents add-on."
+            "Phone Browser Sites: Updated default order to MEEDX WEB, Cinemana, YTS, and newly added TorrentGalaxy, plus long-press site reordering (Start, Forward, Backward, End, or exact position) saved locally.",
+            "Direct Install on TV & Lightweight Phone Addons: Removed the heavy streaming-addon list, + Paste URL, and Search & Stream from Phone; refreshed 1-Click Curated Addons; opening stremio:// links or curated picks now confirms Install on TV and installs directly onto Android TV.",
+            "Unified TV Subtitles & Cloud Sync: One central subtitle config synced across TV, Phone, and Google Cloud Backup, with grouped embedded video subtitles, live timing overlay bar, and one-click Arabic translation.",
+            "New In-App Update Popup (v19+): Silent background checks on the main v2 update channel with bilingual Download/Later actions, Android TV D-Pad focus, website link, and Downloader code 3213660."
           ]
         },
         "improvements": {
           "ar": [
-            "يعيد التحديث تنظيم إعدادات الإضافات بمربعات اختيار ذهبية عالية التباين وزر مستقل لإدارة الإضافات المثبتة، مع إعدادات مخصصة لكل إضافة ومزامنة فورية ثنائية الاتجاه.",
-            "يوحّد التحديث أزرار تفاصيل الأفلام والمسلسلات مع نقل «أولوية اللغات» إلى داخل «مسارات الصوت» ووضع «الإعلان» بجانب «تحديد كمشاهد»، ويقسّم الإعدادات الرئيسية إلى مجموعات واضحة بلا تكرار، ويجهّز التحديث التلقائي للمرحلة القادمة."
+            "إعادة تنظيم شاشة الإعدادات في الهاتف بعناوين قصيرة من سطر واحد (أذونات التطبيق، الترجمة، النسخ السحابي، تنظيف الكاش) ومنع انقسام أزرار رفع / استرجاع / المزيد في بطاقة النسخ السحابي.",
+            "تشديد دقة البحث النصّي عن الترجمة لمنع تسرب النتائج غير المطابقة وتحسين صيانة الكاش الآمن على الشاشة والهاتف."
           ],
           "en": [
-            "Redesigned Add-ons Settings with high-contrast gold checkboxes, a dedicated Manage Installed Add-ons view, and separate per-add-on settings with instant two-way sync.",
-            "Unified Movie and Series details buttons with Language Priority inside Audio Tracks and Trailer next to Mark as Watched, reorganized Main Settings without duplicates, and prepared OTA updates for future repository migration."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.16",
-        "versionCode": 16,
-        "date": "2026-11-23",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "يعيد قسم الإضافات عرض البطاقات في شبكة مربعة من 6 بطاقات في الصف بشعارات رسمية مع إمكانية ترتيب الإضافات ونقل زر الضبط للأعلى. يضيف التطبيق Persian Stremio ويفصل TR TV & Mov ويصلح FayaTV ويعرض أيقونات القنوات بنسبة مربعة 1:1.",
-            "يضيف التطبيق قسم الفن وشاشة التوقف. يضم وضع الفن خمس لوحات متحفية مدمجة وإطارات ورقية قابلة لتغيير الحجم وفلاتر لونية وساعة اختيارية وحماية بكسل. توفر شاشة توقف يوتيوب 4K قائمة تصنيفات منسدلة وبحثًا مدمجًا وتشغيلاً متكررًا عبر SmartTube أو المشغّل الداخلي.",
-            "يوحّد مستعرض الملفات تصفح ملفات الفيديو والصور والترجمات في مكان واحد. تفتح قائمة الضغط المطوّل خيارات التحديد والنسخ والنقل واللصق والحذف. يرتبط وضع الفن واختيار الترجمات مباشرة بهذا المستعرض."
-          ],
-          "en": [
-            "Redesigned Add-ons as a square six-column grid with official logos, custom ordering, and a top settings button. Added Persian Stremio, separated TR TV & Mov, fixed FayaTV, and displayed channel icons in a 1:1 square layout.",
-            "Added the Art and Screensaver section. Art Mode includes five museum paintings, resizable mat frames, color filters, an optional clock, and pixel shift protection. YouTube 4K Screensaver adds a category dropdown, built-in search, and looping playback in SmartTube or the built-in player.",
-            "Unified File Browser to manage video, image, and subtitle files in one place. Long-press opens select, copy, move, paste, and delete actions. Art Mode and subtitle picking now open this browser directly."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "تحدّث شاشة تفاصيل الأفلام والمسلسلات بتصميم مضغوط يزيل نافذة «مشاهدة الآن / الإعلان» ويعرض أزرار الصوت والإعلان وأولوية اللغات. يصلح التحديث قصّ إطارات التركيز وأسماء المواسم، ويفعّل البحث متعدد المصادر للترجمات عبر OpenSubtitles v3 وWyzie وSubsource بالتعبئة التلقائية.",
-            "يسرّع المشغّل بدء بث التورنت ويعرض عدد الموزعين وسرعة التحميل الحية. يلغي التحديث نافذة تأكيد الإيقاف عند الضغط على رجوع، ويخفي التقديم والترجيع في البث المباشر، ويزيل أزرار 10 ثوانٍ من شريط المشغّل، ويبقي قسم البث التلفزيوني على الدول المفضلة فقط."
-          ],
-          "en": [
-            "Updated movie and series details screens by removing the intermediate Watch Now and Trailer dialog and adding audio language priority, quick audio and trailer buttons, full season titles, and unclipped focus rings. Enabled multi-source subtitle search across OpenSubtitles v3, Wyzie, and Subsource with automatic query pre-fill.",
-            "Sped up torrent playback startup and showed live peer counts and download speed. Removed the exit confirmation dialog on Back, hid seek controls during live channels, removed the 10-second seek buttons from the player bar, and focused TV Live on Favorite Countries."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.15",
-        "versionCode": 15,
-        "date": "2026-11-22",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "ثبّت إضافات Stremio للبث والفهارس. فعّلها أو عطّلها بشكل فردي أو جماعي. تجمع قائمة المصادر نتائج الإضافات المفعّلة وتعرض اسم المزوّد واللغة والجودة والحجم وعدد الباذرين.",
-            "تصفّح الأفلام والمسلسلات في TR TV&Mov. اختر فيلمًا أو حلقة لعرض المصادر. شاهد الإعلانات الرسمية على يوتيوب واستخدم الترجمة المزدوجة التلقائية عند تفعيلها وتوفر المسارات المطابقة.",
-            "يفتح قسم TV Live على العراق افتراضيًا. ابحث عن الدولة باسمها أو بحرفها الأول. تظهر الدول المفضلة قرب أعلى منتقي الدول. تظهر القنوات المفضلة أولاً في قائمة القنوات. حدّث قائمة Nexonic العراقية تلقائيًا أو عند الطلب.",
-            "افتح قسم IPTV مستقلاً عن البث المباشر. أضف قوائم M3U وM3U8 أو بيانات Xtream Codes. فعّل قوائم القنوات العربية والمفتوحة من الإعدادات. يحفظ التطبيق الشعارات مؤقتًا ويحتفظ بالقنوات المفضلة.",
-            "اختر لغة الصوت المفضلة من الإعدادات. يستخدم المشغّل المسار المطابق عند توفره."
-          ],
-          "en": [
-            "Install Stremio stream and catalog add-ons. Enable or disable them individually or in groups. The source picker combines results from enabled add-ons and shows the provider, language, quality, file size, and seed count.",
-            "Browse movies and series in TR TV&Mov. Pick an episode or movie to open its source list. Watch official trailers on YouTube and use automatic dual subtitles when matching tracks are available and dual subtitles are enabled.",
-            "TV Live opens with Iraq by default. Search for a country by name or first letter. Favorite countries appear near the top of the picker. Favorite channels appear first in the channel list. Refresh the Iraqi Nexonic playlist automatically or on demand.",
-            "Open IPTV separately from TV Live. Add M3U and M3U8 playlists or Xtream Codes. Enable the Arabic and open channel lists in settings. The app caches channel logos and keeps channel favorites.",
-            "Choose a preferred audio language in Settings. The player selects a matching track when it is available."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "يعطي مشغّل التورنت الأولوية للقطع الأولى وفهرس الفيديو قبل التشغيل. اضغط رجوع أثناء البث المباشر للعودة إلى قائمة القنوات.",
-            "تعرض إعدادات الإضافات بطاقات أكبر وعدد الإضافات المفعّلة وحالة كل مزوّد. يمكنك استبعاد مشاهدات الإضافات من «متابعة المشاهدة».",
-            "افتح الكود المصدري وتراخيص الجهات الخارجية من الإعدادات. تفتح روابط المساعدة والدعم موقع Local Cinema."
-          ],
-          "en": [
-            "The torrent player prioritizes the first pieces and the media index before playback. Press Back during a live channel to return to the channel list.",
-            "Add-on settings use larger cards and show the active count and per-provider status. You can exclude add-on streams from Continue Watching.",
-            "Open the source code and third-party licenses from Settings. Help and support links open the Local Cinema site."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.14",
-        "versionCode": 14,
-        "date": "2026-11-21",
-        "latest": false,
-        "whatsNew": {
-          "en": [
-            "Press OK once to play an episode. Hold OK or press Menu to open its options.",
-            "Continue Watching matches titles with their saved progress more reliably and clears entries when a season is complete.",
-            "Turn Skip Ads on or off in playback controls. Family Watch is marked “Coming Soon.”",
-            "Fixed a crash when the TV app receives a cast while in the background.",
-            "The subtitle picker remembers Dual Subs and shows each track on one line. A single control toggles Dual Subs."
-          ],
-          "ar": [
-            "اضغط زر OK مرة واحدة لتشغيل الحلقة. اضغط مطولًا أو استخدم زر القائمة لعرض الخيارات.",
-            "تعرض «متابعة المشاهدة» تقدّم العمل بدقة أكبر وتزيل إدخال الموسم عند اكتماله.",
-            "يمكن تشغيل «تخطي الإعلانات» أو إيقافه من أدوات المشغّل. تظهر «المشاهدة العائلية» بحالة «قريبًا».",
-            "أُصلح انهيار تطبيق التلفاز عند استقبال بث وهو في الخلفية.",
-            "يحفظ منتقي الترجمات إعداد الترجمة المزدوجة ويعرض كل مسار في سطر واحد. يتحكم زر واحد في تفعيلها."
-          ]
-        },
-        "improvements": {
-          "ar": [],
-          "en": []
-        }
-      },
-      {
-        "version": "1.0.0-beta.13",
-        "versionCode": 13,
-        "date": "2026-11-20",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "تبني الشاشة الرئيسية صفوف المكتبة وترتّبها ديناميكياً حسب أسماء المجلدات المشاركة تحت الجذر (Cartoon و Movies و OTHERS و Shows وأي مجلد جديد) بنفس اسم المجلد الفعلي دون تقسيم Shows أو Movies إلى صفوف فرعية أو تكرارها.",
-            "يوحّد الفحص العميق المتكرر لمشاركات SMB المسارات بين عنوان IP واسم الجهاز Hostname لمنع تكرار المجلدات المفهرسة أو البطاقات أو الحلقات.",
-            "تدمج واجهة المسلسلات البطاقات التي تختلف بوجود سنة الإصدار مثل (2022) وتجمع جميع مواسم المسلسل وحلقاته في بطاقة وصفحة واحدة مع التحديث التلقائي فور انتهاء الفحص.",
-            "يختفي زر الترجمة Subtitles في تبويب Show وعند الوقوف على بطاقة بوستر الموسم الكامل (Watch season)، ويظهر فقط عند التركيز على بطاقة حلقة فردية."
-          ],
-          "en": [
-            "Home builds and sorts library rows dynamically from each direct top-level shared folder (Cartoon, Movies, OTHERS, Shows, and any new folder) using the exact folder name without splitting Shows or Movies into per-series rows or duplicating rows.",
-            "Deep recursive SMB scanning unifies IP and hostname paths so switching between server IP and computer name never duplicates indexed folders, cards, or episodes.",
-            "Series views merge duplicate cards differing by a year suffix like (2022) and combine all seasons and episodes into one card and show page with automatic refresh when scanning finishes.",
-            "The Subtitles button hides on the Show tab and on the full-season poster card (Watch season), and appears only when an individual episode card is focused."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "ينقل الضغط على بوستر الموسم في تبويب Show التركيز مباشرة إلى الحلقة قيد المشاهدة أو الحلقة الأولى E1 مع منع الاستدعاءات الخلفية من سرقة التركيز.",
-            "تحافظ العودة إلى الشاشة الرئيسية على البوسترات في 0ms عبر كاش ذاكرة بحجم 16MB وتمنع تصفح مشاركات SMB من إنشاء أي مجلدات Movies تلقائياً."
-          ],
-          "en": [
-            "Clicking a season poster in the Show tab switches to that season tab and focuses the in-progress episode or E1 while blocking async callbacks from stealing focus.",
-            "Returning to Home keeps posters visible in 0ms from a 16MB memory cache, and SMB browsing runs read-only without creating automatic Movies subfolders."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.12",
-        "versionCode": 12,
-        "date": "2026-11-19",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "يشغّل النقر على أي حلقة في صف الموسم الفيديو مباشرة دون شاشة وسيطة. يعيد الخروج التركيز إلى بطاقة الحلقة نفسها.",
-            "يضيف مشغل الشاشة زري الحلقة السابقة والحلقة التالية أثناء عرض المسلسلات. يعيد اختيار الترجمة تشغيل مؤقت إخفاء الواجهة التلقائي.",
-            "يجلب التركيز على بطاقة أي موسم إعلان الموسم أولاً، ويستخدم إعلان المسلسل عند غيابه. تخفي صفوف الحلقات زر الإعلان.",
-            "تعرض بطاقات متابعة المشاهدة شارة الموسم والحلقة وتبدأ التشغيل مباشرة. يظهر اسم المسلسل واسم الحلقة والوقت المتبقي في الهيدر العلوي.",
-            "يحفظ المشغل موضع التشغيل بالملي ثانية كل 5 ثوانٍ وعند التقديم والترجيع والإيقاف والخروج. يكمّل التطبيق الأعمال تلقائياً عند 85% ويحمي الموضع المحلي من تقريب Trakt.",
-            "يجلب كاش الصور بيانات العربية والإنجليزية في طلب واحد داخل كاش قرصي بسعة 200MB دون بطاقات سوداء. يضيف قسم الإعدادات صفحة التخزين والكاش."
-          ],
-          "en": [
-            "Clicking an episode in a season row starts playback directly without an intermediate screen. Exiting returns focus to that same card.",
-            "In-player controls add Previous Episode and Next Episode buttons during series playback. Selecting a subtitle restarts the HUD auto-hide timer.",
-            "Season cards load the season trailer first and fall back to the series trailer. Episode rows hide trailer actions.",
-            "Continue Watching cards show season and episode badges and start playback directly. The top header displays the show name, episode title, and remaining time.",
-            "Player services save exact millisecond positions every 5 seconds, after seeks, on pause, and on exit. The app marks items watched at 85% and protects local resume timestamps from Trakt rounding.",
-            "Artwork loading fetches Arabic and English posters in one request inside a 200MB disk cache with card-size decoding and no blank cards. Settings adds a Storage & Cache page."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "يضبط التطبيق محاذاة الواجهة العربية في شاشات العرض والتفاصيل ويمنع ظهور صف المواسم أسفل الحلقات.",
-            "يطوي زر الرجوع القائمة الجانبية، أو يعود لأعلى الرئيسية، أو يفتح نافذة التأكيد مع تحديد زر الخروج تلقائياً."
-          ],
-          "en": [
-            "The app aligns show, season, and movie screens in Arabic RTL layout and keeps the season row hidden below episodes.",
-            "The Back key closes the sidebar rail, returns to the top of Home, or opens the exit dialog with Exit focused."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.11",
-        "versionCode": 11,
-        "date": "2026-11-19",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "فصل وحدات الموسيقى والترجمة والمكتبة والاتصال عن TvHubActivity، وتقسيم CinemaBrowser إلى CinemaBrowserSettingsSheet و CinemaBrowserMediaBridge.",
-            "فتح المتصفح بأبعاد الهاتف الطبيعية 100%، مع تبديل وضع سطح المكتب والهاتف، وتكبير الصفحة من 50% إلى 150%، ومدير الإضافات BrowserExtensions.",
-            "تحديد سقف كاش GeckoView عند 100MB وتنظيف ملفات البث المؤقتة عبر CinemaCacheManager، مما قلّص حجم تخزين التطبيق من 1.54GB إلى 514MB، مع إضافة زر Clear Cache في الإعدادات.",
-            "إيقاف نشاط جلسات المتصفح والخوادم المحلية عند الخمول لتوفير البطارية في الخلفية.",
-            "تلوين أزرار حالة الترجمة الأساسية والمزدوجة والإيقاف بالذهبي (#E5B94C) والأحمر القرمزي (#EF4444)، وتثبيت المعرّفات الموجبة (900M+) على التلفاز."
-          ],
-          "en": [
-            "Split TvHubActivity into dedicated Music, Subtitles, Library, and Connection controllers, and extracted CinemaBrowserSettingsSheet and CinemaBrowserMediaBridge from CinemaBrowser.",
-            "Set CinemaBrowser to a 100% mobile viewport by default, added Desktop and Mobile mode switching, a 50% to 150% Page Zoom slider, and the BrowserExtensions manager.",
-            "Capped GeckoView disk cache at 100MB and purged temporary cast files via CinemaCacheManager, reducing app storage from 1.54GB to 514MB, plus added a Clear Cache button in Settings.",
-            "Suspended background GeckoSession activity and stopped idle local media servers to save battery.",
-            "Added Gold (#E5B94C) and Crimson (#EF4444) active fills for Primary, Dual, and Off subtitle toggles, and enforced positive 900M+ synthetic MediaDB IDs on TV."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "ضبط موضع الترجمة المزدوجة على شاشة التلفاز وإلغاء طلبات المزامنة الدورية المتكررة.",
-            "يمسح زر Clear Cache الملفات المؤقتة فقط ويحافظ على الحسابات والمفضلة والاقتران."
-          ],
-          "en": [
-            "Adjusted dual-subtitle vertical spacing on TV and removed periodic background sync polling.",
-            "Clear Cache removes temporary files while keeping logins, bookmarks, and paired TV credentials."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.10",
-        "versionCode": 10,
-        "date": "2026-11-18",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "إصلاح أبعاد الفيديو والدوران (4K / HEVC والعمودية): حل جذري لتمطط الصورة وانقلاب الاتجاه عند تشغيل الفيديوهات عالية الدقة أو العمودية (90° / 180° / 270°) عبر AspectRatioFrameLayout بوضع RESIZE_MODE_FIT الافتراضي والحفاظ على البث الخام Pass-through.",
-            "نظام الترجمة المتكامل على الشاشة والهاتف: تنزيل وفك ضغط ملفات ترجمة Subsource (.zip / .gz) وتصحيح الترميز (UTF-8 / UTF-16 / windows-1256) تلقائياً، نافذة Active & Stream Subtitles وإعدادات Cast Subtitle Settings (الترجمة المزدوجة، التزامن ±100ms / ±500ms، الحجم، اللون، الموضع) مع تصميم بطاقات داكنة ذهبية في Subtitle Settings.",
-            "مركزية الاتصال (Phone = Master Hub و TV = Persistent Receiver): إعادة تنظيم إعدادات التلفاز في Connections & Phone Sync (3 بطاقات نظيفة) وPlayback & Subtitles، واستقبال وحفظ الإضافات ومفاتيح API وحساب Trakt دائماً على الشاشة حتى بدون الهاتف.",
-            "ربط Trakt OAuth 2.0 PKCE والمزامنة ثنائية الاتجاه: تفعيل ربط Trakt بضغطة واحدة ومزامنة قوائم Watchlist وWatched وContinue Watching ونقاط التوقف (Scrobble) مع عزل فيديوهات استوديو الهاتف عن «متابعة المشاهدة».",
-            "استقرار الربط اللحظي ومنع تضارب WebSocket (1008): استبدال اتصالات نفس الجهاز برمز الإغلاق 1000 دون قطع الجلسة أو رسائل الرفض الوهمية، مع مؤشرات ADB و Web في الريموت.",
-            "تحسينات المتصفح والبث: استخراج العنوان النظيف للعمل وإرساله حيّاً (UPDATE_CAST_METADATA)، إيقاف صوت التبويبات الخلفية تلقائياً بشارة 🔊، وحفظ أيقونات المفضلة دائماً مع حذف التورنتات المؤقتة عند الإيقاف."
-          ],
-          "en": [
-            "4K / HEVC Aspect Ratio & Rotation Fix: Eliminated stretching and sideways playback on high-res and portrait (90° / 180° / 270°) videos via AspectRatioFrameLayout defaulting to RESIZE_MODE_FIT, hardware rotation alignment on SurfaceView, accurate Matrix transforms for TextureView, and native pass-through streaming.",
-            "Complete TV & Phone Subtitle System: Auto-downloads, extracts (.zip / .gz), and normalizes Subsource/browser subtitles (UTF-8 / UTF-16 / windows-1256) on TV; adds Active & Stream Subtitles, Cast Subtitle Settings (dual subtitles, ±100ms / ±500ms sync, size, color, position), and dark-gold Subtitle Settings UI.",
-            "Persistent TV Receiver Hub: Reorganized TV settings into clean Connections & Phone Sync (3 cards) and Playback & Subtitles, committing synced Trakt credentials, addons, and keys synchronously for offline availability.",
-            "Two-Way Trakt & Library Sync (1-Tap PKCE): Added browser OAuth 2.0 PKCE sign-in plus two-way Watchlist, Watched, Continue Watching, and live player Scrobble sync while isolating phone studio clips from Continue Watching.",
-            "WebSocket 1008 Conflict Fix: Replaced stale reconnect disconnects with clean code 1000 handoff so TvHubActivity and the floating TV Remote never collide or falsely reject.",
-            "Clean Metadata & Live Title Updates: Extracts full clean movie/series titles, updates active TV casts live (UPDATE_CAST_METADATA), mutes background browser tabs with 🔊 indicators, and auto-purges temporary cast torrents."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "توحيد معرّف Trakt PKCE وتنظيف أخطاء التعريف القديمة تلقائياً بدون الحاجة لأي إعدادات مطورين.",
-            "تحسين تباعد أزرار الاستئناف في تفاصيل المسلسلات واستقرار البحث باللغة العربية التلقائية في Subsource."
-          ],
-          "en": [
-            "Auto-healed legacy Trakt Client ID strings for 1-tap PKCE auth and removed cluttered developer UI fields.",
-            "Refined episode Resume button spacing, dual-subtitle positioning, and automatic Arabic Subsource lookups."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.9",
-        "versionCode": 9,
-        "date": "2026-11-17",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "استعادة كاملة لشاشة المسلسلات والمواسم والحلقات ببوسترات 2:3 ولوجو الأعمال الذهبي وتجميع تلقائي لمجلدات المواسم المتعددة.",
-            "عرض التقييمات المتعددة السريعة (IMDb، TMDb، TVmaze، Rotten Tomatoes، Metacritic) مع سنة البث والمدة الحقيقية لكل حلقة وإزالة تكرار شارات Dolby Vision.",
-            "إبقاء تبويب الموسم النشط مميّزاً بالذهبي أثناء التنقل بين الحلقات، وإصلاح ثبات التركيز في شاشة الأفلام عند التحديد كمشاهد.",
-            "ريموت هاتف مطوّر بيد واحدة بأيقونات صافية، وتاتش باد وجوستك بالسحب، وزر مسح QR، وشريط بث مصغّر.",
-            "محرك اقتناص وبث وسائط احترافي من المتصفح (Web Video Caster Engine) مع زر إعادة الفحص ومزامنة الترجمة الفورية وتوحيد بحث الترجمة مع Connection.",
-            "تقليص حجم تطبيق الهاتف عبر تقسيم معمارية arm64-v8a وتحسين أداء البث بدقة 4K."
-          ],
-          "en": [
-            "Restored full Series & Seasons view with 2:3 season posters, ClearLogos, and automatic multi-season folder grouping.",
-            "Fast parallel multi-source ratings (IMDb, TMDb, TVmaze, Rotten Tomatoes, Metacritic), accurate per-episode air year/runtime, and deduplicated Dolby Vision badges.",
-            "Persistent golden active-season tab highlight and rock-solid focus retention when toggling watched status on movies.",
-            "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting pill.",
-            "Upgraded in-app browser media sniffer & LAN proxy with live rescan, synced subtitle casting, and unified Connection subtitle search.",
-            "Reduced Phone APK size via arm64-v8a ABI split and enhanced 4K playback stability."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "استبدال استعلامات Wikidata البطيئة بجلب متوازٍ سريع مع الحفاظ على التقييمات عبر التبويبات.",
-            "تثبيت ارتفاع شريط التفاصيل والتقييمات لمنع قص أزرار الإجراءات السفلية وإصلاح جمع الحلقات العربية."
-          ],
-          "en": [
-            "Replaced slow Wikidata SPARQL calls with fast parallel lookups preserved across Show and Season tabs.",
-            "Stabilized infoRow/ratingsRow heights to prevent bottom button clipping and refined Arabic plural counts."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.8",
-        "versionCode": 8,
-        "date": "2026-11-16",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة بأيقونات صافية، وتاتش باد وجوستك قابل للتبديل، وزر QR، وشريط بث مصغّر.",
-            "تطوير محرك اقتناص وبث الفيديو من المتصفح (Web Video Caster Engine) وتوحيد بحث الترجمة مع Connection.",
-            "إضافة أيقونات طقس ملوّنة بالموقع الجغرافي الحقيقي وإعداد شفافية خلفية الساعة، وإغناء إعلانات «قريباً» وخيارات الفرز المتعددة."
-          ],
-          "en": [
-            "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting bar.",
-            "Upgraded Web Video Caster & LAN proxy and unified casting subtitle search with Connection keys.",
-            "Location-based live weather icons, clock background opacity, enriched Coming Soon trailers, and poster context Sort By."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "إصلاح المحاذاة العربية (RTL) في صفوف الإعلانات وتفاصيل الأفلام وقوائم المشغّل."
-          ],
-          "en": [
-            "Full Arabic RTL navigation, details alignment, and player menu layout fixes."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.7",
-        "versionCode": 7,
-        "date": "2026-11-16",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "قسم «الإعلانات» (Trailers) السينمائي 16:9 في الشاشة الرئيسية وزر «مشاهدة الإعلان» في YouTube، ومشغّل الوسائط الموحّد."
-          ],
-          "en": [
-            "Cinematic 16:9 Home Trailers rows, Watch Trailer YouTube button, and Unified Media Player."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.6",
-        "versionCode": 6,
-        "date": "2026-11-16",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "وضع التشغيل الفوري بلا حساب، معالج الصلاحيات الذكي، النسخ الاحتياطي عبر Google Drive ومحلياً، وإضافات Nuvio / Stremio وTrakt."
-          ],
-          "en": [
-            "Zero-Account Mode, Permissions Setup Wizard, Google Drive + Local Backup & Restore, Nuvio / Stremio addons, and Trakt sync."
+            "Cleaned up Phone Settings with crisp single-line titles (App Permissions, Subtitles, Cloud Backup, Cache Cleaner) and locked Upload / Restore / More buttons to single lines with zero text wrapping.",
+            "Tightened subtitle text-search relevance filtering to eliminate unrelated matches and improved safe cache maintenance across TV and Phone."
           ]
         }
       }
@@ -390,20 +86,21 @@
     "packageId": "com.meedx.localcinema.manager",
     "name": "Local Cinema Manager",
     "available": true,
-    "version": "1.0.0-beta.17",
-    "versionCode": 17,
-    "releaseDate": "2026-11-23",
+    "version": "1.0.0-beta.19",
+    "versionCode": 19,
+    "releaseDate": "2026-11-24",
     "status": {
-      "ar": "نسخة تجريبية",
-      "en": "Beta"
+      "ar": "آخر نسخة تجريبية",
+      "en": "Final Beta"
     },
+    "shortUrl": "meedx.pages.dev/phone",
     "versionBanner": {
       "ar": "هذه نسخة الهاتف (Android Phone)",
       "en": "This is the Phone Version (Android Phone)"
     },
-    "url": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.17/LocalCinema-Manager-Phone-v1.0.0-beta.17.apk",
-    "sizeBytes": 111388910,
-    "sha256": "9bdde0aee0c228da32a819706597ce8796f6a756cccd447e0aa3ab4e7631ffc3",
+    "url": "https://github.com/alnouri96/local-cinema/releases/download/v1.0.0-beta.19/LocalCinema-Manager-Phone-v1.0.0-beta.19.apk",
+    "sizeBytes": 111406594,
+    "sha256": "c45b4cd3d1f0a49e123318d3d0682365e629a52d37f06a67eee46ce39568270a",
     "specs": {
       "platform": {
         "ar": "Android 8.0+",
@@ -413,303 +110,43 @@
         "ar": "arm64-v8a",
         "en": "arm64-v8a"
       },
-      "sizeLabel": "106.23 MiB",
-      "license": "GPL-3.0-or-later",
+      "sizeLabel": "106.25 MiB",
+      "license": "GPL-3.0",
       "security": {
         "ar": "خضع الملف لفحص مفاتيح المزوّدين المعروفة.",
         "en": "Checked for known provider credentials."
       }
     },
     "changelog": {
-      "ar": "يحدّث التطبيق وحدة الإضافات المشتركة لتمرير ترويسات البروكسي الكاملة وتنظيف الإضافات المعطّلة تلقائياً، ويحافظ على توافق تفضيلات البث المباشر مع وضع الدول المفضلة المدمج، ويصلح رابط تراخيص الجهات الخارجية ويجهّز التحديث التلقائي للمرحلة القادمة.",
-      "en": "Updated shared Stremio add-ons and Live TV preferences to support full proxy headers, automatic cleanup of retired broken add-ons, and Favorite Countries view mode parity with TV. Prepared the in-app updater allowlist for upcoming repository migration and fixed the third-party licenses link."
+      "ar": "تحديث مواقع المتصفح بـ MEEDX WEB وCinemana وYTS وTorrentGalaxy مع إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات وإضافة التثبيت المباشر على الشاشة (Install on TV)، تنظيف الإعدادات وأزرار النسخ السحابي بسطر واحد، ونافذة التحديث الجديدة.",
+      "en": "Updated the Browser Sites grid with MEEDX WEB, Cinemana, YTS, and TorrentGalaxy first plus long-press site reordering. Streamlined External Addons on Phone by removing the heavy stream-addon list and Paste/Search controls while adding direct Install on TV confirmation for Curated Addons and Stremio links. Cleaned up Settings titles and single-line Cloud Backup action buttons, added subtitle config to Google Cloud Backup, and upgraded the in-app update popup for the main v2 update channel."
     },
     "updateNotes": [
       {
-        "version": "1.0.0-beta.17",
-        "versionCode": 17,
-        "date": "2026-11-23",
+        "version": "1.0.0-beta.19",
+        "versionCode": 19,
+        "date": "2026-11-24",
         "latest": true,
         "whatsNew": {
           "ar": [
-            "يحدّث التطبيق وحدة الإضافات المشتركة لتمرير ترويسات البروكسي الكاملة وتنقية العناصر غير القابلة للتشغيل وتنظيف الإضافات المعطّلة تلقائياً."
+            "مواقع المتصفح في الهاتف: تحديث الترتيب الافتراضي ليبدأ بـ MEEDX WEB ثم Cinemana ثم YTS ثم إضافة TorrentGalaxy، مع إمكانية نقل وإعادة ترتيب أي موقع محفوظ بالضغط المطوّل وحفظ الترتيب محلياً.",
+            "تثبيت الإضافات مباشرةً على الشاشة (Install on TV): تخفيف قسم الإضافات في الهاتف بحذف القائمة الثقيلة و+ Paste URL وSearch & Stream، وتطوير تصميم 1-Click Curated Addons، وتحويل روابط stremio:// والدليل إلى نافذة تأكيد ترسل وتثبّت الإضافة مباشرةً على Android TV.",
+            "نظام نافذة التحديث الجديدة (v19+): فحص صامت في الخلفية عبر القناة الرسمية الجديدة مع نافذة تحديث تدعم العربية والإنجليزية."
           ],
           "en": [
-            "Updated shared Stremio add-on parsing to forward full request proxy headers, filter non-playable entries, and automatically clean up retired broken add-ons."
+            "Phone Browser Sites: Updated default order to MEEDX WEB, Cinemana, YTS, and newly added TorrentGalaxy, plus long-press site reordering saved locally.",
+            "Direct Install on TV & Lightweight Phone Addons: Removed the heavy streaming-addon list, + Paste URL, and Search & Stream from Phone; refreshed 1-Click Curated Addons; opening stremio:// links or curated picks now installs directly onto Android TV.",
+            "New In-App Update Popup (v19+): Silent background checks on the main v2 update channel with bilingual Download/Later actions."
           ]
         },
         "improvements": {
           "ar": [
-            "يحافظ التطبيق على توافق تفضيلات البث المباشر مع وضع الدول المفضلة المدمج، ويصلح رابط تراخيص الجهات الخارجية، ويجهّز قائمة التحديث التلقائي للمرحلة القادمة."
+            "إعادة تنظيم شاشة الإعدادات بعناوين قصيرة من سطر واحد (أذونات التطبيق، الترجمة، النسخ السحابي، تنظيف الكاش) ومنع انقسام أزرار رفع / استرجاع / المزيد في بطاقة النسخ السحابي.",
+            "تضمين إعدادات الترجمة الموحّدة بالكامل داخل النسخ الاحتياطي السحابي Google Cloud Backup."
           ],
           "en": [
-            "Kept Live TV preferences compatible with Favorite Countries merged mode, fixed the third-party licenses link, and prepared the OTA updater allowlist for upcoming repository migration."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.16",
-        "versionCode": 16,
-        "date": "2026-11-23",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "يزامن الهاتف الدول المفضلة للبث التلفزيوني تلقائيًا من التلفاز ويحفظها ضمن النسخة الاحتياطية السحابية على Google Drive."
-          ],
-          "en": [
-            "Synced TV Live favorite countries automatically from the TV and included them in Google Drive cloud backups."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "يحسّن التطبيق إعدادات الاتصال الأولي لمحرك التورنت ويزيل التنبيهات السفلية المكررة عند اكتمال رفع النسخة السحابية."
-          ],
-          "en": [
-            "Improved initial peer connection settings for the torrent engine and removed duplicate bottom banners after cloud backup uploads finish."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.15",
-        "versionCode": 15,
-        "date": "2026-11-22",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "أضف إضافات Stremio للبث والفهارس من TV Hub أو افتح رابط تثبيت stremio://. اطوِ قائمة الإضافات الخارجية أو وسّعها داخل تبويب الاتصال. تتزامن التغييرات عند تعديل الإضافات مع التلفاز المقترن.",
-            "استخدم الريموت العائم بين التبويبات وأثناء مشاهدة القنوات المباشرة. اسحب رأس لوحة الريموت للأسفل لإغلاقها.",
-            "تظهر بوسترات الأفلام وأغلفة الموسيقى بحجم أكبر. تحكّم من إعدادات الموسيقى في ظهور معلومات المقطوعة على التلفاز ومدة بقائها.",
-            "افتح خلاصات RSS من شريط المتصفح ومركز التحميل من تبويب «داونلودر». استخدم «المزامنة الآن» في TV Hub لإرسال الإعدادات المدعومة والقنوات المفضلة."
-          ],
-          "en": [
-            "Add Stremio stream and catalog add-ons from TV Hub or open a stremio:// install link. Expand or collapse External Add-ons in Connection. Changes to add-ons sync to the paired TV.",
-            "Use the floating TV remote across tabs and during live channels. Swipe down on its header to close the remote panel.",
-            "Movie posters and music covers are larger. Use music settings to show or hide track information on the TV and set how long it stays visible.",
-            "Open RSS from the browser toolbar and Download Center from the Downloader tab. Use Sync Now in TV Hub to send supported settings and channel favorites."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "أُصلح انهيار GeckoView عند بدء تشغيل نسخة الإصدار المحسّنة.",
-            "تعرض نافذة «حول التطبيق» شعار Local Cinema Manager وتنسب التطوير إلى MEEDX. وتوضح دور LibreTorrent في مركز التحميل وتربط بالكود المصدري وتراخيص الجهات الخارجية."
-          ],
-          "en": [
-            "Fixed a GeckoView startup crash in the optimized release build.",
-            "About shows the Local Cinema Manager logo and credits MEEDX. It describes LibreTorrent as part of Download Center. It also links to the source code and third-party licenses."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.14",
-        "versionCode": 14,
-        "date": "2026-11-21",
-        "latest": false,
-        "whatsNew": {
-          "en": [
-            "Casting uses one media notification while keeping the CPU and Wi-Fi awake during background playback.",
-            "Stop playback from the Local Media mini-bar or the notification shade. The phone switches from music controls to the active video card when playback starts on the TV.",
-            "Hold Seek or Volume on the floating remote to repeat the action. The connection indicator follows the TV connection across tabs.",
-            "Type Arabic or English directly into TV fields. Backspace and cursor movement work as you type, without a Send button.",
-            "Scroll inside the Subtitles sheet without closing it. TV Hub connection cards hide the Trakt username.",
-            "Video Grabber detects direct video and subtitle links. Support for relaying protected streams and embeds that require access tokens is planned for a future release."
-          ],
-          "ar": [
-            "يعرض الهاتف إشعار وسائط واحدًا للبث ويحافظ على نشاط المعالج واتصال Wi-Fi أثناء التشغيل في الخلفية.",
-            "أوقف التشغيل من شريط الوسائط المصغّر أو درج الإشعارات. ينتقل الهاتف من واجهة الموسيقى إلى بطاقة الفيديو عند بدء التشغيل على التلفاز.",
-            "يكرّر الريموت العائم التقديم والترجيع وتغيير مستوى الصوت عند الضغط المطوّل. يعكس مؤشر الاتصال حالة التلفاز عبر التبويبات.",
-            "تصل الكتابة بالعربية والإنجليزية مباشرة إلى حقل التلفاز. يعمل الحذف وتحريك المؤشر فورًا دون زر إرسال.",
-            "يمكن التمرير داخل نافذة الترجمات دون إغلاقها. تخفي بطاقات الاتصال في TV Hub اسم حساب Trakt.",
-            "تلتقط أداة Video Grabber روابط الفيديو والترجمة المباشرة. دعم تمرير البث المحمي والمشغّلات التي تتطلب رموز وصول مؤجل إلى إصدار لاحق."
-          ]
-        },
-        "improvements": {
-          "ar": [],
-          "en": []
-        }
-      },
-      {
-        "version": "1.0.0-beta.13",
-        "versionCode": 13,
-        "date": "2026-11-20",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "يرفع التطبيق رقم الإصدار إلى 13 لمزامنة التحديثات بسلاسة مع إصدار الشاشة v1.0.0-beta.13 ومعرفات المسلسلات الموحّدة.",
-            "يحافظ المشغل على زر Embedded Subtitles الموحّد وخطوات التقديم والترجيع الفورية (10 أو 30 ثانية) عبر لوحة اللمس."
-          ],
-          "en": [
-            "Updates the companion app to versionCode 13 in lockstep with the TV v1.0.0-beta.13 SMB library and series navigation release.",
-            "Retains the unified Embedded Subtitles picker and immediate 10s or 30s horizontal touchpad seek steps."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "يتكامل مع فهرسة مسارات SMB الموحّدة بين IP و Hostname على الشاشة."
-          ],
-          "en": [
-            "Pairs cleanly with host-agnostic SMB IP and hostname library paths on TV."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.12",
-        "versionCode": 12,
-        "date": "2026-11-19",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "يجمع تطبيق الهاتف مسارات الترجمة المدمجة في زر Embedded Subtitles واحد يظهر عند توفرها فقط. يفتح الزر قائمة قابلة للتمرير للترجمة الأساسية والمزدوجة.",
-            "يرسل السحب الأفقي على لوحة اللمس خطوات تقديم وترجيع فورية بمقدار 10 أو 30 ثانية مع اهتزاز خفيف. يلغي التطبيق الضغط المطوّل فور تحرك الإصبع ويبقي الضغط الثابت لإرسال OK."
-          ],
-          "en": [
-            "Phone playback groups built-in tracks under one Embedded Subtitles button that appears only when tracks exist. The button opens a scrollable primary and dual picker.",
-            "Horizontal touchpad swipes send immediate 10s or 30s seek steps with light haptic feedback. Finger movement cancels long-press hold detection while a steady press still sends OK."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "يوحّد التطبيق عتبة الإكمال التلقائي عند 85% بين مزامنة الهاتف والشاشة."
-          ],
-          "en": [
-            "Watch sync uses the same 85% auto-completion threshold on Phone and TV."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.11",
-        "versionCode": 11,
-        "date": "2026-11-19",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "فصل وحدات الموسيقى (TvHubMusicController) والترجمة (TvHubSubtitlesController) والمكتبة (TvHubLibraryController) والاتصال (TvHubConnectionController) عن TvHubActivity، وتقسيم المتصفح CinemaBrowser إلى CinemaBrowserSettingsSheet و CinemaBrowserMediaBridge.",
-            "فتح المتصفح بأبعاد الهاتف الطبيعية 100%، مع تبديل وضع الهاتف وسطح المكتب، وشريط تكبير الصفحة من 50% إلى 150%، ومدير الإضافات BrowserExtensions.",
-            "تحديد سقف كاش GeckoView عند 100MB وحذف ملفات البث والترجمة المؤقتة تلقائياً عبر CinemaCacheManager، مما خفّض المساحة المستهلكة من 1.54GB إلى 514MB، مع إضافة قسم Storage & Cache وزر Clear Cache في الإعدادات.",
-            "إيقاف نشاط GeckoSession.setActive(false) في الخلفية، ومواءمة مؤقتات الفحص مع حالة الشاشة، وإغلاق خوادم البث المحلية عند الخمول.",
-            "تلوين أزرار الترجمة الأساسية (Primary) والمزدوجة (Dual) والإيقاف (Off) في TvHubSubtitlesController بالذهبي (#E5B94C) والأحمر القرمزي (#EF4444)."
-          ],
-          "en": [
-            "Extracted TvHubMusicController, TvHubSubtitlesController, TvHubLibraryController, and TvHubConnectionController from TvHubActivity, and split CinemaBrowser into CinemaBrowserSettingsSheet and CinemaBrowserMediaBridge.",
-            "Set CinemaBrowser startup to a 100% mobile viewport, added Desktop and Mobile mode switching, a 50% to 150% Page Zoom slider, and the BrowserExtensions manager.",
-            "Capped GeckoView disk cache at 100MB and purged temporary cast files via CinemaCacheManager, reducing app storage from 1.54GB to 514MB, and added a Storage & Cache section with a Clear Cache button in Settings.",
-            "Called GeckoSession.setActive(false) in the background, tied playbackPoll and reconnect timers to foreground state, and stopped idle local media servers.",
-            "Updated Primary, Dual, and Off subtitle buttons in TvHubSubtitlesController with Gold (#E5B94C) and Crimson (#EF4444) active fills and borders."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "تشغيل مزامنة الشاشة و Trakt OAuth 2.0 PKCE عند تعديل الإعدادات أو الضغط اليدوي فقط.",
-            "الحفاظ على جلسات المتصفح النشطة عند التنقل بين التبويبات دون إعادة تحميل."
-          ],
-          "en": [
-            "Runs Phone-to-TV and Trakt OAuth 2.0 PKCE sync only when settings change or on manual tap.",
-            "Keeps active browser sessions alive when switching tabs without reloading."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.10",
-        "versionCode": 10,
-        "date": "2026-11-18",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "مركز الاتصال الموحّد (Phone = Master Hub): إعادة تنظيم تبويب Connection في 5 بطاقات واضحة (الشاشة والاقتران مع زر Sync All to TV، حساب Trakt بربط PKCE بضغطة واحدة، مفاتيح Subsource وTMDb، الإضافات الخارجية، معالج الصلاحيات) مع مزامنة فورية وحفظ دائم على الشاشة.",
-            "مشغل موسيقى مستقل تماماً عن مشغل الفيديو: واجهة Music Player مخصصة (بدون أي أدوات فيديو أو ترجمة) مع زر تبديل فوري بين إخراج الشاشة (TV) وسماعة الهاتف (Phone)، وقائمة تشغيل تفاعلية Playing Queue، وشريط مصغر أسفل التطبيق ومنع تداخل الصوت مع الفيديو.",
-            "لوحة تحكم الترجمة المتقدمة أثناء البث: نافذة Active & Stream Subtitles وCast Subtitle Settings للترجمة المزدوجة، وتعديل التزامن ±100ms / ±500ms والحجم واللون والموضع لحظياً على الشاشة.",
-            "ريموت عائم بسطر واحد ومؤشرات LED: عرض عنوان TV Remote بسطر واحد مع مؤشر Connected/Disconnected ومصباحي حالة متوهجين (ADB أخضر و Web أزرق) وحل مشكلة انقطاع WebSocket 1008 نهائياً.",
-            "تحسينات المتصفح والبث المصغر: اقتناص العنوان النظيف وبثه حيّاً (UPDATE_CAST_METADATA)، إيقاف صوت التبويبات الخلفية تلقائياً مع مؤشر 🔊، البقاء في نفس التبويب عند تصغير نافذة البث عبر شريط Now Casting، وحفظ أيقونات المفضلة دائماً على القرص.",
-            "الحفاظ على البث الخام Pass-through للفيديوهات في PhoneVideoServer مع دعم Range وحذف تورنتات البث المؤقتة (Stream to TV) تلقائياً عند الإيقاف."
-          ],
-          "en": [
-            "Master Hub Connection (5 Clean Cards): Unified TV Hub → Connection with TV Pairing & Sync All to TV, 1-Tap Trakt OAuth 2.0 PKCE linking, Subsource & TMDb keys, external Nuvio/Stremio addons management, and the Permissions Wizard—persisting state onto TV even when offline.",
-            "Dedicated Music Player vs Video Cast: Built an independent Music Player sheet (Play Queue, Shuffle/Repeat, Speed, live TV ↔ Phone output toggle) and compact bottom Music Mini Bar with strict Audio/Video mutual exclusion.",
-            "Rich Live Cast Subtitle Controls: Added Active & Stream Subtitles and Cast Subtitle Settings supporting dual subtitles, ±100ms / ±500ms timing sync, size, color, and vertical placement on TV.",
-            "WebSocket 1008 Conflict Fix & Status LEDs: Fixed multi-socket contention between TvHubActivity and the floating controller, kept TV Remote header single-line, and added live glowing Green ADB and Blue Web status LEDs.",
-            "Browser Persistence & Clean Discovery: Keeps browser tabs and web sessions alive across navigation, caches bookmark favicons permanently to disk, pauses background tab audio with 🔊 indicators, updates cast titles live, and keeps you in your active tab behind the Now Casting bar.",
-            "Raw Pass-Through & Zero-Clutter Torrent Streaming: PhoneVideoServer serves local 4K/portrait files with full byte-range pass-through preserving rotation metadata, and Stream-to-TV torrents auto-purge on stop, switch, or startup."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "مزامنة قوائم Watchlist وWatched وContinue Watching مع Trakt مع عزل فيديوهات استوديو الهاتف عن «متابعة المشاهدة».",
-            "حماية وضع سطح المكتب في المتصفح وتوسيع استجابة النقرات لاقتناص روابط البث بسرعة أكبر."
-          ],
-          "en": [
-            "Full two-way Trakt Watchlist/History sync with strict library-only Continue Watching isolation excluding phone local camera clips.",
-            "Reinforced browser desktop mode, top-frame title guards, and click/pointerup stream follow-up scans."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.9",
-        "versionCode": 9,
-        "date": "2026-11-17",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "ريموت هاتف مطوّر بيد واحدة بأيقونات صافية، وتاتش باد وجوستك بالسحب، وزر مسح QR، وشريط بث مصغّر.",
-            "محرك اقتناص وبث وسائط احترافي من المتصفح (Web Video Caster Engine) مع زر إعادة الفحص ومزامنة الترجمة الفورية وتوحيد بحث الترجمة مع Connection.",
-            "تقليص حجم تطبيق الهاتف عبر تقسيم معمارية arm64-v8a وتحسين أداء البث بدقة 4K.",
-            "توافق كامل مع التزامن اللحظي لإعدادات الشاشة واستعادة شاشة المسلسلات والمواسم."
-          ],
-          "en": [
-            "Redesigned one-handed icon-only TV Remote with Touchpad/D-Pad slider, QR shortcut, and compact Now-Casting pill.",
-            "Upgraded in-app browser media sniffer & LAN proxy with live rescan, synced subtitle casting, and unified Connection subtitle search.",
-            "Reduced Phone APK size via arm64-v8a ABI split and enhanced 4K playback stability.",
-            "Seamless LAN synchronization with TV settings and restored Series & Seasons browser integration."
-          ]
-        },
-        "improvements": {
-          "ar": [
-            "ضغط حزمة الهاتف إلى 113.64 MiB بمعمارية arm64-v8a مع ثبات أكبر أثناء البث عالي الدقة.",
-            "توحيد مفاتيح الترجمة عبر Connection وتعبئة اسم الفيديو المبثوث تلقائياً في البحث."
-          ],
-          "en": [
-            "Streamlined 113.64 MiB arm64-v8a build with improved 4K casting buffering and connection stability.",
-            "Unified Connection subtitle keys and auto-filled active cast titles into subtitle search."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.8",
-        "versionCode": 8,
-        "date": "2026-11-16",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "إعادة تصميم ريموت الهاتف للاستخدام بيد واحدة، وتطوير محرك اقتناص وبث الفيديو، والمزامنة التلقائية الفورية عند الربط."
-          ],
-          "en": [
-            "One-handed TV Remote redesign, Web Video Caster engine upgrade, and instant automatic sync upon pairing."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.7",
-        "versionCode": 7,
-        "date": "2026-11-16",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "زر ولوحة TV D-Pad العائمة بسهم جانبي واحد ومشغّل الوسائط الموحّد مع أزرار الصوت الفيزيائية."
-          ],
-          "en": [
-            "Single side-arrow floating TV D-Pad handle and unified media player with hardware volume control."
-          ]
-        }
-      },
-      {
-        "version": "1.0.0-beta.6",
-        "versionCode": 6,
-        "date": "2026-11-16",
-        "latest": false,
-        "whatsNew": {
-          "ar": [
-            "وضع التشغيل الفوري بلا حساب، معالج الصلاحيات الذكي، والنسخ الاحتياطي الشامل عبر Google Drive ومحلياً."
-          ],
-          "en": [
-            "Zero-Account Mode, Permissions Setup Wizard, and Unified Google Drive + Local Backup & Restore."
+            "Cleaned up Settings with crisp single-line titles (App Permissions, Subtitles, Cloud Backup, Cache Cleaner) and locked Upload / Restore / More buttons to single lines with zero text wrapping.",
+            "Included full Unified Subtitle Config inside Google Cloud Backup export and restore."
           ]
         }
       }

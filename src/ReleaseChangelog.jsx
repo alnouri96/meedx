@@ -29,23 +29,25 @@ export function ReleaseNotes({ release, lang, showVersion = true }) {
 
 export function CurrentChangelog({ builds, ar, t }) {
   const [lang, setLang] = useState(ar ? 'ar' : 'en');
+  const primaryBuild = builds.find((b) => b.id === 'tv') ?? builds[0];
+  const latestNote = primaryBuild?.updateNotes?.find((release) => release.latest) ?? primaryBuild?.updateNotes?.[0];
 
   return (
     <>
       <div className="changelog-controls">
-        <code dir="ltr">v{builds[0].version}</code>
+        <code dir="ltr">v{primaryBuild.version}</code>
         <div className="dl-tabs" role="group" aria-label={t('لغة سجل التغييرات', 'Changelog language')}>
           <button type="button" className="dl-tab" lang="ar" aria-pressed={lang === 'ar'} onClick={() => setLang('ar')}>العربية</button>
           <button type="button" className="dl-tab" lang="en" aria-pressed={lang === 'en'} onClick={() => setLang('en')}>English</button>
         </div>
       </div>
       <div className="changelog-notes" lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-        {builds.map((build) => (
-          <section key={build.id}>
-            <h3><bdi>{build.name}</bdi></h3>
-            <ReleaseNotes release={build.updateNotes.find((release) => release.latest)} lang={lang} showVersion={false} />
+        {latestNote && (
+          <section>
+            <h3><bdi>Local Cinema TV &amp; Manager</bdi></h3>
+            <ReleaseNotes release={latestNote} lang={lang} showVersion={false} />
           </section>
-        ))}
+        )}
       </div>
     </>
   );

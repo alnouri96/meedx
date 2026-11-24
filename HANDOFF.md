@@ -1,3 +1,10 @@
-Start with [AGENTS.md](AGENTS.md) and [docs/RELEASE.md](docs/RELEASE.md). Published `Latest` is `v1.0.0-beta.17` (`versionCode = 17`, 2026-11-23), matching Android source commit `0be83f2` (`v1.0.0-beta.17`) on `alnouri96/local-cinema`.
+# MEEDX WEB handoff
 
-- **OTA Migration Plan (`meedx` -> `local-cinema`):** Do not rename `alnouri96/meedx` or make it `Private` before or during bridge release `v1.0.0-beta.17` (protects `beta.15`/`beta.16` OTA). On `v1.0.0-beta.18+`, after hosting APKs on `alnouri96/local-cinema`, updating `verify-downloads.mjs` + `siteConfig.js`, deploying Pages, and passing `npm run verify -- --live`, set `alnouri96/meedx` to `private: true` and rename it to `meedx-web` (`alnouri96/meedx-web`) via `gh api`, update `origin` to `https://github.com/alnouri96/meedx-web.git`, and confirm `https://meedx.pages.dev` stays public.
+Start with [AGENTS.md](AGENTS.md) and [docs/RELEASE.md](docs/RELEASE.md).
+
+- **Official Android Repo & Releases:** `alnouri96/local-cinema` (`main`)
+- **Published Latest:** [`v1.0.0-beta.19`](https://github.com/alnouri96/local-cinema/releases/tag/v1.0.0-beta.19) (`versionCode = 19`, 2026-11-24) — final beta release.
+- **Official OTA Feed (`v19+`):** `https://meedx.pages.dev/api/v2/version.json`
+- **Downloads Center:** `https://meedx.pages.dev/downloads` (Downloader code `3213660`)
+- **Silent Legacy Bridge:** Keep `src/data/ota-bridge-v18.json` (`public/api/version.json`) untouched for at least 1+ week (until 2026-12-08+) so legacy installs finish migrating to `/downloads`.
+- **Next Release Target:** `v1.0.0` (`versionCode = 20`, `versionName = "1.0.0"`) — first official stable release.
