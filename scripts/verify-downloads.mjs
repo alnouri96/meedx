@@ -210,13 +210,23 @@ if (checkLive) {
 if (sync) {
   await mkdir(new URL('public/api/v2/', root), { recursive: true });
   await writeFile(catalogFile, JSON.stringify(builds, null, 2) + '\n');
-  await writeFile(legacyFeedFile, JSON.stringify(expectedLegacyFeed, null, 2) + '\n');
+  if (!bridgeActive) {
+    await writeFile(legacyFeedFile, JSON.stringify(expectedLegacyFeed, null, 2) + '\n');
+  }
   await writeFile(v2FeedFile, JSON.stringify(expectedV2Feed, null, 2) + '\n');
   await writeFile(redirectsFile, expectedRedirects.join('\n') + '\n');
-  console.log('Updated local catalog, legacy OTA bridge feed, v2 OTA feed, and APK redirects');
+  console.log('Updated local catalog, v2 OTA feed, and APK redirects (legacy v18 bridge frozen)');
 } else {
   assert.deepEqual(catalog, builds, 'Catalog drift. Review release notes and run npm run sync:release.');
-  assert.deepEqual(await readJson(legacyFeedFile), expectedLegacyFeed, 'Legacy OTA drift. Run npm run sync:release.');
+  const actualLegacy = await readJson(legacyFeedFile);
+  if (bridgeActive) {
+    assert.deepEqual(actualLegacy.bridge, expectedLegacyFeed.bridge, 'Legacy OTA bridge metadata drift.');
+    for (const { id } of targets) {
+      assert.deepEqual(actualLegacy[id], expectedLegacyFeed[id], 'Legacy OTA bridge ' + id + ' drift.');
+    }
+  } else {
+    assert.deepEqual(actualLegacy, expectedLegacyFeed, 'Legacy OTA drift. Run npm run sync:release.');
+  }
   assert.deepEqual(await readJson(v2FeedFile), expectedV2Feed, 'v2 OTA drift. Run npm run sync:release.');
   assert.deepEqual(redirects, expectedRedirects, 'APK redirect drift. Run npm run sync:release.');
 }

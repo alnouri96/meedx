@@ -9,7 +9,7 @@
     "sha256": "19d98263bcdaf1f7f93977555922ebd7ce4dec7e8c3a37c1cdc76ed5d608a2c6",
     "changelog": {
       "en": "Unified the TV subtitle system around one central config (UnifiedSubtitleConfig) synced across TV, Phone, and Google Cloud Backup, with grouped embedded video subtitles, a live timing overlay bar, one-click Arabic translation, and strict search filtering. Added direct Install on TV support from Phone, upgraded the in-app update dialog for the main v2 update channel with D-Pad focus and Downloader code 3213660, and improved safe cache maintenance.",
-      "ar": "تحديث موحّد وشامل للشاشة والهاتف: ترتيب مواقع المتصفح (MEEDX WEB ثم Cinemana ثم YTS ثم TorrentGalaxy) مع ميزة إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات في الهاتف مع التثبيت المباشر على الشاشة (Install on TV)، تنظيم الإعدادات وأزرار النسخ السحابي بسطر واحد، نظام الترجمة الموحّد والمزامنة السحابية، ونافذة التحديث الجديدة بدعم ريموت التلفاز وكود Downloader 3213660."
+      "ar": "تحديث موحّد وشامل للشاشة والهاتف: مركز الترجمة الموحد والمزامنة السحابية، تخصيص صفوف الشاشة الرئيسية و«متابعة المشاهدة»، الصيانة الذكية للكاش الآمن، ترتيب مواقع متصفح الهاتف (MEEDX WEB، Cinemana، YTS، TorrentGalaxy) مع إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات والتثبيت المباشر على الشاشة (Install on TV)، تنظيم الإعدادات وأزرار النسخ السحابي بسطر واحد، ونافذة التحديث الجديدة بدعم ريموت التلفاز وكود Downloader 3213660."
     }
   },
   "phone": {
@@ -22,7 +22,7 @@
     "sha256": "c45b4cd3d1f0a49e123318d3d0682365e629a52d37f06a67eee46ce39568270a",
     "changelog": {
       "en": "Updated the Browser Sites grid with MEEDX WEB, Cinemana, YTS, and TorrentGalaxy first plus long-press site reordering. Streamlined External Addons on Phone by removing the heavy stream-addon list and Paste/Search controls while adding direct Install on TV confirmation for Curated Addons and Stremio links. Cleaned up Settings titles and single-line Cloud Backup action buttons, added subtitle config to Google Cloud Backup, and upgraded the in-app update popup for the main v2 update channel.",
-      "ar": "تحديث مواقع المتصفح بـ MEEDX WEB وCinemana وYTS وTorrentGalaxy مع إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات وإضافة التثبيت المباشر على الشاشة (Install on TV)، تنظيف الإعدادات وأزرار النسخ السحابي بسطر واحد، ونافذة التحديث الجديدة."
+      "ar": "تحديث مواقع متصفح الهاتف (MEEDX WEB، Cinemana، YTS، TorrentGalaxy) مع إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات والتثبيت المباشر على الشاشة (Install on TV)، تنظيم الإعدادات وأزرار النسخ السحابي بسطر واحد، مزامنة إعدادات الترجمة الموحدة مع Google Cloud Backup، ونافذة التحديث الجديدة."
     }
   },
   "builds": [
@@ -70,7 +70,7 @@
         }
       },
       "changelog": {
-        "ar": "تحديث موحّد وشامل للشاشة والهاتف: ترتيب مواقع المتصفح (MEEDX WEB ثم Cinemana ثم YTS ثم TorrentGalaxy) مع ميزة إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات في الهاتف مع التثبيت المباشر على الشاشة (Install on TV)، تنظيم الإعدادات وأزرار النسخ السحابي بسطر واحد، نظام الترجمة الموحّد والمزامنة السحابية، ونافذة التحديث الجديدة بدعم ريموت التلفاز وكود Downloader 3213660.",
+        "ar": "تحديث موحّد وشامل للشاشة والهاتف: مركز الترجمة الموحد والمزامنة السحابية، تخصيص صفوف الشاشة الرئيسية و«متابعة المشاهدة»، الصيانة الذكية للكاش الآمن، ترتيب مواقع متصفح الهاتف (MEEDX WEB، Cinemana، YTS، TorrentGalaxy) مع إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات والتثبيت المباشر على الشاشة (Install on TV)، تنظيم الإعدادات وأزرار النسخ السحابي بسطر واحد، ونافذة التحديث الجديدة بدعم ريموت التلفاز وكود Downloader 3213660.",
         "en": "Unified the TV subtitle system around one central config (UnifiedSubtitleConfig) synced across TV, Phone, and Google Cloud Backup, with grouped embedded video subtitles, a live timing overlay bar, one-click Arabic translation, and strict search filtering. Added direct Install on TV support from Phone, upgraded the in-app update dialog for the main v2 update channel with D-Pad focus and Downloader code 3213660, and improved safe cache maintenance."
       },
       "updateNotes": [
@@ -81,26 +81,30 @@
           "latest": true,
           "whatsNew": {
             "ar": [
-              "مواقع المتصفح في الهاتف: تحديث الترتيب الافتراضي ليبدأ بـ MEEDX WEB ثم Cinemana ثم YTS ثم إضافة TorrentGalaxy، مع إمكانية نقل وإعادة ترتيب أي موقع محفوظ بالضغط المطوّل وحفظ الترتيب محلياً.",
-              "تثبيت الإضافات مباشرةً على الشاشة (Install on TV): تخفيف قسم الإضافات في الهاتف بحذف القائمة الثقيلة و+ Paste URL وSearch & Stream، وتطوير تصميم 1-Click Curated Addons، وتحويل روابط stremio:// والدليل إلى نافذة تأكيد ترسل وتثبّت الإضافة مباشرةً على Android TV.",
-              "نظام الترجمة الموحّد في الشاشة: إعداد مركزي واحد يتزامن مع الهاتف وGoogle Cloud Backup، مع تجميع ترجمة الفيديو المدمجة في قائمة منسدلة نظيفة، وشريط التوقيت المباشر، والترجمة للعربية بضغطة واحدة.",
-              "نظام نافذة التحديث الجديدة (v19+): فحص صامت في الخلفية عبر القناة الرسمية الجديدة مع نافذة تحديث تدعم العربية والإنجليزية وتركيز ريموت التلفاز وعرض رابط الموقع وكود Downloader (3213660)."
+              "مركز ونظام الترجمة الموحد (Unified Subtitle Center): توحيد جميع إعدادات ومصادر الترجمة في إعداد مركزي واحد يتزامن ثنائياً بين الشاشة والهاتف وGoogle Cloud Backup، يجمع المصادر المفتوحة (OpenSubtitles v3 وOpenSubtitles Free وYIFY وGestdown وإضافات Stremio) ومفاتيح API الاختيارية، مع قائمة منسدلة نظيفة لترجمة الفيديو المدمجة، وشريط تعديل التوقيت المباشر بأعلى الشاشة (±0.1s)، ومعاينة فورية للمظهر، والترجمة للعربية بضغطة واحدة.",
+              "تخصيص الشاشة الرئيسية و«متابعة المشاهدة» (TV): إمكانية ترتيب وإظهار أو إخفاء جميع صفوف الشاشة الرئيسية (متابعة المشاهدة، المضاف حديثاً، المكتبة، وصفوف الإعلانات)، مع تحسين دقة بطاقات «متابعة المشاهدة» وإصلاح تصنيف أفلام ومسلسلات الإضافات لإظهار زر الترجمة وزر التشغيل/الإيقاف الديناميكي في مشغّل HLS.",
+              "تطوير متصفح الهاتف (CinemaBrowser): تحديث الترتيب الافتراضي لشبكة المواقع ليبدأ بـ MEEDX WEB ثم Cinemana ثم YTS ثم إضافة TorrentGalaxy (torrentgalaxy.info)، مع ميزة إعادة ترتيب ونقل أي موقع محفوظ بالضغط المطوّل وحفظ الترتيب محلياً.",
+              "تخفيف قسم الإضافات والتثبيت المباشر على الشاشة (Install on TV): إزالة قائمة إضافات البث الثقيلة وأزرار + Paste URL وSearch & Stream من الهاتف وإبقاء إعدادات الترجمة فقط، وتطوير تصميم 1-Click Curated Addons، وتحويل روابط stremio:// والدليل إلى نافذة تأكيد تثبّت الإضافة مباشرةً على Android TV.",
+              "نظام التحديثات الجديد (v19+): نافذة تحديث منبثقة تلقائية ثنائية اللغة (يوجد إصدار جديد متاح مع زري تحميل / لاحقاً) تفحص بهدوء عبر القناة الجديدة api/v2/version.json مع دعم كامل لريموت التلفاز وعرض رابط الموقع وكود Downloader (3213660)."
             ],
             "en": [
-              "Phone Browser Sites: Updated default order to MEEDX WEB, Cinemana, YTS, and newly added TorrentGalaxy, plus long-press site reordering (Start, Forward, Backward, End, or exact position) saved locally.",
-              "Direct Install on TV & Lightweight Phone Addons: Removed the heavy streaming-addon list, + Paste URL, and Search & Stream from Phone; refreshed 1-Click Curated Addons; opening stremio:// links or curated picks now confirms Install on TV and installs directly onto Android TV.",
-              "Unified TV Subtitles & Cloud Sync: One central subtitle config synced across TV, Phone, and Google Cloud Backup, with grouped embedded video subtitles, live timing overlay bar, and one-click Arabic translation.",
-              "New In-App Update Popup (v19+): Silent background checks on the main v2 update channel with bilingual Download/Later actions, Android TV D-Pad focus, website link, and Downloader code 3213660."
+              "Unified Subtitle Center (TV & Phone): Centralized all subtitle settings and providers in one config synced across TV, Phone, and Google Cloud Backup, combining open sources (OpenSubtitles v3, OpenSubtitles Free, YIFY, Gestdown, Stremio add-ons) and optional API keys, with a grouped embedded video subtitles dropdown, top live timing bar (±0.1s), live appearance preview, and one-click Arabic translation.",
+              "TV Home Customization & Continue Watching: Reorder or show/hide every Home row (Continue Watching, Recently Added, Library folders, and Trailer rows), improved Continue Watching accuracy, fixed VOD vs. Live TV detection for add-on movies/series so subtitles stay visible, and added a dynamic Play/Pause button in the HLS player.",
+              "Phone Browser Sites Upgrade (CinemaBrowser): Updated default Sites grid order to MEEDX WEB, Cinemana, YTS, and newly added TorrentGalaxy (torrentgalaxy.info), plus long-press site reordering (Start, Forward, Backward, End, or exact position) saved locally.",
+              "Lightweight Phone Addons & Direct Install on TV: Removed the heavy streaming-addon list, toggles, + Paste URL, and Search & Stream from Phone while keeping subtitle settings only; refreshed 1-Click Curated Addons; opening stremio:// links or curated picks now opens an Install on TV confirmation that installs directly onto Android TV.",
+              "New In-App Update Popup (v19+): Silent background update checks on the main api/v2/version.json channel with a bilingual popup (Download / Later), Android TV D-Pad focus, website link, and Downloader code 3213660."
             ]
           },
           "improvements": {
             "ar": [
-              "إعادة تنظيم شاشة الإعدادات في الهاتف بعناوين قصيرة من سطر واحد (أذونات التطبيق، الترجمة، النسخ السحابي، تنظيف الكاش) ومنع انقسام أزرار رفع / استرجاع / المزيد في بطاقة النسخ السحابي.",
-              "تشديد دقة البحث النصّي عن الترجمة لمنع تسرب النتائج غير المطابقة وتحسين صيانة الكاش الآمن على الشاشة والهاتف."
+              "إعادة تنظيم وتجميل الإعدادات (Settings): اختصار العناوين الطويلة إلى سطر واحد (أذونات التطبيق، الترجمة، النسخ السحابي، تنظيف الكاش)، وإصلاح أزرار النسخ السحابي (رفع / استرجاع / المزيد · Upload / Restore / More) لمنع انكسار النصوص على سطرين في اللغتين.",
+              "الصيانة الذكية وتنظيف الكاش الآمن: صيانة ذاتية تكيّفية للكاش على الشاشة حسب مساحة التخزين والذاكرة مع تنظيف كاش آمن يحافظ على الحسابات والإضافات والمفضلة والإعدادات.",
+              "تشديد دقة البحث النصّي عن الترجمة لمنع تسرب النتائج غير المطابقة وتوضيح تسميات مسارات الترجمة في جميع القوائم."
             ],
             "en": [
-              "Cleaned up Phone Settings with crisp single-line titles (App Permissions, Subtitles, Cloud Backup, Cache Cleaner) and locked Upload / Restore / More buttons to single lines with zero text wrapping.",
-              "Tightened subtitle text-search relevance filtering to eliminate unrelated matches and improved safe cache maintenance across TV and Phone."
+              "Cleaner Phone Settings: Shortened titles to crisp single lines (App Permissions, Subtitles, Cloud Backup, Cache Cleaner) and locked Cloud Backup buttons (Upload / Restore / More) to single lines with zero text wrapping in both English and Arabic.",
+              "Smart Cache Maintenance & Safe Cache Cleaner: Adaptive TV cache maintenance scaled to device storage and RAM, plus a safe cache cleaner that preserves accounts, add-ons, bookmarks, keys, and settings.",
+              "Tightened subtitle text-search relevance filtering to eliminate unrelated matches and clarified subtitle track labels across all menus."
             ]
           }
         }
@@ -145,7 +149,7 @@
         }
       },
       "changelog": {
-        "ar": "تحديث مواقع المتصفح بـ MEEDX WEB وCinemana وYTS وTorrentGalaxy مع إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات وإضافة التثبيت المباشر على الشاشة (Install on TV)، تنظيف الإعدادات وأزرار النسخ السحابي بسطر واحد، ونافذة التحديث الجديدة.",
+        "ar": "تحديث مواقع متصفح الهاتف (MEEDX WEB، Cinemana، YTS، TorrentGalaxy) مع إعادة الترتيب بالضغط المطوّل، تخفيف قسم الإضافات والتثبيت المباشر على الشاشة (Install on TV)، تنظيم الإعدادات وأزرار النسخ السحابي بسطر واحد، مزامنة إعدادات الترجمة الموحدة مع Google Cloud Backup، ونافذة التحديث الجديدة.",
         "en": "Updated the Browser Sites grid with MEEDX WEB, Cinemana, YTS, and TorrentGalaxy first plus long-press site reordering. Streamlined External Addons on Phone by removing the heavy stream-addon list and Paste/Search controls while adding direct Install on TV confirmation for Curated Addons and Stremio links. Cleaned up Settings titles and single-line Cloud Backup action buttons, added subtitle config to Google Cloud Backup, and upgraded the in-app update popup for the main v2 update channel."
       },
       "updateNotes": [
@@ -156,24 +160,24 @@
           "latest": true,
           "whatsNew": {
             "ar": [
-              "مواقع المتصفح في الهاتف: تحديث الترتيب الافتراضي ليبدأ بـ MEEDX WEB ثم Cinemana ثم YTS ثم إضافة TorrentGalaxy، مع إمكانية نقل وإعادة ترتيب أي موقع محفوظ بالضغط المطوّل وحفظ الترتيب محلياً.",
-              "تثبيت الإضافات مباشرةً على الشاشة (Install on TV): تخفيف قسم الإضافات في الهاتف بحذف القائمة الثقيلة و+ Paste URL وSearch & Stream، وتطوير تصميم 1-Click Curated Addons، وتحويل روابط stremio:// والدليل إلى نافذة تأكيد ترسل وتثبّت الإضافة مباشرةً على Android TV.",
-              "نظام نافذة التحديث الجديدة (v19+): فحص صامت في الخلفية عبر القناة الرسمية الجديدة مع نافذة تحديث تدعم العربية والإنجليزية."
+              "تطوير متصفح الهاتف (CinemaBrowser): تحديث الترتيب الافتراضي لشبكة المواقع ليبدأ بـ MEEDX WEB ثم Cinemana ثم YTS ثم إضافة TorrentGalaxy (torrentgalaxy.info)، مع ميزة إعادة ترتيب ونقل أي موقع محفوظ بالضغط المطوّل وحفظ الترتيب محلياً.",
+              "تخفيف قسم الإضافات والتثبيت المباشر على الشاشة (Install on TV): إزالة قائمة إضافات البث الثقيلة وأزرار + Paste URL وSearch & Stream من الهاتف وإبقاء إعدادات الترجمة فقط، وتطوير تصميم 1-Click Curated Addons، وتحويل روابط stremio:// والدليل إلى نافذة تأكيد تثبّت الإضافة مباشرةً على Android TV.",
+              "نظام التحديثات الجديد (v19+): نافذة تحديث منبثقة تلقائية ثنائية اللغة تفحص بهدوء عبر القناة الجديدة api/v2/version.json."
             ],
             "en": [
-              "Phone Browser Sites: Updated default order to MEEDX WEB, Cinemana, YTS, and newly added TorrentGalaxy, plus long-press site reordering saved locally.",
-              "Direct Install on TV & Lightweight Phone Addons: Removed the heavy streaming-addon list, + Paste URL, and Search & Stream from Phone; refreshed 1-Click Curated Addons; opening stremio:// links or curated picks now installs directly onto Android TV.",
-              "New In-App Update Popup (v19+): Silent background checks on the main v2 update channel with bilingual Download/Later actions."
+              "Phone Browser Sites Upgrade (CinemaBrowser): Updated default Sites grid order to MEEDX WEB, Cinemana, YTS, and newly added TorrentGalaxy (torrentgalaxy.info), plus long-press site reordering saved locally.",
+              "Lightweight Phone Addons & Direct Install on TV: Removed the heavy streaming-addon list, toggles, + Paste URL, and Search & Stream from Phone while keeping subtitle settings only; refreshed 1-Click Curated Addons; opening stremio:// links or curated picks now installs directly onto Android TV.",
+              "New In-App Update Popup (v19+): Silent background update checks on the main api/v2/version.json channel with bilingual Download/Later actions."
             ]
           },
           "improvements": {
             "ar": [
-              "إعادة تنظيم شاشة الإعدادات بعناوين قصيرة من سطر واحد (أذونات التطبيق، الترجمة، النسخ السحابي، تنظيف الكاش) ومنع انقسام أزرار رفع / استرجاع / المزيد في بطاقة النسخ السحابي.",
-              "تضمين إعدادات الترجمة الموحّدة بالكامل داخل النسخ الاحتياطي السحابي Google Cloud Backup."
+              "إعادة تنظيم وتجميل الإعدادات (Settings): اختصار العناوين الطويلة إلى سطر واحد (أذونات التطبيق، الترجمة، النسخ السحابي، تنظيف الكاش)، وإصلاح أزرار النسخ السحابي (رفع / استرجاع / المزيد · Upload / Restore / More) لمنع انكسار النصوص على سطرين في اللغتين.",
+              "تضمين إعدادات الترجمة الموحّدة بالكامل في المزامنة الثنائية وGoogle Cloud Backup."
             ],
             "en": [
-              "Cleaned up Settings with crisp single-line titles (App Permissions, Subtitles, Cloud Backup, Cache Cleaner) and locked Upload / Restore / More buttons to single lines with zero text wrapping.",
-              "Included full Unified Subtitle Config inside Google Cloud Backup export and restore."
+              "Cleaner Phone Settings: Shortened titles to crisp single lines (App Permissions, Subtitles, Cloud Backup, Cache Cleaner) and locked Cloud Backup buttons (Upload / Restore / More) to single lines with zero text wrapping.",
+              "Included full Unified Subtitle Config inside two-way sync and Google Cloud Backup export/restore."
             ]
           }
         }
