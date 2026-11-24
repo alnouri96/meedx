@@ -1,28 +1,38 @@
 {
+  "bridge": {
+    "active": true,
+    "servesLegacyUpToVersionCode": 17,
+    "targetBridgeVersion": "1.0.0-beta.18",
+    "targetBridgeVersionCode": 18,
+    "keepUntilMin": "2026-12-08",
+    "publicDownloadsCatalogFile": "src/data/catalog.json",
+    "nextOtaEndpoint": "/api/v2/version.json",
+    "note": "Pinned legacy OTA bridge for v17 and earlier clients. Decoupled from /downloads and /api/v2/version.json so v19 can ship on /downloads without breaking v17 -> v18 migration."
+  },
   "tv": {
-    "latestVersionCode": 17,
-    "latestVersionName": "1.0.0-beta.17",
-    "versionCode": 17,
-    "versionName": "1.0.0-beta.17",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.17/LocalCinema-TV-v1.0.0-beta.17.apk",
-    "sizeBytes": 48768208,
-    "sha256": "539b38314f456192e0c784c172aa914bc05ecf8d0051b45a2c4e98e244f4d3fc",
+    "latestVersionCode": 18,
+    "latestVersionName": "1.0.0-beta.18",
+    "versionCode": 18,
+    "versionName": "1.0.0-beta.18",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.18/LocalCinema-TV-v1.0.0-beta.18.apk",
+    "sizeBytes": 48986330,
+    "sha256": "c79de8dd003c3e0243e289a4e8048ce866e6e2a208f69d52d7cd0e1396a225a7",
     "changelog": {
-      "en": "Upgraded TV Live with automatic focus on the first channel card, split and translated bilingual categories with saved selection, merged Favorite Countries channels with a searchable country picker, and global Nexonic IPTV alongside iptv-org. Rebuilt Add-ons Settings with clear high-contrast checkboxes, a dedicated Manage Installed Add-ons button, and separate per-add-on settings with instant two-way sync. Live add-on channels now play directly without the torrent source picker, pass full proxy headers, auto-switch between HLS and MPEG-TS streams, fail over to alternate links, and clean up retired broken add-ons such as Best Torrents. Added ordered audio language priority (1, 2, 3...) across Movies and Series, unified Movie and Series action bars with Language Priority inside Audio Tracks, restructured Main Settings without duplicates, enabled All Files Access in File Browser and the Permissions Wizard, and prepared OTA updates for future repository migration.",
-      "ar": "يطوّر التحديث شاشة البث التلفزيوني المباشر بتركيز أولي تلقائي على أول بطاقة قناة، وتفكيك التصنيفات المركّبة وتعريبها بالكامل مع حفظ آخر تصنيف مختار، ودمج قنوات جميع الدول المفضلة في قائمة واحدة مع منتقي دول عالمي مزوّد بشريط بحث، وترقية مصدر Nexonic IPTV ليعمل عالمياً بجانب iptv-org. يعيد التحديث تنظيم إعدادات الإضافات بمربعات اختيار ذهبية عالية التباين وزر مستقل لإدارة الإضافات المثبتة، مع فصل الإعدادات الخاصة بكل إضافة داخل صفحتها وربطها بمزامنة فورية ثنائية الاتجاه. يشغّل التطبيق قنوات الإضافات المباشرة فوراً دون نافذة مصادر التورنت، ويمرّر جميع ترويسات البروكسي، ويبدّل تلقائياً بين صيغتي HLS وMPEG-TS مع انتقال تلقائي للروابط البديلة وتنظيف تلقائي لإضافة Best Torrents المغلقة. يضيف التحديث قائمة أولوية لغات صوت مرتّبة بالتسلسل (1، 2، 3...) تُطبَّق تلقائياً في الأفلام والمسلسلات، ويوحّد أزرار تفاصيل الأفلام والمسلسلات، ويقسّم الإعدادات الرئيسية بلا تكرار، ويمكّن صلاحية إدارة جميع الملفات لحذف ونقل الملفات من مستعرض الملفات."
+      "en": "This version is a mandatory migration bridge. Please install this update to receive direct instructions for downloading the new v19 release from the official website (meedx.pages.dev/downloads), GitHub (github.com/alnouri96/local-cinema), or Downloader code 3213660.",
+      "ar": "هذه النسخة هي جسر انتقال إلزامي. يرجى تثبيت هذا التحديث للحصول على الروابط المباشرة وكود Downloader (3213660) لتنزيل الإصدار الجديد (19) من الموقع الرسمي (meedx.pages.dev/downloads) أو مستودع GitHub الرئيسي."
     }
   },
   "phone": {
-    "latestVersionCode": 17,
-    "latestVersionName": "1.0.0-beta.17",
-    "versionCode": 17,
-    "versionName": "1.0.0-beta.17",
-    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.17/LocalCinema-Manager-Phone-v1.0.0-beta.17.apk",
-    "sizeBytes": 111388910,
-    "sha256": "9bdde0aee0c228da32a819706597ce8796f6a756cccd447e0aa3ab4e7631ffc3",
+    "latestVersionCode": 18,
+    "latestVersionName": "1.0.0-beta.18",
+    "versionCode": 18,
+    "versionName": "1.0.0-beta.18",
+    "apkUrl": "https://github.com/alnouri96/meedx/releases/download/v1.0.0-beta.18/LocalCinema-Manager-Phone-v1.0.0-beta.18.apk",
+    "sizeBytes": 111356066,
+    "sha256": "d2932447803a6ed7e934cdbb9f8d562f807afa26123c66dd463fdbbaf56e020b",
     "changelog": {
-      "en": "Updated shared Stremio add-ons and Live TV preferences to support full proxy headers, automatic cleanup of retired broken add-ons, and Favorite Countries view mode parity with TV. Prepared the in-app updater allowlist for upcoming repository migration and fixed the third-party licenses link.",
-      "ar": "يحدّث التطبيق وحدة الإضافات المشتركة لتمرير ترويسات البروكسي الكاملة وتنظيف الإضافات المعطّلة تلقائياً، ويحافظ على توافق تفضيلات البث المباشر مع وضع الدول المفضلة المدمج، ويصلح رابط تراخيص الجهات الخارجية ويجهّز التحديث التلقائي للمرحلة القادمة."
+      "en": "This version is a mandatory migration bridge. Please install this update to open the direct download page for the new v19 release on the official website (meedx.pages.dev/downloads) or GitHub (github.com/alnouri96/local-cinema).",
+      "ar": "هذه النسخة هي جسر انتقال إلزامي. يرجى تثبيت هذا التحديث للانتقال مباشرةً إلى صفحة تنزيل الإصدار الجديد (19) من الموقع الرسمي (meedx.pages.dev/downloads) أو مستودع GitHub الرئيسي."
     }
   },
   "builds": [
