@@ -198,7 +198,7 @@ if (checkLive) {
   for (const { id, url, version, versionCode, sizeBytes, sha256 } of builds) {
     const { changelog: _changelog, ...distribution } = expectedV2Feed[id];
     for (const [key, value] of Object.entries(distribution)) {
-      assert.equal(v2Feed[id]?.[key], value, 'Live v2 OTA ' + id + '.' + key);
+      assert.deepEqual(v2Feed[id]?.[key], value, 'Live v2 OTA ' + id + '.' + key);
     }
     const liveBuild = v2Feed.builds?.find((build) => build.id === id);
     assert.deepEqual(
