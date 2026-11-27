@@ -30,4 +30,4 @@ Website, Downloads Center, and OTA feed for Local Cinema served via Cloudflare P
 
 - Official APK assets live exclusively on `alnouri96/local-cinema` GitHub Releases (`main`). Never commit APKs, ZIPs, signing files, secrets, payment info, QRs, local paths, or device IDs into `MEEDX WEB`.
 - One home per action: `/apps/local-cinema` (setup & unified patch notes), `/downloads` (APKs & checksums), `/tv` & `/phone` (current APK redirects), `/api/v2/version.json` (main OTA feed).
-- Current Latest: `v1.0.0-beta.19` (`versionCode = 19`, final beta). Next release: `v1.0.0` (`versionCode = 20`, official stable).
+- Current Latest: `v1.0.0` (`versionCode = 20`, 2026-11-27), first stable release.
