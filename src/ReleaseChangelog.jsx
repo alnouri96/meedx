@@ -1,7 +1,42 @@
 import React, { useState } from 'react';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Monitor, Smartphone, Subtitles } from 'lucide-react';
 
-export function ReleaseNotes({ release, lang, showVersion = true }) {
+const sectionTypes = [
+  { id: 'tv', en: 'Local Cinema TV', ar: 'تطبيق التلفاز', Icon: Monitor },
+  { id: 'phone', en: 'Local Cinema Manager', ar: 'تطبيق الهاتف', Icon: Smartphone },
+  { id: 'shared', en: 'Shared Across TV & Phone', ar: 'التحديثات المشتركة بين التلفاز والهاتف', Icon: Subtitles },
+];
+
+function currentRelease(build) {
+  return build?.updateNotes?.find((release) => release.latest) ?? build?.updateNotes?.[0];
+}
+
+function ReleaseSections({ builds, lang }) {
+  const tv = currentRelease(builds.find((build) => build.id === 'tv'));
+  const phone = currentRelease(builds.find((build) => build.id === 'phone'));
+  const sections = {
+    tv: tv?.sections?.tv,
+    phone: phone?.sections?.phone,
+    shared: tv?.sections?.shared ?? phone?.sections?.shared,
+  };
+
+  return sectionTypes.map(({ id, en, ar, Icon }) => {
+    const items = sections[id]?.[lang];
+    if (!items?.length) return null;
+    return (
+      <section className="release-section-card" data-release-section={id} key={id} aria-label={lang === 'ar' ? ar : en}>
+        <h3><Icon size={20} aria-hidden="true" /><bdi>{lang === 'ar' ? ar : en}</bdi></h3>
+        <ul>
+          {items.map(({ title, description }) => (
+            <li key={title}><h4>{title}</h4><p>{description}</p></li>
+          ))}
+        </ul>
+      </section>
+    );
+  });
+}
+
+export function ReleaseNotes({ release, lang, builds, showVersion = true }) {
   const groups = [
     [lang === 'ar' ? 'ما الجديد' : "What's new", release.whatsNew?.[lang]],
     [lang === 'ar' ? 'التحسينات والإصلاحات' : 'Improvements and fixes', release.improvements?.[lang]],
@@ -17,6 +52,7 @@ export function ReleaseNotes({ release, lang, showVersion = true }) {
           )}
         </div>
       )}
+      {builds && release.sections && <ReleaseSections builds={builds} lang={lang} />}
       {groups.map(([title, items]) => (
         <section className="dl-note-group" key={title}>
           <h4>{title}</h4>
@@ -30,24 +66,21 @@ export function ReleaseNotes({ release, lang, showVersion = true }) {
 export function CurrentChangelog({ builds, ar, t }) {
   const [lang, setLang] = useState(ar ? 'ar' : 'en');
   const primaryBuild = builds.find((b) => b.id === 'tv') ?? builds[0];
-  const latestNote = primaryBuild?.updateNotes?.find((release) => release.latest) ?? primaryBuild?.updateNotes?.[0];
+  const latestNote = currentRelease(primaryBuild);
 
   return (
     <>
       <div className="changelog-controls">
-        <code dir="ltr">v{primaryBuild.version}</code>
+        {primaryBuild && <code dir="ltr">v{primaryBuild.version}</code>}
         <div className="dl-tabs" role="group" aria-label={t('لغة سجل التغييرات', 'Changelog language')}>
           <button type="button" className="dl-tab" lang="ar" aria-pressed={lang === 'ar'} onClick={() => setLang('ar')}>العربية</button>
           <button type="button" className="dl-tab" lang="en" aria-pressed={lang === 'en'} onClick={() => setLang('en')}>English</button>
         </div>
       </div>
       <div className="changelog-notes" lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-        {latestNote && (
-          <section>
-            <h3><bdi>Local Cinema TV &amp; Manager</bdi></h3>
-            <ReleaseNotes release={latestNote} lang={lang} showVersion={false} />
-          </section>
-        )}
+        {latestNote?.sections
+          ? <ReleaseSections builds={builds} lang={lang} />
+          : latestNote && <ReleaseNotes release={latestNote} lang={lang} showVersion={false} />}
       </div>
     </>
   );

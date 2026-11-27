@@ -219,7 +219,22 @@
 .changelog-controls .dl-tabs { display: inline-flex; width: auto; }
 .changelog-controls .dl-tab[aria-pressed="true"] { background: #e5a93b; color: #171717; border-color: #e5a93b; }
 .changelog-notes { display: grid; gap: 20px; }
-.changelog-notes h3 { color: #fff; margin-block-end: 8px; font-size: 1.13rem; }
+.release-section-card {
+  min-inline-size: 0;
+  padding: clamp(14px, 3vw, 24px);
+  background: #171717;
+  border: 1px solid rgba(229, 169, 59, .24);
+  border-inline-start: 3px solid #e5a93b;
+  border-radius: 12px;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+.release-section-card h3 { display: flex; align-items: center; gap: 9px; margin: 0; color: #e5a93b; font-size: 1.13rem; }
+.release-section-card h3 svg { flex: none; }
+.release-section-card ul { display: grid; gap: 12px; margin: 12px 0 0; padding: 0; list-style: none; }
+.release-section-card li + li { border-block-start: 1px solid rgba(229, 169, 59, .16); padding-block-start: 12px; }
+.release-section-card h4 { color: #f7f3eb; font-size: .96rem; margin: 0; }
+.release-section-card p { color: #dfd9cb; font-size: .9rem; line-height: 1.58; margin: 4px 0 0; }
 .changelog-notes .dl-note-group li + li { margin-block-start: .55rem; }
 #patch-notes .section-head .button { margin-inline-end: 12px; }
 @media (max-width: 767px) {

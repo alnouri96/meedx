@@ -84,8 +84,20 @@ for (const { id, packageId, prefix } of targets) {
   assert.ok(checksums.includes(digest + '  ' + fileName), id + ' checksums.txt entry');
   expectedAssets.set(fileName, { size: release.sizeBytes, digest: 'sha256:' + digest });
 
+  const changelog = { en: release.changelog, ar: release.changelogAr ?? build.changelog.ar };
+  const updateNotes = release.noteSections
+    ? build.updateNotes.map((entry) => entry.latest ? {
+        version: entry.version,
+        versionCode: entry.versionCode,
+        date: entry.date,
+        latest: true,
+        sections: release.noteSections,
+      } : entry)
+    : build.updateNotes;
+
   builds.push({
     ...build,
+    updateNotes,
     version: release.versionName,
     versionCode: release.versionCode,
     releaseDate: release.releaseDate,
@@ -93,10 +105,10 @@ for (const { id, packageId, prefix } of targets) {
     sizeBytes: release.sizeBytes,
     sha256: digest,
     specs: { ...build.specs, sizeLabel: (release.sizeBytes / 1048576).toFixed(2) + ' MiB' },
-    changelog: { ...build.changelog, en: release.changelog },
+    changelog,
   });
   const { fileName: _fileName, releaseDate: _releaseDate, ...ota } = release;
-  expectedV2Feed[id] = { ...ota, changelog: { en: release.changelog, ar: build.changelog.ar } };
+  expectedV2Feed[id] = { ...ota, changelog };
   console.log('Verified local catalog APK', fileName, release.sizeBytes, digest);
 }
 expectedV2Feed.builds = builds;

@@ -10,7 +10,7 @@ Website, Downloads Center, and OTA feed for Local Cinema served via Cloudflare P
 ## Permanent engineering rules
 
 1. **Modular & Isolated Code:** Put new sections, dialogs, or helpers in focused `src/` files and keep the source map below current.
-2. **No Duplication / Reuse Existing Components:** Reuse existing cards, modals, data helpers, and CSS tokens. Keep Patch Notes unified (no duplicated TV/Phone changelog blocks).
+2. **No Duplication / Reuse Existing Components:** Reuse existing cards, modals, data helpers, and CSS tokens. Show release notes in distinct TV, Phone, and Shared sections. Show shared changes once in the website changelog and include them in each app's OTA notes alongside that app's own changes.
 3. **Targeted Read Policy:** Read only this file and open target files directly.
 
 ## Source map
@@ -18,8 +18,8 @@ Website, Downloads Center, and OTA feed for Local Cinema served via Cloudflare P
 | Path | Purpose |
 | --- | --- |
 | `src/main.jsx` | Routes, anchors, AR RTL / EN LTR navigation |
-| `src/AppsShowcasePage.jsx`, `src/AppDetailPage.jsx` | Apps overview, setup, add-ons, screenshots, unified patch notes |
-| `src/DownloadAppCard.jsx`, `src/ReleaseChangelog.jsx` | APK cards, build metadata, checksums, unified bilingual changelog modal |
+| `src/AppsShowcasePage.jsx`, `src/AppDetailPage.jsx` | Apps overview, setup, add-ons, screenshots, TV, Phone, and Shared patch notes |
+| `src/DownloadAppCard.jsx`, `src/ReleaseChangelog.jsx` | APK cards, build metadata, checksums, bilingual changelog modal with TV, Phone, and Shared sections |
 | `src/AddonsConnectionsSection.jsx`, `src/InteractiveShowcase.jsx`, `src/ZoomViewer.jsx`, `src/panels.jsx`, `src/GoldParticles.jsx` | Showcase, add-ons, lightbox, and visual panels |
 | `src/config/siteConfig.js`, `src/data/catalog.json`, `src/data/screenshots.json`, `src/data/screenshot-copy.js` | Site config, v19+ catalog metadata, screenshots, bilingual copy |
 | `public/api/v2/version.json`, `public/api/config.json`, `public/api/addons.json` | Main v19+ OTA feed (`npm run sync:release`), public config, curated add-ons |
@@ -29,5 +29,5 @@ Website, Downloads Center, and OTA feed for Local Cinema served via Cloudflare P
 ## Publication & safety rules
 
 - Official APK assets live exclusively on `alnouri96/local-cinema` GitHub Releases (`main`). Never commit APKs, ZIPs, signing files, secrets, payment info, QRs, local paths, or device IDs into `MEEDX WEB`.
-- One home per action: `/apps/local-cinema` (setup & unified patch notes), `/downloads` (APKs & checksums), `/tv` & `/phone` (current APK redirects), `/api/v2/version.json` (main OTA feed).
+- One home per action: `/apps/local-cinema` (setup & TV, Phone, and Shared patch notes), `/downloads` (APKs & checksums), `/tv` & `/phone` (current APK redirects), `/api/v2/version.json` (main OTA feed).
 - Current Latest: `v1.0.0` (`versionCode = 20`, 2026-11-27), first stable release.

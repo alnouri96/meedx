@@ -13,7 +13,7 @@ Cloudflare Pages serves production at [meedx.pages.dev](https://meedx.pages.dev)
 ## Sync, verify, build, and deploy
 
 1. Ensure the approved GitHub Release (`--latest`, `--prerelease=false`) with `LocalCinema-TV-<tag>.apk`, `LocalCinema-Manager-Phone-<tag>.apk`, and `checksums.txt` is published on `alnouri96/local-cinema` (`main`) and `Local Cinema/version.json` is updated.
-2. Update unified bilingual patch notes in `src/data/catalog.json` (single clean current-release block without duplicate entries).
+2. Keep the current bilingual TV, Phone, and Shared sections in the Android repository version manifest. The sync step imports the sections into `src/data/catalog.json` and the v2 OTA feed.
 3. Run sync, published check, and production build:
 
 ~~~powershell

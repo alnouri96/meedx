@@ -173,7 +173,7 @@ export function AppDetailPage({
         </div>
 
         <div className="detail-notes-grid" dir={ar ? 'rtl' : 'ltr'}>
-          {notes.map((release) => <ReleaseNotes key={release.version} release={release} lang={lang} />)}
+          {notes.map((release) => <ReleaseNotes key={release.version} release={release} lang={lang} builds={release.latest ? catalog : undefined} />)}
         </div>
       </section>
     </div>
