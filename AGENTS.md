@@ -10,7 +10,7 @@ Website, Downloads Center, and OTA feed for Local Cinema served via Cloudflare P
 ## Permanent engineering rules
 
 1. **Modular & Isolated Code:** Put new sections, dialogs, or helpers in focused `src/` files and keep the source map below current.
-2. **No Duplication / Reuse Existing Components:** Reuse existing cards, modals, data helpers, and CSS tokens. Show release notes in distinct TV, Phone, and Shared sections. Show shared changes once in the website changelog and include them in each app's OTA notes alongside that app's own changes.
+2. **No Duplication / Reuse Existing Components:** Reuse existing cards, modals, data helpers, and CSS tokens. Show release notes in distinct TV, Phone, and Shared sections. Show shared changes once in the website changelog and include them in each app's OTA notes alongside that app's own changes. The website starts with the selected app, follows with the other app, and ends with Shared. The app detail page defaults to TV. Changelog dialogs use the app that opened them.
 3. **Targeted Read Policy:** Read only this file and open target files directly.
 
 ## Source map

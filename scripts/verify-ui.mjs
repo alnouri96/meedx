@@ -142,12 +142,15 @@ try {
       await expect(dialog.getByRole('heading', { name: 'سجل التغييرات', exact: true })).toBeVisible();
       await expect(dialog.locator('code')).toHaveText('v' + feed[device].versionName);
       const notes = dialog.locator('.changelog-notes');
-      await expect(notes.locator('h3')).toHaveText(['تطبيق التلفاز', 'تطبيق الهاتف', 'التحديثات المشتركة بين التلفاز والهاتف']);
+      const other = device === 'tv' ? 'phone' : 'tv';
+      await expect(notes.locator('[data-release-section]')).toHaveCount(3);
+      assert.deepEqual(await notes.locator('[data-release-section]').evaluateAll((cards) => cards.map((card) => card.dataset.releaseSection)), [device, other, 'shared']);
       await expect(notes).toHaveAttribute('dir', 'rtl');
       await expect(notes.locator('[data-release-section="shared"] h4').first()).toHaveText('قسم الترجمة الموحدة الذكية');
       await dialog.getByRole('button', { name: 'English', exact: true }).click();
       await expect(notes).toHaveAttribute('dir', 'ltr');
-      await expect(notes.locator('h3')).toHaveText(['Local Cinema TV', 'Local Cinema Manager', 'Shared Across TV & Phone']);
+      const names = { tv: 'Local Cinema TV', phone: 'Local Cinema Manager' };
+      await expect(notes.locator('h3')).toHaveText([names[device], names[other], 'Shared Across TV & Phone']);
       await expect(notes.locator('[data-release-section="tv"] li')).toHaveCount(4);
       await expect(notes.locator('[data-release-section="phone"] li')).toHaveCount(2);
       await expect(notes.locator('[data-release-section="shared"] li')).toHaveCount(2);
@@ -161,7 +164,12 @@ try {
     const patchNotes = page.locator('#patch-notes');
     await expect(patchNotes.locator('.dl-release-head').first()).toContainText(feed.tv.versionName);
     await expect(patchNotes.locator('[data-release-section] h3')).toHaveText(['تطبيق التلفاز', 'تطبيق الهاتف', 'التحديثات المشتركة بين التلفاز والهاتف']);
+    const phoneNotes = patchNotes.locator('.detail-notes-tabs button').nth(1);
+    await phoneNotes.click();
+    await expect(phoneNotes).toHaveAttribute('aria-pressed', 'true');
+    await expect(patchNotes.locator('[data-release-section]').first()).toHaveAttribute('data-release-section', 'phone');
     await patchNotes.getByRole('button', { name: 'سجل التغييرات', exact: true }).click();
+    await expect(dialog.locator('.changelog-notes [data-release-section]').first()).toHaveAttribute('data-release-section', 'phone');
     await expect(dialog.locator('.changelog-notes [data-release-section="shared"] h4').first()).toHaveText('قسم الترجمة الموحدة الذكية');
     await page.keyboard.press('Escape');
 

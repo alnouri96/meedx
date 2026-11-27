@@ -237,6 +237,8 @@
 .release-section-card p { color: #dfd9cb; font-size: .9rem; line-height: 1.58; margin: 4px 0 0; }
 .changelog-notes .dl-note-group li + li { margin-block-start: .55rem; }
 #patch-notes .section-head .button { margin-inline-end: 12px; }
+#patch-notes .detail-notes-tabs { width: fit-content; margin-block-end: 16px; }
+#patch-notes .detail-notes-tabs .dl-tab[aria-pressed="true"] { background: #e5a93b; color: #171717; border-color: #e5a93b; }
 @media (max-width: 767px) {
   .cinema-hero h1 { font-size: clamp(2.55rem, 10.5vw, 4.25rem); }
   .cinema-detail-actions .button { flex: 1 0 auto; }

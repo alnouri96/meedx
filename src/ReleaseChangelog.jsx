@@ -11,7 +11,7 @@ function currentRelease(build) {
   return build?.updateNotes?.find((release) => release.latest) ?? build?.updateNotes?.[0];
 }
 
-function ReleaseSections({ builds, lang }) {
+function ReleaseSections({ builds, lang, primaryId }) {
   const tv = currentRelease(builds.find((build) => build.id === 'tv'));
   const phone = currentRelease(builds.find((build) => build.id === 'phone'));
   const sections = {
@@ -20,7 +20,10 @@ function ReleaseSections({ builds, lang }) {
     shared: tv?.sections?.shared ?? phone?.sections?.shared,
   };
 
-  return sectionTypes.map(({ id, en, ar, Icon }) => {
+  const [tvType, phoneType, sharedType] = sectionTypes;
+  const orderedTypes = primaryId === 'phone' ? [phoneType, tvType, sharedType] : sectionTypes;
+
+  return orderedTypes.map(({ id, en, ar, Icon }) => {
     const items = sections[id]?.[lang];
     if (!items?.length) return null;
     return (
@@ -36,7 +39,7 @@ function ReleaseSections({ builds, lang }) {
   });
 }
 
-export function ReleaseNotes({ release, lang, builds, showVersion = true }) {
+export function ReleaseNotes({ release, lang, builds, primaryId, showVersion = true }) {
   const groups = [
     [lang === 'ar' ? 'ما الجديد' : "What's new", release.whatsNew?.[lang]],
     [lang === 'ar' ? 'التحسينات والإصلاحات' : 'Improvements and fixes', release.improvements?.[lang]],
@@ -52,7 +55,7 @@ export function ReleaseNotes({ release, lang, builds, showVersion = true }) {
           )}
         </div>
       )}
-      {builds && release.sections && <ReleaseSections builds={builds} lang={lang} />}
+      {builds && release.sections && <ReleaseSections builds={builds} lang={lang} primaryId={primaryId} />}
       {groups.map(([title, items]) => (
         <section className="dl-note-group" key={title}>
           <h4>{title}</h4>
@@ -65,7 +68,7 @@ export function ReleaseNotes({ release, lang, builds, showVersion = true }) {
 
 export function CurrentChangelog({ builds, ar, t }) {
   const [lang, setLang] = useState(ar ? 'ar' : 'en');
-  const primaryBuild = builds.find((b) => b.id === 'tv') ?? builds[0];
+  const primaryBuild = builds[0];
   const latestNote = currentRelease(primaryBuild);
 
   return (
@@ -79,7 +82,7 @@ export function CurrentChangelog({ builds, ar, t }) {
       </div>
       <div className="changelog-notes" lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
         {latestNote?.sections
-          ? <ReleaseSections builds={builds} lang={lang} />
+          ? <ReleaseSections builds={builds} lang={lang} primaryId={primaryBuild.id} />
           : latestNote && <ReleaseNotes release={latestNote} lang={lang} showVersion={false} />}
       </div>
     </>

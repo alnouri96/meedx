@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Keyboard, Navigation, Pagination } from 'swiper/modules';
 import {
@@ -16,7 +16,9 @@ export function AppDetailPage({
   const tvApp = catalog.find((p) => p.id === 'tv');
   const lang = ar ? 'ar' : 'en';
   const BackArrow = ar ? ArrowRight : ArrowLeft;
-  const notes = tvApp?.updateNotes ?? [];
+  const [notesDevice, setNotesDevice] = useState('tv');
+  const notesBuild = catalog.find((build) => build.id === notesDevice) ?? tvApp;
+  const notes = notesBuild?.updateNotes ?? [];
 
   return (
     <div className="app-detail-page sc-animate">
@@ -165,15 +167,22 @@ export function AppDetailPage({
         <div className="section-head">
           <div>
             <h2 id="patch-notes-title">{t('سجل التحديثات', 'Patch notes')}</h2>
-            <button type="button" className="button" onClick={() => openChangelog(tvApp)}>
+            <button type="button" className="button" onClick={() => openChangelog(notesBuild)}>
               <List size={17} />{t('سجل التغييرات', 'Changelog')}
             </button>
             <a className="link" href={siteConfig.releases}>{t('كل الإصدارات على GitHub', 'All releases on GitHub')}<ArrowUpRight size={16} /></a>
           </div>
         </div>
 
+        <div className="dl-tabs detail-notes-tabs" role="group" aria-label={t('ترتيب ملاحظات الإصدار حسب التطبيق', 'Release notes app order')}>
+          <button type="button" className="dl-tab" aria-pressed={notesDevice === 'tv'} onClick={() => setNotesDevice('tv')}>{t('التلفاز', 'TV')}</button>
+          <button type="button" className="dl-tab" aria-pressed={notesDevice === 'phone'} onClick={() => setNotesDevice('phone')}>{t('الهاتف', 'Phone')}</button>
+        </div>
         <div className="detail-notes-grid" dir={ar ? 'rtl' : 'ltr'}>
-          {notes.map((release) => <ReleaseNotes key={release.version} release={release} lang={lang} builds={release.latest ? catalog : undefined} />)}
+          {notes.map((release) => (
+            <ReleaseNotes key={release.version} release={release} lang={lang}
+              builds={release.latest ? catalog : undefined} primaryId={notesBuild.id} />
+          ))}
         </div>
       </section>
     </div>
